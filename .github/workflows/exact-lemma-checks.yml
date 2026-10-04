@@ -19,3 +19,5 @@ jobs:
         run: python scripts/verify_lemmas.py
       - name: Run exact Christoffel checks
         run: python scripts/christoffel_exact.py
+      - name: Run exact k=8 target checks
+        run: python scripts/k8_target.py
