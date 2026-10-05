@@ -1,0 +1,138 @@
+name: exact-52-batch
+
+on:
+  push:
+    branches:
+      - "compute/exact52-batch"
+
+jobs:
+  exact:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        include:
+          - d: 1
+            lo: 0
+            hi: 15
+          - d: 1
+            lo: 15
+            hi: 30
+          - d: 1
+            lo: 30
+            hi: 45
+          - d: 1
+            lo: 45
+            hi: 60
+          - d: 1
+            lo: 60
+            hi: 75
+          - d: 1
+            lo: 75
+            hi: 90
+          - d: 1
+            lo: 90
+            hi: 105
+          - d: 1
+            lo: 105
+            hi: 120
+          - d: 1
+            lo: 120
+            hi: 135
+          - d: 1
+            lo: 135
+            hi: 150
+          - d: 2
+            lo: 0
+            hi: 15
+          - d: 2
+            lo: 15
+            hi: 30
+          - d: 2
+            lo: 30
+            hi: 45
+          - d: 2
+            lo: 45
+            hi: 60
+          - d: 2
+            lo: 60
+            hi: 75
+          - d: 2
+            lo: 75
+            hi: 90
+          - d: 2
+            lo: 90
+            hi: 105
+          - d: 2
+            lo: 105
+            hi: 120
+          - d: 2
+            lo: 120
+            hi: 135
+          - d: 2
+            lo: 135
+            hi: 150
+          - d: 3
+            lo: 0
+            hi: 15
+          - d: 3
+            lo: 15
+            hi: 30
+          - d: 3
+            lo: 30
+            hi: 45
+          - d: 3
+            lo: 45
+            hi: 60
+          - d: 3
+            lo: 60
+            hi: 75
+          - d: 3
+            lo: 75
+            hi: 90
+          - d: 3
+            lo: 90
+            hi: 105
+          - d: 3
+            lo: 105
+            hi: 120
+          - d: 3
+            lo: 120
+            hi: 135
+          - d: 3
+            lo: 135
+            hi: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Evaluate exact polytope chunk
+        run: |
+          python scripts/exact_polytope_52.py ${{ matrix.d }} \
+            --terms ${{ matrix.lo }}:${{ matrix.hi }} \
+            --out result.txt
+      - name: Upload exact chunk
+        uses: actions/upload-artifact@v4
+        with:
+          name: exact52-d${{ matrix.d }}-${{ matrix.lo }}-${{ matrix.hi }}
+          path: result.txt
+          retention-days: 7
+
+  tally:
+    needs: exact
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: exact52-*
+          path: results
+          merge-multiple: true
+      - name: Exact tally against pre-registered fractions
+        run: python scripts/tally_52.py results
