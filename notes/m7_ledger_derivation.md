@@ -1,12 +1,10 @@
 # Bell(7) derivation of the seventh-moment ledger
 
-**Status:** exact combinatorial reduction, conditional only on extending the same frozen-singleton identities and 3-block vanishing rule already consumed at \(m_5,m_6\).
-
-This note derives the \(m_7\) ledger from the 877 set partitions of a seven-cycle. It does not assume a numerical value for the new \(\{5,2\}\) joint class or for \(C_7\).
+**Status:** exact combinatorial reduction, conditional on extending the same frozen-singleton identities and 3-block vanishing rule already consumed at \(m_5,m_6\). The numerical value of \(m_7\) remains candidate-level because \(\{5,2\}\) and \(C_7\) are not yet both exact-certified.
 
 ## 1. Bell(7) classes
 
-The block-size signatures and multiplicities are:
+The block-size signatures and multiplicities are
 
 \[
 \begin{array}{c|r}
@@ -29,67 +27,25 @@ The block-size signatures and multiplicities are:
 \end{array}
 \]
 
-The total is \(877\).
+with total \(877\).
 
 ## 2. Classes containing a 3-block
 
-The lower-moment arithmetic local law kills the classes whose nontrivial connected structure contains a 3-block. Thus the signatures
+The lower-moment local law kills the classes whose nontrivial connected structure contains a 3-block:
 
 \[
 3\,1^4,\quad
 3\,2\,1^2,\quad
 3\,2^2,\quad
 3^2\,1,\quad
-4\,3
+4\,3.
 \]
 
-do not contribute.
-
-This is the same rule that removes the 3-block classes in the \(m_5,m_6\) ledgers, including the separately audited \(\{3,3\}\) class.
+This is the same mechanism already consumed in the \(m_5,m_6\) ledgers.
 
 ## 3. Pair/four-cycle layer
 
-The surviving classes built only from pairs, a four-block and singletons collapse to the certified four-cycle anchors.
-
-### One pair
-
-There are
-
-\[
-\binom72=21
-\]
-
-placements, each contributing the two-cycle constant \(1/3\). Hence
-
-\[
-21\cdot\frac13=7.
-\]
-
-### Two pairs
-
-Choose the four paired vertices in
-
-\[
-\binom74=35
-\]
-
-ways. For any cyclically ordered four-set, its three pairings consist of two non-crossing pairings and one crossing pairing. Therefore
-
-\[
-70\,t_{\rm adj}+35\,t_{\rm opp}.
-\]
-
-### One four-block
-
-There are
-
-\[
-\binom74=35
-\]
-
-placements, each reducing by frozen singletons to \(\Phi_4\).
-
-Together with the all-singleton class, the pair/four layer is
+The all-singleton, one-pair, two-pair and one-four-block classes give
 
 \[
 1+7+70t_{\rm adj}+35t_{\rm opp}+35\Phi_4.
@@ -103,71 +59,43 @@ t_{\rm opp}=\frac1{30},\qquad
 \Phi_4=-\frac1{60},
 \]
 
-this collapses exactly to
+this is exactly
 
 \[
 \boxed{\frac{67}{4}}.
 \]
 
-## 4. Frozen-singleton lifts of lower connected classes
+## 4. Frozen-singleton lifts
 
-A singleton block repeats one walk value and does not change the overlap range. Thus deleting singleton blocks maps the following seven-cycle classes to already-defined lower-cycle aggregates.
-
-### Three pairs plus one singleton
-
-There are \(105\) partitions of type \(2^3\,1\). The six-cycle aggregate \(\{2,2,2\}\) contains \(15\) placements. Hence the seven-cycle class is
+Deleting singleton blocks leaves overlap ranges unchanged, hence
 
 \[
-\frac{105}{15}\{2,2,2\}
-=
-7\{2,2,2\}.
+2^3\,1:\quad 7\{2,2,2\},
 \]
 
-### Four-block, pair, singleton
-
-There are \(105\) partitions of type \(4\,2\,1\). The six-cycle \(\{4,2\}\) aggregate contains \(15\) placements. Hence
-
 \[
-7\{4,2\}.
+4\,2\,1:\quad 7\{4,2\},
 \]
 
-### Five-block plus two singletons
-
-There are
-
 \[
-\binom75=21
+5\,1^2:\quad 21C_5,
 \]
 
-placements, each reducing to the pure five-cycle constant \(C_5\). Hence
-
 \[
-21C_5.
-\]
-
-### Six-block plus singleton
-
-There are \(7\) placements, yielding
-
-\[
-7C_6.
+6\,1:\quad 7C_6.
 \]
 
 ## 5. New seventh-order classes
 
-Two genuinely seventh-order objects remain:
+Only
 
 \[
-\{5,2\},
-\qquad
-C_7.
+\{5,2\},\qquad C_7
 \]
 
-Here \(\{5,2\}\) already denotes the sum over all \(21\) placements of the five-block/pair joint class; no additional multiplicity is applied.
+remain genuinely seventh-order. Here \(\{5,2\}\) already denotes the sum over all \(21\) placements.
 
-## 6. Exact ledger identity
-
-Consequently,
+Therefore
 
 \[
 \boxed{
@@ -183,50 +111,65 @@ m_7
 }
 \]
 
-Substituting the lower-order exact constants
-
-\[
-C_5=\frac1{36},\qquad
-\{2,2,2\}=\frac{131}{420},\qquad
-\{4,2\}=-\frac{23}{420},\qquad
-C_6=-\frac1{126},
-\]
-
-gives the affine form
+Substituting the exact lower-order constants gives
 
 \[
 \boxed{
 m_7
 =
 \frac{1717}{90}
-+\{5,2\}+C_7
++\{5,2\}
++C_7.
 }
 \]
 
-or, more simply after combining the rational part,
+## 6. Current active candidate
+
+The old \(\{5,2\}=1/8\) midpoint candidate is retired; see
+`results/spectator_52_coarse.md`
+and
+`notes/spectator_52_eliminate_v.md`.
+
+The active exact-\(v\) numerical candidate is
 
 \[
-\boxed{
-m_7
-=
-\frac{1717}{90}
-+\{5,2\}+C_7.
-}
+\{5,2\}=\frac7{72}.
 \]
 
-With the currently pre-registered/identified candidates
+Using the source identification candidate
 
 \[
-\{5,2\}=\frac18,\qquad
 C_7=-\frac{17}{360},
 \]
 
-this becomes
+we obtain
 
 \[
 \boxed{
-m_7=\frac{862}{45}=19.155555\ldots.
+m_7
+=
+\frac{3443}{180}
+=
+19.127777777\ldots.
 }
 \]
 
-The last numerical value remains a **candidate** until both new seventh-order constants and their arithmetic transports are certified.
+This is only
+
+\[
+\frac{5813}{4057200}
+=
+0.0014327615\ldots
+\]
+
+above the exact Stieltjes floor
+
+\[
+m_7^*=\frac{25866469}{1352400}
+=
+19.126345016\ldots.
+\]
+
+That small gap is important: it makes the \(m_8\) target for any further Christoffel improvement quite tight.
+
+The displayed \(m_7\) remains a **candidate** until both new seventh-order constants and their arithmetic transports are certified.
