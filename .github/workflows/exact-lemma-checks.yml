@@ -25,5 +25,7 @@ jobs:
         run: python scripts/bell7_gate.py
       - name: Run candidate m7 ledger
         run: python scripts/m7_ledger.py
+      - name: Run candidate m8 aggregate ledger
+        run: python scripts/m8_ledger.py
       - name: Benchmark one exact {5,2} polytope term
         run: timeout 600 python scripts/exact_polytope_52.py 1 --terms 0:1
