@@ -126,6 +126,14 @@ divisor moments and repeated-prime partitions avoid a pointwise tail
 bound that would fail for rare primorial shifts. The remaining weighted
 and dilated zeta interface retains separate proof obligations.
 
+[The dilated lock calculation](../notes/dilated_rectangle_geometry.md)
+derives the physical heterogeneous cube, exact raw overlap and finite
+presieved main term. It proves a progression-norm replacement criterion
+at the balanced raw scale and evaluates the exceptional-prime factors.
+Their complete-period second-moment budget stays uniformly bounded for
+prime-power moduli of any exponent. The remaining large-progression prime
+norms and weighted consumption are explicit research targets.
+
 ## Pilot milestones
 
 | Period | Work | Deliverable |

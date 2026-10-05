@@ -339,3 +339,38 @@ core obstruction; singular consumption weights and the zeta normalization
 remain unresolved. Singular-series moment methods are established
 background; the note states its restricted-family proof without a priority
 claim.
+
+## Physical dilations and exceptional-prime normalization
+
+[The dilated rectangle calculation](notes/dilated_rectangle_geometry.md)
+retains the raw resolved variance as a heterogeneous eight-vertex cube.
+Splitting the two sequences into progressions of steps r and q gives the
+deterministic criterion
+
+    sum_(k,J)|N_(f,g)-N_(u,v)|^2<=16 rq M^4 delta^2 B^6,
+
+where delta is the maximal progression U^3 discrepancy and B bounds the
+ordinary progression U^3 norms. In balanced windows of lengths rH,qH,
+M=O(H), so this matches the raw rq H^4 scale. Supplying those norms
+uniformly for growing coefficients remains an analytic obligation.
+
+The general passage from a global cyclic U^3 norm to a selected step-d
+progression loses sqrt(d). A single-coset indicator attains that factor:
+its global norm tends to zero as d grows while its selected progression
+is identically one. This specifies why qualitative global cubic smallness
+cannot alone supply the required growing-progression prime estimate.
+
+At a prime dividing rq, the exact admissible cube count is
+(p-1)(p^3-4p^2+6p-3). Its normalized factor is
+(1-1/p)^(-3)[1+1/(p-1)^3]. The product is bounded by a constant times
+[rq/phi(rq)]^3. For the reference's prime-power moduli rq has at most two
+distinct prime divisors, so this bound is uniform in their bases and
+exponents. It is also exactly the complete-period second moment of the
+finite four-point singular series.
+
+The note parameterizes each lock by a Bezout solution and gives the
+exact raw window overlap and all local factors of the finite presieve.
+It distinguishes that raw cardinality from the consumption-normalized
+volume. The large-progression prime estimate, incomplete weighted ranges
+and the final zeta normalization remain open. The scale audit records
+the progression length before any short-window theorem is invoked.

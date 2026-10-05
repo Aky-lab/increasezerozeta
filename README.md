@@ -54,9 +54,11 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 [The averaged Euler-tail estimate](notes/rectangle_singular_series_tail.md) replaces that finite main term by the full four-point singular series on nondegenerate shifts. For every fixed integer r>=1, the r-th absolute tail moment over the rectangle box is O_r(Y^2/w^r), uniformly in height and cutoff. Its mean-square case gives the full Hardy--Littlewood main term with the same qualitative prime saving. The proof uses positive divisor moments and repeated-prime partitions; a uniform pointwise tail bound would fail.
 
+[The dilated rectangle geometry](notes/dilated_rectangle_geometry.md) gives the exact heterogeneous cube and raw overlap for the physical two-modulus locks. It proves a deterministic replacement criterion using progression U^3 norms and evaluates the finite main term, including exceptional primes. The local squared normalization is uniformly bounded for the project's prime-power moduli, even when their exponents grow. Uniform cubic prime estimates on the resulting shorter progression windows, and their weighted consumption, remain open.
+
 ## Reproduction
 
-Run all twenty-three project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all twenty-four project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
@@ -119,7 +121,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all twenty-three executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all twenty-four executed checks.
 
 ## Project files
 

@@ -424,6 +424,15 @@ the finite local product by the full singular series in the unweighted
 nondegenerate joint average. It does not bound the class-subtracted
 frequency tail above or justify singular consumption weights.
 
+[The dilated geometry theorem](dilated_rectangle_geometry.md) gives the
+exact raw overlap and heterogeneous cube for the physical locks. It proves
+that the local cube normalization stays uniformly bounded for prime-power
+moduli and is exactly the finite singular-series second moment over a
+complete period. Its deterministic progression U^3 criterion has the
+correct balanced raw scale. Uniform prime norms on the shorter progression
+windows and the consumed weight ranges are still needed; an ordinary
+W-tricked bound is not silently promoted to a growing-modulus estimate.
+
 ## 7. Target for a full one-percentage-point improvement
 
 If all non-vanishing remainder terms are combined *after being individually identified* into

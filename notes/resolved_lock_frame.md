@@ -7,6 +7,10 @@ correct transforms, an exact nonnegative counterexample, a valid
 full-lock transport theorem, and the cubic uniformity norm for the
 rectangle restriction.
 
+The subsequent [dilated geometry calculation](dilated_rectangle_geometry.md)
+evaluates the heterogeneous cube's local normalization, raw overlap and
+finite presieved main term, and states a progression Gowers criterion.
+
 The distinction matters for the fourth-moment arithmetic interface. It
 does not disprove a prime-specific estimate that might be established by
 additional arguments, and it does not affect the exact continuum-model

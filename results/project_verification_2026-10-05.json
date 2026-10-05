@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T15:08:07.844570+00:00",
+  "generated_at_utc": "2026-10-05T15:26:02.755101+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "5033751e251560a2a012dbd135d7c1777f0538f0a93a2df3d9b641c49a7ec779",
+  "runner_sha256": "25fd66de3aaab4be70753dd4e69372fd4731e9af6cc6cd0a00644c40a5232c16",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -26,6 +26,7 @@
     "scripts/verify_cue_fluctuations.py": "a896c611434507fc686e3fcc30ccc6a57a890b2f688db36c9a9c06aa5b66454a",
     "scripts/verify_cue_model.py": "7ade82e2b9c104ca851f6b9bf73b73653926888bdd90c4736472920f182646e2",
     "scripts/verify_cycle_eight_lattice.py": "a5aaae108761fdf0291cbddcb561aea3628c162d59cfdc1f83215eb1f449dae4",
+    "scripts/verify_dilated_rectangles.py": "53945eeb2767bea9e2d5489b5f9fc72b10f3df49d2b83687fd362640156c4b1b",
     "scripts/verify_lemmas.py": "a5d3fb7a7b7460a182773fc743b329d8e593e94a30ecf50d7a82bc9b1619a125",
     "scripts/verify_lock_frame.py": "31c66514072a4e4f71b53b7938513e8489b9bbf943c857dbe5163fce3944ec56",
     "scripts/verify_mixed_cycles.py": "1773ecc9ef8357e6f3406f2262350bb50cfb8d47966a81174c30efd870ab1663",
@@ -33,7 +34,7 @@
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
     "scripts/verify_presieved_pairs.py": "93bf6795ea056efe1f8d67cc2146da87fab0bbf0b53ebe3db6d3bbf9889df995",
     "scripts/verify_prime_pair_transport.py": "c2f0d53493c0cc0727a95faa6b157dd2e030548a2510041ca60a02dc4b209735",
-    "scripts/verify_project.py": "5033751e251560a2a012dbd135d7c1777f0538f0a93a2df3d9b641c49a7ec779",
+    "scripts/verify_project.py": "25fd66de3aaab4be70753dd4e69372fd4731e9af6cc6cd0a00644c40a5232c16",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
     "scripts/verify_rectangle_tail.py": "057311dda5e6a07a5fca63fc4f127fde7568145dd3745544effa604dbd54ea59",
@@ -120,6 +121,15 @@
       "scope": "rectangle discriminant support, positive divisor moments, repeated-prime partitions and finite Euler-tail decompositions",
       "exit_code": 0,
       "stdout": "Exact local collision and discriminant checks: 2592\nPositive divisor expansions and endpoint bounds: 12\nRepeated-prime moment and partition identities: 6\nNondegenerate geometry and rare-shift decompositions: (16, 3)\nRectangle Euler-tail finite audits passed; infinite estimates use the written proof.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_dilated_rectangles.py",
+      "sha256": "53945eeb2767bea9e2d5489b5f9fc72b10f3df49d2b83687fd362640156c4b1b",
+      "scope": "heterogeneous lock cubes, progression-norm criterion, exceptional-prime budgets, raw overlaps and finite CRT main terms",
+      "exit_code": 0,
+      "stdout": "Resolved squared counts, cubes and exact progression-norm criterion: 19\nCoset cube identity, sharp extraction loss and selected-progression examples: 13\nPrime-field and CRT local second-moment budgets: (25, 15)\nBezout-independent raw overlaps and presieved main terms: 2625\nDilated rectangle finite audits passed; growing-modulus prime uniformity remains open.\n",
       "stderr": "",
       "passed": true
     },
