@@ -1,84 +1,113 @@
-# Pre-registered candidate for the seventh-moment joint class \(\{5,2\}\)
+# Seventh-moment joint class \(\{5,2\}\): candidate history and active target
 
-**Status:** numerical identification candidate only. This is deliberately recorded before any finer-grid run or exact polytope integration.
-
-The independent midpoint engine defined in notes/spectator_52_spec.md gives the following coarse rungs.
-
-| \(dv\) | \(U_1\) | \(U_2\) | \(U_3\) | \(7(U_1+U_2+U_3)\) |
-|---:|---:|---:|---:|---:|
-| 0.25 | 0.01080322 | 0.00282288 | 0.00643921 | 0.1404571533 |
-| 0.20 | 0.01052160 | 0.00280640 | 0.00598400 | 0.1351840000 |
-| 0.125 | 0.01017094 | 0.00278878 | 0.00548315 | 0.1291000843 |
-
-A three-rung fit in \(1,dv^2,dv^4\) extrapolates the total to approximately
+**Status:** unresolved model-side constant. The original \(1/8\) candidate is **retired**. The active numerical candidate is
 
 \[
-0.1249970,
+\boxed{\{5,2\}=\frac7{72}=0.0972222222\ldots}
 \]
 
-suggesting the exact value
+and must not be consumed as a theorem-level value until exact rational integration agrees.
+
+## 1. Retired first candidate
+
+The first five-dimensional midpoint discretisation treated the spectator frequency \(v\) numerically together with the four \(C_5\) variables. Coarse rungs drifted towards
 
 \[
-\boxed{\{5,2\}=\frac18}.
-\]
-
-More strongly, the three placement components independently point to
-
-\[
-\boxed{
-U_1=\frac5{504},\qquad
-U_2=\frac1{360},\qquad
-U_3=\frac{13}{2520}.
-}
-\]
-
-These fractions satisfy
-
-\[
-\frac5{504}+\frac1{360}+\frac{13}{2520}
-=
-\frac1{56},
-\]
-
-and therefore
-
-\[
-7(U_1+U_2+U_3)=\frac18.
-\]
-
-## Error-profile gate
-
-For the candidate component fractions, the observed errors divided by \(dv^2\) are:
-
-| \(dv\) | \(e_1/dv^2\) | \(e_2/dv^2\) | \(e_3/dv^2\) |
-|---:|---:|---:|---:|
-| 0.25 | 0.01412 | 0.000722 | 0.02049 |
-| 0.20 | 0.01502 | 0.000716 | 0.02063 |
-| 0.125 | 0.01602 | 0.000704 | 0.02076 |
-
-This is consistent with the expected midpoint \(O(dv^2)\) convergence and is substantially stronger evidence than identifying only the total.
-
-## Pre-registered falsifier
-
-The candidate is now frozen as
-
-\[
-(U_1,U_2,U_3)
-=
-\left(
-\frac5{504},
-\frac1{360},
-\frac{13}{2520}
-\right),
-\qquad
 \{5,2\}=\frac18.
 \]
 
-The candidate should be rejected or revised if any of the following occurs:
+That candidate was correctly pre-registered before finer work, but it did **not** survive the next structural check.
 
-1. finer midpoint rungs fail to approach the component fractions with an even-power error profile;
-2. an independently written implementation disagrees on any coarse rung;
-3. exact polytope integration gives a different component fraction;
-4. the arithmetic-side joint-class transport reveals that the model class being evaluated is not the class consumed by the \(m_7\) ledger.
+The exact spectator-frequency elimination in
+`notes/spectator_52_eliminate_v.md`
+showed that the apparent \(1/8\) convergence was a quadrature artefact caused by crossing rational kink hyperplanes in the \(v\)-direction.
 
-No theorem should consume \(1/8\) until the exact gate passes.
+Therefore
+
+\[
+\boxed{\{5,2\}=1/8\quad\text{is retired.}}
+\]
+
+Any script or note still using \(1/8\) is stale and should be corrected rather than interpreted as an alternative candidate.
+
+## 2. Exact-\(v\) reduction
+
+For fixed five-block frequencies, the \(v\)-integral
+
+\[
+\int |v|\,O_7(v)\,dv
+\]
+
+is evaluated analytically. This reduces the problem from a five-dimensional midpoint quadrature to a four-dimensional piecewise-polynomial integral.
+
+The exact formula and derivation are in
+`notes/spectator_52_eliminate_v.md`.
+
+## 3. Corrected numerical ladder
+
+With \(v\) eliminated exactly, the corrected total
+\(\{5,2\}=7(U_1+U_2+U_3)\) is:
+
+| mesh \(dc\) | corrected total |
+|---:|---:|
+| 0.2500 | 0.1024055481 |
+| 0.2000 | 0.1008627200 |
+| 0.1250 | 0.0987835526 |
+| 0.1000 | 0.0982422875 |
+| 0.0800 | 0.0970260964 |
+| 0.0625 | 0.0976295331 |
+| 0.0500 | 0.0974842118 |
+
+Because the remaining four-dimensional midpoint rule still crosses rational kink hyperplanes, these values are **not enclosures** and need not be monotone.
+
+Two genuinely dyadic Richardson probes are:
+
+\[
+0.125\to0.0625:\quad0.09724485998,
+\]
+
+\[
+0.100\to0.0500:\quad0.09723151986.
+\]
+
+Both are close to
+
+\[
+\frac7{72}=0.09722222222\ldots.
+\]
+
+Thus the active candidate to falsify is
+
+\[
+\boxed{\{5,2\}=\frac7{72}}.
+\]
+
+## 4. Required decisive gate
+
+The exact-\(v\) reduction leaves a four-dimensional rational piecewise-polynomial integral. The decisive next step is exact rational cell/polytope integration.
+
+The active candidate must be rejected or revised if that exact computation disagrees.
+
+## 5. Downstream consequence if certified
+
+Together with the source identification
+
+\[
+C_7=-\frac{17}{360},
+\]
+
+the exact Bell(7) ledger would give
+
+\[
+m_7
+=
+\frac{1717}{90}
++\frac7{72}
+-\frac{17}{360}
+=
+\boxed{\frac{3443}{180}}
+=
+19.1277777\ldots.
+\]
+
+This lies only slightly above the exact Stieltjes floor from \(m_0,\ldots,m_6\), so the \(k=8\) target geometry is correspondingly tight.
