@@ -214,6 +214,13 @@ short-window endpoint deduction, with the exact restrictions stated.
 
 ## Finite verification
 
+The [finite presieved comb](presieved_pair_transport.md) now evaluates the
+pair main term of a power-sized divisor approximation with its correct
+Fourier coefficients. It also gives an actual prime-pair mean-square
+estimate averaged over integer starts and shifts. This closes the averaged
+pair calculation in that note's range; it does not supply the higher lock
+geometry or the arithmetic-to-continuum normalization required above.
+
 `python scripts/verify_short_window_transport.py` checks integer-cell
 constancy, discrete partial summation on all small progressions, coupled
 product telescoping and weighted start histograms, exceptional-set

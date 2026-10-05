@@ -183,3 +183,10 @@ histograms. A longer-window pointwise version uses Y>=j^(5/8+epsilon)
 and a model at each base j. These are additional inputs with explicit
 position and weight budgets; neither identifies the required continuum
 comb or justifies a common-position multiple-prime factorization.
+
+[Presieved pair transport](presieved_pair_transport.md) additionally proves
+an actual prime-pair estimate averaged jointly over short-window starts
+and full-window shifts, including divisor multiplicities. Its proof uses
+the newer Fourier input, explicit finite sieve coefficients and Parseval.
+The X Y^3 variance scale and weighted budget must be retained when using
+it; a fixed-start or short-shift H Y^2 estimate is not supplied.

@@ -397,6 +397,14 @@ this input, the dilated lattice scales and concentration budget must be
 verified, and the presieved main term must be identified with the proposed
 comb. These steps remain part of the analytic reduction.
 
+The [finite presieved pair theorem](presieved_pair_transport.md) evaluates
+the divisor model's Fourier coefficients and pair main term. It gives
+actual prime-pair variance O_A(X Y^3 log(3X)^(-A)) averaged jointly over
+integer short-window starts and full-window shifts, also with divisor
+multiplicity. Its consumption norm retains the position and window scales.
+It does not replace a common-position four-prime lock by independent
+chains, and it does not establish the final zeta normalization.
+
 ## 7. Target for a full one-percentage-point improvement
 
 If all non-vanishing remainder terms are combined *after being individually identified* into

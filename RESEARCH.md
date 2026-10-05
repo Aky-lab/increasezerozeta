@@ -228,5 +228,33 @@ counts at least X times an inverse power of log X suffice for normalized
 logarithmic savings. Highly concentrated fixed starts need further input.
 A longer-window theorem supplies a pointwise alternative with a model
 depending on each start. No independence or variance factorization is used.
-The actual dilated lattice ranges, weight budgets, presieved comb and
-arithmetic-to-continuum identities must still be established in an application.
+The actual dilated lattice ranges, weight budgets and arithmetic-to-continuum
+identities must still be established in an application.
+
+## An explicit comb and averaged short-window prime pairs
+
+[Presieved pair transport](notes/presieved_pair_transport.md) writes the
+finite divisor model with its exact Ramanujan coefficients. An elementary
+Rankin mean-square bound controls its difference from the full presieved
+model. CRT residue counting and period orthogonality identify its pair
+density with the usual singular series, up to an arbitrarily small
+logarithmic error and the explicit interval error O(c_R^2 D^2).
+
+Combining this calculation with the published short-window Fourier input
+and Parseval gives
+
+    sum_(X<=j<2X) sum_(0<|h|<Y)
+      |sum_n Lambda(n)Lambda(n+h)1_(j<n<=j+Y)1_(j<n+h<=j+Y)
+         -S(h)(Y-|h|)|^2 = O_(A,epsilon)(X Y^3 log(3X)^(-A))
+
+for X^(1/3+epsilon)<=Y<=X^(1-epsilon). The same bound holds with
+divisor multiplicities h=qk and gives an explicit weighted consumption
+estimate. The diagonal is excluded. The formulation is an application of
+published uniformity, not a claim of a new twin-prime theorem or established
+priority. The finite checker independently compares Ramanujan expansions,
+direct period sums, CRT counts, Rankin factors and autocorrelation Parseval.
+
+The estimate averages over both positions and shifts. Restricting to a
+shorter shift interval retains the Y^3 bound; no H Y^2 saving is inferred.
+Prescribed starts, common-position four-prime locks and the actual zeta
+counting interface remain distinct research targets.

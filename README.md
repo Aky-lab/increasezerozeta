@@ -42,13 +42,15 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 [A cutoff obstruction](notes/fixed_cutoff_obstruction.md) proves the uniform bound C_ell,P=O((1+log P)/log T). Every subpower cutoff, including any fixed power of log T, leaves the entire leading model contribution in its tail. An absolute envelope for that same tail has lower limit at least 1/48, so the older 0.0111 finite-height charge cannot be promoted to such an asymptotic bound.
 
-[Prime-pair progression transport](notes/prime_pair_progression_transport.md) uses the published Matomaki–Radziwill–Tao theorem to control arbitrary divisor subfamilies of shifts h=qk. It supplies a weighted error budget and resolves the full-dyadic, one-chain aggregation step. Short position windows, coupled prime chains and the actual zeta-moment reduction remain open.
+[Prime-pair progression transport](notes/prime_pair_progression_transport.md) uses the published Matomaki–Radziwill–Tao theorem to control arbitrary divisor subfamilies of shifts h=qk. It supplies a weighted error budget and resolves the full-dyadic, one-chain aggregation step. Coupled prime chains and the actual zeta-moment reduction remain open.
 
-[Short-window Fourier transport](notes/short_window_fourier_transport.md) applies published higher-uniformity results to replace single-prime sums by a presieved model. It derives an integer-position mean-square bound and controls coupled products through weighted start histograms. The averaged range begins at X^(1/3+epsilon); a longer pointwise range begins at j^(5/8+epsilon). Identifying and consuming the resulting main term remains open.
+[Short-window Fourier transport](notes/short_window_fourier_transport.md) applies published higher-uniformity results to replace single-prime sums by a presieved model. It derives an integer-position mean-square bound and controls coupled products through weighted start histograms. The averaged range begins at X^(1/3+epsilon); a longer pointwise range begins at j^(5/8+epsilon).
+
+[The finite presieved comb](notes/presieved_pair_transport.md) gives explicit Fourier coefficients for a power-sized divisor approximation and identifies its pair main term uniformly. Parseval then yields an actual prime-pair estimate averaged over short-window positions and shifts, with arbitrary logarithmic savings and a divisor-family consumption budget. Prescribed individual windows, higher prime correlations and the zeta normalization still require separate arguments. This is a deduction from published uniformity input; priority for the specific formulation has not been established.
 
 ## Reproduction
 
-Run all nineteen project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all twenty project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
@@ -111,7 +113,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all nineteen executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all twenty executed checks.
 
 ## Project files
 

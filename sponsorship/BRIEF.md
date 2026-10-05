@@ -83,8 +83,8 @@ work toward signed estimates and actual-minus-model discrepancies.
 [Prime-pair progression transport](../notes/prime_pair_progression_transport.md)
 resolves the full-dyadic, one-chain divisor-family aggregation step using a
 published prime-correlation theorem. Its weighted bound states the precise
-consumption budget. Short position windows and coupled prime chains remain
-open, with their missing scale estimates specified explicitly.
+consumption budget. Coupled prime chains retain separate scale and
+correlation obligations.
 
 [Short-window Fourier transport](../notes/short_window_fourier_transport.md)
 derives a newer position-averaged prime-model replacement and controls
@@ -92,6 +92,15 @@ coupled products with explicit marginal concentration budgets. A separate
 longer-window pointwise option is available. The work replaces an invalid
 unrestricted endpoint deduction with verified ranges and a presieved main
 term whose consumption remains an analytic research target.
+
+[The finite presieved comb](../notes/presieved_pair_transport.md) identifies
+an explicit divisor model's Fourier coefficients and pair main term. A
+Parseval deduction gives actual short-window prime pairs averaged over
+positions and shifts, with arbitrary logarithmic savings and a weighted
+divisor-family budget. This advances the arithmetic transport program
+without assuming independent prime chains. Prescribed individual windows,
+four-prime locks and the final zeta reduction remain open. Independent
+review and priority assessment are still needed.
 
 ## Pilot milestones
 
