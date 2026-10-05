@@ -198,7 +198,7 @@ gives the affine form
 \boxed{
 m_7
 =
-\frac{17139}{900}
+\frac{1717}{90}
 +\{5,2\}+C_7
 }
 \]
@@ -209,7 +209,7 @@ or, more simply after combining the rational part,
 \boxed{
 m_7
 =
-\frac{3431}{180}
+\frac{1717}{90}
 +\{5,2\}+C_7.
 }
 \]
