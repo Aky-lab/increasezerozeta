@@ -11,7 +11,8 @@ The project studies a continuum moment model and the arithmetic estimates needed
 | [Research guide](RESEARCH.md) | Definitions, exact values, proof status and a map of the notes |
 | [Counting bridge](notes/spectral_counting_bridge.md) | The actual-matrix hypothesis sufficient for an 80% simple-zero bound |
 | [Bounded resolvent criterion](notes/bounded_resolvent_bridge.md) | An alternative arithmetic target using three resolvent powers |
-| [Lean proofs](formal/README.md) | 18 kernel-checked scalar and finite counting theorems, with their assumptions |
+| [Positive-weight criterion](notes/mirror_resolvent_certificate.md) | A certificate bounded by two, three first resolvents and a sufficient one-point inequality |
+| [Lean proofs](formal/README.md) | 26 kernel-checked scalar and finite counting theorems, with their assumptions |
 | [Computational records](results/project_verification_2026-10-05.json) | Local verification results, source hashes and reproduction details |
 
 The finite model has moments
@@ -30,7 +31,7 @@ From the repository root, using Python 3.12 or later:
 python scripts/verify_project.py
 ```
 
-This runs 32 checks using the Python standard library. With Lean 4.33.0 installed, include the formal proof audit:
+This runs 33 checks using the Python standard library. With Lean 4.33.0 installed, include the formal proof audit:
 
 ```sh
 python scripts/verify_project.py --with-lean --output verification.json

@@ -23,6 +23,10 @@ THEOREMS=(
     'count_le_certificate_sum','tenth_count_cap','threshold_count_cap',
     'finite_bounded_certificate_counting','cubic_model_cap','cubic_model_margin',
     'cubic_counting_conversion','cubic_model_trace_identity','rational_parameter_admissible',
+    'mirror_denominator_identity','mirror_denominator_positive',
+    'mirror_certificate_nonnegative','mirror_certificate_le_two',
+    'mirror_certificate_negative_majorant','mirror_denominator_dominates',
+    'mirror_threshold_count_cap','finite_mirror_certificate_counting',
 )
 
 

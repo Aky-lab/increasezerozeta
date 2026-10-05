@@ -169,6 +169,86 @@ theorem tenth_count_cap {A : Type} (xs : List A)
   have hc : ((10*xs.countP bad : Nat) : R) ≤ (xs.length : R) := by grind
   exact OrderedRing.le_of_natCast_le_natCast _ _ hc
 
+/-- Even denominator obtained by averaging the two reflected squares. -/
+def mirrorDenominator (x : R) : R :=
+  6345361+104885808*x^2+86095872*x^4+3732624*x^6
+
+def mirrorCertificate (x : R) : R := (q3Numerator x)^2 / mirrorDenominator x
+
+omit [LE R] [LT R] [LawfulOrderLT R] [IsLinearOrder R] [OrderedRing R] in
+theorem mirror_denominator_identity (x : R) :
+    2*mirrorDenominator x = (q3Numerator x)^2+(q3Numerator (-x))^2 := by
+  unfold mirrorDenominator q3Numerator
+  grind
+
+theorem mirror_denominator_positive (x : R) : 0 < mirrorDenominator x := by
+  have h2 := OrderedRing.sq_nonneg (a := x)
+  have h4 := OrderedRing.mul_nonneg h2 h2
+  have h6 := OrderedRing.mul_nonneg h4 h2
+  have hterm2 := OrderedRing.mul_nonneg (OrderedRing.ofNat_nonneg (R := R) 104885808) h2
+  have hterm4 := OrderedRing.mul_nonneg (OrderedRing.ofNat_nonneg (R := R) 86095872) h4
+  have hterm6 := OrderedRing.mul_nonneg (OrderedRing.ofNat_nonneg (R := R) 3732624) h6
+  unfold mirrorDenominator
+  grind
+
+theorem mirror_certificate_nonnegative (x : R) : 0 ≤ mirrorCertificate x := by
+  have hd := mirror_denominator_positive x
+  have hs := OrderedRing.sq_nonneg (a := q3Numerator x)
+  have hi := (Field.IsOrdered.inv_nonneg_iff (a := mirrorDenominator x)).mpr
+    (Preorder.le_of_lt hd)
+  have hp := OrderedRing.mul_nonneg hs hi
+  unfold mirrorCertificate
+  simpa only [Field.div_eq_mul_inv] using hp
+
+theorem mirror_certificate_le_two (x : R) : mirrorCertificate x ≤ 2 := by
+  have hd := mirror_denominator_positive x
+  have hsq := OrderedRing.sq_nonneg (a := q3Numerator (-x))
+  have hid := mirror_denominator_identity x
+  have hn : (q3Numerator x)^2 ≤ 2*mirrorDenominator x := by grind
+  have hi := (Field.IsOrdered.inv_nonneg_iff (a := mirrorDenominator x)).mpr
+    (Preorder.le_of_lt hd)
+  have hp := OrderedRing.mul_le_mul_of_nonneg_right hn hi
+  have hne : mirrorDenominator x ≠ 0 := by grind
+  unfold mirrorCertificate
+  rw [Field.div_eq_mul_inv]
+  have hcancel := Field.mul_inv_cancel hne
+  grind
+
+theorem mirror_certificate_negative_majorant (x : R) (hx : x ≤ 0) :
+    1 ≤ mirrorCertificate x := by
+  have ht : 0 ≤ -x := by grind
+  have ht2 := OrderedRing.mul_nonneg ht ht
+  have ht3 := OrderedRing.mul_nonneg ht2 ht
+  have ht5 := OrderedRing.mul_nonneg ht3 ht2
+  have h1 := OrderedRing.mul_nonneg (OrderedRing.ofNat_nonneg (R := R) 41472816) ht
+  have h3 := OrderedRing.mul_nonneg (OrderedRing.ofNat_nonneg (R := R) 131040168) ht3
+  have h5 := OrderedRing.mul_nonneg (OrderedRing.ofNat_nonneg (R := R) 28469952) ht5
+  have hn : mirrorDenominator x ≤ (q3Numerator x)^2 := by
+    unfold mirrorDenominator q3Numerator
+    grind
+  have hd := mirror_denominator_positive x
+  have hdiv := (Field.IsOrdered.le_mul_inv_iff_mul_le (1 : R)
+    ((q3Numerator x)^2) hd).mpr (by grind)
+  unfold mirrorCertificate
+  simpa only [Field.div_eq_mul_inv] using hdiv
+
+theorem mirror_denominator_dominates (α x : R)
+    (hα : 0 ≤ α) (hαone : α ≤ 1)
+    (hαcube : 2519^2*α^3 ≤ (1932 : R)^2) :
+    certificateDenominator α x ≤ mirrorDenominator x := by
+  have h2 := OrderedRing.sq_nonneg (a := x)
+  have h4 := OrderedRing.mul_nonneg h2 h2
+  have h6 := OrderedRing.mul_nonneg h4 h2
+  have hα2 := OrderedRing.mul_le_mul_of_nonneg_left hαone hα
+  have hc2 : (0 : R) ≤ 104885808-19036083*α := by grind
+  have hc4 : (0 : R) ≤ 86095872-19036083*α^2 := by grind
+  have hc6 : (0 : R) ≤ 3732624-6345361*α^3 := by grind
+  have hp2 := OrderedRing.mul_nonneg hc2 h2
+  have hp4 := OrderedRing.mul_nonneg hc4 h4
+  have hp6 := OrderedRing.mul_nonneg hc6 h6
+  unfold certificateDenominator mirrorDenominator
+  grind
+
 variable [DecidableLE R]
 
 /-- The bad count includes equality at the spectral threshold. -/
@@ -210,6 +290,40 @@ theorem finite_bounded_certificate_counting
     (xs.countP (fun x => decide (x ≤ ε))) target collar simple deficit
     hcount hbad hdeficit
 
+/-- The reflected-square certificate controls equality at the threshold. -/
+theorem mirror_threshold_count_cap (xs : List R) (ε : R)
+    (hcap : 10*(xs.map (fun x => mirrorCertificate (x-ε))).sum
+      ≤ (xs.length : R)) :
+    10*xs.countP (fun x => decide (x ≤ ε)) ≤ xs.length := by
+  apply tenth_count_cap xs (fun x => decide (x ≤ ε))
+    (fun x => mirrorCertificate (x-ε))
+  · intro x _
+    exact mirror_certificate_nonnegative (x-ε)
+  · intro x _ hx
+    have hxle : x ≤ ε := of_decide_eq_true hx
+    have hshift : x-ε ≤ 0 := by grind
+    exact mirror_certificate_negative_majorant (x-ε) hshift
+  · exact hcap
+
+theorem finite_mirror_certificate_counting
+    (xs : List R) (ε : R)
+    (s₁ s₂ pairs positive target collar simple deficit : Nat)
+    (hcap : 10*(xs.map (fun x => mirrorCertificate (x-ε))).sum
+      ≤ (xs.length : R))
+    (hinertia : positive ≤ s₁+s₂+pairs)
+    (hmultiplicity : s₁+2*s₂+2*pairs ≤ target+collar)
+    (hspectral : xs.length ≤ positive+xs.countP (fun x => decide (x ≤ ε)))
+    (hremove : s₁ ≤ simple+collar)
+    (hdeficit : target ≤ xs.length+deficit) :
+    4*target ≤ 5*simple+10*collar+9*deficit := by
+  have hcount := simple_collar_accounting s₁ s₂ pairs positive xs.length
+    (xs.countP (fun x => decide (x ≤ ε))) target collar simple
+    hinertia hmultiplicity hspectral hremove
+  have hbad := mirror_threshold_count_cap xs ε hcap
+  exact eighty_percent_accounting xs.length
+    (xs.countP (fun x => decide (x ≤ ε))) target collar simple deficit
+    hcount hbad hdeficit
+
 end OrderedField
 
 theorem cubic_model_cap : (247 : Rat)/2519 < 1/10 := by decide +kernel
@@ -243,3 +357,11 @@ end ZeroZeta
 #print axioms ZeroZeta.cubic_counting_conversion
 #print axioms ZeroZeta.cubic_model_trace_identity
 #print axioms ZeroZeta.rational_parameter_admissible
+#print axioms ZeroZeta.mirror_denominator_identity
+#print axioms ZeroZeta.mirror_denominator_positive
+#print axioms ZeroZeta.mirror_certificate_nonnegative
+#print axioms ZeroZeta.mirror_certificate_le_two
+#print axioms ZeroZeta.mirror_certificate_negative_majorant
+#print axioms ZeroZeta.mirror_denominator_dominates
+#print axioms ZeroZeta.mirror_threshold_count_cap
+#print axioms ZeroZeta.finite_mirror_certificate_counting

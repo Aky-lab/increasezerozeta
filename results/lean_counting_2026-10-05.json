@@ -1,12 +1,12 @@
 {
-  "generated_at_utc": "2026-10-05T19:21:26.985429+00:00",
+  "generated_at_utc": "2026-10-05T19:53:09.711067+00:00",
   "status": "Lean kernel accepted the scalar and finite conditional counting proofs; arithmetic cap unproved",
   "lean_version": "Lean (version 4.33.0, x86_64-w64-windows-gnu, commit d8b18978322de05a8f3dba51ef03cf5461676c17, Release)",
   "source": "formal/CountingBridge.lean",
-  "source_sha256": "d922c10c29fe6ecc0b38d1e372179b33e13c9346fbba6d8eb1aae0ead6154257",
+  "source_sha256": "e57e14d83f839fb9ead7b489c5a6df21dabd2c277b36226add451de632843c0c",
   "toolchain_sha256": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b",
-  "checker_sha256": "504574991193ab4d308397b3f83aafd1660551fa5533a6a233198fd3b99dc1d7",
-  "theorem_count": 18,
+  "checker_sha256": "708d8d9aa39746016018fd973d4055eee5d8512294b0487efe29375e5fe88b77",
+  "theorem_count": 26,
   "axiom_dependencies": {
     "simple_accounting": [
       "propext",
@@ -92,6 +92,46 @@
       "propext",
       "Classical.choice",
       "Quot.sound"
+    ],
+    "mirror_denominator_identity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "mirror_denominator_positive": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "mirror_certificate_nonnegative": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "mirror_certificate_le_two": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "mirror_certificate_negative_majorant": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "mirror_denominator_dominates": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "mirror_threshold_count_cap": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "finite_mirror_certificate_counting": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
     ]
   },
   "allowed_standard_axioms": [
@@ -100,7 +140,7 @@
     "propext"
   ],
   "lean_exit_code": 0,
-  "lean_stdout": "'ZeroZeta.simple_accounting' depends on axioms: [propext, Quot.sound]\n'ZeroZeta.simple_collar_accounting' depends on axioms: [propext, Quot.sound]\n'ZeroZeta.distinct_collar_accounting' depends on axioms: [propext, Quot.sound]\n'ZeroZeta.eighty_percent_accounting' depends on axioms: [propext, Quot.sound]\n'ZeroZeta.ninety_percent_distinct_accounting' depends on axioms: [propext, Quot.sound]\n'ZeroZeta.certificate_denominator_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.bounded_certificate_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.negative_certificate_numerator' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.bounded_certificate_negative_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.count_le_certificate_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.tenth_count_cap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.threshold_count_cap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.finite_bounded_certificate_counting' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.cubic_model_cap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.cubic_model_margin' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.cubic_counting_conversion' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.cubic_model_trace_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.rational_parameter_admissible' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+  "lean_stdout": "'ZeroZeta.simple_accounting' depends on axioms: [propext, Quot.sound]\n'ZeroZeta.simple_collar_accounting' depends on axioms: [propext, Quot.sound]\n'ZeroZeta.distinct_collar_accounting' depends on axioms: [propext, Quot.sound]\n'ZeroZeta.eighty_percent_accounting' depends on axioms: [propext, Quot.sound]\n'ZeroZeta.ninety_percent_distinct_accounting' depends on axioms: [propext, Quot.sound]\n'ZeroZeta.certificate_denominator_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.bounded_certificate_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.negative_certificate_numerator' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.bounded_certificate_negative_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.count_le_certificate_sum' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.tenth_count_cap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.threshold_count_cap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.finite_bounded_certificate_counting' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.cubic_model_cap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.cubic_model_margin' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.cubic_counting_conversion' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.cubic_model_trace_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.rational_parameter_admissible' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.mirror_denominator_identity' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.mirror_denominator_positive' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.mirror_certificate_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.mirror_certificate_le_two' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.mirror_certificate_negative_majorant' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.mirror_denominator_dominates' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.mirror_threshold_count_cap' depends on axioms: [propext, Classical.choice, Quot.sound]\n'ZeroZeta.finite_mirror_certificate_counting' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
   "rejected_gate_cases": [
     "compile_error",
     "missing_theorem_report",
