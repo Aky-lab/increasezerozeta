@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T14:08:53.265318+00:00",
+  "generated_at_utc": "2026-10-05T14:29:41.036524+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "94fa16af05b2e5631216c4e306fb620136df369a4f0b63ba0c6fe1d06e9d0dc7",
+  "runner_sha256": "6f851f33d8792d95481edeec3dd18aa1308024fad9ef621d80792417057cf7c2",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -27,12 +27,13 @@
     "scripts/verify_cue_model.py": "7ade82e2b9c104ca851f6b9bf73b73653926888bdd90c4736472920f182646e2",
     "scripts/verify_cycle_eight_lattice.py": "a5aaae108761fdf0291cbddcb561aea3628c162d59cfdc1f83215eb1f449dae4",
     "scripts/verify_lemmas.py": "a5d3fb7a7b7460a182773fc743b329d8e593e94a30ecf50d7a82bc9b1619a125",
+    "scripts/verify_lock_frame.py": "31c66514072a4e4f71b53b7938513e8489b9bbf943c857dbe5163fce3944ec56",
     "scripts/verify_mixed_cycles.py": "1773ecc9ef8357e6f3406f2262350bb50cfb8d47966a81174c30efd870ab1663",
     "scripts/verify_model_certificates.py": "82eeb6c7bd3b4e4c22547fce0f4066f86927b22eb22a25b88ead8ff23cf25874",
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
     "scripts/verify_presieved_pairs.py": "93bf6795ea056efe1f8d67cc2146da87fab0bbf0b53ebe3db6d3bbf9889df995",
     "scripts/verify_prime_pair_transport.py": "c2f0d53493c0cc0727a95faa6b157dd2e030548a2510041ca60a02dc4b209735",
-    "scripts/verify_project.py": "94fa16af05b2e5631216c4e306fb620136df369a4f0b63ba0c6fe1d06e9d0dc7",
+    "scripts/verify_project.py": "6f851f33d8792d95481edeec3dd18aa1308024fad9ef621d80792417057cf7c2",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
     "scripts/verify_short_window_transport.py": "6a70c7c764aebb31b28505e7b7aa5a214e08224a4bf63c4b7099daca584c7ef1",
@@ -90,6 +91,15 @@
       "scope": "finite presieved Fourier coefficients, CRT pair main terms, Rankin Euler factors and Parseval",
       "exit_code": 0,
       "stdout": "Exact Ramanujan/direct-period/CRT pair densities: 1113\nInterval main-term and residue-count bounds: 4452\nRankin Euler expansion/count cases: 18\nIndependent Laurent/position autocorrelation Parseval cases: 36\nFinite comb audits passed; asymptotic prime input remains explicitly cited.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_lock_frame.py",
+      "sha256": "31c66514072a4e4f71b53b7938513e8489b9bbf943c857dbe5163fce3944ec56",
+      "scope": "resolved lock transforms, nonperiodic counterexamples, full-lock transport, cubic identities and quadratic characters",
+      "exit_code": 0,
+      "stdout": "Exact resolved two-dimensional transform cases: 128\nFull-lock transform/product/stability frequency cases: 252\nNonperiodic counterexamples passed; dilation cases: 16\nCubic identity and raised rational stability cases: 8\nQuadratic Gauss/cancellation cases: (39, 232)\nResolved frame audits passed; no prime-specific variance theorem is inferred.\n",
       "stderr": "",
       "passed": true
     },

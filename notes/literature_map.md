@@ -63,6 +63,18 @@ then controls long interactions uniformly. The matrix inequality and the
 ergodic theorem are established background; the specific application and
 its proof require independent review and further priority assessment.
 
+## Arithmetic lock transport
+
+The [resolved lock frame](resolved_lock_frame.md) compares the reference's
+one-dimensional autocorrelation convolution with the actual restricted
+four-point array. The full-lock product identity remains valid. The
+restriction requires another estimate; separate spectra cannot recover it
+for general nonnegative densities. MRSTT II's qualitative Gowers input
+is distinct from its logarithmically quantitative Fourier theorem.
+The use of cubic uniformity and quadratic-phase obstructions is established
+background; the exact frame audit and consumption bounds need independent
+review and priority assessment.
+
 ## Review targets
 
 - Compare the finite CUE network representation with existing dependent-phase

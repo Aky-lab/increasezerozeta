@@ -102,6 +102,14 @@ without assuming independent prime chains. Prescribed individual windows,
 four-prime locks and the final zeta reduction remain open. Independent
 review and priority assessment are still needed.
 
+[The resolved lock audit](../notes/resolved_lock_frame.md) identifies an
+information loss in a proposed Fourier reduction: separate power spectra
+can agree while resolved four-point variances differ. It supplies exact
+nonnegative counterexamples, the correct two-dimensional transform, a
+valid full-lock stability theorem and a cubic-uniformity replacement
+criterion. This narrows the missing arithmetic input and prevents an
+aggregated statistic from being consumed as a resolved variance.
+
 ## Pilot milestones
 
 | Period | Work | Deliverable |

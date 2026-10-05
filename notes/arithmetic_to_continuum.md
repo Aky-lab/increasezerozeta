@@ -405,6 +405,13 @@ multiplicity. Its consumption norm retains the position and window scales.
 It does not replace a common-position four-prime lock by independent
 chains, and it does not establish the final zeta normalization.
 
+The [resolved frame audit](resolved_lock_frame.md) separates a convolution
+of autocorrelations from the two-coordinate four-prime lock variance.
+Its nonnegative counterexamples rule out a general identity based only
+on separate power spectra. The valid full-lock theorem loses a factor Y
+when restricted to the raw rectangle scale; cubic or equivalent relative
+uniformity must be supplied before that gap is charged as a vanishing error.
+
 ## 7. Target for a full one-percentage-point improvement
 
 If all non-vanishing remainder terms are combined *after being individually identified* into

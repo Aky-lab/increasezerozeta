@@ -89,6 +89,7 @@ the positive moment cone and alternative supplied inputs.
 5. Evaluate further moments and connected covariance coefficients efficiently, and extend the polynomial-statistic CLT to wider test-function classes.
 6. Extend the [verified literature comparison](notes/literature_map.md) and review the network/Gram application and reduced certificate method.
 7. Independently review the global CUE/sine-process comparison, its normalization, boundary terms and removal of the interaction cutoff.
+8. Establish a relative cubic-uniformity or equivalent restricted-lock estimate with the actual dilation and consumption budgets in the [resolved frame](notes/resolved_lock_frame.md).
 
 A certified finite integral, an assembled model moment and an established
 arithmetic zeta moment are distinct stages. The remaining analytic work is
@@ -258,3 +259,29 @@ The estimate averages over both positions and shifts. Restricting to a
 shorter shift interval retains the Y^3 bound; no H Y^2 saving is inferred.
 Prescribed starts, common-position four-prime locks and the actual zeta
 counting interface remain distinct research targets.
+
+## Resolved lock transport and an information-loss obstruction
+
+[The resolved lock frame](notes/resolved_lock_frame.md) proves that the
+one-dimensional convolution of autocorrelations gives an aggregated
+four-point statistic, while the restricted squared lock count has a
+two-dimensional transform. Two nonnegative integer sequences with the
+same autocorrelation give positive-shift squared counts 292 and 220
+against the same second sequence. Thus a general bridge to the resolved
+variance cannot use those separate power spectra alone.
+
+A full-lock stability theorem is valid for every fixed number of slots,
+with maximal Fourier errors and the other slots' energies. Published
+short-window input therefore gives an averaged full-lock prime-model
+replacement, including dilated lattices and coupled start histograms.
+Restricting a four-slot array to rectangle locks retains a Y^5 error
+scale, whereas the raw rectangle's natural squared scale is Y^4.
+
+The symmetric rectangle norm is exactly a cubic Gowers norm. A bounded
+nonnegative quadratic-phase example has vanishing normalized maximal
+Fourier error but nonvanishing normalized rectangle discrepancy. This
+specifies why a generic Fourier-only repair is insufficient. The cited
+prime U^3 input is qualitative and uses Lambda_w; it must not be changed
+to an arbitrary logarithmic saving or to Lambda_sharp without proof.
+These are algebraic and conditional transport results, not a falsification
+of a separately proved prime-specific theorem or a new zeta-zero bound.

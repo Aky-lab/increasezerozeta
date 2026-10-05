@@ -17,6 +17,7 @@ CHECKS = (
     ("verify_prime_pair_transport.py", "divisor-family aggregation and published-input prime-pair error bookkeeping"),
     ("verify_short_window_transport.py", "integer-window discretization, Abel weights and coupled-product marginal concentration"),
     ("verify_presieved_pairs.py", "finite presieved Fourier coefficients, CRT pair main terms, Rankin Euler factors and Parseval"),
+    ("verify_lock_frame.py", "resolved lock transforms, nonperiodic counterexamples, full-lock transport, cubic identities and quadratic characters"),
     ("christoffel_exact.py", "exact moment consumption for supplied moments"),
     ("k8_target.py", "exact target geometry for supplied moments"),
     ("verify_spectator_reduction.py", "finite rational checks of actual-walk exact-v reduction"),

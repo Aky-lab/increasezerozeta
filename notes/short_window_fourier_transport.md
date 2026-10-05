@@ -221,6 +221,11 @@ estimate averaged over integer starts and shifts. This closes the averaged
 pair calculation in that note's range; it does not supply the higher lock
 geometry or the arithmetic-to-continuum normalization required above.
 
+The [resolved frame theorem](resolved_lock_frame.md) also applies (3) to
+the full multi-coordinate lock array through its exact Fourier transform.
+It states the loss when restricting that array to rectangle locks and
+the cubic replacement norm for the resulting four-point variance.
+
 `python scripts/verify_short_window_transport.py` checks integer-cell
 constancy, discrete partial summation on all small progressions, coupled
 product telescoping and weighted start histograms, exceptional-set

@@ -279,3 +279,8 @@ and they are not those of a naive denominator-truncated twin series.
 Neither the approximation nor (2) contradicts the earlier subpower
 cutoff obstruction. The actual higher-moment lock variance and final
 zeta counting interface remain open.
+
+The [resolved frame audit](resolved_lock_frame.md) gives exact counterexamples
+to inferring a four-prime lock variance from the separate pair spectra.
+It states the valid full-lock replacement and the extra cubic-uniformity
+criterion needed for the rectangle restriction.
