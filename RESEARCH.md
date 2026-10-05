@@ -125,6 +125,19 @@ it does not assume that six-prime configurations reduce to four-prime
 locks. These analytic deductions await independent review, and the
 off-balance estimate remains unproved.
 
+The [finite-frame second-moment proof](notes/prime_second_moment.md)
+discharges O_2=o(1) with an explicit O_(lambda,chi)(X/(T*ell)) bound,
+using Montgomery--Vaughan's periodic weighted cosecant inequality.
+Opposite signs have a separable taper amplitude, while the same-sign
+alias denominator is canceled by its overlap factor. A two-sided
+projection-leakage argument improves the word error to O_j(log(d)/d).
+This recovers the actual normalized moments 1 and 1+lambda^2/3 and
+removes order two from the remaining cubic signed target. The result
+is a reconstruction of established second-moment information; its
+normalization and proof await independent review. Absolute summation
+of the general word error only gives a vanishing envelope when
+j*lambda/2<=1. At unit bandwidth this does not cover higher degrees.
+
 ## Structural results beyond enumeration
 
 For the lifted network polytopes, the all-ones direction and Ehrhart

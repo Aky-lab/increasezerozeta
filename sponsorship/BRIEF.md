@@ -33,6 +33,13 @@ Its balanced contribution is approximately 0.160833, so at least
 independently reviewing that cancellation is a concrete support milestone;
 the estimate itself remains open.
 
+The [finite-frame second-moment proof](../notes/prime_second_moment.md)
+now recovers the known arithmetic second moment in these conventions,
+with explicit projection and sampled mean-value errors. Its second
+off-balance contribution vanishes, leaving orders three through six
+in the cubic target. The proof tracks the boundary cost that higher
+moments still need to overcome and attributes its classical input.
+
 ## Structural research and computational value
 
 [Centered reciprocity](../notes/centered_reciprocity.md) reduces the number of

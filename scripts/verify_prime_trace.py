@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-"""Exact finite checks of the actual-prime trace decomposition.
+"""Finite exact algebra and numerical calibrations of prime trace formulas.
 
 The cyclic-frame checks calibrate algebra and Fourier factors. They do not
 prove any asymptotic off-balance prime estimate or certify analytic proofs.
 """
 import argparse
+import cmath
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from fractions import Fraction as F
 from itertools import product
 import json
-from math import comb
+from math import comb, log, pi, sin, sqrt
 from pathlib import Path
 import random
 
@@ -226,6 +227,94 @@ def telescoping_checks(q):
     return 24
 
 
+def double_leakage_checks():
+    """Independent full-frame products versus compressed two-factor products."""
+    frame = frames(tuple(range(N)))
+    operators = {s:scale(a,F(1,N)) for s,a in frame.items()}
+    cases = 0
+    for d in range(1,N):
+        for s,t in product(range(-3,4),repeat=2):
+            a,b = operators[s],operators[t]
+            sub_a = [row[:d] for row in a[:d]]
+            sub_b = [row[:d] for row in b[:d]]
+            compressed = trace(multiply(sub_a,sub_b))
+            full = sum(multiply(a,b)[i][i] for i in range(d))
+            crossing = sum((a[i][k]*b[k][i]
+                            for i in range(d) for k in range(d,N)),ZERO)
+            assert full-compressed == crossing
+            left = sum(a[i][k].re**2+a[i][k].im**2
+                       for i in range(d) for k in range(d,N))
+            right = sum(b[k][i].re**2+b[k][i].im**2
+                        for i in range(d) for k in range(d,N))
+            assert crossing.re**2+crossing.im**2 <= left*right
+            amplitude = sum(PHI[u]*PHI[(u+s+t)%N]*PHI[(u+s)%N]**2
+                            for u in range(N))/N
+            geometric = sum((phase(-i*(s+t)) for i in range(d)),ZERO)*F(1,d)
+            assert full*F(1,d) == amplitude*geometric
+            cases += 1
+    return cases
+
+
+def logarithmic_mean_value_calibrations():
+    """Numerical finite calibrations; not a proof of the cited inequality."""
+    prime_powers = ((2,2),(3,3),(4,2),(5,5),(7,7),(8,2),(9,3),
+                    (11,11),(13,13),(16,2),(17,17),(19,19),(23,23),
+                    (25,5),(27,3),(29,29),(31,31),(32,2),(37,37))
+    length = log(40)
+    frequency = [log(n) for n,p in prime_powers]
+    for i,(n,p) in enumerate(prime_powers):
+        circular = min(min(abs(frequency[i]-s),length-abs(frequency[i]-s))
+                       for j,s in enumerate(frequency) if i!=j)
+        assert circular+1e-14 >= 1/(2*n)
+    mean_cases,geometric_cases = 0,0
+    for start,d in product((0.0,10.0,123.5),(1,7,31,80)):
+        kernel = []
+        for i,s in enumerate(frequency):
+            row = []
+            for j,t in enumerate(frequency):
+                delta = s-t
+                direct = sum(cmath.exp(-1j*(start+2*pi*a/length)*delta)
+                             for a in range(d))/d
+                if i!=j:
+                    endpoint = (cmath.exp(-1j*(start-pi/length)*delta)
+                                -cmath.exp(-1j*(start+(2*d-1)*pi/length)*delta))
+                    endpoint /= 2j*d*sin(pi*delta/length)
+                    assert abs(direct-endpoint)<1e-10
+                    geometric_cases += 1
+                row.append(direct)
+            kernel.append(row)
+        for v in (length/8,length/3,length/2):
+            coefficients = [log(p)/sqrt(n)*max(0.0,1-4*(v-s)**2/length**2)
+                            *cmath.exp(0.31j*n)
+                            for (n,p),s in zip(prime_powers,frequency)]
+            actual = sum(abs(sum(x*cmath.exp(-1j*(start+2*pi*a/length)*s)
+                                 for x,s in zip(coefficients,frequency)))**2
+                         for a in range(d))/d
+            diagonal = sum(abs(x)**2 for x in coefficients)
+            off = sum(coefficients[i]*coefficients[j].conjugate()*kernel[i][j]
+                      for i in range(len(coefficients))
+                      for j in range(len(coefficients)) if i!=j)
+            assert abs(actual-diagonal-off)<1e-9
+            energy = sum(n*abs(x)**2 for (n,p),x in zip(prime_powers,coefficients))
+            assert abs(off)<=3*length*energy/d+1e-9
+            mean_cases += 1
+    alias_cases = 0
+    for length in (3.0,5.0,10.0,100.0):
+        for fraction in (0.0,0.25,0.5,0.9,0.99,0.99999):
+            s = log(4)+(length-log(4))*fraction
+            ratio = (1-s/length)/sin(pi*s/length)
+            assert ratio<=length/(2*log(4))+1e-9
+            alias_cases += 1
+    exponents = []
+    for degree in range(2,9):
+        for bandwidth in (F(1),F(2,degree),F(1,4)):
+            exponent = degree*bandwidth/2-1
+            assert (exponent<=0)==(degree*bandwidth<=2)
+            exponents.append({'degree':degree,'bandwidth':str(bandwidth),
+                              'power_exponent':str(exponent)})
+    return mean_cases,geometric_cases,alias_cases,exponents
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path)
@@ -269,6 +358,8 @@ def main():
     loops = closed_loop_checks()
     classifications = prime_word_classification()
     telescope = telescoping_checks(q)
+    double_leakage = double_leakage_checks()
+    means,geometric,aliases,envelopes = logarithmic_mean_value_calibrations()
     leakage = 0
     for d in range(1,12):
         for shift in range(-17,18):
@@ -276,7 +367,7 @@ def main():
             leakage += 1
     report = {
         'generated_at_utc':datetime.now(timezone.utc).isoformat(),
-        'status':'finite algebra checked; analytic proof draft; off-balance target unproved',
+        'status':'finite algebra and numerical calibrations checked; analytic proof draft; higher off-balance target unproved',
         'p3_coefficients':[str(x) for x in p],
         'squared_prime_polynomial_coefficients':[str(x) for x in coeff],
         'unit_bandwidth_balanced_limits':[str(x) for x in diagonal],
@@ -296,11 +387,18 @@ def main():
         'integer_product_classifications':classifications,
         'noncommuting_telescoping_cases':telescope,
         'projection_leakage_count_cases':leakage,
+        'exact_double_projection_and_open_word_cases':double_leakage,
+        'numerical_logarithmic_sampled_mean_value_cases':means,
+        'numerical_geometric_endpoint_cases':geometric,
+        'numerical_same_sign_alias_cases':aliases,
+        'absolute_frame_envelope_exponents':envelopes,
+        'analytic_second_off_balance_status':'published-input deduction in proof draft; O2=o(1)',
+        'remaining_cubic_off_balance_orders':[3,4,5,6],
         'limitations':[
             'Finite cyclic frames calibrate Fourier algebra, not continuous asymptotics.',
             'The analytic Schatten and balanced-prime proofs require independent review.',
             'No actual off-balance prime estimate is established by these checks.',
-            'Model off-balance constants are targets, not actual prime moment evaluations.',
+            'Higher model off-balance constants are targets, not actual prime moment evaluations.',
             'No new unconditional zeta-zero counting bound follows.',
         ],
     }
@@ -308,6 +406,7 @@ def main():
         args.output.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print(f'PASS: {fourier} exact Fourier entries, six word-ledger degrees,')
     print(f'      {loops} periodic closed loops and {telescope} noncommuting telescopes.')
+    print(f'      {double_leakage} exact double-leakage cases, {means} sampled mean-value calibrations.')
     print('Balanced trace limit:',balanced)
     print('Unproved off-balance cap for 80%:',off_cap)
 

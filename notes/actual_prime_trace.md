@@ -253,6 +253,14 @@ Indeed |sin(pi*s/L)|>=2*min(s,L-s)/L. Chebyshev partial summation
 gives sum_(n<=X) Lambda(n)/sqrt(n)=O(sqrt(X)). Division by C*d yields
 M_1=O(sqrt(X)/(ell1*T))=o(1). Since D_1=0, O_1=o(1) as well.
 
+The [finite-frame second-moment derivation](prime_second_moment.md)
+also proves O_2=O_(lambda,chi)(X/(T*ell))=o(1), using the published
+weighted cosecant inequality. It supplies a stronger O_j(log(2*d)/d)
+open-word frame estimate and retains all errors when summing the
+two-prime expression. Thus the full second moment is lambda^2/3.
+This recovers a known arithmetic input; higher off-balance moments
+remain separate obligations.
+
 ## 6. The precise unproved off-balance target
 
 With q3 from the bridge, put p3(h)=q3(1-h). Then
@@ -271,7 +279,8 @@ off-balance values
 
     (o_2,...,o_6)=(0,0,-1/60,-1/36,-79/1260),
 
-which have not been established for actual primes. The balanced part
+The second off-balance value is established in the linked proof draft;
+the higher values have not been established for actual primes. The balanced part
 of the squared certificate tends exactly to
 
     A_diag=(c_0+c_2/3+4*c_4/15+32*c_6/105)/6345361
@@ -279,16 +288,17 @@ of the squared certificate tends exactly to
 
 It exceeds the desired cap 0.1. The required cancellation is therefore
 substantial: ignoring all off-balance terms cannot prove the cap.
-By (5), (10) and O_1=o(1), the actual degree-three 80% target is equivalent
+By (5), (10), O_1=o(1) and O_2=o(1), the actual degree-three 80% target is equivalent
 to the following **unproved signed arithmetic estimate**:
 
-    limsup_(T->infinity) [sum_(j=2..6) c_j*O_j(T)]/6345361
+    limsup_(T->infinity) [sum_(j=3..6) c_j*O_j(T)]/6345361
       <= 1/10-A_diag
        =-3860057/63453610 = -0.06083274064....                 (12)
 
 The full model predicts -1991744/31726805, approximately -0.062777957,
 leaving the same exact excess allowance 49/25190 as the bridge.
 Equivalently one may bound sum c_j*(O_j-o_j)/6345361 by that allowance.
+The sum can begin at j=3 because its j=2 term tends to zero.
 No absolute-value bound or separate autocorrelation theorem supplies
 the negative upper bound in (12) automatically.
 
@@ -317,6 +327,9 @@ approximately -0.216910864, leaving the larger excess allowance
 requirements of the two certificates; they prove neither off-balance
 cap. The quartic route needs words through length eight and permits
 more error, while the cubic route needs words only through length six.
+The second off-balance term vanishes in both routes. The finite-frame
+note quantifies why its absolute boundary-error argument cannot be
+promoted to higher unbalanced moments at unit bandwidth.
 
 ## Verification and scope
 

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T18:06:43.378966+00:00",
+  "generated_at_utc": "2026-10-05T18:21:33.906141+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "3d53c51ba82337a413391ecab71e95bdbb795ff74bde399e0ad5e86513b2ec6a",
+  "runner_sha256": "857f33ee2ff2e4ea6714c66e92bcdc424b25ba1b5dc29b6f0e9be60437806a7a",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -36,9 +36,9 @@
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
     "scripts/verify_presieved_pairs.py": "93bf6795ea056efe1f8d67cc2146da87fab0bbf0b53ebe3db6d3bbf9889df995",
     "scripts/verify_prime_pair_transport.py": "c2f0d53493c0cc0727a95faa6b157dd2e030548a2510041ca60a02dc4b209735",
-    "scripts/verify_prime_trace.py": "4d97e9b3520bf87efd8aaae1e38054ef27a52b0b12aa37bd0ad55865d4099edd",
+    "scripts/verify_prime_trace.py": "bd6d00670593bc431b255e9f1f65d21d3a3c9ad0026382aa8ca7d707baa0843a",
     "scripts/verify_progression_profile.py": "3f271788f9d1fd5340cbea4855cc5d35a844052b6d30731d94b5a181221a751a",
-    "scripts/verify_project.py": "3d53c51ba82337a413391ecab71e95bdbb795ff74bde399e0ad5e86513b2ec6a",
+    "scripts/verify_project.py": "857f33ee2ff2e4ea6714c66e92bcdc424b25ba1b5dc29b6f0e9be60437806a7a",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
     "scripts/verify_rectangle_tail.py": "057311dda5e6a07a5fca63fc4f127fde7568145dd3745544effa604dbd54ea59",
@@ -186,10 +186,10 @@
     },
     {
       "script": "scripts/verify_prime_trace.py",
-      "sha256": "4d97e9b3520bf87efd8aaae1e38054ef27a52b0b12aa37bd0ad55865d4099edd",
-      "scope": "exact cyclic Fourier normalization, balanced/off-balance word ledgers, closed-loop overlaps, prime-base classification, noncommuting telescoping and signed trace budgets",
+      "sha256": "bd6d00670593bc431b255e9f1f65d21d3a3c9ad0026382aa8ca7d707baa0843a",
+      "scope": "exact cyclic Fourier normalization, balanced/off-balance word ledgers, open/closed-loop overlaps, prime-base classification, noncommuting telescoping, two-sided projection leakage, sampled mean-value calibrations and signed trace budgets",
       "exit_code": 0,
-      "stdout": "PASS: 63 exact Fourier entries, six word-ledger degrees,\n      174 periodic closed loops and 24 noncommuting telescopes.\nBalanced trace limit: 5102709/31726805\nUnproved off-balance cap for 80%: -3860057/63453610\n",
+      "stdout": "PASS: 63 exact Fourier entries, six word-ledger degrees,\n      174 periodic closed loops and 24 noncommuting telescopes.\n      147 exact double-leakage cases, 36 sampled mean-value calibrations.\nBalanced trace limit: 5102709/31726805\nUnproved off-balance cap for 80%: -3860057/63453610\n",
       "stderr": "",
       "passed": true
     },

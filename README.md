@@ -22,6 +22,8 @@ The [direct counting bridge](notes/spectral_counting_bridge.md) states and deriv
 
 The [actual prime-matrix derivation](notes/actual_prime_trace.md) removes the archimedean and pole terms in a normalized Schatten norm and evaluates the multiplicatively balanced prime contributions. At unit bandwidth their second, fourth and sixth moments tend to 1/3, 4/15 and 32/105, connecting actual arithmetic terms to the exact pair-cycle integrals. The cubic certificate's balanced contribution is approximately 0.160833. Its remaining signed off-balance contribution must be at most -0.060833 to meet the 0.1 cap. This analytic proof draft isolates the missing cancellation; it does not establish that estimate or a new zeta bound. Independent review remains necessary.
 
+The [finite-frame second-moment proof](notes/prime_second_moment.md) recovers the known arithmetic second moment using Montgomery--Vaughan's sampled weighted inequality. Its second off-balance term vanishes, leaving orders three through six in the cubic target. A sharper two-sided projection estimate tracks the finite-frame boundary cost and specifies why the same absolute summation cannot justify higher moments at unit bandwidth. This is a published-input deduction in proof-draft form, not a new counting record.
+
 See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 ## Structural research
