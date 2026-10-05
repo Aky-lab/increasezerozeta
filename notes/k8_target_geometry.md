@@ -9,7 +9,7 @@ Use the audited lower moments
     (m0,...,m6) = (1,1,4/3,2,13/4,101/18,640/63).
 
 Their reconstruction is in the [local-identity proof](model_local_identities.md),
-with the correction documented in the [pairing audit](../results/pairing_model_audit.md).
+with three-pair integration in the [pair-cycle note](../results/pairing_model_audit.md).
 
 ## Stieltjes floor
 

@@ -164,7 +164,7 @@ lattice enumeration.
 
 ## 5. Seventh-order consequence
 
-Combining C7=-17/360 with the exact corrected {5,2}=1/8 gives
+Combining C7=-17/360 with the exact {5,2}=1/8 gives
 
     685/36 + {5,2} + C7 = 3439/180.
 

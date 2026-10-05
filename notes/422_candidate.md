@@ -2,8 +2,7 @@
 
 The class consists of one connected four-block and two pairs on an
 eight-cycle. Its 210 placements split into 22 dihedral orbits.
-The [mixed-cycle certificate](mixed_cycle_flow_polytopes.md) confirms
-the earlier numerical candidate exactly:
+The [mixed-cycle certificate](mixed_cycle_flow_polytopes.md) gives
 
     {4,2,2} = -127/840.
 

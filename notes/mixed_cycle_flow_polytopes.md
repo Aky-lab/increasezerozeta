@@ -82,7 +82,7 @@ degree-seven polynomials and n=9 is held out.
 | {4,4} | 35 | 7 | 23/4536 |
 
 The lower-order mixed class recovers the reference -23/420. The
-{4,2,2} numerical candidate is confirmed. The earlier {6,2}=-1/20
+{4,2,2} value is -127/840. The {6,2}=-1/20
 candidate is rejected: the exact value is larger by 1/2835.
 
 [The record](../results/mixed_cycle_flow_2026-10-05.json) contains all

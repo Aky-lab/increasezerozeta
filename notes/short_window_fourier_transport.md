@@ -214,7 +214,7 @@ short-window endpoint deduction, with the exact restrictions stated.
 
 ## Finite verification
 
-The [finite presieved comb](presieved_pair_transport.md) now evaluates the
+The [finite presieved comb](presieved_pair_transport.md) evaluates the
 pair main term of a power-sized divisor approximation with its correct
 Fourier coefficients. It also gives an actual prime-pair mean-square
 estimate averaged over integer starts and shifts. This closes the averaged

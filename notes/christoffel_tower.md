@@ -140,7 +140,7 @@ The current conditional model sequence is
 The sixth-order value is assembled from certified class values and the
 [finite-model local identities](model_local_identities.md). The
 [pairing audit](../results/pairing_model_audit.md) explains its difference
-from the earlier supplied reference moment. Arithmetic transport and the
+from the separately specified reference moment. Arithmetic transport and the
 spectral/counting interface remain open.
 
 For this sequence,

@@ -133,7 +133,7 @@ The class subtraction is eta=delta_2, hence for M>=2,
       = log M + EulerGamma - 2
         + O_alpha(M^(-alpha)(1+log M)).                    (4)
 
-This proves the constant formerly read from the archive. It is not a fitted
+This derives the coefficient directly. It is not a fitted
 numerical slope. Partial summation also gives
 
     sum_(d>M) gamma_d^(1,1)

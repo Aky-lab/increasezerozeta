@@ -15,12 +15,8 @@ integer counts, multiplicities, orbit values and source hashes.
 `scripts/verify_pairing_model.py` independently enumerates every matching
 on small scalar grids without using dihedral reduction.
 
-Earlier midpoint calculations suggested this fraction. Their claimed
-three-pair calibration used an incorrect noncrossing grouping. The
-[pairing audit](../results/pairing_model_audit.md) explains why the direct
-three-pair value is 32/105 and independently integrates the adjacent
-and nested patterns. The exact four-pair value follows from its own
-certificate rather than that calibration.
+The [three-pair integration](../results/pairing_model_audit.md) gives
+32/105 by separately integrating adjacent and nested patterns.
 
 This certifies a finite continuum-model class. Its arithmetic
 interpretation remains open. The [complete eighth-order certificate](eighth_order_certificate.md)

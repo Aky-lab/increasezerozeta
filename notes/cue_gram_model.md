@@ -32,7 +32,7 @@ and the trace-cumulant formula below yield the exact identity
 
     n^(B+1) M_B(n) = sum_P S_P(n),
 
-where S_P is precisely the signed network count, now permitting singleton
+where S_P is precisely the signed network count, permitting singleton
 blocks as well. Each block must have total frequency zero. The inner count
 for its cyclic partition pi is max(n-range(prefixes(pi)),0), with coefficient
 (-1)^(number_of_blocks(pi)-1).

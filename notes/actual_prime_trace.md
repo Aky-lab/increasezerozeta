@@ -302,7 +302,7 @@ The sum can begin at j=3 because its j=2 term tends to zero.
 No absolute-value bound or separate autocorrelation theorem supplies
 the negative upper bound in (12) automatically.
 
-The next analytic obligation is now (12), with O_j defined by (6)-(7).
+The next analytic obligation is (12), with O_j defined by (6)-(7).
 Any regional progression replacement must first derive its coefficients
 from these sums and account for all configurations. The current
 four-prime transport results are not silently used for six-prime words.

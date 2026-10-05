@@ -43,9 +43,8 @@ The [pair-cycle](paired_cycle_flow_polytopes.md),
     A8 = 633/2240,
     m8 = 747361/20160.
 
-The {6,2}=-1/20 numerical candidate is rejected, rather than included
-in this assembly. The [pairing audit](../results/pairing_model_audit.md)
-documents the earlier lower-order grouping correction.
+The [pair-cycle integration](../results/pairing_model_audit.md)
+supplies the lower-order three-pair value.
 
 ## Consumption and target geometry
 

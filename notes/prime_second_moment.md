@@ -36,7 +36,7 @@ Their Hilbert--Schmidt norms are both O_j(sqrt(log(2*d))). Therefore
     |Tr(P*K_1*...*K_j*P)
        -Tr(P*K_1*P*...*P*K_j*P)| <= C_j*log(2*d).             (2)
 
-This improves the earlier one-leakage bound and holds for open words as
+This bound holds for open words as
 well as balanced words. No prime sum has yet been estimated.
 
 For s_1,...,s_j put p_0=0, p_i=sum_(k=1..i) s_k, S=p_j, and
@@ -144,7 +144,7 @@ bound the exact O_2=M_2-D_2. As d is comparable to L*T and L=lambda*ell,
 these estimates give (1). The balanced limit D_2->lambda^2/3 was derived
 in the actual-prime note using Mertens estimates and the pair overlap.
 
-In particular the normalized Schatten-two reduction there now gives
+In particular the normalized Schatten-two reduction there gives
 
     Tr(B_T)/d -> 1,
     Tr(B_T^2)/d -> 1+lambda^2/3.                             (10)
@@ -157,7 +157,7 @@ Their counting consequences are established background, not a new record.
 
 ## 6. What this removes from the remaining cap
 
-The degree-three target in the actual-prime note now needs only
+The degree-three target in the actual-prime note needs only
 
     limsup [c_3*O_3+c_4*O_4+c_5*O_5+c_6*O_6]/6345361
       <= -3860057/63453610,                                 (11)

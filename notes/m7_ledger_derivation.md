@@ -1,6 +1,6 @@
 # Bell(7) derivation of the seventh-moment ledger
 
-The [finite-model local identities](model_local_identities.md) prove singleton deletion and 3-block vanishing. The corrected model values {5,2}=1/8 and C7=-17/360 are exact; arithmetic transport remains unresolved.
+The [finite-model local identities](model_local_identities.md) prove singleton deletion and 3-block vanishing. The model values {5,2}=1/8 and C7=-17/360 are exact; arithmetic transport remains unresolved.
 
 ## 1. Bell(7) classes
 
@@ -142,4 +142,4 @@ The audited lower-moment inputs imply the Stieltjes floor
 The calculator in `scripts/m7_ledger.py` uses these model values by
 by default and accepts explicit overrides. Arithmetic transport and the
 spectral/counting interface remain analytic obligations; see
-[the pairing audit](../results/pairing_model_audit.md) for the lower-order correction.
+[the pairing audit](../results/pairing_model_audit.md) for the lower-order integration.

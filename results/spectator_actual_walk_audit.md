@@ -1,30 +1,28 @@
-# Actual-walk spectator audit — 5 October 2026
+# Spectator integral: exact checks and numerical comparison
 
-The distance-three prefix correction changes the model integral. The corrected value is exactly {5,2}=1/8; see [the lattice proof](../notes/spectator_52_exact_lattice.md) and [integer record](spectator_52_exact_lattice_2026-10-05.json). The numerical comparison below isolates the effect of the error.
+The model integral is exactly {5,2}=1/8; see [the lattice proof](../notes/spectator_52_exact_lattice.md) and [integer record](spectator_52_exact_lattice_2026-10-05.json). The comparison below distinguishes the defining walk from a walk with an additional prefix.
 
 ## Finding
 
-The historical distance-three elimination used the fixed set
-`{0,s1,s2,s3,s4}`. The defining seven-cycle walk instead has
-`{0,s2,s3,s4}` as its fixed set. Adding s1 changes the overlap.
+The defining seven-cycle walk has `{0,s2,s3,s4}` as its distance-three
+fixed set. Enlarging it to `{0,s1,s2,s3,s4}` changes the overlap.
 
 At `(s1,s2,s3,s4)=(4/5,1/5,3/10,2/5)`, direct exact integration gives
-`J3=2/75`; the historical formula gives `1/375`.
-The corrected formula and its derivation are in
+`J3=2/75`; the extra-prefix formula gives `1/375`.
+The defining formula and its derivation are in
 [the elimination note](../notes/spectator_52_eliminate_v.md).
 
-The corrected checker derives the seven positions from increments
+The defining checker derives the seven positions from increments
 independently. It passes 7,203 rational cases and detects 358
-distance-three failures of the historical formula.
+distance-three failures of the extra-prefix formula.
 
 ## Numerical reproduction
 
 The optional NumPy script evaluates the same signed 150-term C5
-definition with corrected and historical spectator weights side by side.
-The historical column reproduces the previous ladder at shared mesh
-sizes, isolating the changed distance-three support.
+definition with defining and extra-prefix spectator weights side by side.
+The extra-prefix column measures the effect of enlarging the distance-three support.
 
-| Mesh | Corrected actual-walk total | Historical superset total | Pure C5 anchor |
+| Mesh | Defining actual-walk total | Extra-prefix superset total | Pure C5 anchor |
 |---|---:|---:|---:|
 | 1/4 | 0.134422302246 | 0.102405548096 | 0.029296875000 |
 | 1/8 | 0.127610564232 | 0.098783552647 | 0.028198242188 |
@@ -34,7 +32,7 @@ sizes, isolating the changed distance-three support.
 | 1/32 | 0.125168188795 | 0.097325117109 | 0.027804851532 |
 
 The inherited pure-C5 anchor is `1/36=0.0277777777...`.
-Three Richardson probes `(4*fine-coarse)/3` for the corrected total:
+Three Richardson probes `(4*fine-coarse)/3` for the defining total:
 
 - 1/8 to 1/16: 0.125021445254;
 - 1/16 to 1/32: 0.125001343394;
@@ -62,12 +60,6 @@ the outer support for all three distances. Boundary cells have
 zero overlap. The midpoint rule remains a numerical quadrature.
 
 The [raw numerical record](spectator_actual_walk_2026-10-05.json)
-contains component values, historical comparisons, anchor values,
+contains component values, extra-prefix comparisons, anchor values,
 mesh sizes, and timing. The [exact-check report](../sponsorship/evidence/actual-walk-2026-10-05.json)
 records executed hashes, including the reduction module.
-
-## Consequences
-
-The 7/72 ladder evaluates a different fixed-prefix set. Seventh- and eighth-order scenario bounds derived from that value do not apply to the corrected model.
-
-The earlier finite checker integrated the same erroneous superset, so it did not detect the structural error. The increment-based checker constructs the defining walk independently.

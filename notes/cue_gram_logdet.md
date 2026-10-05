@@ -71,7 +71,7 @@ factor of two in L_n cancels the unordered-pair factor. The finite expansion
 
     |D_n(t)|^2=n+2 sum_(k=1)^(n-1) (n-k)cos(k t)
 
-now gives
+gives
 
     E L_n=sum_(k=1)^(n-1) (n-k)/k = n(H_n-1).
 

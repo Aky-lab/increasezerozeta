@@ -130,7 +130,7 @@ For general 0<=delta<=1 and 0<=u<=delta the actual square has side
 
     t=min(delta-u,(1-u)/2).
 
-The four swapped terms in section 2 now have values
+The four swapped terms in section 2 have values
 
     (y-x-u)_+, min(y,1-2u-x-y)_+, 0, min(x-y-u,y)_+.
 

@@ -96,11 +96,11 @@ overflow bounds and source hashes. Generation of this record took about
 nine seconds on the recorded local environment; this is a single run,
 not a hardware-independent benchmark.
 
-Every one of the 119 earlier aggregate counts and 641 earlier orbit counts
-matches the reduced polynomials, including counts beyond the new fit range.
-The {5,2} integral now also has a period-one network certificate with just
+Every one of the 119 independently generated aggregate counts and 641 independently generated orbit counts
+matches the reduced polynomials, including counts beyond the fit range.
+The {5,2} integral has a period-one network certificate with just
 three fit counts. Its three distance integrals are 5/504, 1/360 and 13/2520,
-and its aggregate is 1/8. The older spectator certificate used a different
+and its aggregate is 1/8. The weighted spectator certificate uses a different
 weighted lattice and a period-dividing-six bound; both give the same integral.
 
 ```sh

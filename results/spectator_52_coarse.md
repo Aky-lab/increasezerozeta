@@ -1,8 +1,8 @@
 # Numerical comparison for the extra-prefix spectator formula
 
-The table below records the earlier formula with the distance-three fixed set {0,s1,s2,s3,s4}. That set contains an extra s1 and evaluates a different integral from the defining walk.
+The table below records an extra-prefix formula with the distance-three fixed set {0,s1,s2,s3,s4}. That set contains an extra s1 and evaluates a different integral from the defining walk.
 
-The corrected model value is {5,2}=1/8 by [exact lattice evaluation](../notes/spectator_52_exact_lattice.md). The [actual-walk audit](spectator_actual_walk_audit.md) compares corrected and extra-prefix calculations.
+The model value is {5,2}=1/8 by [exact lattice evaluation](../notes/spectator_52_exact_lattice.md). The [actual-walk audit](spectator_actual_walk_audit.md) compares defining and extra-prefix calculations.
 
 ## Calibration: pure C5
 
@@ -36,4 +36,4 @@ The spectator frequency was integrated analytically, while the four remaining va
 | 0.0625 | 0.0099563102 | 0.0027934096 | 0.0011973564 | 0.0976295331 |
 | 0.0500 | 0.0099435807 | 0.0027878263 | 0.0011949089 | 0.0974842118 |
 
-These are numerical quadratures without error enclosures. Their apparent convergence toward 7/72 concerns the extra-prefix formula rather than the corrected model.
+These are numerical quadratures without error enclosures. Their apparent convergence toward 7/72 concerns the extra-prefix formula rather than the defining model.

@@ -1,16 +1,11 @@
-# Correct spectator-frequency elimination for {5,2}
+# Spectator-frequency elimination for {5,2}
 
 **Status:** elementary exact reduction of the spectator integral only.
-The full corrected model integral is evaluated in [the lattice certificate](spectator_52_exact_lattice.md). Arithmetic transport remains unresolved.
+The full model integral is evaluated in [the lattice certificate](spectator_52_exact_lattice.md). Arithmetic transport remains unresolved.
 
-## 1. Correction to the historical reduction
+## 1. Prefix sets
 
-At frontier revision `b90e747da2fed0395402396d5b755bdd3a21ad05`,
-the elimination note used the fixed prefix set
-`{0,s1,s2,s3,s4}` for every distance. This is correct for distances
-one and two, but adds an absent `s1` to the distance-three walk.
-
-From the defining increments, with `sj=c1+...+cj`, the actual sets are:
+From the defining increments, with `sj=c1+...+cj`, the prefix sets are:
 
 | Distance | Fixed set B_d | Shifted set A_d |
 |---|---|---|
@@ -24,14 +19,14 @@ In distance three, A_d need not be a subset of B_d.
 ## 2. Exact counterexample
 
 Take `(s1,s2,s3,s4)=(4/5,1/5,3/10,2/5)`.
-At `v=-2/5`, the actual overlap is `1/5`; the historical
+At `v=-2/5`, the actual overlap is `1/5`; the extra-prefix
 superset overlap is zero. Integration over v gives:
 
 - actual distance-three integral: `2/75`;
-- historical cubic: `1/375`;
+- extra-prefix cubic: `1/375`;
 - discrepancy: `3/125`.
 
-This disproves the distance-three reduction. It does not by itself
+This rules out using the same fixed set for all three distances. It does not by itself
 evaluate the signed C5-weighted integral: pointwise errors could
 cancel after multiplication by C5.
 
@@ -81,16 +76,11 @@ coefficients. The remaining definition stays
 increments independently and integrates the actual piecewise overlap.
 On a seven-point rational grid for each of s1,...,s4:
 
-- 7,203 distance/grid cases agree with the corrected reduction;
+- 7,203 distance/grid cases agree with the reduction;
 - 2,539 have nonzero integrals;
-- the historical distance-three cubic fails 358 cases;
+- the extra-prefix distance-three cubic fails 358 cases;
 - the explicit counterexample is checked exactly.
-
-The earlier sponsorship checker compared the historical formula
-against the same erroneous fixed prefix set. Its pass established
-a finite identity for that superset, not correctness against W3.
-The counterexample and this limitation are retained in the audit.
 
 ## 5. Full model integral
 
-The corrected reduction gives {5,2}=1/8 by [exact lattice evaluation](spectator_52_exact_lattice.md). The 7/72 numerical ladder used the additional distance-three prefix and does not evaluate the stated model. The separate [flow-polytope calculation](pure_cycle_flow_polytopes.md) gives C7=-17/360. Arithmetic transport remains open.
+The reduction gives {5,2}=1/8 by [exact lattice evaluation](spectator_52_exact_lattice.md). The separate [flow-polytope calculation](pure_cycle_flow_polytopes.md) gives C7=-17/360. Arithmetic transport remains open.

@@ -1,102 +1,44 @@
 # increasezerozeta
 
-Exact computation and analytic research on lower bounds for the proportion of simple zeros of the Riemann zeta function on the critical line.
+Exact computations, proof notes and formal verification for research on simple zeros of the Riemann zeta function.
 
-The project develops reproducible mathematical calculations toward stronger bounds. All class evaluations needed for the finite continuum model through eighth order are certified. The model also has a Haar-unitary Gram realization, almost sure convergence to a unique limiting spectral distribution, and a joint Gaussian limit for polynomial spectral statistics. Arithmetic transport to zeta moments remains a central open problem.
+The project studies a continuum moment model and the arithmetic estimates needed to connect it to zeros on the critical line. It contains exact class evaluations through eighth order, random-matrix interpretations, and a conditional spectral counting argument. **The arithmetic estimate needed for a new zeta-zero bound remains open.**
 
-## Results and scope
+## Start here
 
-The corrected continuum model integral **{5,2}=1/8** has an exact integer-lattice evaluation, with components 5/504, 1/360 and 13/2520. The [proof](notes/spectator_52_exact_lattice.md) establishes the polynomial degree and period used in the calculation; the [integer record](results/spectator_52_exact_lattice_2026-10-05.json) includes source hashes and held-out checks.
+| Material | Contents |
+|---|---|
+| [Research guide](RESEARCH.md) | Definitions, exact values, proof status and a map of the notes |
+| [Counting bridge](notes/spectral_counting_bridge.md) | The actual-matrix hypothesis sufficient for an 80% simple-zero bound |
+| [Bounded resolvent criterion](notes/bounded_resolvent_bridge.md) | An alternative arithmetic target using three resolvent powers |
+| [Lean proofs](formal/README.md) | 18 kernel-checked scalar and finite counting theorems, with their assumptions |
+| [Computational records](results/project_verification_2026-10-05.json) | Local verification results, source hashes and reproduction details |
 
-The pure-cycle integral **C7=-17/360** is also exact. Its [flow-polytope proof](notes/pure_cycle_flow_polytopes.md) reduces the calculation to nine integer lattice counts and recovers the known lower-order constants.
+The finite model has moments
 
-The [pair-cycle calculation](notes/paired_cycle_flow_polytopes.md) gives **{2^4}=1661/3780**. Its lower-order checks exposed a grouping error: the direct three-pair aggregate is **32/105**, because adjacent and nested noncrossing patterns have different integrals. The [pairing audit](results/pairing_model_audit.md) includes an independent exact integration of both patterns.
+```text
+(m0,...,m8) = (1, 1, 4/3, 2, 13/4, 101/18, 640/63, 3439/180, 747361/20160).
+```
 
-The [complete eighth-order certificate](notes/eighth_order_certificate.md) gives {4,2,2}=-127/840, {4,4}=23/4536, {6,2}=-563/11340 and C8=157/4032. It rejects the earlier {6,2}=-1/20 guess. All mixed-class orbits and the pure cycle pass held-out integer-count predictions and independent small-grid checks.
+They yield an exact degree-four origin-mass certificate of `12241115/162540559`. Its counting conversion is approximately 84.938%, conditional on arithmetic transport. The [eighth-order certificate](notes/eighth_order_certificate.md) supplies the class values and their derivation.
 
-With [finite-model local identities](notes/model_local_identities.md), the exact ledgers give m6=640/63, m7=3439/180 and m8=747361/20160. Rational Hankel inversion gives lambda_4(0)=12241115/162540559 and a **conditional counting conversion of approximately 84.938%**. This depends on the unresolved analytic interface and is not an established zeta bound.
+## Reproduce the checks
 
-These are finite model and algebraic results. Arithmetic transport to zeta moments remains open; the calculations do not yet establish a new unconditional zeta-zero bound.
-
-The [direct counting bridge](notes/spectral_counting_bridge.md) states and derives a sufficient condition on the **actual** compressed Weil matrix: one asymptotic polynomial-trace upper bound would give the conditional counting target. For 80%, a cubic certificate needs only moments through order six and permits an excess of 49/25190 over its model trace; the degree-four alternative permits 40129409/1625405590. The note handles indefinite matrices, the tail threshold and boundary zeros. Both arithmetic trace bounds remain unproved.
-
-The [actual prime-matrix derivation](notes/actual_prime_trace.md) removes the archimedean and pole terms in a normalized Schatten norm and evaluates the multiplicatively balanced prime contributions. At unit bandwidth their second, fourth and sixth moments tend to 1/3, 4/15 and 32/105, connecting actual arithmetic terms to the exact pair-cycle integrals. The cubic certificate's balanced contribution is approximately 0.160833. Its remaining signed off-balance contribution must be at most -0.060833 to meet the 0.1 cap. This analytic proof draft isolates the missing cancellation; it does not establish that estimate or a new zeta bound. Independent review remains necessary.
-
-The [finite-frame second-moment proof](notes/prime_second_moment.md) recovers the known arithmetic second moment using Montgomery--Vaughan's sampled weighted inequality. Its second off-balance term vanishes, leaving orders three through six in the cubic target. A sharper two-sided projection estimate tracks the finite-frame boundary cost and specifies why the same absolute summation cannot justify higher moments at unit bandwidth. This is a published-input deduction in proof-draft form, not a new counting record.
-
-See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
-
-The [bounded resolvent bridge](notes/bounded_resolvent_bridge.md) gives a
-weaker sufficient condition for the same 80% target. A bounded rational
-certificate avoids a sixth-moment requirement and permits an
-O((log T)^(-2)) removal of finite-mode compression. The remaining
-arithmetic condition is one signed combination of three resolvent powers
-at a single nonreal point. Its estimate remains open; exact finite checks
-verify the partial fractions and block identities.
-
-The [prime-removal expansion](notes/prime_removal_resolvent.md) groups
-all powers of each prime and bounds the cubic resolvent remainder by
-O((log T)^(-3)). Quadratic higher-power removal costs O((log T)^(-2)),
-and the retained covariance map has norm at most 1/2+o(1). The draft
-keeps two explicit conditional-phase sums and a nonlinear covariance
-trace; their required signed estimate remains unproved. A finite
-counterexample rules out inferring cancellation from small increments.
-
-## Structural research
-
-[Centered Ehrhart reciprocity](notes/centered_reciprocity.md) reduces an eighth-order class certificate to four fit counts and one held-out count. The new method reproduces all fourteen class integrals, including a separate period-one certificate for {5,2}. Its polynomials match all 119 earlier aggregate counts and 641 orbit counts.
-
-[The Haar-unitary Gram identity](notes/cue_gram_model.md) identifies the finite network model with exact expected moments of a positive random matrix. A separate integer Laurent-polynomial calculation checks every moment through eighth order at matrix sizes 1, 2, 3 and 4.
-
-[An occupancy and moment-growth argument](notes/cue_limit_determinacy.md) proves that the expected spectral measures converge to a unique distribution with the continuum moments at every order. These derivations use established reciprocity, CUE and moment-problem results; priority for their specific application remains to be assessed.
-
-[Connected multi-cycle counts](notes/cue_gram_fluctuations.md) strengthen this to almost sure convergence of the random empirical spectrum and joint Gaussian fluctuations of fixed polynomial statistics. They give exact finite-size joint cumulants. The order-two/order-three limiting covariance matrix is [[1/10,1/3],[1/3,79/70]], with positive determinant 11/6300. Independent Weyl integration checks the joint certificates at sizes 1 through 5.
-
-[Logarithmic control](notes/cue_gram_logdet.md) proves that the limiting model measure has no atom at zero. The exact identity E[log det(G_n)]/n=H_n-1-log n gives a uniform bound on small-eigenvalue mass, which survives the weak limit. This all-order model conclusion is stronger than the finite-moment origin-mass certificate; arithmetic counting transport remains open.
-
-[The bandwidth extension](notes/cue_gram_bandwidth.md) proves strong spectral convergence, polynomial fluctuations and logarithmic control for rectangular CUE Gram matrices with m/n tending to any fixed 0<lambda<=1. The row law has no zero atom; the column law has zero mass exactly 1-lambda. Its second-moment fluctuation variance is 2*lambda^3/15-(2*lambda-1)_+^5/(30*lambda^2), with an overlap threshold at lambda=1/2. Independent exact Weyl checks cover every 1<=m<=n<=5.
-
-[The global sine-process comparison](notes/sine_gram_identification.md) identifies the growing-window sine Gram law with the CUE column law, with almost sure convergence of all moments. At unit bandwidth it has the certified continuum moments; at smaller bandwidth its limiting zero atom is exactly 1-lambda, even though every finite sine Gram matrix is invertible. The proof controls long interactions and specifies the point/frequency normalization.
-
-[The literature comparison](notes/literature_map.md) credits the earlier sine-process Gram motivation, independent-phase Vandermonde work, CUE pair statistics and stationary determinantal-process background. Arithmetic transport and independent review of the model proofs remain open.
-
-[The quantitative arithmetic-core proof](notes/arithmetic_core_limit.md) establishes the explicitly defined class-subtracted prime-power model as -1/48+O(1/log T). It proves the universal coefficient asymptotic, controls exceptional moduli uniformly, and derives the overlap integral from cube and simplex volumes.
-
-[A cutoff obstruction](notes/fixed_cutoff_obstruction.md) proves the uniform bound C_ell,P=O((1+log P)/log T). Every subpower cutoff, including any fixed power of log T, leaves the entire leading model contribution in its tail. An absolute envelope for that same tail has lower limit at least 1/48, so the older 0.0111 finite-height charge cannot be promoted to such an asymptotic bound.
-
-[Prime-pair progression transport](notes/prime_pair_progression_transport.md) uses the published Matomaki–Radziwill–Tao theorem to control arbitrary divisor subfamilies of shifts h=qk. It supplies a weighted error budget and resolves the full-dyadic, one-chain aggregation step. Coupled prime chains and the actual zeta-moment reduction remain open.
-
-[Short-window Fourier transport](notes/short_window_fourier_transport.md) applies published higher-uniformity results to replace single-prime sums by a presieved model. It derives an integer-position mean-square bound and controls coupled products through weighted start histograms. The averaged range begins at X^(1/3+epsilon); a longer pointwise range begins at j^(5/8+epsilon).
-
-[The finite presieved comb](notes/presieved_pair_transport.md) gives explicit Fourier coefficients for a power-sized divisor approximation and identifies its pair main term uniformly. Parseval then yields an actual prime-pair estimate averaged over short-window positions and shifts, with arbitrary logarithmic savings and a divisor-family consumption budget. Prescribed individual windows, higher prime correlations and the zeta normalization still require separate arguments. This is a deduction from published uniformity input; priority for the specific formulation has not been established.
-
-[The resolved lock frame](notes/resolved_lock_frame.md) derives the correct two-dimensional Fourier transform for four-point locks. Exact nonnegative examples show that separate autocorrelations can agree while resolved squared counts differ. A full-lock stability theorem gives an averaged prime-model replacement, but its restriction to rectangle locks loses a window-length factor. The note identifies the cubic uniformity norm required to repair that step and keeps the published qualitative and quantitative inputs distinct.
-
-[Qualitative rectangle transport](notes/averaged_rectangle_transport.md) uses published cubic uniformity to replace actual four-prime rectangle counts by a finite presieved model, averaged over integer starts and both shifts. It proves a vanishing squared error at the natural Y^4 scale and gives an explicit four-point local product. An exact admissible-residue budget avoids a growing normalization loss. The saving is qualitative; weighted, dilated and prescribed-start zeta transport remains open.
-
-[The averaged Euler-tail estimate](notes/rectangle_singular_series_tail.md) replaces that finite main term by the full four-point singular series on nondegenerate shifts. For every fixed integer r>=1, the r-th absolute tail moment over the rectangle box is O_r(Y^2/w^r), uniformly in height and cutoff. Its mean-square case gives the full Hardy--Littlewood main term with the same qualitative prime saving. The proof uses positive divisor moments and repeated-prime partitions; a uniform pointwise tail bound would fail.
-
-[The dilated rectangle geometry](notes/dilated_rectangle_geometry.md) gives the exact heterogeneous cube and raw overlap for the physical two-modulus locks. It proves a deterministic replacement criterion using progression U^3 norms and evaluates the finite main term, including exceptional primes. The local squared normalization is uniformly bounded for the project's prime-power moduli, even when their exponents grow. Uniform cubic prime estimates on the resulting shorter progression windows, and their weighted consumption, remain open.
-
-[Weighted dilated prime transport](notes/weighted_dilated_prime_transport.md) supplies the replacement for every fixed dilation and a sufficiently slowly growing prime-power family. It allows coupled start weights with bounded marginal density, preserves the balanced raw scale and identifies the full singular-series main term on nondegenerate locks. A translated short-box Euler-tail bound includes its endpoint remainder. The cutoff and saving are qualitative; prescribed starts and the positive-power modulus region in the zeta reduction remain open.
-
-[Prescribed full-window transport](notes/full_window_prime_transport.md) uses published global cubic uniformity to obtain a double-logarithmic saving at every start when window lengths are comparable to their positions. It covers arbitrary coprime dilations up to a small fixed power of log log H and identifies the full singular-series main term on nondegenerate locks. Prescribed starts are therefore covered for the reference's fixed-dilation default full windows; genuine short prescribed windows and positive-power dilations remain open.
-
-[The full dilation distribution](notes/dilation_core_coverage.md) quantifies the remaining range gap with an exact piecewise polynomial for every cutoff exponent 0<=delta<=1. The cube-root cutoff captures only 59/1215 of the leading model term; capturing 99% requires an exponent between 0.859563 and 0.859564. Every subpower dilation cutoff contributes zero in the limit. A clipped-cube identity derives the formula, and independent rational polygon integration checks the original twelve overlaps. The [standalone manuscript source](papers/dilation_core_distribution.tex) includes the proof, distribution plot, arithmetic hypotheses and reproduction instructions.
-
-[Prime-position coefficient profiles](notes/progression_range_profile.md) map growing coefficients to their actual physical prime positions and common progression length. The square-root profile covers exactly 107/600, about 17.83%, of the leading model term. A closed formula covers every smaller profile, while exact polyhedral slice certificates give larger-profile values. This measures the footprint of a candidate arithmetic range; the requisite cubic prime theorem and weighted zeta transport remain open.
-
-## Reproduction
-
-Run all thirty-two project checks from the repository root with Python 3.12 or later. They use only the standard library:
+From the repository root, using Python 3.12 or later:
 
 ```sh
 python scripts/verify_project.py
 ```
 
-This checks finite algebra, Euler convolution and prime-power coefficients, overlap geometry and Ramanujan cutoff decompositions, divisor-family error bookkeeping, exact moment targets, actual-walk examples, certificate records and source hashes, independent pairing counts and cell integrals, scalar mixed-class counts, the reduced reciprocity certificates, independent Weyl moments and joint cumulants, connected multi-cycle identities, Bell(7)/Bell(8) enumeration, and both moment ledgers. Use `--output verification.json` to save the full results.
+This runs 32 checks using the Python standard library. With Lean 4.33.0 installed, include the formal proof audit:
 
-The faster route to recompute all fourteen network certificates requires NumPy:
+```sh
+python scripts/verify_project.py --with-lean --output verification.json
+```
+
+The Lean file uses `Std`; no Mathlib download is required. The audit checks every theorem's axiom dependencies and tests rejection of invalid proofs. Finite computations and formal proofs verify the stated identities and implications; analytic assumptions are documented in the corresponding notes.
+
+To regenerate all fourteen network class certificates through eighth order, install NumPy and run:
 
 ```sh
 python -m pip install -r requirements-lattice.txt
@@ -105,61 +47,12 @@ python scripts/verify_reciprocity.py --record results/reciprocity_reproduction.j
 python scripts/verify_cue_model.py --record results/reciprocity_reproduction.json
 ```
 
-The generation step took about nine seconds in the recorded environment. These commands check the regenerated certificate; without `--record` the verifiers check the committed one. The independent Gram verifier computes its Weyl integrals afresh. Older evaluators below retain the original, larger sample ranges for comparison.
+Individual evaluators and their independent checks are linked from the [research guide](RESEARCH.md).
 
-The seventh- and eighth-order calculators are available directly:
+## Review and support
 
-```sh
-python scripts/m7_ledger.py
-python scripts/m8_ledger.py
-```
+Mathematical review is especially useful for the model normalization, the CUE/sine comparison and the connection between the spectral counting argument and the actual prime operator. Review comments should identify the statement, its assumptions and the step requiring justification.
 
-The exact lattice evaluator requires NumPy. The recorded calculation used Python 3.12.12 and NumPy 2.3.5:
+The [support proposal](sponsorship/BRIEF.md) sets out a six-month research plan beginning with a six-week pilot. AI assists with derivation and implementation; accepted calculations require reproducible verification, and analytic proof notes remain subject to mathematical review.
 
-```sh
-python -m pip install -r requirements-lattice.txt
-python scripts/spectator_52_exact_lattice.py --out results/lattice_reproduction.json
-```
-
-To check the stored certificate, source hashes and rational calibration gates without repeating the large lattice sums:
-
-```sh
-python scripts/spectator_52_exact_lattice.py --out results/spectator_52_exact_lattice_2026-10-05.json --verify-only
-```
-
-The [spectator audit](results/spectator_actual_walk_audit.md) documents the distance-three prefix correction and the numerical comparison.
-
-Recompute the pure-cycle counts and their independent term checks with NumPy:
-
-```sh
-python scripts/pure_cycle_lattice.py --out results/pure_cycle_reproduction.json
-python scripts/verify_pure_cycle_lattice.py --out results/pure_cycle_checks.json
-```
-
-Recompute the pair-cycle counts through four pairs with NumPy:
-
-```sh
-python scripts/paired_cycle_lattice.py --out results/paired_cycle_reproduction.json
-python scripts/verify_pairing_model.py
-```
-
-Recompute the mixed classes and the pure eighth-order cycle with NumPy:
-
-```sh
-python scripts/mixed_cycle_lattice.py --out results/mixed_cycle_reproduction.json
-python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
-python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
-```
-
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all thirty-two executed checks.
-
-## Project files
-
-- [RESEARCH.md](RESEARCH.md): model conventions, references and open mathematical problems.
-- [Seventh-order ledger](notes/m7_ledger_derivation.md) and [eighth-order targets](notes/m8_ledger_and_80_target.md): the exact class assembly and conditional counting targets.
-- `scripts/`: executable checks, exact evaluators and exploratory numerical tools.
-- `results/`: integer records and computational audits supporting the mathematical notes.
-
-## Research support
-
-The [research proposal](sponsorship/BRIEF.md) describes a six-week pilot for certificate review, higher-moment computation and analytic transport.
+The [literature map](notes/literature_map.md) records source attribution and related work. Reference conventions are pinned to [JoshuaHKU/zeta-0.7947-reproduction](https://github.com/JoshuaHKU/zeta-0.7947-reproduction/tree/d85bddfe9d8f12856fba735fc9cb3ca23b48b3a8).

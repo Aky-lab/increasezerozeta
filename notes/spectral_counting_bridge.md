@@ -9,6 +9,11 @@ below, including negative eigenvalues, a nonzero threshold and boundary
 zeros. The needed trace estimate for the actual zeta matrix is **not proved**.
 The model trace is not substituted for that arithmetic trace.
 
+[Lean kernel proofs](../formal/README.md) cover scalar majorization
+and the finite integer count/collar conversion conditional on the
+explicit spectral inputs. The inertia argument, actual matrix
+identification and arithmetic trace bound remain outside that formal file.
+
 ## 1. A finite theorem with no positive-matrix assumption
 
 Let A be a real symmetric d-by-d matrix formed from s1 simple on-line
@@ -146,7 +151,7 @@ forms whenever the proposed cap is finite. This simplification does not
 prove either cap.
 
 The underlying Weil/inertia construction is prior work. This note supplies
-an explicit application to the repository's corrected certificate and
+an explicit application to the repository's certificate and
 states the outstanding arithmetic estimate separately. It claims no
 priority for the general counting mechanism.
 

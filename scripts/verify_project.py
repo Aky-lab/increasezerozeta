@@ -50,9 +50,12 @@ CHECKS = (
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--with-lean", action="store_true",
+                        help="also compile and audit the pinned finite Lean proofs")
     args = parser.parse_args()
     checks = []
-    for name, scope in CHECKS:
+    requested = CHECKS + (("verify_lean_counting.py", "Lean kernel proofs of scalar majorization and conditional finite counting, with complete axiom audit"),) if args.with_lean else CHECKS
+    for name, scope in requested:
         path = ROOT / "scripts" / name
         record = {
             "script": "scripts/" + name,
@@ -63,6 +66,11 @@ def main():
             dependency = ROOT / "scripts" / "spectator_reduction.py"
             record["dependency_sha256"] = {
                 "scripts/spectator_reduction.py": hashlib.sha256(dependency.read_bytes()).hexdigest()
+            }
+        if name == "verify_lean_counting.py":
+            record["dependency_sha256"] = {
+                name: hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
+                for name in ("formal/CountingBridge.lean", "lean-toolchain")
             }
         try:
             completed = subprocess.run(
@@ -85,6 +93,7 @@ def main():
             for path in sorted((ROOT/"scripts").glob("*.py"))
         },
         "all_checks_passed": all(c["passed"] for c in checks),
+        "lean_requested": args.with_lean,
         "limitations": [
             "Passing checks do not prove the surrounding analytic transport.",
             "Finite model moments do not establish arithmetic transport to zeta zeros.",

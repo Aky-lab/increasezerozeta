@@ -130,7 +130,7 @@ endpoints yields only
     relative error = O((X/Y)E(X)).                       (5)
 
 For a continuously differentiable weight f, integration by parts gives
-the corrected weighted version
+the weighted formulation
 
     |sum_(u<n<=v) Lambda(n)f(n)-integral_u^v f(t)dt|
       <= C X E(X) (|f(u)|+|f(v)|+integral_u^v |f'(t)|dt).                (6)
@@ -176,7 +176,7 @@ variance factorizes. The exact model moments and their zeta counting
 conversion retain those analytic obligations.
 
 A separate [short-window Fourier theorem](short_window_fourier_transport.md)
-now supplies an averaged replacement by a presieved prime model for
+supplies an averaged replacement by a presieved prime model for
 integer lengths Y>=X^(1/3+epsilon), using newer published uniformity input.
 It controls coupled products of single sums through weighted start
 histograms. A longer-window pointwise version uses Y>=j^(5/8+epsilon)

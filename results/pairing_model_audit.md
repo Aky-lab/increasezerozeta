@@ -1,4 +1,4 @@
-# Three-pair grouping audit
+# Exact three-pair integration
 
 The direct perfect-matching model has five dihedral orbits on six cyclic
 positions. Grouping all five noncrossing matchings as copies of the same
@@ -43,25 +43,16 @@ The [verifier](../scripts/verify_pairing_model.py) expands those polynomials
 with integer coefficients and sums the rational integrals. It shares no
 lattice-count or orbit implementation with the primary evaluator.
 
-## Consequences for the supplied model ledger
+## Model ledger
 
-Relative to the earlier supplied reference ledgers, the pairing correction gives
+The [local-identity proof](../notes/model_local_identities.md) reconstructs the lower model moments from the class values:
 
-    m6 = 12809/1260 - 1/140 = 640/63,
-    m7 = 862/45 - 7/140 = 3439/180,
-    m8 = 3329/90 - 28/140 + A8 = 3311/90 + A8.
+```text
+m6 = 640/63,
+m7 = 3439/180,
+m8 = 3311/90 + A8.
+```
 
-The audited six-moment algebra gives lambda_3(0)=247/2519 and the
-conditional counting conversion 1-2*lambda_3(0)=2025/2519, approximately
-80.389%. The earlier 1415/13891 Christoffel value is valid algebra for
-the separately supplied reference moment 12809/1260; it is not the
-value for the direct perfect-matching model.
+The six-moment origin-mass certificate is `lambda_3(0)=247/2519`. Its conditional counting conversion is `2025/2519`, approximately 80.389%. The [eighth-order certificate](../notes/eighth_order_certificate.md) supplies `A8=633/2240`.
 
-The {5,2}=1/8 and C7=-17/360 certificates are unchanged. This audit
-does not establish arithmetic transport, validate the entire reference
-analytic framework, or claim an unconditional zeta-zero bound.
-
-The [local-identity proof](../notes/model_local_identities.md) now reconstructs
-these lower model moments directly from certified class inputs. The
-[complete eighth-order certificate](../notes/eighth_order_certificate.md)
-extends this assembly; it does not establish arithmetic transport.
+These are finite-model values. Their identification with arithmetic zeta moments remains open.

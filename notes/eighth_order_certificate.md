@@ -2,7 +2,7 @@
 
 The finite model uses the cumulant/prefix-walk conventions in the
 [research overview](../RESEARCH.md). Every class required by the Bell(8)
-ledger now has an exact value or an exact local reduction.
+ledger has an exact value or an exact local reduction.
 
 ## New eighth-order classes
 

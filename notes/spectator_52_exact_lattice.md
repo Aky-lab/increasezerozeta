@@ -1,4 +1,4 @@
-# Exact lattice evaluation of the corrected model {5,2}
+# Exact lattice evaluation of the model {5,2}
 
 This note evaluates the finite continuum model defined by the 150-term C5
 compiler and the **actual** distance-one, two and three walks. It does not

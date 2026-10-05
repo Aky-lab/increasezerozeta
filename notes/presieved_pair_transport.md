@@ -212,7 +212,7 @@ any weighted Fourier sum of F_D by
 Consequently the coupled-product deduction in the short-window note
 also holds with F_D as the main term and the same histogram norm budget:
 the extra fixed power of L is absorbed in the arbitrary saving. The finite
-main term is now explicit, although the lock geometry still needs analysis.
+main term is explicit, although the lock geometry still needs analysis.
 
 ## 6. Parseval proves the actual windowed prime-pair estimate
 
@@ -240,7 +240,7 @@ over O(XY) pairs gives
 
 The last error is also O_A(XY^3 L^(-A)), since
 D^4/Y^2<=X^(4delta-2/3-2epsilon) has a fixed negative exponent.
-The squared triangle inequality now proves (2).
+The squared triangle inequality proves (2).
 
 ## 7. Divisor families and consumption
 

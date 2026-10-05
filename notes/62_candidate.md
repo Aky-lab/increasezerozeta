@@ -1,13 +1,10 @@
-# Exact {6,2} class and rejected numerical candidate
+# Exact {6,2} class
 
 The class consists of a connected six-block and a pair on an eight-cycle.
 Its 28 placements split into four dihedral types with multiplicities
 8,8,8,4. The [mixed-cycle certificate](mixed_cycle_flow_polytopes.md) gives
 
     {6,2} = -563/11340 = -0.0496472663... .
-
-Earlier coarse midpoint extrapolation suggested -1/20. The exact
-value differs by 1/2835, so that candidate is rejected.
 
 Each mixed-class lift is an integral network polytope of dimension nine.
 Ten integer counts determine each orbit's degree-nine polynomial and

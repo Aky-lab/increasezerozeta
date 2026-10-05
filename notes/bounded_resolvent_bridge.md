@@ -282,3 +282,8 @@ Use `--output results/bounded_certificate_2026-10-05.json` to save the
 record. Finite examples verify algebra; they do not prove (8), the
 asymptotic transfer, (15), or a new counting theorem. The analytic
 arguments and their normalization still require independent review.
+
+The scalar majorant and conditional finite counting conversion are also
+[formalized in Lean](../formal/README.md). Its kernel proofs leave the
+matrix/spectrum identification, root construction, tail and resolvent
+estimates, and actual arithmetic cap outside the formal file.

@@ -348,7 +348,7 @@ The deterministic model core, whose limit is proved for the explicitly defined f
 C_{\mathrm{core}}=-\frac1{48}.
 \]
 
-The model-core convergence error is now proved to vanish. It does not require a non-vanishing numerical allowance; errors in an unproved arithmetic-to-model reduction remain separate obligations.
+The model-core convergence error is proved to vanish. It does not require a non-vanishing numerical allowance; errors in an unproved arithmetic-to-model reduction remain separate obligations.
 
 ### \(E_{\mathrm{tail}}\)
 
@@ -382,7 +382,7 @@ Any other non-vanishing deterministic allowance that survives the limit. At pres
 Only terms actually proved to vanish may be placed here: covered-zone errors, band/glue deviations, smoothing collars, low-zone terms, or analogous quantities must each have a cited estimate showing decay after the final normalisation.
 
 The [prime-pair progression theorem](prime_pair_progression_transport.md)
-now supplies arbitrary logarithmic mean-square savings for every divisor
+supplies arbitrary logarithmic mean-square savings for every divisor
 subfamily of full-dyadic, one-chain shifts \(h=qk\), in the published MRT
 range. Its weighted bound makes the required consumption norm explicit.
 It does not supply the short-position-window or multiple-chain estimates,
@@ -434,7 +434,7 @@ windows and the consumed weight ranges are still needed; an ordinary
 W-tricked bound is not silently promoted to a growing-modulus estimate.
 
 [Weighted dilation transport](weighted_dilated_prime_transport.md)
-now supplies the prime replacement and full nondegenerate singular-series
+supplies the prime replacement and full nondegenerate singular-series
 main term for fixed coefficients and a sufficiently slowly growing
 prime-power family. Its coupled start-weight condition and consumption
 norm are explicit. This resolves that restricted progression transfer,
