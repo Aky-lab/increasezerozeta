@@ -1,27 +1,22 @@
-# Coarse {5,2} midpoint reconnaissance
+# {5,2} numerical reconnaissance
 
-**Status: numerical model-side reconnaissance only. Not consumed as proof.**
+**Status: model-side falsifier only. Nothing here is consumed as proof.**
 
-These values were produced with the independent definition in
-`notes/spectator_52_spec.md`.  The implementation uses:
-
-- 150 partition-cyclic C5 terms;
-- 15 cached unique prefix linear forms;
-- global negation symmetry in the spectator frequency;
-- three pair-placement distances with multiplicities 7/7/7.
+The first five-dimensional midpoint ladder discretised the spectator
+frequency v and showed a strong but misleading drift towards 1/8.
+The exact elimination of v in
+`notes/spectator_52_eliminate_v.md` revealed that this was a
+quadrature artefact. The 1/8 candidate is therefore **retired**.
 
 ## Calibration: pure C5
 
-The same C5 evaluator, integrated against the pure five-cycle overlap,
-should converge to the already certified value
+The same partition-cyclic five-point cumulant evaluator should recover
 
-[
-C_5=rac1{36}=0.027777777777ldots.
-]
+    C5 = 1/36 = 0.027777777777...
 
-Observed coarse midpoint values:
+Observed midpoint values:
 
-| dv | pure C5 |
+| dc | pure C5 |
 |---:|---:|
 | 0.500 | 0.0312500000 |
 | 0.250 | 0.0292968750 |
@@ -29,43 +24,48 @@ Observed coarse midpoint values:
 | 0.125 | 0.0281982422 |
 | 0.100 | 0.0280500000 |
 
-The convergence direction and scale are consistent with the certified
-anchor.
+This is consistent with the certified anchor.
 
-## {5,2} ladder
+## Corrected ladder: spectator frequency integrated exactly
 
-[
-{5,2}=7(U_1+U_2+U_3).
-]
+For each four-dimensional midpoint cell, the v-integral is evaluated
+analytically using the cubic formula in
+`notes/spectator_52_eliminate_v.md`.
 
-| dv | U1 | U2 | U3 | {5,2} |
+| dc | U1 | U2 | U3 | {5,2}=7(U1+U2+U3) |
 |---:|---:|---:|---:|---:|
-| 0.500 | 0.0117187500 | 0.0029296875 | 0.0097656250 | 0.1708984375 |
-| 0.250 | 0.0108032227 | 0.0028228760 | 0.0064392090 | 0.1404571533 |
-| 0.200 | 0.0105216000 | 0.0028064000 | 0.0059840000 | 0.1351840000 |
-| 0.125 | 0.0101709366 | 0.0027887821 | 0.0054831505 | 0.1291000843 |
-| 0.100 | 0.0100831500 | 0.0027847875 | 0.0053666250 | 0.1276419375 |
-| 0.080 | 0.0098569944 | 0.0028121542 | 0.0051747091 | 0.1249070039 |
+| 0.2500 | 0.0103759766 | 0.0029830933 | 0.0012702942 | 0.1024055481 |
+| 0.2000 | 0.0102400000 | 0.0029200000 | 0.0012489600 | 0.1008627200 |
+| 0.1250 | 0.0100574493 | 0.0028380156 | 0.0012164712 | 0.0987835526 |
+| 0.1000 | 0.0100100000 | 0.0028170312 | 0.0012075812 | 0.0982422875 |
+| 0.0800 | 0.0098889730 | 0.0027761171 | 0.0011957809 | 0.0970260964 |
+| 0.0625 | 0.0099563102 | 0.0027934096 | 0.0011973564 | 0.0976295331 |
+| 0.0500 | 0.0099435807 | 0.0027878263 | 0.0011949089 | 0.0974842118 |
 
-The total is not monotone at these coarse grids, so no rational
-identification is justified yet.
+The remaining four-dimensional midpoint rule still crosses rational
+kink hyperplanes, so non-monotonicity is expected and these rungs
+must not be treated as enclosures.
 
-Two dyadic-style Richardson probes happen to land near (1/8):
+Two genuinely dyadic Richardson probes are:
 
-- from (dv=0.25,0.125): (0.1253143946);
-- from (dv=0.20,0.10): (0.1251279167).
+- dc 0.125 -> 0.0625: 0.09724485998;
+- dc 0.100 -> 0.0500: 0.09723151986.
 
-This makes (1/8) a **candidate worth falsifying**, not a result.
-The (dv=0.16,0.08) pair behaves much less cleanly, which is a useful
-warning against premature reconstruction.
+Both are close to
 
-## Next gates
+    7/72 = 0.09722222222...
 
-1. produce finer rungs with the cached-prefix implementation;
-2. separate the three (U_d) convergence profiles;
-3. verify exact negation symmetry by paired slices;
-4. implement support pruning and confirm bitwise agreement with the
-   unpruned coarse engine;
-5. only after stable (h^2)-type convergence, attempt rational
-   reconstruction;
-6. independently certify any candidate with exact polytope integration.
+so **7/72 is now the active candidate to falsify**, not an accepted
+identification.
+
+The deviations of the two Richardson probes from 7/72 are about
+2.26e-5 and 9.30e-6 respectively. That is encouraging but nowhere
+near enough for a proof.
+
+## Next gate
+
+The exact-v reduction turns each partition-cyclic term into a
+four-dimensional piecewise polynomial of degree at most four on a
+rational hyperplane arrangement. The next decisive step is exact
+rational cell/polytope integration. A rational reconstruction is not
+to be consumed until that independent exact computation agrees.
