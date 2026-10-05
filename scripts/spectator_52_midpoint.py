@@ -165,26 +165,38 @@ def run(dv, use_sym=False, checkpoint=True):
         done = int(d["done"])
 
     t0 = time.time()
-    # Chunk by v and c1; each mesh is only 3D.
+
+    # Critical optimisation: C5 is independent of the spectator
+    # pair frequency v.  Build it ONCE per c1 slice, then sweep all
+    # v values.  This removes an entire factor |vgrid| from the
+    # expensive 150-term cumulant evaluation.
     C2, C3, C4 = np.meshgrid(g, g, g, indexing="ij")
     cell_weight = dv ** 5
+    zero = np.zeros_like(C2)
 
-    total_slices = len(vgrid) * len(g)
+    total_slices = len(g) * len(vgrid)
     slice_no = 0
-    for iv, v in enumerate(vgrid):
-        for i1, c1_scalar in enumerate(g):
+    for c1_scalar in g:
+        C1 = np.full_like(C2, c1_scalar)
+        c5 = c5_value([C1, C2, C3, C4])
+
+        c12 = C1 + C2
+        c123 = c12 + C3
+        c1234 = c123 + C4
+
+        for v in vgrid:
             if slice_no < done:
                 slice_no += 1
                 continue
-            C1 = np.full_like(C2, c1_scalar)
 
-            # C5 depends on c5=-c1-c2-c3-c4 internally through the
-            # coefficient representation used by c5_value.
-            c5 = c5_value([C1, C2, C3, C4])
             pair = min(abs(float(v)), 1.0)
             density = c5 * pair
+            V = np.full_like(C1, v)
 
-            w1, w2, w3 = walks(v, C1, C2, C3, C4)
+            w1 = [zero, V, zero, C1, c12, c123, c1234]
+            w2 = [zero, V, V + C1, C1, c12, c123, c1234]
+            w3 = [zero, V, V + C1, V + c12, c12, c123, c1234]
+
             acc[0] += float(np.sum(overlap_from_positions(w1) * density))
             acc[1] += float(np.sum(overlap_from_positions(w2) * density))
             acc[2] += float(np.sum(overlap_from_positions(w3) * density))
@@ -206,7 +218,6 @@ def run(dv, use_sym=False, checkpoint=True):
     print(f"{{5,2}} = 7*(U1+U2+U3) = {total:+.10f}")
     print(f"wall={time.time()-t0:.1f}s")
     return U, total
-
 
 def main():
     ap = argparse.ArgumentParser()
