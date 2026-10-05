@@ -74,6 +74,8 @@ def compile_cumulant_terms(b=5):
 
 TERMS5 = compile_cumulant_terms(5)
 assert len(TERMS5) == 150
+UNIQUE_PREFIXES = sorted({coeff for _, prefixes in TERMS5 for coeff in prefixes})
+assert len(UNIQUE_PREFIXES) == 15
 
 
 def overlap_from_positions(positions):
@@ -91,16 +93,20 @@ def lincomb(coeff, C):
 
 
 def c5_value(C):
-    """Partition-cyclic five-point cumulant on four free arrays."""
+    """Partition-cyclic five-point cumulant on four free arrays.
+
+    Only 15 distinct prefix linear forms occur across all 150 signed
+    terms.  Cache those arrays once per C-slice rather than rebuilding
+    the same linear combinations term by term.
+    """
     out = np.zeros_like(C[0])
     zero = np.zeros_like(C[0])
+    prefix_values = {coeff: lincomb(coeff, C) for coeff in UNIQUE_PREFIXES}
     for sign, prefixes in TERMS5:
         if not prefixes:
             out = out + sign
             continue
-        positions = [zero]
-        for coeff in prefixes:
-            positions.append(lincomb(coeff, C))
+        positions = [zero] + [prefix_values[coeff] for coeff in prefixes]
         out = out + sign * overlap_from_positions(positions)
     return out
 
