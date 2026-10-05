@@ -5,7 +5,7 @@ The five genuinely new eighth-order classes are collected into A8:
     A8 = {2^4} + {4,2,2} + {4,4} + {6,2} + C8.
 
 This script uses the currently pre-registered seventh-order candidates
-{5,2}=1/8 and C7=-17/360.  Therefore the resulting inherited baseline
+{5,2}=7/72 and C7=-17/360.  Therefore the resulting inherited baseline
 is candidate-level until those inputs are certified.
 """
 
@@ -19,10 +19,10 @@ J42 = F(-23, 420)
 C5 = F(1, 36)
 C6 = F(-1, 126)
 
-J52 = F(1, 8)       # pre-registered, not yet exact-certified
+J52 = F(7, 72)      # active exact-v numerical candidate
 C7 = F(-17, 360)    # identified in source, not yet exact-certified
 
-M7 = F(862, 45)     # candidate assembled from the same seventh inputs
+M7 = F(3443, 180)   # candidate assembled from the same seventh inputs
 M7_STAR = F(25866469, 1352400)
 LAMBDA3 = F(1415, 13891)
 C_GAP = F(18663120, 3931153)
@@ -65,15 +65,15 @@ def main():
         + 28 * C6
         + 8 * C7
     )
-    assert inherited == F(3329, 90)
+    assert inherited == F(1103, 30)
 
     print("Bell(8) base pair/four layer =", base, "=", float(base))
     print("candidate inherited m8 baseline =", inherited, "=", float(inherited))
-    print("m8 = 3329/90 + A8")
+    print("m8 = 1103/30 + A8")
     print("A8 := {2^4}+{4,2,2}+{4,4}+{6,2}+C8")
 
     floor = m8_floor(M7)
-    print("\nAt candidate m7=862/45:")
+    print("\nAt candidate m7=3443/180:")
     print("  m8 Stieltjes floor =", floor, "=", float(floor))
     print("  A8 floor =", floor - inherited, "=", float(floor - inherited))
 
@@ -92,7 +92,7 @@ def main():
 
     # Exact 80% aggregate cap.
     cap80 = m8_target(M7, F(4, 5)) - inherited
-    assert cap80 == F(33596531, 68531400)
+    assert cap80 == F(18073331, 68531400)
 
     print("\nCANDIDATE BELL(8) LEDGER CHECKS PASSED")
 
