@@ -1,13 +1,7 @@
-# Evidence status
+# Verification records
 
-- `baseline-2026-10-05.json` is historical. Its three baseline algebra
-  checks remain useful, but its spectator checker compared the cubic
-  with an erroneous superset of the distance-three walk. Its pass must
-  not be cited as verification of the defining W3 integral.
-- `actual-walk-2026-10-05.json` supersedes that spectator evidence. It
-  checks the actual walks, records the explicit counterexample, and
-  hashes the imported reduction module.
+- `baseline-2026-10-05.json` records three baseline algebra checks and an earlier spectator checker. That checker used an extra distance-three prefix, so its spectator pass applies only to the erroneous superset.
+- `actual-walk-2026-10-05.json` records the independent increment-based checker, exact counterexample and source hashes.
+- [The lattice record](../../results/spectator_52_exact_lattice_2026-10-05.json) contains the complete corrected model evaluation {5,2}=1/8 and the C5=1/36 anchor.
 
-Neither report certifies the remaining C5 integral, arithmetic transport,
-higher-moment fractions, or a new unconditional zeta-zero record.
-Read `results/spectator_actual_walk_audit.md` for the correction history.
+The [spectator audit](../../results/spectator_actual_walk_audit.md) explains the prefix correction. Analytic transport to zeta moments remains open.
