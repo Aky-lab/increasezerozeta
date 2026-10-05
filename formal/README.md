@@ -15,7 +15,7 @@ and the finite count implication conditional on the spectral inputs.
 | Conditional counting conversion | The finite trace-cap input gives `4*N <= 5*S + 10*C + 9*delta`. |
 | Resolvent minorant | A cleared polynomial-square identity gives a global quadratic lower bound for `x/(x^2+r^2)`, for positive r and S. |
 | Rational-pole stability | An integer sum of squares proves both signs of the cleared envelope underlying `abs(x)/(x^2+1/16)^2<=21`. |
-| Exact rational arithmetic | The supplied cubic model constants and parameter witness are checked, as are the one-point threshold 3529/3536, conditional cap 993/10000 and conversion 4007/5000. |
+| Exact rational arithmetic | The supplied cubic model constants and parameter witness are checked, as are the one-point threshold 113102/124503, conditional cap 2980427/30000000, conversion 12019573/15000000 and model-disk comparisons. |
 
 Here N is the target multiplicity, S its simple-on-line count, C the
 collar multiplicity, and delta a nonnegative dimension deficit satisfying
@@ -70,10 +70,13 @@ The rational-pole lemmas check the exact integer sum of squares
        +32*(55*x-384*x^2)^2+983808*x^4,
 
 and the corresponding nonnegative inequalities at x and -x. The
-one-point constants theorem uses kernel reduction to check the six
+one-point constants theorem uses kernel reduction to check the eight
 rational equalities and comparisons used in the conditional criterion.
 The degree-ten Sturm certificate for the global rational majorant is
 verified by the Python checker and the proof note, outside Lean.
+The moment matrices, Bessel projection inequality and model-resolvent
+disk construction are also outside the formalization; Lean checks the
+resulting exact endpoint comparisons only.
 
 ## What is still an input
 

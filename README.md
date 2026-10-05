@@ -11,7 +11,7 @@ The project studies a continuum moment model and the arithmetic estimates needed
 | [Research guide](RESEARCH.md) | Definitions, exact values, proof status and a map of the notes |
 | [Counting bridge](notes/spectral_counting_bridge.md) | The actual-matrix hypothesis sufficient for an 80% simple-zero bound |
 | [Bounded resolvent criterion](notes/bounded_resolvent_bridge.md) | An alternative arithmetic target using three resolvent powers |
-| [Rational one-point criterion](notes/mirror_resolvent_certificate.md) | An exact rational majorant reduces the arithmetic target to the resolvent at i/4 |
+| [Rational one-point criterion](notes/mirror_resolvent_certificate.md) | An exact rational majorant reduces the arithmetic target to the resolvent at 11i/40; the model supports its threshold |
 | [Lean proofs](formal/README.md) | 31 kernel-checked scalar and finite counting theorems, with their assumptions |
 | [Computational records](results/project_verification_2026-10-05.json) | Local verification results, source hashes and reproduction details |
 
@@ -23,7 +23,7 @@ The finite model has moments
 
 They yield an exact degree-four origin-mass certificate of `12241115/162540559`. Its counting conversion is approximately 84.938%, conditional on arithmetic transport. The [eighth-order certificate](notes/eighth_order_certificate.md) supplies the class values and their derivation.
 
-An alternative uses only the established first two actual moments and a single resolvent value. Proving `liminf Re m_T(i/4) >= 1` would imply an 80.14% simple-critical-line proportion. The [rational majorant and reduction](notes/mirror_resolvent_certificate.md#5-a-rational-one-point-criterion) are verified; the required arithmetic lower bound remains open.
+An alternative uses only the established first two actual moments and a single resolvent value. Proving `liminf Re m_T(11i/40) >= 91/100` would imply an approximately 80.13% simple-critical-line proportion. The [rational majorant and reduction](notes/mirror_resolvent_certificate.md#5-a-rational-one-point-criterion) are verified, and the eight certified model moments imply a value above 0.9112 at this point. The required actual arithmetic lower bound remains open.
 
 ## Reproduce the checks
 

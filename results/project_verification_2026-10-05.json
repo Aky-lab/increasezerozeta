@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T20:36:56.435368+00:00",
+  "generated_at_utc": "2026-10-05T20:53:44.408028+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "698872108e1a8396d20e9db663368a001fb0e914c2e91e01ecbc067ec40f1e6e",
+  "runner_sha256": "683204a48a3d368ff303e4c8d590d5f782d2bc0c81306b66b3c19ab4df920dea",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -33,7 +33,7 @@
     "scripts/verify_lean_counting.py": "81f3be04a77fed3dcfb0ba9884158fc796557e15bce8311b78d954ca3c646368",
     "scripts/verify_lemmas.py": "a5d3fb7a7b7460a182773fc743b329d8e593e94a30ecf50d7a82bc9b1619a125",
     "scripts/verify_lock_frame.py": "31c66514072a4e4f71b53b7938513e8489b9bbf943c857dbe5163fce3944ec56",
-    "scripts/verify_mirror_certificate.py": "b0b8b906e7385db84fb8e5b25f5d9c28ac0e206589e167c5d7ddd8a9d6b70580",
+    "scripts/verify_mirror_certificate.py": "af9bc5993ba98b94c8c0527a3674244758ec239293c360e4c8b858365854f352",
     "scripts/verify_mixed_cycles.py": "1773ecc9ef8357e6f3406f2262350bb50cfb8d47966a81174c30efd870ab1663",
     "scripts/verify_model_certificates.py": "82eeb6c7bd3b4e4c22547fce0f4066f86927b22eb22a25b88ead8ff23cf25874",
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
@@ -42,7 +42,7 @@
     "scripts/verify_prime_removal.py": "c95e2af10c155d57b96aa1e016eefc3065ee8404bcebb01d3c71e923ea795918",
     "scripts/verify_prime_trace.py": "9cdc54e5b1cbe757521d15f38ac669248fdec30791714d2e4a742c64ba60e792",
     "scripts/verify_progression_profile.py": "3f271788f9d1fd5340cbea4855cc5d35a844052b6d30731d94b5a181221a751a",
-    "scripts/verify_project.py": "698872108e1a8396d20e9db663368a001fb0e914c2e91e01ecbc067ec40f1e6e",
+    "scripts/verify_project.py": "683204a48a3d368ff303e4c8d590d5f782d2bc0c81306b66b3c19ab4df920dea",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
     "scripts/verify_rectangle_tail.py": "057311dda5e6a07a5fca63fc4f127fde7568145dd3745544effa604dbd54ea59",
@@ -218,10 +218,14 @@
     },
     {
       "script": "scripts/verify_mirror_certificate.py",
-      "sha256": "b0b8b906e7385db84fb8e5b25f5d9c28ac0e206589e167c5d7ddd8a9d6b70580",
-      "scope": "exact reflected-square identities, partial fractions, pole intervals and rational one-point Sturm majorant",
+      "sha256": "af9bc5993ba98b94c8c0527a3674244758ec239293c360e4c8b858365854f352",
+      "scope": "exact reflected-square identities, partial fractions, pole intervals, rational one-point Sturm majorant and model-moment Bessel disks",
+      "dependency_sha256": {
+        "scripts/model_moments.py": "1887303965ad29d161b420892d8317867e6790b59c6db15de61244bcf035d28c",
+        "scripts/christoffel_exact.py": "3ca58d46bc10e86a0c74d67a2412cd23a930040f68bcb566e100d52fdc5fdd7c"
+      },
       "exit_code": 0,
-      "stdout": "PASS: mirror square identities; three simple imaginary pole pairs; positive weights;\npartial fractions; quadratic lower bounds; exact rational one-point Sturm majorant.\nThe actual arithmetic resolvent inequality remains unproved.\n",
+      "stdout": "PASS: mirror square identities; three simple imaginary pole pairs; positive weights;\npartial fractions; quadratic lower bounds; exact rational one-point Sturm majorant.\nModel-moment disks support the 11i/40 target and exclude a stronger i/4 target.\nThe actual arithmetic resolvent inequality remains unproved.\n",
       "stderr": "",
       "passed": true
     },
@@ -368,7 +372,7 @@
       "sha256": "81f3be04a77fed3dcfb0ba9884158fc796557e15bce8311b78d954ca3c646368",
       "scope": "Lean kernel proofs of scalar majorization and conditional finite counting, with complete axiom audit",
       "dependency_sha256": {
-        "formal/CountingBridge.lean": "e42fe8f8828703cd707a6777de75e379c1aa316ccc52eefeac6e4bdee1480a84",
+        "formal/CountingBridge.lean": "45487dd907d9e0ac363ae535f135b22eb4dea9bfa41373858d8387f7d6c527ae",
         "lean-toolchain": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b"
       },
       "exit_code": 0,

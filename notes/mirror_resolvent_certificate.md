@@ -201,33 +201,35 @@ statistical independence.
 
 The integer polynomials Q and D from section 1 satisfy the global bound
 
-    f_m(x) <= A(x)-(221/625)*x/(x^2+1/16),                 (10)
-    A(x)=10119/10000-(947/1000)*x+(291/1000)*x^2.
+    f_m(x) <= A(x)-(41501/100000)*x/(x^2+121/1600),        (10)
+    A(x)=1.00912-0.83810*x+0.22949*x^2.
+
+The terminating decimals here denote exact rational numbers.
 
 This bound has a direct exact proof, with no algebraic pole construction.
-Both D(x) and x^2+1/16 are positive. Define the integer polynomial
+Both D(x) and x^2+121/1600 are positive. Define the integer polynomial
 
-    Z(x)=160000*[A(x)*D(x)*(x^2+1/16)
-                 -(221/625)*x*D(x)-Q(x)^2*(x^2+1/16)].
+    Z(x)=160000000*[A(x)*D(x)*(x^2+121/1600)
+                 -(41501/100000)*x*D(x)-Q(x)^2*(x^2+121/1600)].
 
 Its ascending coefficients are
 
-    (755097959, -4357552606, 43027979006, 57315066112,
-     810605696640, -327459190272, 5298392930544,
-     -8736579090144, 4026592652256, -565567188480,
-     173790973440).
+    (700223277072, 16130581267790, 38453491895885,
+     -657884432134880, 686791679385776, 656143236526080,
+     4216355565563136, -7275624514820640, 3177114169954896,
+     -500529947904000, 137055981081600).
 
 The exact signed Euclidean remainder sequence for Z,Z' has degrees
 10,9,...,0. Positive rational rescaling to primitive integer coefficients
 does not change its signs. At minus and plus infinity these are
 
-    -infinity: (+,-,-,+,-,-,-,-,+,-,-),
-    +infinity: (+,+,-,-,-,+,-,+,+,+,-).
+    -infinity: (+,-,-,+,-,-,+,-,-,-,-),
+    +infinity: (+,+,-,-,-,+,+,+,-,+,-).
 
 Both have five sign variations. The final nonzero constant remainder
 also proves that Z is squarefree. By
 [Sturm's theorem](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Algebra/Polynomial/Sturm/Sequence.html),
-Z has no real root. Since Z(0)=755097959>0, Z is positive everywhere,
+Z has no real root. Since Z(0)=700223277072>0, Z is positive everywhere,
 which proves (10). The complete integer chain is supplied in the
 [exact record](../results/mirror_certificate_2026-10-05.json).
 The checker verifies every Euclidean division identity and checks the
@@ -245,61 +247,125 @@ For the second identity, use
 second prime moment and the approximation. Spectral functional calculus
 therefore yields
 
-    tau_d f_m(B_T) <=4529/10000
-       -(221/625)*Re tau_d(B_T-iI/4)^(-1)+o(1).
+    tau_d f_m(B_T) <=71551/150000
+       -(41501/100000)*Re tau_d(B_T-(11i/40)I)^(-1)+o(1).
 
 The resolvent identity transfers this single rational point:
 
-    |tau_d(B_T-iI/4)^(-1)-tau_d(A_T-iI/4)^(-1)|
-        <=16*||B_T-A_T||_(2,d)=o(1).
+    |tau_d(B_T-(11i/40)I)^(-1)-tau_d(A_T-(11i/40)I)^(-1)|
+        <=(1600/121)*||B_T-A_T||_(2,d)=o(1).
 
 The [block compression bound](bounded_resolvent_bridge.md) and fixed-taper
-leakage give tau_d(A_T-iI/4)^(-1)=m_T(i/4)+o(1). No trace of
+leakage give tau_d(A_T-(11i/40)I)^(-1)=m_T(11i/40)+o(1). No trace of
 an infinite-dimensional identity and no compression assertion for f_m
 itself is needed for this deduction. Consequently
 
     limsup tau_d f_m(B_T)
-       <=4529/10000-(221/625)*liminf Re m_T(i/4).           (11)
+       <=71551/150000-(41501/100000)*liminf Re m_T(11i/40). (11)
 
 The entirely rational sufficient arithmetic target for 80% is
 
-    liminf Re m_T(i/4) >=3529/3536.                        (12)
+    liminf Re m_T(11i/40) >=113102/124503.                 (12)
 
-The cleaner, slightly stronger hypothesis liminf Re m_T(i/4)>=1
-would give a trace cap of 993/10000 and, by the counting bridge,
+The cleaner, slightly stronger hypothesis liminf Re m_T(11i/40)>=91/100
+would give a trace cap of 2980427/30000000 and, by the counting bridge,
 
     liminf N_simple,on-line(T,2T)/N(T,2T)
-        >=1-2*(993/10000)=4007/5000=0.8014.               (13)
+        >=12019573/15000000, approximately 0.801304867.    (13)
 
 Here d/N tends to one, the collar loss vanishes, and the globally
 bounded derivative of f_m handles the vanishing spectral threshold.
 These are conditional implications. Neither (12) nor its stronger
-version at one has been established for the actual prime operator.
+version at 91/100 has been established for the actual prime operator.
 
 The arithmetic content can be stated in the prime-removal variables.
-Set t=1-i/4 and Y_T=Z_1+B_1+G_1 at z=i/4. The deterministic
+Set t=1-11i/40 and Y_T=Z_1+B_1+G_1 at z=11i/40. The deterministic
 identity t*m_T=1+Y_T+O(ell^-2) gives
 
-    Re m_T(i/4)=16/17+Re(Y_T/t)+o(1).
+    Re m_T(11i/40)=1600/1721+Re(Y_T/t)+o(1).
 
-Thus the sufficient bound at one is equivalent to the closing estimate
+Thus the sufficient bound at 91/100 is equivalent to the closing estimate
 
-    liminf Re[(Z_1+B_1+G_1)(i/4)/(1-i/4)] >=1/17.         (14)
+    liminf Re[(Z_1+B_1+G_1)(11i/40)/(1-11i/40)]
+        >=-3389/172100.                                   (14)
 
-Alternatively, write Xi_T=Tr[P*K_T*(J_T-iI/4)^(-1)*K_T*P]/d.
+Alternatively, write Xi_T=Tr[P*K_T*(J_T-(11i/40)I)^(-1)*K_T*P]/d.
 The exact two-prime insertion identity and the vanishing first prime
 moment give m_T=1/t+Xi_T/t^2+o(1). Since
-1/t^2=(240+128*i)/289, (14) is also equivalent to
+1/t^2=(2366400+1408000*i)/2961841, (14) is also equivalent to
 
-    liminf [240*Re Xi_T-128*Im Xi_T] >=17.
+    liminf Re[t^(-2)*Xi_T] >=-3389/172100.
 
 For the positive measure kappa_T(E)=Tr[P*K_T*1_E(J_T)*K_T*P]/d,
-this statistic is the integral of (240*x-32)/(x^2+1/16).
+this statistic is the integral of
+(2366400*x-387200)/[2961841*(x^2+121/1600)].
 Its total mass tends to 1/3, which alone does not determine this signed
 integral. These identities isolate the phase and covariance estimate
 still needed; they do not assume independence of the prime-removal terms.
 
-There is also an exact scalar stability estimate at this rational pole:
+## 6. Model-moment compatibility
+
+The [continuum Gram law](cue_gram_model.md) supports the target in (12)
+without substituting its moments for actual prime moments. Resolvent
+disks derived from moment constraints are classical; see di Dio,
+[Weyl Circles for one-dimensional Moment Problems](https://arxiv.org/abs/1506.06589).
+The argument below specializes a direct Bessel projection to the
+certified moment ledger. More generally,
+let mu be any probability measure on the real line with supplied moments
+m_0,...,m_(2n), and let H=(m_(j+k))_(j,k=0..n) be positive definite.
+For z=i*r, r>0, write m(z)=integral (x-z)^(-1) dmu and
+
+    q_j=z^j,  s_0=0,
+    s_j=sum_(k=0..j-1) z^k*m_(j-1-k),
+    v_j=integral x^j/(x-z) dmu=q_j*m(z)+s_j.
+
+Bessel's inequality for projection onto 1,x,...,x^n gives
+
+    v^*H^(-1)v <=integral |x-z|^(-2) dmu=Im m(z)/r.
+
+Set a=q^*H^(-1)q, b=q^*H^(-1)s and c=s^*H^(-1)s. Then
+a>0, c is real, and the inequality is
+
+    a*|m|^2+2*Re(conj(m)*b)+c <=Im(m)/r.
+
+Completing the square gives a disk centered at
+(-Re(b)/a,(1/(2*r)-Im(b))/a). Its radius squared is
+[Re(b)^2+(Im(b)-1/(2*r))^2-a*c]/a^2.
+All these quantities are exact rational numbers at a rational imaginary
+pole with rational moments.
+
+For the certified model moments through eighth order, H is positive
+definite: its successive LDL pivots are
+
+    (1, 1/3, 5/36, 247/5040, 2448223/104569920).
+
+At r=11/40, n=4, the disk therefore proves
+
+    Re m_model(11i/40)
+       >=23741200782961777600/26054764615856959631
+       >0.9112>91/100.                                    (15)
+
+This bound needs no assumption of nonnegative spectral support. It
+applies to every probability measure on the real line with those
+eight moments. For the actual matrix only the first two moment limits
+are established here; (15) supplies model evidence, not the missing
+arithmetic estimate.
+
+Support restrictions can also reject unsuitable candidate bounds.
+For a measure supported on [0,infinity), use the weighted inner product
+integral x*conj(f)*g dmu and the shifted matrix (m_(j+k+1)). With
+v_j=integral x^(j+1)/(x-z) dmu, Bessel's inequality becomes
+v^*H_shift^(-1)v<=Re m(z). At z=i/4 and degree three, exact completion
+of the square with the model moments through seventh order gives
+
+    Re m_model(i/4)<=742724016/753835003<1.                (16)
+
+Thus a sufficient condition requiring a value of one at i/4 would
+be incompatible with convergence to this positive model.
+The actual matrix may have negative spectral support; (16) does not
+give an upper bound for its resolvent from the first two moments alone.
+
+An exact scalar stability estimate at i/4 is
 
     24255*(16*x^2+1)^2-295680*x
       =55*(21-128*x-96*x^2)^2
@@ -311,7 +377,7 @@ to obtain |x|/(x^2+1/16)^2<=21. Thus for v>=1/16,
     |x/(x^2+v)-x/(x^2+1/16)|<=21*(v-1/16).
 
 Lean checks the cleared identity, both signs of its inequality and
-the exact rational constants in (11)--(13). The Sturm root count and
+the exact rational constants and comparisons in (11)--(16). The Sturm root count and
 the analytic operator transfers remain outside that formalization.
 
 ## Reproduction and scope
@@ -320,7 +386,8 @@ Run `python scripts/verify_mirror_certificate.py`. The
 [exact record](../results/mirror_certificate_2026-10-05.json) contains
 the square coefficients, endpoint signs, refined rational pole and
 weight intervals, the isolated one-point target and the rational
-majorant's complete Sturm certificate. A separate
+majorant's complete Sturm certificate, model moment matrices and
+Bessel-disk coefficients. A separate
 companion-matrix determinant/adjugate identity verifies the complete
 partial fractions by coefficient comparison. No sampled numerical
 evaluation is used as a polynomial proof.

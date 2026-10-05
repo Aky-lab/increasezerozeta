@@ -4,7 +4,7 @@
 
 Support a six-month investigation of the arithmetic estimate needed to turn an exact continuum moment model into a stronger bound on simple critical-line zeros of the Riemann zeta function. The plan begins with a six-week pilot. The requested budget is **$5,000 in AI credits**, with research subscription access where available. Deterministic computations run locally.
 
-The immediate target is a lower bound for the actual prime operator's resolvent at i/4. Exact finite-model certificates and a conditional counting implication are available; the central arithmetic estimate remains open.
+The immediate target is a lower bound for the actual prime operator's resolvent at 11i/40. The exact model moments support the proposed threshold of 0.91. Finite-model certificates and a conditional counting implication are available; the central arithmetic estimate remains open.
 
 ## Evidence
 
@@ -15,7 +15,7 @@ The immediate target is a lower bound for the actual prime operator's resolvent 
 | [Counting bridge](../notes/spectral_counting_bridge.md) | A sufficient actual-matrix trace hypothesis for the 80% target |
 | [Bounded resolvent reduction](../notes/bounded_resolvent_bridge.md) | An alternative target with controlled compression error and three resolvent powers |
 | [Prime-removal expansion](../notes/prime_removal_resolvent.md) | Local remainder bounds and explicit conditional-phase/covariance terms to estimate |
-| [Rational one-point criterion](../notes/mirror_resolvent_certificate.md) | An exact global majorant; a lower bound of one at i/4 would imply 80.14%, with no higher arithmetic moment hypothesis |
+| [Rational one-point criterion](../notes/mirror_resolvent_certificate.md) | An exact global majorant; a lower bound of 0.91 at 11i/40 would imply approximately 80.13%, with no higher arithmetic moment hypothesis. The certified model bound exceeds 0.9112. |
 | [Lean formalization](../formal/README.md) | 31 kernel-checked scalar and conditional finite counting theorems, with an axiom audit |
 | [Local verification record](../results/project_verification_2026-10-05.json) | 33 Python checks and the separate Lean proof audit, including source hashes |
 
