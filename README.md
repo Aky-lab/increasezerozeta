@@ -2,7 +2,7 @@
 
 Exact computation and analytic research on lower bounds for the proportion of simple zeros of the Riemann zeta function on the critical line.
 
-The project develops reproducible mathematical calculations toward stronger bounds. All class evaluations needed for the finite continuum model through eighth order are now certified. The remaining research is to independently review those certificates and prove their connection to zeta moments.
+The project develops reproducible mathematical calculations toward stronger bounds. All class evaluations needed for the finite continuum model through eighth order are certified. The model also has a Haar-unitary Gram realization and a proof of convergence to a unique limiting spectral distribution. Arithmetic transport to zeta moments remains a central open problem.
 
 ## Results and scope
 
@@ -20,15 +20,34 @@ These are finite model and algebraic results. Arithmetic transport to zeta momen
 
 See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
+## Structural research
+
+[Centered Ehrhart reciprocity](notes/centered_reciprocity.md) reduces an eighth-order class certificate to four fit counts and one held-out count. The new method reproduces all fourteen class integrals, including a separate period-one certificate for {5,2}. Its polynomials match all 119 earlier aggregate counts and 641 orbit counts.
+
+[The Haar-unitary Gram identity](notes/cue_gram_model.md) identifies the finite network model with exact expected moments of a positive random matrix. A separate integer Laurent-polynomial calculation checks every moment through eighth order at matrix sizes 1, 2, 3 and 4.
+
+[An occupancy and moment-growth argument](notes/cue_limit_determinacy.md) proves that the expected spectral measures converge to a unique distribution with the continuum moments at every order. These derivations use established reciprocity, CUE and moment-problem results; priority for their specific application remains to be assessed.
+
 ## Reproduction
 
-Run all eleven project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all thirteen project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
 ```
 
-This checks finite algebra, exact moment targets, actual-walk examples, certificate records and source hashes, independent pairing counts and cell integrals, scalar mixed-class counts, Bell(7)/Bell(8) enumeration, and both moment ledgers. Use `--output verification.json` to save the full results.
+This checks finite algebra, exact moment targets, actual-walk examples, certificate records and source hashes, independent pairing counts and cell integrals, scalar mixed-class counts, the reduced reciprocity certificates, independent Weyl integration, Bell(7)/Bell(8) enumeration, and both moment ledgers. Use `--output verification.json` to save the full results.
+
+The faster route to recompute all fourteen network certificates requires NumPy:
+
+```sh
+python -m pip install -r requirements-lattice.txt
+python scripts/reciprocity_certificates.py --out results/reciprocity_reproduction.json
+python scripts/verify_reciprocity.py --record results/reciprocity_reproduction.json
+python scripts/verify_cue_model.py --record results/reciprocity_reproduction.json
+```
+
+The generation step took about nine seconds in the recorded environment. These commands check the regenerated certificate; without `--record` the verifiers check the committed one. The independent Gram verifier computes its Weyl integrals afresh. Older evaluators below retain the original, larger sample ranges for comparison.
 
 The seventh- and eighth-order calculators are available directly:
 
@@ -74,7 +93,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all eleven executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all thirteen executed checks.
 
 ## Project files
 

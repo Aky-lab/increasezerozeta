@@ -19,6 +19,8 @@ CHECKS = (
     ("verify_model_certificates.py", "recorded integer certificates and source provenance"),
     ("verify_pairing_model.py", "pair-cycle certificates, direct counts and exact cell integration"),
     ("verify_mixed_cycles.py", "mixed-cycle certificates and independent scalar frequency sums"),
+    ("verify_reciprocity.py", "reduced reciprocity certificates and all earlier lattice counts"),
+    ("verify_cue_model.py", "independent exact Weyl-integration checks of Haar-unitary Gram moments"),
     ("bell7_gate.py", "seventh-order partition multiplicities"),
     ("bell8_orbits.py", "eighth-order dihedral orbits and multiplicities"),
     ("m7_ledger.py", "seventh-order continuum model ledger"),

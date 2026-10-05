@@ -28,7 +28,7 @@ separate analytic obligations.
 | C7 | -17/360 | Pure-cycle lift |
 | C8 | 157/4032 | Pure-cycle lift |
 | {4,2} | -23/420 | Mixed-cycle lift |
-| {5,2} | 1/8 | Weighted spectator lattice calculation |
+| {5,2} | 1/8 | Weighted spectator lattice and reduced network certificate |
 | {6,2} | -563/11340 | Mixed-cycle lift |
 | {4,2,2} | -127/840 | Mixed-cycle lift |
 | {4,4} | 23/4536 | Mixed-cycle lift |
@@ -82,12 +82,41 @@ the positive moment cone and alternative supplied inputs.
 
 ## Open research
 
-1. Independently review the finite certificates, normalization and grouping corrections.
+1. Independently review the structural proofs, finite certificates and normalization.
 2. Prove the arithmetic moment identities and their continuum transport through eighth order.
 3. Establish the spectral/counting interface for these supplied moments.
 4. Resolve the fixed-P tail obligation in the separate [fourth-moment route](notes/class_subtracted_universality.md) and [arithmetic analysis](notes/arithmetic_to_continuum.md).
-5. Assess further model orders after the analytic interface is validated.
+5. Develop efficient evaluation of further model moments and study fluctuations of the Gram spectrum.
+6. Assess prior literature for the network/Gram connection and reduced certificate method.
 
 A certified finite integral, an assembled model moment and an established
 arithmetic zeta moment are distinct stages. The remaining analytic work is
 essential to any unconditional simple-zero bound.
+
+## Structural results beyond enumeration
+
+For the lifted network polytopes, the all-ones direction and Ehrhart
+reciprocity imply S_P(-n)=(-1)^(B+1) S_P(n). Non-singleton cumulants also
+force zeros at n=0,1,-1. The resulting factorization needs only floor(B/2)
+fit counts; [the proof and reduced certificates](notes/centered_reciprocity.md)
+reproduce every class through order eight and every earlier network count.
+
+For Haar U in U(n), form V_(a,j)=z_j^a/sqrt(n) from its eigenvalues, and
+G_n=V V*. [The exact Gram identity](notes/cue_gram_model.md) identifies
+n^(B+1) E[Tr(G_n^B)/n] with the same Bell-class network sum. It proves that
+the model moments are limits of positive spectral moments, and that every
+finite-size correction is an even power of 1/n. Independent Weyl integration
+checks the entire moment assembly through order eight at n=1,2,3,4.
+
+[The occupancy argument](notes/cue_limit_determinacy.md) gives the all-order
+uniform bound E[Tr(G_n^B)/n]<=42^B Bell_(B+1). Carleman's criterion then
+proves moment determinacy and weak convergence of the expected empirical
+spectral measures to a unique probability measure on [0,infinity).
+This resolves existence and uniqueness for the model sequence without
+enumerating later class integrals. It does not prove convergence of random
+empirical measures or transport to zeta zeros.
+
+The underlying Ehrhart, determinantal-process and moment-problem theorems
+are established background cited in the proof notes. The applications are
+derived in this repository; a claim of priority requires further literature
+review and independent mathematical assessment.

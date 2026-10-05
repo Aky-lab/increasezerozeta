@@ -4,7 +4,7 @@
 
 Develop auditable exact computations for higher moments in research on simple zeros of the Riemann zeta function. A six-week pilot seeks **$1,000 in AI API credits** for independent derivations, computation and analytic proof development.
 
-The immediate objective is independent review of the complete eighth-order finite model and progress on the lemmas connecting it to arithmetic zeta moments.
+The immediate objective is independent review of the exact model and its structural proofs, further mathematical research, and progress on the lemmas connecting it to arithmetic zeta moments.
 
 ## Existing results
 
@@ -22,15 +22,33 @@ The assembled model moments are m6=640/63, m7=3439/180 and m8=747361/20160. Exac
 
 See [the research overview](../RESEARCH.md) for conventions and proof obligations.
 
+## Structural research and computational value
+
+[Centered reciprocity](../notes/centered_reciprocity.md) reduces the number of
+fit counts for an order-B class to floor(B/2). At eighth order the largest
+outer cube shrinks from 214358881 to 1679616 points. All fourteen class
+certificates regenerate in about nine seconds in the recorded environment;
+every earlier network count agrees with the reduced polynomials. This also
+provides a separate period-one certificate for the spectator integral.
+
+[The Haar-unitary Gram realization](../notes/cue_gram_model.md) gives a
+positive random-matrix foundation for the model. Independent exact Weyl
+integration checks the moments through order eight at four matrix sizes.
+[The occupancy proof](../notes/cue_limit_determinacy.md) bounds moments at
+every order, establishes moment determinacy and proves convergence of the
+expected spectral measures to a unique limit. These are mathematical model
+results beyond the individual class evaluations. Their application to zeta
+zeros and priority in the literature remain separate questions.
+
 ## Pilot milestones
 
 | Period | Work | Deliverable |
 |---|---|---|
 | Week 1 | Review definitions, reference conventions and normalization | Reviewed specification and anchor cases |
-| Weeks 2–3 | Independently review the complete seventh/eighth-order certificates | Reviewed counts, normalization and corrections or counterexamples |
+| Weeks 2–3 | Review reciprocity, Gram realization, determinacy and class certificates | Reviewed proofs and certificates, corrections or counterexamples, literature comparison |
 | Week 4 | Audit the analytic moment-production framework | Precise transport specification and missing lemmas |
 | Week 5 | Develop arithmetic-to-model transport | Proofs and a precise list of remaining lemmas |
-| Week 6 | Package computations and evaluate the next stage | Reproduction bundle, resource report and mathematical review |
+| Week 6 | Evaluate further moments and spectral fluctuations; package computations | Further results or explicit obstacles, reproduction bundle and resource report |
 
 ## Resources and evaluation
 

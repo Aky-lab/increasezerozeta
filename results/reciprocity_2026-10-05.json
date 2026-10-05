@@ -1,0 +1,10939 @@
+{
+  "schema_version": 1,
+  "source_sha256": {
+    "scripts/reciprocity_certificates.py": "572cd5d4e30450ca0f341c608b456a0d8d6c3b15b6eb2aab953693b1fd0a06b0",
+    "scripts/mixed_cycle_lattice.py": "f935aa37d440c506a9e87204e7a244b5208f8558a9fc99fb564815992c3fa0a0",
+    "scripts/pure_cycle_lattice.py": "e581cbfa542d9d10746e4e8703cd4490e3ab3d014ca13b5c6a5d96e4c37466d8",
+    "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488"
+  },
+  "records": [
+    {
+      "signature": [
+        2
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 2,
+      "absolute_sum_bound": 2,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2
+      ],
+      "n": 2,
+      "signed_count": 2,
+      "outer_free_coordinates": 2,
+      "absolute_sum_bound": 16,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 2
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2
+      ],
+      "n": 3,
+      "signed_count": 8,
+      "outer_free_coordinates": 2,
+      "absolute_sum_bound": 54,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 8
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2,
+        2
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 3,
+      "absolute_sum_bound": 12,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2,
+        2
+      ],
+      "n": 2,
+      "signed_count": 4,
+      "outer_free_coordinates": 3,
+      "absolute_sum_bound": 384,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2,
+        2
+      ],
+      "n": 3,
+      "signed_count": 48,
+      "outer_free_coordinates": 3,
+      "absolute_sum_bound": 2916,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 22
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 4
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2,
+        2
+      ],
+      "n": 4,
+      "signed_count": 232,
+      "outer_free_coordinates": 3,
+      "absolute_sum_bound": 12288,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 104
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 24
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2,
+        2,
+        2
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 4,
+      "absolute_sum_bound": 120,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2,
+        2,
+        2
+      ],
+      "n": 2,
+      "signed_count": 12,
+      "outer_free_coordinates": 4,
+      "absolute_sum_bound": 15360,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 2
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2,
+        2,
+        2
+      ],
+      "n": 3,
+      "signed_count": 408,
+      "outer_free_coordinates": 4,
+      "absolute_sum_bound": 262440,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 62
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 10
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 60
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 4
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 32
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2,
+        2,
+        2
+      ],
+      "n": 4,
+      "signed_count": 3816,
+      "outer_free_coordinates": 4,
+      "absolute_sum_bound": 1966080,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 560
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 116
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 536
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 52
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 236
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2,
+        2,
+        2
+      ],
+      "n": 5,
+      "signed_count": 20088,
+      "outer_free_coordinates": 4,
+      "absolute_sum_bound": 9375000,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2902
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 658
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 2764
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 308
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 1120
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 1680,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.01600000000325963
+    },
+    {
+      "signature": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 2,
+      "signed_count": 48,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 860160,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 3,
+      "signed_count": 4480,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 33067440,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 178
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 26
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 168
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 10
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 24
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 90
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 10
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 26
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 28
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 164
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 6
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 4
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 12
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 4
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 22
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 70
+        },
+        {
+          "blocks": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 40
+        }
+      ],
+      "seconds": 0.014999999955762178
+    },
+    {
+      "signature": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 4,
+      "signed_count": 79968,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 440401920,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 3104
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 584
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 2864
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 252
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 544
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1244
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 248
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 576
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 608
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 2768
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 148
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 98
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 228
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 128
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 380
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 880
+        },
+        {
+          "blocks": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 656
+        }
+      ],
+      "seconds": 0.01600000000325963
+    },
+    {
+      "signature": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 5,
+      "signed_count": 680544,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 3281250000,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 26098
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 5386
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 23824
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 2430
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 5024
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 9418
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 2374
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 5274
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 5520
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 22916
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 1428
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 952
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1968
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 1324
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 3114
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 6378
+        },
+        {
+          "blocks": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 5208
+        }
+      ],
+      "seconds": 0.01600000000325963
+    },
+    {
+      "signature": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "n": 6,
+      "signed_count": 3771728,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 16930529280,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 143654
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 31024
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 130374
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 14312
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 28944
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 49014
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 13928
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 30256
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 31528
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 125078
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 8428
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 5648
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 10968
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 8048
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 16840
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 32430
+        },
+        {
+          "blocks": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 27616
+        }
+      ],
+      "seconds": 0.015000000013969839
+    },
+    {
+      "signature": [
+        4
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 4,
+      "absolute_sum_bound": 26,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        4
+      ],
+      "n": 2,
+      "signed_count": 0,
+      "outer_free_coordinates": 4,
+      "absolute_sum_bound": 832,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        4
+      ],
+      "n": 3,
+      "signed_count": -2,
+      "outer_free_coordinates": 4,
+      "absolute_sum_bound": 6318,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": -2
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        4
+      ],
+      "n": 4,
+      "signed_count": -12,
+      "outer_free_coordinates": 4,
+      "absolute_sum_bound": 26624,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": -12
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        5
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 150,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        5
+      ],
+      "n": 2,
+      "signed_count": 0,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 9600,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        5
+      ],
+      "n": 3,
+      "signed_count": 10,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 109350,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 10
+        }
+      ],
+      "seconds": 0.01600000000325963
+    },
+    {
+      "signature": [
+        5
+      ],
+      "n": 4,
+      "signed_count": 80,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 614400,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 80
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        6
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 1082,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.015000000013969839
+    },
+    {
+      "signature": [
+        6
+      ],
+      "n": 2,
+      "signed_count": -2,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 138496,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": -2
+        }
+      ],
+      "seconds": 0.01600000000325963
+    },
+    {
+      "signature": [
+        6
+      ],
+      "n": 3,
+      "signed_count": -30,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 2366334,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": -30
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        6
+      ],
+      "n": 4,
+      "signed_count": -192,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 17727488,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": -192
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        6
+      ],
+      "n": 5,
+      "signed_count": -822,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 84531250,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": -822
+        }
+      ],
+      "seconds": 0.01600000000325963
+    },
+    {
+      "signature": [
+        7
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 9366,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.15600000001722947
+    },
+    {
+      "signature": [
+        7
+      ],
+      "n": 2,
+      "signed_count": 0,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 2397696,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.06300000002374873
+    },
+    {
+      "signature": [
+        7
+      ],
+      "n": 3,
+      "signed_count": -126,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 61450326,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 1,
+          "count": -126
+        }
+      ],
+      "seconds": 0.061999999976251274
+    },
+    {
+      "signature": [
+        7
+      ],
+      "n": 4,
+      "signed_count": -1960,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 613810176,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 1,
+          "count": -1960
+        }
+      ],
+      "seconds": 0.061999999976251274
+    },
+    {
+      "signature": [
+        7
+      ],
+      "n": 5,
+      "signed_count": -13930,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 3658593750,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 1,
+          "count": -13930
+        }
+      ],
+      "seconds": 0.07800000003771856
+    },
+    {
+      "signature": [
+        8
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 8,
+      "absolute_sum_bound": 94586,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 1.5
+    },
+    {
+      "signature": [
+        8
+      ],
+      "n": 2,
+      "signed_count": 12,
+      "outer_free_coordinates": 8,
+      "absolute_sum_bound": 48428032,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 12
+        }
+      ],
+      "seconds": 0.7660000000032596
+    },
+    {
+      "signature": [
+        8
+      ],
+      "n": 3,
+      "signed_count": 666,
+      "outer_free_coordinates": 8,
+      "absolute_sum_bound": 1861736238,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 666
+        }
+      ],
+      "seconds": 0.9059999999590218
+    },
+    {
+      "signature": [
+        8
+      ],
+      "n": 4,
+      "signed_count": 9656,
+      "outer_free_coordinates": 8,
+      "absolute_sum_bound": 24795152384,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 9656
+        }
+      ],
+      "seconds": 1.0310000000172295
+    },
+    {
+      "signature": [
+        8
+      ],
+      "n": 5,
+      "signed_count": 73972,
+      "outer_free_coordinates": 8,
+      "absolute_sum_bound": 184738281250,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 73972
+        }
+      ],
+      "seconds": 1.3130000000237487
+    },
+    {
+      "signature": [
+        8
+      ],
+      "n": 6,
+      "signed_count": 386136,
+      "outer_free_coordinates": 8,
+      "absolute_sum_bound": 953208953856,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 386136
+        }
+      ],
+      "seconds": 1.8290000000270084
+    },
+    {
+      "signature": [
+        4,
+        2
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 780,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        4,
+        2
+      ],
+      "n": 2,
+      "signed_count": 0,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 99840,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        4,
+        2
+      ],
+      "n": 3,
+      "signed_count": -48,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 1705860,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": -6
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": -4
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        4,
+        2
+      ],
+      "n": 4,
+      "signed_count": -564,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 12779520,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": -68
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": -4
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": -44
+        }
+      ],
+      "seconds": 0.014999999955762178
+    },
+    {
+      "signature": [
+        4,
+        2
+      ],
+      "n": 5,
+      "signed_count": -3216,
+      "outer_free_coordinates": 5,
+      "absolute_sum_bound": 60937500,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": -382
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": -32
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": -244
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        5,
+        2
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 6300,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 0
+        }
+      ],
+      "seconds": 0.01600000000325963
+    },
+    {
+      "signature": [
+        5,
+        2
+      ],
+      "n": 2,
+      "signed_count": 0,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 1612800,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        5,
+        2
+      ],
+      "n": 3,
+      "signed_count": 336,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 41334300,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 28
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 4
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 16
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        5,
+        2
+      ],
+      "n": 4,
+      "signed_count": 5208,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 412876800,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 424
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 88
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 232
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        5,
+        2
+      ],
+      "n": 5,
+      "signed_count": 36960,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 2460937500,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 2980
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 700
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "count": 1600
+        }
+      ],
+      "seconds": 0.01600000000325963
+    },
+    {
+      "signature": [
+        6,
+        2
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 60592,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        }
+      ],
+      "seconds": 0.01600000000325963
+    },
+    {
+      "signature": [
+        6,
+        2
+      ],
+      "n": 2,
+      "signed_count": -32,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 31023104,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        }
+      ],
+      "seconds": 0.015000000013969839
+    },
+    {
+      "signature": [
+        6,
+        2
+      ],
+      "n": 3,
+      "signed_count": -1392,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 1192632336,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -78
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -24
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -48
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -48
+        }
+      ],
+      "seconds": 0.014999999955762178
+    },
+    {
+      "signature": [
+        6,
+        2
+      ],
+      "n": 4,
+      "signed_count": -17216,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 15883829248,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -896
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -416
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -488
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -704
+        }
+      ],
+      "seconds": 0.03200000000651926
+    },
+    {
+      "signature": [
+        6,
+        2
+      ],
+      "n": 5,
+      "signed_count": -119696,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 118343750000,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -5918
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -3368
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -3072
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -5208
+        }
+      ],
+      "seconds": 0.0470000000204891
+    },
+    {
+      "signature": [
+        6,
+        2
+      ],
+      "n": 6,
+      "signed_count": -587296,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 610627756032,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -28006
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -18016
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -14198
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -26384
+        }
+      ],
+      "seconds": 0.2029999999795109
+    },
+    {
+      "signature": [
+        4,
+        2,
+        2
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 21840,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        }
+      ],
+      "seconds": 0.015000000013969839
+    },
+    {
+      "signature": [
+        4,
+        2,
+        2
+      ],
+      "n": 2,
+      "signed_count": 0,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 11182080,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        4,
+        2,
+        2
+      ],
+      "n": 3,
+      "signed_count": -992,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 429876720,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -18
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -18
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -12
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -18
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -12
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -16
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -10
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -8
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -12
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        4,
+        2,
+        2
+      ],
+      "n": 4,
+      "signed_count": -22464,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 5725224960,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -392
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -20
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -384
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -244
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -24
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -384
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -20
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -252
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -344
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -64
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -12
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -164
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -4
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -28
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -16
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -16
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -136
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -56
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -216
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": -24
+        }
+      ],
+      "seconds": 0.01600000000325963
+    },
+    {
+      "signature": [
+        4,
+        2,
+        2
+      ],
+      "n": 5,
+      "signed_count": -207792,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 42656250000,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -3562
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -260
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -3458
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -2152
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -308
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -3458
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -260
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -2252
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -3108
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -660
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -160
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -1306
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -60
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -352
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -202
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -202
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -34
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -1114
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -550
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -1796
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -8
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": -296
+        }
+      ],
+      "seconds": 0.046999999962281436
+    },
+    {
+      "signature": [
+        4,
+        2,
+        2
+      ],
+      "n": 6,
+      "signed_count": -1198624,
+      "outer_free_coordinates": 6,
+      "absolute_sum_bound": 220096880640,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -20352
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -1720
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -19664
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -12104
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -2024
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -19664
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -1720
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -12752
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -17704
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -4004
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -1072
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -6944
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -424
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -2288
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -1316
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": -1316
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -252
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": -6036
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -3256
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -9776
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": -80
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": -1904
+        }
+      ],
+      "seconds": 0.10899999999674037
+    },
+    {
+      "signature": [
+        4,
+        4
+      ],
+      "n": 1,
+      "signed_count": 0,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 23660,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.0
+    },
+    {
+      "signature": [
+        4,
+        4
+      ],
+      "n": 2,
+      "signed_count": 0,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 12113920,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.015000000013969839
+    },
+    {
+      "signature": [
+        4,
+        4
+      ],
+      "n": 3,
+      "signed_count": 36,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 465699780,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.01600000000325963
+    },
+    {
+      "signature": [
+        4,
+        4
+      ],
+      "n": 4,
+      "signed_count": 752,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 6202327040,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 52
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 40
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 36
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 40
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "seconds": 0.01600000000325963
+    },
+    {
+      "signature": [
+        4,
+        4
+      ],
+      "n": 5,
+      "signed_count": 6884,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 46210937500,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 504
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 4
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 350
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 8
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 312
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 358
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 8
+        }
+      ],
+      "seconds": 0.0779999999795109
+    },
+    {
+      "signature": [
+        4,
+        4
+      ],
+      "n": 6,
+      "signed_count": 39712,
+      "outer_free_coordinates": 7,
+      "absolute_sum_bound": 238438287360,
+      "orbits": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 2972
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 40
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1960
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 80
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 1756
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2040
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 80
+        }
+      ],
+      "seconds": 0.28100000001722947
+    }
+  ],
+  "certificates": {
+    "2": {
+      "value": "1/3",
+      "degree_bound": 3,
+      "period": 1,
+      "parity": "odd",
+      "factor_power": 1,
+      "fit_n": [
+        2
+      ],
+      "held_out_n": 3,
+      "reduced_polynomial": [
+        "1/3"
+      ],
+      "polynomial": [
+        "0",
+        "-1/3",
+        "0",
+        "1/3"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "1/3",
+          "polynomial": [
+            "0",
+            "-1/3",
+            "0",
+            "1/3"
+          ]
+        }
+      ]
+    },
+    "2,2": {
+      "value": "4/15",
+      "degree_bound": 5,
+      "period": 1,
+      "parity": "odd",
+      "factor_power": 1,
+      "fit_n": [
+        2,
+        3
+      ],
+      "held_out_n": 4,
+      "reduced_polynomial": [
+        "-2/5",
+        "4/15"
+      ],
+      "polynomial": [
+        "0",
+        "2/5",
+        "0",
+        "-2/3",
+        "0",
+        "4/15"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "value": "7/60",
+          "polynomial": [
+            "0",
+            "2/15",
+            "0",
+            "-1/4",
+            "0",
+            "7/60"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "1/30",
+          "polynomial": [
+            "0",
+            "2/15",
+            "0",
+            "-1/6",
+            "0",
+            "1/30"
+          ]
+        }
+      ]
+    },
+    "2,2,2": {
+      "value": "32/105",
+      "degree_bound": 7,
+      "period": 1,
+      "parity": "odd",
+      "factor_power": 1,
+      "fit_n": [
+        2,
+        3,
+        4
+      ],
+      "held_out_n": 5,
+      "reduced_polynomial": [
+        "34/35",
+        "-101/105",
+        "32/105"
+      ],
+      "polynomial": [
+        "0",
+        "-34/35",
+        "0",
+        "29/15",
+        "0",
+        "-19/15",
+        "0",
+        "32/105"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "value": "3/70",
+          "polynomial": [
+            "0",
+            "-8/105",
+            "0",
+            "11/60",
+            "0",
+            "-3/20",
+            "0",
+            "3/70"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "value": "1/90",
+          "polynomial": [
+            "0",
+            "-1/15",
+            "0",
+            "23/180",
+            "0",
+            "-13/180",
+            "0",
+            "1/90"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "value": "17/420",
+          "polynomial": [
+            "0",
+            "-2/35",
+            "0",
+            "3/20",
+            "0",
+            "-2/15",
+            "0",
+            "17/420"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "value": "1/180",
+          "polynomial": [
+            "0",
+            "-1/15",
+            "0",
+            "19/180",
+            "0",
+            "-2/45",
+            "0",
+            "1/180"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "1/70",
+          "polynomial": [
+            "0",
+            "-1/21",
+            "0",
+            "1/30",
+            "0",
+            "0",
+            "0",
+            "1/70"
+          ]
+        }
+      ]
+    },
+    "2,2,2,2": {
+      "value": "1661/3780",
+      "degree_bound": 9,
+      "period": 1,
+      "parity": "odd",
+      "factor_power": 1,
+      "fit_n": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "held_out_n": 6,
+      "reduced_polynomial": [
+        "-424/105",
+        "4049/945",
+        "-7849/3780",
+        "1661/3780"
+      ],
+      "polynomial": [
+        "0",
+        "424/105",
+        "0",
+        "-1573/189",
+        "0",
+        "229/36",
+        "0",
+        "-317/126",
+        "0",
+        "1661/3780"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "value": "83/5040",
+          "polynomial": [
+            "0",
+            "8/105",
+            "0",
+            "-59/315",
+            "0",
+            "43/240",
+            "0",
+            "-71/840",
+            "0",
+            "83/5040"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "59/15120",
+          "polynomial": [
+            "0",
+            "2/35",
+            "0",
+            "-461/3780",
+            "0",
+            "67/720",
+            "0",
+            "-9/280",
+            "0",
+            "59/15120"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "223/15120",
+          "polynomial": [
+            "0",
+            "4/105",
+            "0",
+            "-209/1890",
+            "0",
+            "91/720",
+            "0",
+            "-173/2520",
+            "0",
+            "223/15120"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "19/10080",
+          "polynomial": [
+            "0",
+            "1/21",
+            "0",
+            "-241/2520",
+            "0",
+            "31/480",
+            "0",
+            "-31/1680",
+            "0",
+            "19/10080"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "11/3024",
+          "polynomial": [
+            "0",
+            "4/105",
+            "0",
+            "-71/756",
+            "0",
+            "59/720",
+            "0",
+            "-5/168",
+            "0",
+            "11/3024"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "5/1008",
+          "polynomial": [
+            "0",
+            "1/35",
+            "0",
+            "-43/1260",
+            "0",
+            "1/240",
+            "0",
+            "-1/280",
+            "0",
+            "5/1008"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "value": "11/6048",
+          "polynomial": [
+            "0",
+            "4/105",
+            "0",
+            "-607/7560",
+            "0",
+            "83/1440",
+            "0",
+            "-29/1680",
+            "0",
+            "11/6048"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "19/5040",
+          "polynomial": [
+            "0",
+            "4/105",
+            "0",
+            "-23/252",
+            "0",
+            "19/240",
+            "0",
+            "-5/168",
+            "0",
+            "19/5040"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "353/90720",
+          "polynomial": [
+            "0",
+            "2/63",
+            "0",
+            "-361/4536",
+            "0",
+            "317/4320",
+            "0",
+            "-89/3024",
+            "0",
+            "353/90720"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "319/22680",
+          "polynomial": [
+            "0",
+            "8/315",
+            "0",
+            "-947/11340",
+            "0",
+            "23/216",
+            "0",
+            "-59/945",
+            "0",
+            "319/22680"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "29/25920",
+          "polynomial": [
+            "0",
+            "2/45",
+            "0",
+            "-509/6480",
+            "0",
+            "383/8640",
+            "0",
+            "-49/4320",
+            "0",
+            "29/25920"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "23/30240",
+          "polynomial": [
+            "0",
+            "3/70",
+            "0",
+            "-67/945",
+            "0",
+            "17/480",
+            "0",
+            "-41/5040",
+            "0",
+            "23/30240"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "13/10080",
+          "polynomial": [
+            "0",
+            "1/35",
+            "0",
+            "-103/2520",
+            "0",
+            "3/160",
+            "0",
+            "-13/1680",
+            "0",
+            "13/10080"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "17/15120",
+          "polynomial": [
+            "0",
+            "4/105",
+            "0",
+            "-293/3780",
+            "0",
+            "37/720",
+            "0",
+            "-11/840",
+            "0",
+            "17/15120"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "167/90720",
+          "polynomial": [
+            "0",
+            "1/45",
+            "0",
+            "-341/22680",
+            "0",
+            "-13/4320",
+            "0",
+            "-13/2160",
+            "0",
+            "167/90720"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "value": "283/90720",
+          "polynomial": [
+            "0",
+            "2/45",
+            "0",
+            "-1441/22680",
+            "0",
+            "11/864",
+            "0",
+            "7/2160",
+            "0",
+            "283/90720"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "13/4536",
+          "polynomial": [
+            "0",
+            "4/315",
+            "0",
+            "157/5670",
+            "0",
+            "-43/1080",
+            "0",
+            "-13/3780",
+            "0",
+            "13/4536"
+          ]
+        }
+      ]
+    },
+    "4": {
+      "value": "-1/60",
+      "degree_bound": 5,
+      "period": 1,
+      "parity": "odd",
+      "factor_power": 1,
+      "fit_n": [
+        2,
+        3
+      ],
+      "held_out_n": 4,
+      "reduced_polynomial": [
+        "1/15",
+        "-1/60"
+      ],
+      "polynomial": [
+        "0",
+        "-1/15",
+        "0",
+        "1/12",
+        "0",
+        "-1/60"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "-1/60",
+          "polynomial": [
+            "0",
+            "-1/15",
+            "0",
+            "1/12",
+            "0",
+            "-1/60"
+          ]
+        }
+      ]
+    },
+    "5": {
+      "value": "1/36",
+      "degree_bound": 6,
+      "period": 1,
+      "parity": "even",
+      "factor_power": 2,
+      "fit_n": [
+        2,
+        3
+      ],
+      "held_out_n": 4,
+      "reduced_polynomial": [
+        "-1/9",
+        "1/36"
+      ],
+      "polynomial": [
+        "0",
+        "0",
+        "1/9",
+        "0",
+        "-5/36",
+        "0",
+        "1/36"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "1/36",
+          "polynomial": [
+            "0",
+            "0",
+            "1/9",
+            "0",
+            "-5/36",
+            "0",
+            "1/36"
+          ]
+        }
+      ]
+    },
+    "6": {
+      "value": "-1/126",
+      "degree_bound": 7,
+      "period": 1,
+      "parity": "odd",
+      "factor_power": 1,
+      "fit_n": [
+        2,
+        3,
+        4
+      ],
+      "held_out_n": 5,
+      "reduced_polynomial": [
+        "4/35",
+        "-101/1260",
+        "-1/126"
+      ],
+      "polynomial": [
+        "0",
+        "-4/35",
+        "0",
+        "7/36",
+        "0",
+        "-13/180",
+        "0",
+        "-1/126"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "-1/126",
+          "polynomial": [
+            "0",
+            "-4/35",
+            "0",
+            "7/36",
+            "0",
+            "-13/180",
+            "0",
+            "-1/126"
+          ]
+        }
+      ]
+    },
+    "7": {
+      "value": "-17/360",
+      "degree_bound": 8,
+      "period": 1,
+      "parity": "even",
+      "factor_power": 2,
+      "fit_n": [
+        2,
+        3,
+        4
+      ],
+      "held_out_n": 5,
+      "reduced_polynomial": [
+        "-3/10",
+        "19/72",
+        "-17/360"
+      ],
+      "polynomial": [
+        "0",
+        "0",
+        "3/10",
+        "0",
+        "-203/360",
+        "0",
+        "14/45",
+        "0",
+        "-17/360"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "-17/360",
+          "polynomial": [
+            "0",
+            "0",
+            "3/10",
+            "0",
+            "-203/360",
+            "0",
+            "14/45",
+            "0",
+            "-17/360"
+          ]
+        }
+      ]
+    },
+    "8": {
+      "value": "157/4032",
+      "degree_bound": 9,
+      "period": 1,
+      "parity": "odd",
+      "factor_power": 1,
+      "fit_n": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "held_out_n": 6,
+      "reduced_polynomial": [
+        "3/5",
+        "-641/1680",
+        "547/20160",
+        "157/4032"
+      ],
+      "polynomial": [
+        "0",
+        "-3/5",
+        "0",
+        "1649/1680",
+        "0",
+        "-1177/2880",
+        "0",
+        "-17/1440",
+        "0",
+        "157/4032"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "157/4032",
+          "polynomial": [
+            "0",
+            "-3/5",
+            "0",
+            "1649/1680",
+            "0",
+            "-1177/2880",
+            "0",
+            "-17/1440",
+            "0",
+            "157/4032"
+          ]
+        }
+      ]
+    },
+    "4,2": {
+      "value": "-23/420",
+      "degree_bound": 7,
+      "period": 1,
+      "parity": "odd",
+      "factor_power": 1,
+      "fit_n": [
+        2,
+        3,
+        4
+      ],
+      "held_out_n": 5,
+      "reduced_polynomial": [
+        "-13/35",
+        "131/420",
+        "-23/420"
+      ],
+      "polynomial": [
+        "0",
+        "13/35",
+        "0",
+        "-41/60",
+        "0",
+        "11/30",
+        "0",
+        "-23/420"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "value": "-2/315",
+          "polynomial": [
+            "0",
+            "1/35",
+            "0",
+            "-11/180",
+            "0",
+            "7/180",
+            "0",
+            "-2/315"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "value": "-1/1260",
+          "polynomial": [
+            "0",
+            "1/35",
+            "0",
+            "-7/180",
+            "0",
+            "1/90",
+            "0",
+            "-1/1260"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "value": "-1/252",
+          "polynomial": [
+            "0",
+            "1/105",
+            "0",
+            "-1/36",
+            "0",
+            "1/45",
+            "0",
+            "-1/252"
+          ]
+        }
+      ]
+    },
+    "5,2": {
+      "value": "1/8",
+      "degree_bound": 8,
+      "period": 1,
+      "parity": "even",
+      "factor_power": 2,
+      "fit_n": [
+        2,
+        3,
+        4
+      ],
+      "held_out_n": 5,
+      "reduced_polynomial": [
+        "23/30",
+        "-83/120",
+        "1/8"
+      ],
+      "polynomial": [
+        "0",
+        "0",
+        "-23/30",
+        "0",
+        "35/24",
+        "0",
+        "-49/60",
+        "0",
+        "1/8"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "value": "5/504",
+          "polynomial": [
+            "0",
+            "0",
+            "-29/630",
+            "0",
+            "7/72",
+            "0",
+            "-11/180",
+            "0",
+            "5/504"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "value": "1/360",
+          "polynomial": [
+            "0",
+            "0",
+            "-1/18",
+            "0",
+            "29/360",
+            "0",
+            "-1/36",
+            "0",
+            "1/360"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 7,
+          "value": "13/2520",
+          "polynomial": [
+            "0",
+            "0",
+            "-1/126",
+            "0",
+            "11/360",
+            "0",
+            "-1/36",
+            "0",
+            "13/2520"
+          ]
+        }
+      ]
+    },
+    "6,2": {
+      "value": "-563/11340",
+      "degree_bound": 9,
+      "period": 1,
+      "parity": "odd",
+      "factor_power": 1,
+      "fit_n": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "held_out_n": 6,
+      "reduced_polynomial": [
+        "-352/315",
+        "3889/2835",
+        "-925/2268",
+        "-563/11340"
+      ],
+      "polynomial": [
+        "0",
+        "352/315",
+        "0",
+        "-7057/2835",
+        "0",
+        "961/540",
+        "0",
+        "-677/1890",
+        "0",
+        "-563/11340"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-19/9072",
+          "polynomial": [
+            "0",
+            "16/315",
+            "0",
+            "-376/2835",
+            "0",
+            "241/2160",
+            "0",
+            "-209/7560",
+            "0",
+            "-19/9072"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-43/22680",
+          "polynomial": [
+            "0",
+            "16/315",
+            "0",
+            "-509/5670",
+            "0",
+            "41/1080",
+            "0",
+            "11/3780",
+            "0",
+            "-43/22680"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-23/22680",
+          "polynomial": [
+            "0",
+            "2/45",
+            "0",
+            "-587/11340",
+            "0",
+            "5/216",
+            "0",
+            "-2/135",
+            "0",
+            "-23/22680"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "-109/45360",
+          "polynomial": [
+            "0",
+            "-4/315",
+            "0",
+            "-839/11340",
+            "0",
+            "43/432",
+            "0",
+            "-79/7560",
+            "0",
+            "-109/45360"
+          ]
+        }
+      ]
+    },
+    "4,2,2": {
+      "value": "-127/840",
+      "degree_bound": 9,
+      "period": 1,
+      "parity": "odd",
+      "factor_power": 1,
+      "fit_n": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "held_out_n": 6,
+      "reduced_polynomial": [
+        "232/105",
+        "-77/30",
+        "133/120",
+        "-127/840"
+      ],
+      "polynomial": [
+        "0",
+        "-232/105",
+        "0",
+        "1003/210",
+        "0",
+        "-147/40",
+        "0",
+        "529/420",
+        "0",
+        "-127/840"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-19/7560",
+          "polynomial": [
+            "0",
+            "-2/105",
+            "0",
+            "47/945",
+            "0",
+            "-17/360",
+            "0",
+            "2/105",
+            "0",
+            "-19/7560"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "value": "-5/18144",
+          "polynomial": [
+            "0",
+            "-1/63",
+            "0",
+            "143/4536",
+            "0",
+            "-17/864",
+            "0",
+            "13/3024",
+            "0",
+            "-5/18144"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-109/45360",
+          "polynomial": [
+            "0",
+            "-4/315",
+            "0",
+            "421/11340",
+            "0",
+            "-17/432",
+            "0",
+            "131/7560",
+            "0",
+            "-109/45360"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "value": "-131/90720",
+          "polynomial": [
+            "0",
+            "-1/315",
+            "0",
+            "269/22680",
+            "0",
+            "-71/4320",
+            "0",
+            "139/15120",
+            "0",
+            "-131/90720"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "value": "-29/90720",
+          "polynomial": [
+            "0",
+            "-4/315",
+            "0",
+            "653/22680",
+            "0",
+            "-89/4320",
+            "0",
+            "73/15120",
+            "0",
+            "-29/90720"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "-109/45360",
+          "polynomial": [
+            "0",
+            "-4/315",
+            "0",
+            "421/11340",
+            "0",
+            "-17/432",
+            "0",
+            "131/7560",
+            "0",
+            "-109/45360"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "value": "-5/18144",
+          "polynomial": [
+            "0",
+            "-1/63",
+            "0",
+            "143/4536",
+            "0",
+            "-17/864",
+            "0",
+            "13/3024",
+            "0",
+            "-5/18144"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-1/648",
+          "polynomial": [
+            "0",
+            "-1/315",
+            "0",
+            "5/324",
+            "0",
+            "-23/1080",
+            "0",
+            "2/189",
+            "0",
+            "-1/648"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              4,
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-197/90720",
+          "polynomial": [
+            "0",
+            "-4/315",
+            "0",
+            "821/22680",
+            "0",
+            "-161/4320",
+            "0",
+            "241/15120",
+            "0",
+            "-197/90720"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-101/181440",
+          "polynomial": [
+            "0",
+            "-1/63",
+            "0",
+            "1553/45360",
+            "0",
+            "-209/8640",
+            "0",
+            "193/30240",
+            "0",
+            "-101/181440"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "value": "-1/5670",
+          "polynomial": [
+            "0",
+            "-1/63",
+            "0",
+            "317/11340",
+            "0",
+            "-2/135",
+            "0",
+            "11/3780",
+            "0",
+            "-1/5670"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-11/15120",
+          "polynomial": [
+            "0",
+            "-1/105",
+            "0",
+            "2/945",
+            "0",
+            "1/144",
+            "0",
+            "1/840",
+            "0",
+            "-11/15120"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-1/12960",
+          "polynomial": [
+            "0",
+            "-1/63",
+            "0",
+            "79/3240",
+            "0",
+            "-43/4320",
+            "0",
+            "23/15120",
+            "0",
+            "-1/12960"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-1/2835",
+          "polynomial": [
+            "0",
+            "-1/315",
+            "0",
+            "193/11340",
+            "0",
+            "-1/54",
+            "0",
+            "19/3780",
+            "0",
+            "-1/2835"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 16,
+          "value": "-37/181440",
+          "polynomial": [
+            "0",
+            "-1/315",
+            "0",
+            "529/45360",
+            "0",
+            "-97/8640",
+            "0",
+            "89/30240",
+            "0",
+            "-37/181440"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "value": "-37/181440",
+          "polynomial": [
+            "0",
+            "-1/315",
+            "0",
+            "529/45360",
+            "0",
+            "-97/8640",
+            "0",
+            "89/30240",
+            "0",
+            "-37/181440"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-1/20160",
+          "polynomial": [
+            "0",
+            "-1/70",
+            "0",
+            "107/5040",
+            "0",
+            "-23/2880",
+            "0",
+            "11/10080",
+            "0",
+            "-1/20160"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "-121/181440",
+          "polynomial": [
+            "0",
+            "-1/45",
+            "0",
+            "1117/45360",
+            "0",
+            "-37/8640",
+            "0",
+            "11/4320",
+            "0",
+            "-121/181440"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "-13/30240",
+          "polynomial": [
+            "0",
+            "0",
+            "0",
+            "61/7560",
+            "0",
+            "-17/1440",
+            "0",
+            "1/240",
+            "0",
+            "-13/30240"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "-7/6480",
+          "polynomial": [
+            "0",
+            "2/315",
+            "0",
+            "-23/1620",
+            "0",
+            "11/2160",
+            "0",
+            "29/7560",
+            "0",
+            "-7/6480"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "-1/45360",
+          "polynomial": [
+            "0",
+            "-4/315",
+            "0",
+            "41/2268",
+            "0",
+            "-13/2160",
+            "0",
+            "1/1512",
+            "0",
+            "-1/45360"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "value": "-13/45360",
+          "polynomial": [
+            "0",
+            "2/315",
+            "0",
+            "19/11340",
+            "0",
+            "-5/432",
+            "0",
+            "29/7560",
+            "0",
+            "-13/45360"
+          ]
+        }
+      ]
+    },
+    "4,4": {
+      "value": "23/4536",
+      "degree_bound": 9,
+      "period": 1,
+      "parity": "odd",
+      "factor_power": 1,
+      "fit_n": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "held_out_n": 6,
+      "reduced_polynomial": [
+        "-92/315",
+        "877/5670",
+        "-923/22680",
+        "23/4536"
+      ],
+      "polynomial": [
+        "0",
+        "92/315",
+        "0",
+        "-2533/5670",
+        "0",
+        "211/1080",
+        "0",
+        "-173/3780",
+        "0",
+        "23/4536"
+      ],
+      "orbit_values": [
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "71/181440",
+          "polynomial": [
+            "0",
+            "2/315",
+            "0",
+            "-139/9072",
+            "0",
+            "107/8640",
+            "0",
+            "-23/6048",
+            "0",
+            "71/181440"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              4
+            ],
+            [
+              3,
+              5,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "1/90720",
+          "polynomial": [
+            "0",
+            "2/315",
+            "0",
+            "-41/4536",
+            "0",
+            "13/4320",
+            "0",
+            "-1/3024",
+            "0",
+            "1/90720"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              2,
+              5
+            ],
+            [
+              3,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "1/4320",
+          "polynomial": [
+            "0",
+            "0",
+            "0",
+            "-1/1080",
+            "0",
+            "1/480",
+            "0",
+            "-1/720",
+            "0",
+            "1/4320"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              5
+            ],
+            [
+              2,
+              4,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "1/45360",
+          "polynomial": [
+            "0",
+            "4/315",
+            "0",
+            "-41/2268",
+            "0",
+            "13/2160",
+            "0",
+            "-1/1512",
+            "0",
+            "1/45360"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              3,
+              6
+            ],
+            [
+              2,
+              4,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "13/60480",
+          "polynomial": [
+            "0",
+            "2/105",
+            "0",
+            "-397/15120",
+            "0",
+            "5/576",
+            "0",
+            "-17/10080",
+            "0",
+            "13/60480"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              1,
+              4,
+              5
+            ],
+            [
+              2,
+              3,
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "value": "23/90720",
+          "polynomial": [
+            "0",
+            "4/315",
+            "0",
+            "-431/22680",
+            "0",
+            "7/864",
+            "0",
+            "-31/15120",
+            "0",
+            "23/90720"
+          ]
+        },
+        {
+          "blocks": [
+            [
+              0,
+              2,
+              4,
+              6
+            ],
+            [
+              1,
+              3,
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "1/45360",
+          "polynomial": [
+            "0",
+            "4/315",
+            "0",
+            "-41/2268",
+            "0",
+            "13/2160",
+            "0",
+            "-1/1512",
+            "0",
+            "1/45360"
+          ]
+        }
+      ]
+    }
+  },
+  "python_version": "3.12.12",
+  "numpy_version": "2.3.5",
+  "scope": "finite network model; arithmetic transport open"
+}
