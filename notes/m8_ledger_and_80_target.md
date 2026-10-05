@@ -21,7 +21,7 @@ The corrected exact model input {5,2}=1/8 therefore gives
 
     m8 = 1121/30 + 8C7 + A8.
 
-If the unproved candidate C7=-17/360 is also supplied, the scenario becomes m7=862/45 and m8=3329/90+A8.
+The [exact flow-polytope value](pure_cycle_flow_polytopes.md) C7=-17/360 gives the model ledger m7=862/45 and m8=3329/90+A8. Arithmetic transport remains open.
 
 ## Candidate class values
 
@@ -39,6 +39,15 @@ These values require exact computation or rigorous enclosure. Their sum is 1801/
 
 The degree-four Christoffel bound reaches a conditional simple-zero proportion of 80% when lambda_4(0)<=1/10. The permitted m8 interval depends on m7 and the lower moments.
 
-[The generic target derivation](k8_target_geometry.md) and `scripts/k8_target.py` give the Hankel floor and exact target curves. The explicit-input calculator `scripts/m8_ledger.py` evaluates scenarios with supplied {5,2} and C7 values.
+[The generic target derivation](k8_target_geometry.md) and `scripts/k8_target.py` give the Hankel floor and exact target curves. The calculator `scripts/m8_ledger.py` uses the exact seventh-order model inputs by default and accepts explicit overrides.
 
-Earlier thresholds based on {5,2}=7/72 use an erroneous distance-three prefix set and do not apply to the corrected model. Exact C7, eighth-order class evaluations and arithmetic transport are needed before a zeta bound follows.
+At m7=862/45 and m8=3329/90+A8, the moment-cone floor and conditional
+80% target give
+
+    204409997/748818000 <= A8 <= 33596531/68531400.
+
+This is approximately 0.272977 <= A8 <= 0.490236. The interval is a
+constraint on supplied model moments; it does not certify any of the
+five eighth-order classes or their arithmetic transport.
+
+Earlier thresholds based on {5,2}=7/72 use an erroneous distance-three prefix set and do not apply to the corrected model. Eighth-order class evaluations and arithmetic transport are needed before a zeta bound follows.

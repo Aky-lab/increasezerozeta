@@ -3,7 +3,8 @@
 This note evaluates the finite continuum model defined by the 150-term C5
 compiler and the **actual** distance-one, two and three walks. It does not
 prove that this model supplies the seventh zeta moment. The arithmetic
-transport and the separate C7 input remain unresolved.
+transport remains unresolved. The separate C7 model integral is evaluated
+in [the flow-polytope certificate](pure_cycle_flow_polytopes.md).
 
 The completed exact evaluation is
 
@@ -141,5 +142,6 @@ checks, rational component results, and held-out test. Reproduce with:
 
     python scripts/spectator_52_exact_lattice.py --out results/lattice_reproduction.json
 
-The model result does not make C7 exact, prove arithmetic transport,
-or establish a new unconditional zero-density record.
+This calculation evaluates only {5,2}; the C7 evaluation has a separate
+certificate. Arithmetic transport and a new unconditional simple-zero
+bound require further analytic work.

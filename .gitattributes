@@ -1,0 +1,3 @@
+# Preserve the exact source and record bytes used in certificate hashes.
+scripts/*.py -text
+results/*.json -text

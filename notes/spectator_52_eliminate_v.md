@@ -93,4 +93,4 @@ The counterexample and this limitation are retained in the audit.
 
 ## 5. Full model integral
 
-The corrected reduction gives {5,2}=1/8 by [exact lattice evaluation](spectator_52_exact_lattice.md). The 7/72 numerical ladder used the additional distance-three prefix and does not evaluate the stated model. C7 and the arithmetic transport are separate open problems.
+The corrected reduction gives {5,2}=1/8 by [exact lattice evaluation](spectator_52_exact_lattice.md). The 7/72 numerical ladder used the additional distance-three prefix and does not evaluate the stated model. The separate [flow-polytope calculation](pure_cycle_flow_polytopes.md) gives C7=-17/360. Arithmetic transport remains open.

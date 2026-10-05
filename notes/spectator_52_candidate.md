@@ -16,4 +16,4 @@ The conditional ledger is
 
     m7 = 1717/90 + {5,2} + C7 = 6913/360 + C7.
 
-C7=-17/360 remains a numerical candidate. That assumption would give m7=862/45. Certification of C7 and arithmetic transport are separate requirements.
+The separate [flow-polytope certificate](pure_cycle_flow_polytopes.md) gives C7=-17/360 exactly. The resulting model ledger is m7=862/45; arithmetic transport remains open.

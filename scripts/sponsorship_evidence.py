@@ -16,6 +16,7 @@ CHECKS = (
     ("christoffel_exact.py", "exact moment consumption for supplied moments"),
     ("k8_target.py", "exact target geometry for supplied moments"),
     ("verify_spectator_reduction.py", "finite rational checks of actual-walk exact-v reduction"),
+    ("verify_model_certificates.py", "recorded integer certificates and source provenance"),
 )
 
 
@@ -55,7 +56,7 @@ def main():
         "all_checks_passed": all(c["passed"] for c in checks),
         "limitations": [
             "Passing checks do not prove the surrounding analytic transport.",
-            "Higher-moment fractions and the 80% target remain candidates.",
+            "Eighth-order class fractions and the 80% target remain candidates.",
             "Spectator checks are finite examples, not an exhaustive proof.",
             "Hashes identify the executed scripts, not a full repository revision.",
         ],

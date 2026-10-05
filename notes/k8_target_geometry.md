@@ -286,10 +286,16 @@ The \(k=8\) programme should be split into two arithmetic tasks:
    \[
    m_7^*=25866469/1352400,
    \]
-   preferably by evaluating the new \(\{5,2\}\) joint class and \(C_7\);
+   by transporting the exact model ledger \(m_7=862/45\) to the arithmetic setting;
 2. prove an upper bound on \(m_8\) strong enough to place \((m_7,m_8)\) below the desired target curve.
 
 There is no need to design a new consumption LP after that. The exact Christoffel engine converts the moments automatically.
+
+The finite evaluations \(\{5,2\}=1/8\) and \(C_7=-17/360\) are in the
+[joint lattice certificate](spectator_52_exact_lattice.md) and
+[pure-cycle flow certificate](pure_cycle_flow_polytopes.md). Their model
+ledger exceeds the displayed floor by \(118513/4057200\). The arithmetic
+transport remains a separate proof obligation.
 
 The natural first headline target is now
 
@@ -298,3 +304,4 @@ The natural first headline target is now
 \]
 
 rather than merely improving the sixth decimal place of \(79.62\%\).
+
