@@ -56,9 +56,7 @@ EXPECTED = {
     (4, 4): (35, 7, [1, 2, 4, 4, 8, 8, 8]),
     (4, 2, 2): (
         210, 22,
-        [2, 4, 4, 4, 4,
-         8, 8, 8, 8, 8, 8, 8, 8, 8,
-         16, 16, 16, 16, 16, 16, 16, 16],
+        [2] + [4] * 4 + [8] * 10 + [16] * 7,
     ),
     (2, 2, 2, 2): (
         105, 17,
@@ -70,6 +68,7 @@ EXPECTED = {
 
 def main():
     for sig, (total, norb, sizes) in EXPECTED.items():
+        assert len(sizes) == norb and sum(sizes) == total
         oo = orbits(8, sig)
         got_sizes = sorted(s for _, s in oo)
         assert sum(got_sizes) == total
