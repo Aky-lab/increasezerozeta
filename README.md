@@ -1,27 +1,39 @@
 # increasezerozeta
 
-Research repository for rigorous improvements to unconditional lower bounds on the proportion of simple zeros of the Riemann zeta function on the critical line.
+Private research repository for rigorous improvements to unconditional lower bounds on the proportion of simple zeros of the Riemann zeta function on the critical line.
 
-## Current focus
+## Start here
 
-The immediate goal is to isolate and prove the arithmetic-to-continuum step behind the one-sided fourth-moment route, with particular emphasis on:
+Read **HANDOFF.md** first. It is the authoritative continuation guide and records:
 
-- the class-subtracted \(\ell^1\) universality estimate for the actual \(\gamma_d^{\mathrm{free}}\) convention;
-- an exact evaluation of the continuum core candidate \(C_{\mathrm{core}}=-1/48\);
-- a transparent remainder ledger separating the fixed sawtooth-tail charge from genuine \(o(1)\) terms.
+- what is exact versus candidate-level;
+- the active research branch;
+- retired values that must not be reused;
+- the current 80% target;
+- the exact next mathematical steps.
 
-## Current research branch
+## Stable baseline on main
 
-`research/class-subtracted-universality`
+The merged baseline contains:
 
-- [Proof note](notes/class_subtracted_universality.md): includes the actual class-(d) replacement used by the reference code and proves an explicit
-  [
-  \ell^1\text{ bound }\le 8\left(\frac1{p-1}+\frac1{q-1}\right)
-  \]
-  for distinct odd prime moduli.
-- [Exact checker](scripts/verify_lemmas.py): verifies the local tensor algebra, class correction, rational continuum integrals, and the conditional (1082/1539\approx70.3053931\%\) consumption arithmetic.
-- CI runs the exact checker on pushes and pull requests.
+- the class-subtracted universality/core reduction, including the candidate exact continuum value C_core = -1/48;
+- the exact Christoffel/Hankel consumption framework;
+- the exact six-moment origin-mass value lambda_3(0)=1415/13891, giving 11061/13891 = 79.62709668...% within the same candidate analytic framework as the reference higher-moment programme;
+- exact k=8 target geometry in terms of m7 and m8;
+- reproducible exact-arithmetic checks.
+
+## Active frontier
+
+The active higher-moment work is on:
+
+research/k8-moments
+
+with draft PR #6.
+
+Important: the early {5,2}=1/8 midpoint candidate is retired. The active corrected candidate after exact spectator-frequency elimination is {5,2}=7/72. See HANDOFF.md before using any research-branch number.
 
 ## Status
 
-This is research work in progress. The local algebra and rational calculations above are suitable for review, but the surrounding fourth-moment analytic chain has not been independently certified here. Nothing in this repository should be described as an established new unconditional theorem until that chain has been checked.
+This is research work in progress. Nothing here should be advertised as an established new unconditional record until the analytic moment-production/transport chain has been independently checked and all candidate constants consumed by a headline result have theorem-level certification.
+
+Keep the repository private until there is something concrete enough to circulate.
