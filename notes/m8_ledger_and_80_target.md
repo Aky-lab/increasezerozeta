@@ -360,3 +360,54 @@ S_8\le0.0408098779\ldots
 \]
 
 Thus, conditional on exact certification of the two pre-registered candidates, the remaining burden for an 80% result is a comparatively coarse aggregate upper bound on just three classes.
+
+
+## 9. After the pre-registered \(\{6,2\}\) candidate
+
+The six-block/pair reconnaissance now has the frozen candidate
+
+\[
+\{6,2\}=-\frac1{20}.
+\]
+
+Define
+
+\[
+T_8:=\{4,4\}+C_8.
+\]
+
+Combining the currently frozen candidates
+
+\[
+\{2^4\}=\frac{1661}{3780},\qquad
+\{4,2,2\}=-\frac{127}{840},\qquad
+\{6,2\}=-\frac1{20},
+\]
+
+the residual targets become:
+
+### 80%
+
+\[
+\boxed{
+T_8\le0.2520080722\ldots
+}
+\]
+
+### 80.2%
+
+\[
+\boxed{
+T_8\le0.1747491251\ldots
+}
+\]
+
+### 81%
+
+\[
+\boxed{
+T_8\le0.0908098779\ldots
+}
+\]
+
+Thus, conditional on exact certification of the three pre-registered mixed/pairing candidates, an 80% result only requires a very coarse aggregate upper bound on \(\{4,4\}+C_8\).
