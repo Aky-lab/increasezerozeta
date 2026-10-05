@@ -56,25 +56,11 @@ Draft PR: #6.
 
 This branch contains candidate-level seventh/eighth-moment work.
 
-### IMPORTANT correction: retired 1/8 candidate
+### IMPORTANT: actual-walk audit supersedes the candidate history
 
-An early five-dimensional midpoint computation suggested
+The historical spectator elimination added an absent s1 prefix to the distance-three walk. An exact counterexample gives J3=2/75 against the historical 1/375. The corrected reduction and regression gates are on main in notes/spectator_52_eliminate_v.md and scripts/verify_spectator_reduction.py.
 
-{5,2} = 1/8.
-
-That candidate is RETIRED.
-
-The exact spectator-frequency elimination exposed the drift as a quadrature artefact. The active corrected numerical candidate is
-
-{5,2} = 7/72.
-
-Authoritative files:
-
-- notes/spectator_52_eliminate_v.md
-- results/spectator_52_coarse.md
-- notes/spectator_52_candidate.md
-
-If any older branch or script says 1/8, treat it as stale.
+The earlier 7/72 preference is quarantined. The stated reason for retiring 1/8 is withdrawn. Corrected numerical refinement approaches 1/8, but neither fraction is certified. Read results/spectator_actual_walk_audit.md before older candidate notes.
 
 ### Seventh moment
 
@@ -82,17 +68,17 @@ The exact Bell(7) ledger is
 
 m7 = 1717/90 + {5,2} + C7.
 
-Using the active candidate {5,2}=7/72 and the reference identification candidate C7=-17/360 gives
+For historical scenario analysis only, substituting {5,2}=7/72 and C7=-17/360 gives
 
 m7 = 3443/180 = 19.1277777...
 
-(candidate only).
+(quarantined historical scenario only).
 
 The exact Stieltjes floor implied by m0,...,m6 is
 
 m7* = 25866469/1352400 = 19.126345016...
 
-so the candidate is only about 0.00143 above the floor.
+The historical scenario is about 0.00143 above the floor; this does not establish the actual seventh moment.
 
 See notes/m7_ledger_derivation.md and scripts/m7_ledger.py.
 
@@ -106,7 +92,7 @@ with
 
 m8 = 1103/30 + A8
 
-under the active seventh-order candidate.
+under the quarantined 7/72 seventh-order scenario only.
 
 Current pre-registered numerical candidates:
 
@@ -124,7 +110,7 @@ Conditional on those three candidates, define
 
 T8 = {4,4} + C8.
 
-The exact target for 80% is
+For that historical scenario, the exact target for 80% is
 
 T8 <= 291211/11421900 = 0.02549584570...
 
@@ -132,21 +118,21 @@ while the moment-cone floor corresponds to approximately
 
 T8 >= 0.02497315369.
 
-Thus the decisive model-side k=8 problem is a narrow bound or evaluation of {4,4}+C8, after the earlier candidates are certified.
+These scenario-specific bounds must be recomputed after the actual seventh-order inputs are certified. The generic moment-space geometry in notes/k8_target_geometry.md remains independent of this correction.
 
 ## 4. Obsolete/experimental branch warning
 
 compute/exact52-batch was created when 1/8 was still the pre-registered {5,2} target.
 
-It is historical/experimental and should NOT be treated as authoritative without updating it to the exact-v reduction and active 7/72 target.
+It is historical/experimental. Both this branch and research/k8-moments must be interpreted through the actual-walk correction; no fraction is currently certified.
 
-The authoritative seventh-order state is on research/k8-moments.
+The latest correction is recorded on main; older research-branch candidate notes are superseded until repaired.
 
 ## 5. What must be proved next
 
 In recommended order:
 
-1. Exact-certify {5,2} using the exact spectator-frequency elimination followed by four-dimensional rational piecewise/polytope integration.
+1. Use the corrected actual-walk spectator elimination, then exact-certify {5,2} by rational piecewise/polytope integration, without baking either candidate into the result.
 2. Exact-certify C7=-17/360 rather than relying on numerical identification.
 3. Prove the arithmetic transport for all seventh-order classes, yielding theorem-grade m7.
 4. Exact-certify or rigorously enclose {2^4}, {4,2,2}, {6,2}.
@@ -181,7 +167,7 @@ Every numerical quantity must be labelled as one of:
 
 Do not promote rational reconstruction from numerical data into a theorem input without an independent exact/enclosure gate.
 
-When a falsifier fires, preserve the old value in the audit history and clearly mark it retired. The 1/8 -> 7/72 correction is the model example.
+When a falsifier fires, preserve the old value in the audit history and clearly mark it retired. The later actual-walk audit overturned the evidence for the 1/8 -> 7/72 change; preserve both stages of that history.
 
 ## 9. Minimal resume checklist
 
@@ -190,8 +176,9 @@ A new researcher should:
 1. read this file;
 2. run the exact checks on main;
 3. checkout research/k8-moments;
-4. read results/spectator_52_coarse.md before any older {5,2} note;
+4. read results/spectator_actual_walk_audit.md and the corrected elimination note before any older {5,2} note;
 5. run the Bell(7)/Bell(8) gates and ledgers;
 6. work on exact {5,2} certification first.
 
 No mathematical step should require private chat context after following this handoff. If a future decision depends on something not written here or in a cited note/script, add it to the repository before relying on it.
+

@@ -18,11 +18,11 @@ The long-term mathematical objective is to improve lower bounds for simple criti
 
 ## Existing work and evidence
 
-The private repository contains exact Christoffel/Hankel consumption, seventh/eighth-moment target geometry, and a research handoff that enumerates certification and transport gaps. Three baseline Python scripts passed in the preparation run. An additional independent spectator-reduction check passed 7,203 exact rational cases.
+The private repository contains exact Christoffel/Hankel consumption, seventh/eighth-moment target geometry, and a research handoff that enumerates certification and transport gaps. Three baseline Python scripts passed in the preparation run. A corrected independent check constructs actual walks from increments and passes 7,203 exact rational cases; the earlier checker shared the defective prefix assumption and is superseded.
 
 The higher-moment analytic framework is inherited from the reference implementation identified in HANDOFF.md. Its assumptions and conventions require independent review. We do not claim to have established that framework, a new unconditional record, or a proof of the Riemann hypothesis.
 
-The repository's retirement of an early `{5,2}=1/8` numerical candidate after exact spectator-frequency elimination illustrates why the proposed verification gates matter. The current `7/72` replacement remains unproved. A numerical reconstruction is not an acceptable theorem input.
+An actual-walk audit found a structural error in the spectator elimination that had motivated replacing `1/8` with `7/72`. The earlier preference is quarantined, and the reason for retiring `1/8` is withdrawn. The corrected finite gate passes 7,203 rational cases and detects 358 failures of the old formula. Corrected numerical refinement approaches `1/8`, but neither fraction is certified. A numerical reconstruction is not a theorem input.
 
 ## Planned use of Claude
 
