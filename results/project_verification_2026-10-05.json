@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T16:37:35.787251+00:00",
+  "generated_at_utc": "2026-10-05T16:57:37.959813+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "79777accfa0f33d201bef93a8557112ee55d69135ee637e282d4c465701ce84d",
+  "runner_sha256": "e840e54ff868aa38ebbea3badadb4fccd0da18cbc007ccaa0dfa708def345997",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -36,7 +36,8 @@
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
     "scripts/verify_presieved_pairs.py": "93bf6795ea056efe1f8d67cc2146da87fab0bbf0b53ebe3db6d3bbf9889df995",
     "scripts/verify_prime_pair_transport.py": "c2f0d53493c0cc0727a95faa6b157dd2e030548a2510041ca60a02dc4b209735",
-    "scripts/verify_project.py": "79777accfa0f33d201bef93a8557112ee55d69135ee637e282d4c465701ce84d",
+    "scripts/verify_progression_profile.py": "3f271788f9d1fd5340cbea4855cc5d35a844052b6d30731d94b5a181221a751a",
+    "scripts/verify_project.py": "e840e54ff868aa38ebbea3badadb4fccd0da18cbc007ccaa0dfa708def345997",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
     "scripts/verify_rectangle_tail.py": "057311dda5e6a07a5fca63fc4f127fde7568145dd3745544effa604dbd54ea59",
@@ -160,6 +161,15 @@
       "scope": "independent original-overlap polygon integrals, full piecewise cutoff law, affine-root integration, exact quantiles and reduced prime-power classification",
       "exit_code": 0,
       "stdout": "Coverage values: [('1/3', '59/1215'), ('1/2', '11/32'), ('2/3', '959/1215'), ('3/4', '147/160'), ('4/5', '15049/15625'), ('9/10', '15582/15625')]\nQuantile brackets (millionths): [('1/2', (551320, 551321)), ('9/10', (734423, 734424)), ('99/100', (859563, 859564))]\nPASS: 20 original-overlap polygon integrals, 1620 pointwise overlaps,\n      4 exact core integrals, threshold countercheck and 1536 cutoff cases.\n      66 full-range polygon integrals, 61 piecewise core integrations,\n      4 symbolic density identities with branch joins and exact quantile brackets.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_progression_profile.py",
+      "sha256": "3f271788f9d1fd5340cbea4855cc5d35a844052b6d30731d94b5a181221a751a",
+      "scope": "physical coefficient-scale mapping, closed profile law, original-overlap slice cubics, polyhedral breakpoints and exact larger-profile certificates",
+      "exit_code": 0,
+      "stdout": "PASS: 5 exact profile fractions, 35 proved-degree slice cubics,\n      140 independent held-out/endpoint evaluations, 20 closed-form geometries,\n      4374 coefficient/progression scale cases and exact coverage containment bounds.\nProfile fractions: [('1/2', '107/600'), ('2/3', '73/150'), ('3/4', '10243/15750'), ('9/10', '256636537/277981875'), ('1', '1')]\n",
       "stderr": "",
       "passed": true
     },

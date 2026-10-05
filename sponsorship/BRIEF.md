@@ -162,6 +162,15 @@ states the uniform arithmetic error and provides independent reproduction
 instructions. It gives reviewers a focused result with explicit analytic
 limits and directs further research toward a substantial arithmetic range.
 
+[The physical progression profile](../notes/progression_range_profile.md)
+maps a coefficient range to the actual prime positions and progression
+length. It derives a closed coverage formula through the square-root
+profile, whose fraction is exactly 107/600, and gives exact slice
+certificates for larger ranges. The manuscript includes this scale map
+and its uniform model theorem. This sharpens the missing arithmetic
+specification while keeping a candidate coefficient range separate from
+a proved four-prime cubic estimate.
+
 ## Pilot milestones
 
 | Period | Work | Deliverable |

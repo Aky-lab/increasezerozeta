@@ -28,6 +28,9 @@ The same formula holds for a cutoff on both reduced dilations.
 The leading core is $-1/48$; a cube-root cutoff captures only $59/1215$
 of it. We derive the formula from a clipped-cube volume and provide
 independent exact rational checks against the original twelve overlaps.
+We also map coefficient bounds relative to physical prime positions
+into the model: the square-root profile captures exactly $107/600$
+of its leading term.
 This is a theorem about the specified arithmetic model. Its identification
 with an actual zeta moment remains a separate analytic problem.
 \end{abstract}
@@ -333,6 +336,92 @@ the modulus and reduced-dilation cutoffs differ only on shared-base
 pairs, whose full absolute contribution is $O(\ell^{-2})$.
 This completes the proof of both assertions.
 
+\section{Coefficient ranges relative to prime positions}
+The preceding cutoff is measured against the global height.
+A coefficient range in a prospective prime theorem may instead be
+measured against the physical prime positions.
+At the central product cell put $P=T/\theta=e^{\nu\ell}$,
+$M=P/b_2$, $N=P/b_1$, $r=b_1/g$, $q=b_2/g$,
+$g=\gcd(b_1,b_2)$. The common progression scale is
+\[
+ H_*=\frac Mr=\frac Nq=\frac{Pg}{b_1b_2}.
+\]
+Off the negligible shared-base pairs, $g=1$ and
+$\log H_*/\ell=\nu-\beta_1-\beta_2$.
+For $0\leq\tau\leq1$, the profile $r\leq M^\tau$, $q\leq N^\tau$
+therefore corresponds to
+\[
+ \beta_1+\tau\beta_2\leq\tau\nu,\qquad
+ \tau\beta_1+\beta_2\leq\tau\nu.
+\]
+It implies $\beta_i\leq\tau$ and
+$\nu-\beta_1-\beta_2\geq\nu(1-\tau)/(1+\tau)$.
+The latter leaves a positive-power progression length for fixed $\tau<1$.
+This is a scale identity, not an assertion of prime uniformity.
+
+\begin{theorem}\label{thm:profile}
+The profile-restricted core has the uniform model limit
+$-\mathcal P(\tau)/48+O(\ell^{-1})$. For $0\leq\tau\leq1/2$,
+\[
+ \mathcal P(\tau)=
+ \frac{2\tau^5(59+40\tau+5\tau^2)}{5(1+\tau)^2(2+\tau)}.
+\]
+In particular $\mathcal P(1/2)=107/600$.
+For the full range, with $\mathcal P$ defined by its limiting region,
+$F(\tau/(1+\tau))\leq\mathcal P(\tau)\leq F(\tau)$.
+\end{theorem}
+\begin{proof}
+In the coordinates $\beta_1=u+x$, $\beta_2=u+y$, the profile is
+$x+\tau y\leq s=\tau-u$, $\tau x+y\leq s$, $x,y\geq0$,
+and $x,y\leq(1-u)/2$. For $\tau\leq1/2$ the latter bounds are redundant,
+and the quadrilateral has vertices
+$(0,0),(s,0),(s/(1+\tau),s/(1+\tau)),(0,s)$.
+Its maximum of $x+2y$ is $3s/(1+\tau)\leq1-2u$:
+the inequality reduces to $(2\tau-1)(1+u)\leq0$.
+Hence the overlap branch in the previous section simplifies throughout
+this region to
+\[
+ H=4\min(x,y)+2\bigl(y+(y-x-u)_++\min(x-y-u,y)_+\bigr).
+\]
+The integrals of $\min(x,y)$ and $y$ are respectively
+$s^3/(3(1+\tau)^2)$ and $(3+\tau)s^3/(6(1+\tau)^2)$.
+The positive wedge has integral $(s-u)_+^3/(6(1+\tau))$.
+For the remaining term introduce $z\leq y$, $z\leq x-y-u$,
+then put $y=z+v$, $x=u+2z+v+h$.
+Its volume is the simplex
+$(2+\tau)z+(1+\tau)v+h\leq s-u$, and equals
+$(s-u)_+^3/(6(1+\tau)(2+\tau))$.
+The total slice is thus
+\[
+ Q_\tau(1+u)=\frac{(7+\tau)(\tau-u)^3}{3(1+\tau)^2}
+ +\frac{(3+\tau)(\tau-2u)_+^3}{3(1+\tau)(2+\tau)}.
+\]
+Integrating against $96u$ gives the stated expression.
+
+The arithmetic replacement remains uniform in $\tau$.
+For a fixed second coordinate its first-coordinate upper endpoint is
+the clamped minimum of $\nu/2$, $\tau(\nu-\beta_2)$ and
+$\nu-\beta_2/\tau$. This is monotone, with bounded total variation,
+uniformly for $\tau>0$. The first Mertens-measure replacement therefore
+costs $O(\ell^{-1})$. The resulting second-coordinate function has
+variation bounded by the Lipschitz bound for $H$ plus a constant times
+the endpoint variation, so the second replacement has the same cost.
+Exceptions are controlled absolutely as before; $\tau=0$ has an empty
+coprime region. Finally $\beta_i\leq\tau/(1+\tau)$ suffices for the
+profile since $\nu\geq1$, and the profile implies $\beta_i\leq\tau$.
+These containments prove the bounds.
+\end{proof}
+
+For larger profiles, exact rational slice certificates give
+$\mathcal P(2/3)=73/150$, $\mathcal P(3/4)=10243/15750$ and
+$\mathcal P(9/10)=256636537/277981875$.
+The companion profile note and checker~\cite{profile} provide the
+polyhedral degree proof and certificates. The small-profile expression
+is not extrapolated beyond $1/2$.
+No single-prime progression estimate is being used as a cubic
+four-prime theorem. These fractions quantify the footprint of a
+candidate range; the requisite prime norms and consumption remain open.
+
 \section{Distribution, verification and scope}
 The positive measure $96uH\,\dd\beta_1\dd\beta_2\dd u$ on the full region
 has total mass one. Its distribution of $\max(\beta_1,\beta_2)$ is $F$.
@@ -351,6 +440,7 @@ The standard-library reproduction commands are
 \begin{verbatim}
 python scripts/verify_arithmetic_transport.py
 python scripts/verify_dilation_coverage.py
+python scripts/verify_progression_profile.py
 python scripts/verify_project.py
 \end{verbatim}
 The cutoff checker integrates the original twelve overlaps by exact
@@ -398,5 +488,10 @@ MIT 18.785, Fall 2021, \emph{Problem Set 9}, Problem 1.
 increasezerozeta project, \emph{The full dilation distribution of the
 arithmetic core}, proof note and exact verification source.
 \url{https://github.com/Aky-lab/increasezerozeta/blob/main/notes/dilation_core_coverage.md}.
+
+\bibitem{profile}
+increasezerozeta project, \emph{Prime-position coefficient ranges and
+their model coverage}, companion proof and rational certificates.
+\url{https://github.com/Aky-lab/increasezerozeta/blob/main/notes/progression_range_profile.md}.
 \end{thebibliography}
 \end{document}

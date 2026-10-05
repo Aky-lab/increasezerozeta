@@ -62,9 +62,11 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 [The full dilation distribution](notes/dilation_core_coverage.md) quantifies the remaining range gap with an exact piecewise polynomial for every cutoff exponent 0<=delta<=1. The cube-root cutoff captures only 59/1215 of the leading model term; capturing 99% requires an exponent between 0.859563 and 0.859564. Every subpower dilation cutoff contributes zero in the limit. A clipped-cube identity derives the formula, and independent rational polygon integration checks the original twelve overlaps. The [standalone manuscript source](papers/dilation_core_distribution.tex) includes the proof, distribution plot, arithmetic hypotheses and reproduction instructions.
 
+[Prime-position coefficient profiles](notes/progression_range_profile.md) map growing coefficients to their actual physical prime positions and common progression length. The square-root profile covers exactly 107/600, about 17.83%, of the leading model term. A closed formula covers every smaller profile, while exact polyhedral slice certificates give larger-profile values. This measures the footprint of a candidate arithmetic range; the requisite cubic prime theorem and weighted zeta transport remain open.
+
 ## Reproduction
 
-Run all twenty-seven project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all twenty-eight project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
@@ -127,7 +129,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all twenty-seven executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all twenty-eight executed checks.
 
 ## Project files
 

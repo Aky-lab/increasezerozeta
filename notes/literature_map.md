@@ -113,6 +113,15 @@ volume method is established geometry; priority for this specific model
 distribution is not claimed. The standalone manuscript credits the
 coefficient convention and separates the model from the zeta interface.
 
+The [prime-position coefficient profile](progression_range_profile.md)
+uses that same model measure and original overlaps. Its scale map and
+coverage calculation define a candidate arithmetic footprint. The
+square-root profile is a geometric definition here, not a citation to
+a cubic prime theorem or a deduction from single-prime progression
+distribution. Affine polyhedral slicing and degree-bounded rational
+interpolation are established methods; priority for this model-specific
+formula and profile certificates requires further assessment.
+
 - Compare the finite CUE network representation with existing dependent-phase
   Vandermonde and sine-process spectral literature.
 - Review the connected-partition cancellation, integral lattice chart,

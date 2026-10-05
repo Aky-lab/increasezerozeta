@@ -24,6 +24,7 @@ CHECKS = (
     ("verify_weighted_dilations.py", "translated divisor/prime endpoint moments, dilated discriminants, carry/progression splitting and weighted consumption"),
     ("verify_full_window_transport.py", "prefix cube normalization, integer/cyclic embeddings, selected progressions, full-window locks and weighted consumption"),
     ("verify_dilation_coverage.py", "independent original-overlap polygon integrals, full piecewise cutoff law, affine-root integration, exact quantiles and reduced prime-power classification"),
+    ("verify_progression_profile.py", "physical coefficient-scale mapping, closed profile law, original-overlap slice cubics, polyhedral breakpoints and exact larger-profile certificates"),
     ("christoffel_exact.py", "exact moment consumption for supplied moments"),
     ("k8_target.py", "exact target geometry for supplied moments"),
     ("verify_spectator_reduction.py", "finite rational checks of actual-walk exact-v reduction"),

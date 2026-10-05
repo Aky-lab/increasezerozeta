@@ -456,3 +456,34 @@ denominator obstruction. The quantitative prime theorem and the model
 coverage theorem together specify a concrete remaining gap: positive-
 power dilation transport and the signed, consumption-normalized zeta
 interface. Neither theorem establishes a new zeta-zero counting bound.
+
+## Coefficients relative to physical prime positions
+
+[The progression profile calculation](notes/progression_range_profile.md)
+records the product-cell scales P=T/theta, M=P/b_2,N=P/b_1 and
+H_*=M/r=N/q=Pg/(b_1b_2). Off shared-base pairs, the coefficient range
+r<=M^tau,q<=N^tau is exactly
+beta_1+tau beta_2<=tau nu, tau beta_1+beta_2<=tau nu. It leaves
+a progression exponent at least nu(1-tau)/(1+tau) for fixed tau<1.
+This maps the model region to a candidate physical arithmetic range;
+it does not replace the exact raw overlap or the zeta consumption volume.
+
+For 0<=tau<=1/2 the exact leading coverage fraction is
+
+    P_prof(tau)=2tau^5(59+40tau+5tau^2)/[5(1+tau)^2(2+tau)].
+
+The uniform core asymptotic is -P_prof(tau)/48+O(1/ell). The square-
+root profile captures only 107/600 of the leading model term. A proof
+integrates the original overlap branches on a symmetric quadrilateral;
+the Mertens measure passage keeps a uniform moving-endpoint variation bound.
+For larger profiles the exact certificates give 73/150 at tau=2/3,
+10243/15750 at 3/4 and 256636537/277981875 at 9/10. Their cubic slice
+degree follows from affine vertices before interpolation; original-
+overlap integration checks additional interior and endpoint samples.
+
+The standalone manuscript now includes the physical scale map and the
+closed profile theorem. Ordinary single-prime progression distribution
+does not supply the cubic lock norms. Even a square-root cubic profile
+would leave most of this leading core beyond its range. Averaging the
+actual modulus weights, or a different global signed argument, remains
+an analytic research target.
