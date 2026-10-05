@@ -49,8 +49,10 @@ The explicit finite main term also satisfies
 
 This finite local product includes repeated offsets on k=0, h=0 and
 k=+-h. No infinite four-distinct-prime singular series is substituted
-on those degeneracies. Nor is uniform replacement by the infinite series
-claimed on all nondegenerate shifts.
+on those degeneracies. Uniform pointwise replacement by the infinite series
+is not claimed. The subsequent [Euler-tail proof](rectangle_singular_series_tail.md)
+does establish its replacement in the joint mean square on nondegenerate
+shifts.
 
 ## 2. Published input and the norm used
 
@@ -228,8 +230,12 @@ An unspecified little-o cannot absorb arbitrary powers of log X, divisor
 multiplicities, or powers of X. Restricting to a shorter shift family
 retains the full Y^4 bound; no proportional saving in its size is inferred.
 The proof averages over X integer starts and treats undilated rectangles.
-The actual two-modulus lattices, concentrated starts, singular-series
-tail, class subtraction and zeta normalization require further estimates.
+The actual two-modulus lattices, concentrated starts, class subtraction
+and zeta normalization require further estimates. The subsequent
+[averaged Euler-tail theorem](rectangle_singular_series_tail.md) replaces
+K_w by the full singular series on nondegenerate shifts, with the same
+o(XY^4) error and consumption scale. Degenerate shifts retain the finite
+model; the four-distinct-offset infinite product does not apply there.
 In particular (1)-(2) do not overturn the separate subpower-cutoff
 obstruction for the arithmetic-core tail.
 

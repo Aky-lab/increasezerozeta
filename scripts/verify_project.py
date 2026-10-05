@@ -19,6 +19,7 @@ CHECKS = (
     ("verify_presieved_pairs.py", "finite presieved Fourier coefficients, CRT pair main terms, Rankin Euler factors and Parseval"),
     ("verify_lock_frame.py", "resolved lock transforms, nonperiodic counterexamples, full-lock transport, cubic identities and quadratic characters"),
     ("verify_rectangle_transport.py", "cube rank/minor certificate, admissible residue budget, carry splitting, boundaries and finite rectangle main term"),
+    ("verify_rectangle_tail.py", "rectangle discriminant support, positive divisor moments, repeated-prime partitions and finite Euler-tail decompositions"),
     ("christoffel_exact.py", "exact moment consumption for supplied moments"),
     ("k8_target.py", "exact target geometry for supplied moments"),
     ("verify_spectator_reduction.py", "finite rational checks of actual-walk exact-v reduction"),

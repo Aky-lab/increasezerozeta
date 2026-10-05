@@ -75,6 +75,24 @@ The use of cubic uniformity and quadratic-phase obstructions is established
 background; the exact frame audit and consumption bounds need independent
 review and priority assessment.
 
+## Singular-series averaging
+
+[Kevin Ford, Simple proof of Gallagher's singular series sum estimate](https://arxiv.org/pdf/1108.3861)
+gives a short proof for unrestricted distinct tuples.
+[Emmanuel Kowalski, Averages of Euler products, distribution of singular
+series and the ubiquity of Poisson distribution](https://people.math.ethz.ch/~kowalski/singular-series-distribution.pdf)
+establishes singular-series moment and distribution results for that
+unrestricted family. Euler-product moment averaging is established
+background.
+
+The [rectangle tail note](rectangle_singular_series_tail.md) supplies an
+explicit uniform O_r(Y^2/w^r) absolute tail-moment estimate on a restricted
+two-parameter family. Its elementary proof keeps the repeated-prime
+partitions and excludes the degenerate lines. The mean-square estimate is
+consumed by the preceding qualitative four-prime theorem. Neither general
+singular-series averaging nor priority for this specific bound is claimed
+as established by the present literature comparison.
+
 ## Review targets
 
 - Compare the finite CUE network representation with existing dependent-phase

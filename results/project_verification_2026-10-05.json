@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T14:49:15.195903+00:00",
+  "generated_at_utc": "2026-10-05T15:08:07.844570+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "10b4c9f2d418100534322e88d513b03737e9bbce218666eff6ac28571b0752fb",
+  "runner_sha256": "5033751e251560a2a012dbd135d7c1777f0538f0a93a2df3d9b641c49a7ec779",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -33,9 +33,10 @@
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
     "scripts/verify_presieved_pairs.py": "93bf6795ea056efe1f8d67cc2146da87fab0bbf0b53ebe3db6d3bbf9889df995",
     "scripts/verify_prime_pair_transport.py": "c2f0d53493c0cc0727a95faa6b157dd2e030548a2510041ca60a02dc4b209735",
-    "scripts/verify_project.py": "10b4c9f2d418100534322e88d513b03737e9bbce218666eff6ac28571b0752fb",
+    "scripts/verify_project.py": "5033751e251560a2a012dbd135d7c1777f0538f0a93a2df3d9b641c49a7ec779",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
+    "scripts/verify_rectangle_tail.py": "057311dda5e6a07a5fca63fc4f127fde7568145dd3745544effa604dbd54ea59",
     "scripts/verify_rectangle_transport.py": "3f2cdc0d2d4f1dcb38f92e637b895e62199a336815d3e2875c4ab0a220fb500e",
     "scripts/verify_short_window_transport.py": "6a70c7c764aebb31b28505e7b7aa5a214e08224a4bf63c4b7099daca584c7ef1",
     "scripts/verify_sine_bridge.py": "3798112cf615e8072eb45c03fb196209d1791d87fc6517f0f277e5a1f0a4edad",
@@ -110,6 +111,15 @@
       "scope": "cube rank/minor certificate, admissible residue budget, carry splitting, boundaries and finite rectangle main term",
       "exit_code": 0,
       "stdout": "Cube subset-rank certificates and square minors: (256, 494)\nDirect CRT and normalization-budget cases: 4\nResidue-window boundary cases: 847\nExact quotient/carry cube decompositions: 3\nFour-point period and finite-window main terms: 486\nFinite cube audits passed; qualitative prime input is the cited theorem.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_rectangle_tail.py",
+      "sha256": "057311dda5e6a07a5fca63fc4f127fde7568145dd3745544effa604dbd54ea59",
+      "scope": "rectangle discriminant support, positive divisor moments, repeated-prime partitions and finite Euler-tail decompositions",
+      "exit_code": 0,
+      "stdout": "Exact local collision and discriminant checks: 2592\nPositive divisor expansions and endpoint bounds: 12\nRepeated-prime moment and partition identities: 6\nNondegenerate geometry and rare-shift decompositions: (16, 3)\nRectangle Euler-tail finite audits passed; infinite estimates use the written proof.\n",
       "stderr": "",
       "passed": true
     },

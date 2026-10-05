@@ -118,6 +118,14 @@ the natural squared scale. An exact cube-residue calculation preserves the
 normalization budget. Its qualitative rate and undilated range are stated
 explicitly; the weighted zeta interface still needs further estimates.
 
+[The rectangle Euler-tail theorem](../notes/rectangle_singular_series_tail.md)
+supplies uniform absolute tail moments O_r(Y^2/w^r) on nondegenerate
+shifts. Its mean-square case upgrades the preceding averaged prime
+estimate to the full four-point singular-series main term. Positive
+divisor moments and repeated-prime partitions avoid a pointwise tail
+bound that would fail for rare primorial shifts. The remaining weighted
+and dilated zeta interface retains separate proof obligations.
+
 ## Pilot milestones
 
 | Period | Work | Deliverable |

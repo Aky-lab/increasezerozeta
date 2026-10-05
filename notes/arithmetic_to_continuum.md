@@ -418,7 +418,11 @@ undilated shifts. It retains the other prime factors' U^3 norms, controls
 the admissible residue normalization and identifies a finite four-point
 main term. Its unspecified little-o does not absorb arbitrary logarithmic
 or divisor consumption weights, and it does not yet cover the reference's
-actual dilated lattice family or the infinite-series tail.
+actual dilated lattice family. The subsequent
+[rectangle Euler-tail theorem](rectangle_singular_series_tail.md) replaces
+the finite local product by the full singular series in the unweighted
+nondegenerate joint average. It does not bound the class-subtracted
+frequency tail above or justify singular consumption weights.
 
 ## 7. Target for a full one-percentage-point improvement
 

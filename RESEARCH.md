@@ -311,6 +311,31 @@ logarithmic pointwise loss without asserting a quantitative U^3 theorem.
 
 The result is a published-input deduction with qualitative decay. It
 cannot automatically absorb logarithmic consumption weights, divisor
-multiplicity, sparse starts, variable dilations or an infinite-series tail.
-Those remain needed for the actual zeta reduction. Independent review and
-priority assessment remain open.
+multiplicity, sparse starts or variable dilations. Those remain needed for
+the actual zeta reduction. Independent review and priority assessment remain
+open.
+
+## Averaged rectangle singular-series tails
+
+[The Euler-tail theorem](notes/rectangle_singular_series_tail.md) proves,
+for every fixed positive integer r and integer w>=5,
+
+    sum_(|k|,|h|<=Y, kh(k-h)(k+h)!=0) |S_4(k,h)-K_w(k,h)|^r
+      <=C_r Y^2/w^r.
+
+Positive squarefree-divisor expansions give bounded moments for the
+coincidence factors. Expanding the reciprocal-prime tail and grouping
+equal prime indices by set partitions gives uniform moments of order
+w^(-r). Linear-form multiplicities transfer these estimates to the
+two-parameter rectangle; no independence or period approximation is used.
+Rare primorial shifts show why a height-uniform pointwise tail would fail.
+
+The mean-square case replaces K_w by S_4 in the preceding actual-prime
+estimate on nondegenerate shifts. Thus its joint position/shift average
+has the full four-point Hardy--Littlewood main term with o(XY^4) error.
+The prime saving is still qualitative. This Euler-product tail differs
+from the class-subtracted Ramanujan denominator tail in the arithmetic
+core obstruction; singular consumption weights and the zeta normalization
+remain unresolved. Singular-series moment methods are established
+background; the note states its restricted-family proof without a priority
+claim.
