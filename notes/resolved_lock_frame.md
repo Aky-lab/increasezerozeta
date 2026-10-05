@@ -266,6 +266,12 @@ bound.
 
 ## Verification
 
+[Qualitative rectangle transport](averaged_rectangle_transport.md) gives
+an additional averaged, undilated prime-model replacement by keeping the
+other factors' U^3 norms instead of bounding them by B. Its residue
+normalization is uniformly controlled. The saving remains qualitative,
+and the actual weighted/dilated zeta consumption is not inferred.
+
 `python scripts/verify_lock_frame.py` uses exact rational and Gaussian
 integer arithmetic. It checks independent position counts, the two
 resolved transforms, full-lock transforms and stability, cubic identities,

@@ -412,6 +412,14 @@ on separate power spectra. The valid full-lock theorem loses a factor Y
 when restricted to the raw rectangle scale; cubic or equivalent relative
 uniformity must be supplied before that gap is charged as a vanishing error.
 
+[Qualitative rectangle transport](averaged_rectangle_transport.md) supplies
+a replacement at the raw Y^4 squared scale averaged over starts and two
+undilated shifts. It retains the other prime factors' U^3 norms, controls
+the admissible residue normalization and identifies a finite four-point
+main term. Its unspecified little-o does not absorb arbitrary logarithmic
+or divisor consumption weights, and it does not yet cover the reference's
+actual dilated lattice family or the infinite-series tail.
+
 ## 7. Target for a full one-percentage-point improvement
 
 If all non-vanishing remainder terms are combined *after being individually identified* into

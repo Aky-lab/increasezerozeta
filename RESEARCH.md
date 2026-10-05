@@ -257,7 +257,7 @@ direct period sums, CRT counts, Rankin factors and autocorrelation Parseval.
 
 The estimate averages over both positions and shifts. Restricting to a
 shorter shift interval retains the Y^3 bound; no H Y^2 saving is inferred.
-Prescribed starts, common-position four-prime locks and the actual zeta
+Prescribed starts, weighted and dilated four-prime locks and the actual zeta
 counting interface remain distinct research targets.
 
 ## Resolved lock transport and an information-loss obstruction
@@ -285,3 +285,32 @@ prime U^3 input is qualitative and uses Lambda_w; it must not be changed
 to an arbitrary logarithmic saving or to Lambda_sharp without proof.
 These are algebraic and conditional transport results, not a falsification
 of a separately proved prime-specific theorem or a new zeta-zero bound.
+
+## Qualitative four-prime rectangle replacement
+
+[Averaged rectangle transport](notes/averaged_rectangle_transport.md) now
+uses the published W-tricked U^3 estimate and the other factors' Gowers
+norms to control the restricted rectangle at its natural squared scale.
+For a sufficiently slow w(X)->infinity, it proves
+
+    sum_(X<=j<2X) sum_(k,h)
+      |N_j(Lambda;k,h)-Z_Y(k,h)K_w(k,h)|^2=o(X Y^4)
+
+in the short-window range X^(1/3+epsilon)<=Y<=X^(1-epsilon).
+Here Z_Y=(Y-|k|-|h|)_+ and K_w is the explicit finite four-point local
+product. It includes repeated-offset degeneracies instead of assigning
+them an infinite distinct-prime singular series.
+
+The proof keeps the admissible residue count: its normalization factor
+is uniformly bounded. The exact odd-prime cube count is
+p^4-8p^3+28p^2-44p+23, with B_2=1, certified by all 256 subset ranks and
+494 square minors, and checked by direct finite-field enumeration.
+Residue carries, integer exceptional positions, boundary trims and deleted
+small-prime powers are accounted for. This avoids the earlier crude
+logarithmic pointwise loss without asserting a quantitative U^3 theorem.
+
+The result is a published-input deduction with qualitative decay. It
+cannot automatically absorb logarithmic consumption weights, divisor
+multiplicity, sparse starts, variable dilations or an infinite-series tail.
+Those remain needed for the actual zeta reduction. Independent review and
+priority assessment remain open.

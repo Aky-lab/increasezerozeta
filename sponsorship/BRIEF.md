@@ -99,7 +99,7 @@ Parseval deduction gives actual short-window prime pairs averaged over
 positions and shifts, with arbitrary logarithmic savings and a weighted
 divisor-family budget. This advances the arithmetic transport program
 without assuming independent prime chains. Prescribed individual windows,
-four-prime locks and the final zeta reduction remain open. Independent
+weighted and dilated four-prime locks and the final zeta reduction remain open. Independent
 review and priority assessment are still needed.
 
 [The resolved lock audit](../notes/resolved_lock_frame.md) identifies an
@@ -109,6 +109,14 @@ nonnegative counterexamples, the correct two-dimensional transform, a
 valid full-lock stability theorem and a cubic-uniformity replacement
 criterion. This narrows the missing arithmetic input and prevents an
 aggregated statistic from being consumed as a resolved variance.
+
+[Qualitative rectangle transport](../notes/averaged_rectangle_transport.md)
+advances this restricted problem using published cubic uniformity. It
+replaces actual four-prime counts averaged over short-window starts and
+both shifts by an explicit finite local main term, with vanishing error at
+the natural squared scale. An exact cube-residue calculation preserves the
+normalization budget. Its qualitative rate and undilated range are stated
+explicitly; the weighted zeta interface still needs further estimates.
 
 ## Pilot milestones
 
