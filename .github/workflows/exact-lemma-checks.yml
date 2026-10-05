@@ -21,3 +21,7 @@ jobs:
         run: python scripts/christoffel_exact.py
       - name: Run exact k=8 target checks
         run: python scripts/k8_target.py
+      - name: Run Bell(7) gate
+        run: python scripts/bell7_gate.py
+      - name: Run candidate m7 ledger
+        run: python scripts/m7_ledger.py
