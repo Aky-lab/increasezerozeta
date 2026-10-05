@@ -42,6 +42,14 @@ moments still need to overcome and attributes its classical input.
 
 ## Structural research and computational value
 
+The [bounded resolvent reduction](../notes/bounded_resolvent_bridge.md)
+offers a second analytic milestone: prove one signed combination of
+three actual-prime resolvent powers at a single nonreal point. Its bounded
+certificate avoids high-moment outlier control, and the draft proves that
+finite-mode compression has vanishing cost for this statistic. Exact
+algebraic-field and block-matrix checks verify the reduction's identities;
+the arithmetic estimate itself remains open.
+
 [Centered reciprocity](../notes/centered_reciprocity.md) reduces the number of
 fit counts for an order-B class to floor(B/2). At eighth order the largest
 outer cube shrinks from 214358881 to 1679616 points. All fourteen class

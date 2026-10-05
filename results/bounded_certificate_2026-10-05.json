@@ -1,0 +1,110 @@
+{
+  "generated_at_utc": "2026-10-05T18:42:44.073058+00:00",
+  "status": "exact finite algebra checked; analytic reduction draft; arithmetic resolvent target unproved",
+  "q_coefficients": [
+    "1",
+    "-8232/2519",
+    "7368/2519",
+    "-1932/2519"
+  ],
+  "r_cubed": "2519/1932",
+  "field_basis": [
+    "1",
+    "r",
+    "r^2",
+    "i",
+    "i*r",
+    "i*r^2"
+  ],
+  "partial_fraction_coefficients_A1_A2_A3": [
+    [
+      "-614/161",
+      "0",
+      "0",
+      "-2185121/1622236",
+      "3/4",
+      "-1345248/405559"
+    ],
+    [
+      "186840/25921",
+      "-2185121/1622236",
+      "-3/4",
+      "49/92",
+      "-307/92",
+      "2340003/463496"
+    ],
+    [
+      "-780001/177744",
+      "49/46",
+      "307/322",
+      "0",
+      "74736/25921",
+      "-2185121/811118"
+    ]
+  ],
+  "closing_insertion_coefficients_C1_C2_C3": [
+    [
+      "-188252582479529468733600204/10315608004252496957347050625",
+      "-191027849426603032817105748/10315608004252496957347050625",
+      "398650967712262795194431424/10315608004252496957347050625",
+      "-2019041435301189163025991495149823/4183587666596638413524712504424375",
+      "-2270719439021041917886447614/10315608004252496957347050625",
+      "-3769225342934356914804305366067/25985016562712039835557220524375"
+    ],
+    [
+      "1215224854088354961519/4094313696340090586500",
+      "-208283533057251293091959337/415121442093497699542588375",
+      "-189606617428840478766/1023578424085022646625",
+      "474744012757570802560649/1318369010221509168853000",
+      "-20324641306833955173/2047156848170045293250",
+      "2125230713292364441276203/2578394050270172046848375"
+    ],
+    [
+      "-22838627801812381/32704181694592450",
+      "49111350302276681/65408363389184900",
+      "-708913906737/101565781660225",
+      "2495940567451771/16352090847296225",
+      "13307977400382/101565781660225",
+      "-42823741198457765244/41190916844339190775"
+    ]
+  ],
+  "f_at_one": [
+    "-8562790600535581079/1023578424085022646625",
+    "1254556675544193252/1023578424085022646625",
+    "7696811424072131424/1023578424085022646625",
+    "0",
+    "0",
+    "0"
+  ],
+  "exact_partial_fraction_coefficient_identities": 7,
+  "exact_block_resolvent_power_and_trace_bound_cases": 18,
+  "exact_two_prime_resolvent_insertion_cases": 18,
+  "projection_leakage_count_cases": 385,
+  "model_trace_upper_bound": "247/2519",
+  "actual_trace_cap_required": "1/10",
+  "actual_signed_resolvent_combination_required": "-9/20",
+  "first_two_moment_block_counterexample": {
+    "law": [
+      [
+        "1/6",
+        "0"
+      ],
+      [
+        "2/3",
+        "1"
+      ],
+      [
+        "1/6",
+        "2"
+      ]
+    ],
+    "simple_fraction": "2/3",
+    "f_trace_lower_bound": "1/6"
+  },
+  "limitations": [
+    "Finite matrix checks do not prove the continuous leakage estimate or asymptotic transfer.",
+    "Model trace bounds are not estimates for the actual arithmetic matrix.",
+    "The three actual resolvent powers and their signed combination remain unestimated.",
+    "No unconditional new zeta-zero counting bound is established."
+  ]
+}

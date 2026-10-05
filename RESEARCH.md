@@ -86,7 +86,7 @@ the positive moment cone and alternative supplied inputs.
 
 1. Independently review the structural proofs, finite certificates and normalization.
 2. Prove the arithmetic moment identities and their continuum transport through eighth order.
-3. Independently review the direct spectral/counting implication, normalized Schatten reduction and balanced-prime evaluation; prove the actual signed off-balance bound, or suitable one-sided moment estimates.
+3. Independently review the direct spectral/counting implication, normalized Schatten reduction and balanced-prime evaluation; prove the actual signed off-balance bound, suitable one-sided moment estimates, or the bounded resolvent criterion below.
 4. Replace the obstructed fixed-P absolute-tail estimate with a signed estimate or an actual-minus-model remainder bound in the separate [fourth-moment route](notes/class_subtracted_universality.md).
 5. Evaluate further moments and connected covariance coefficients efficiently, and extend the polynomial-statistic CLT to wider test-function classes.
 6. Extend the [verified literature comparison](notes/literature_map.md) and review the network/Gram application and reduced certificate method.
@@ -96,6 +96,17 @@ the positive moment cone and alternative supplied inputs.
 A certified finite integral, an assembled model moment and an established
 arithmetic zeta moment are distinct stages. The remaining analytic work is
 essential to any unconditional simple-zero bound.
+
+The [bounded resolvent criterion](notes/bounded_resolvent_bridge.md)
+uses f(x)=q3(x)^2/(1+(1932/2519)^(2/3)*x^2)^3. It majorizes the
+nonpositive half-line and is globally bounded and Lipschitz. Normalized
+Schatten-two perturbation and a block resolvent estimate transfer its
+trace to the whole-circle prime operator with vanishing compression
+error, without assuming a sixth-moment bound. At z=i*(2519/1932)^(1/3),
+the sufficient arithmetic estimate is a real linear combination of
+resolvent powers one through three bounded above by -9/20.
+This analytically weaker alternative avoids the absolute higher-word
+boundary cost; it does not evaluate the required arithmetic combination.
 
 The direct bridge reduces the endpoint target to Tr(q3(B_T)^2)/d or
 Tr(q4(B_T)^2)/d, where B_T is the actual normalized Weil matrix.
