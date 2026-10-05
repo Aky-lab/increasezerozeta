@@ -1,6 +1,26 @@
-# Bell(8) reduction: the five new classes controlling the 80% target
+# Bell(8) reduction and the corrected 80% target
 
-**Status:** exact combinatorial reduction conditional on the same frozen-singleton and 3-block-vanishing identities used below order eight, plus the currently pre-registered seventh-order inputs.
+**Status:** exact combinatorial reduction conditional on the same frozen-singleton and 3-block-vanishing identities used below order eight. Numerical eighth-order class values remain pre-registered candidates until exact certification.
+
+The active seventh-order candidate is now
+
+\[
+\{5,2\}=\frac7{72},
+\]
+
+not the retired \(1/8\) value. Together with the source identification
+
+\[
+C_7=-\frac{17}{360},
+\]
+
+this gives the candidate
+
+\[
+m_7=\frac{3443}{180}=19.1277777\ldots.
+\]
+
+## 1. Five genuinely new eighth-order classes
 
 Let
 
@@ -8,136 +28,11 @@ Let
 A_8:=\{2^4\}+\{4,2,2\}+\{4,4\}+\{6,2\}+C_8.
 \]
 
-The main point of this note is that, once lower classes are inserted, **all genuinely new eighth-order information enters only through \(A_8\)**.
+After the Bell(8) class reduction, every other contribution is inherited from lower orders.
 
-## 1. Surviving Bell(8) signatures
-
-Among the \(B_8=4140\) set partitions, the signatures not containing a 3-block are
+The exact base/frozen-singleton ledger is
 
 \[
-1^8,\;
-2\,1^6,\;
-2^2\,1^4,\;
-2^3\,1^2,\;
-2^4,\;
-4\,1^4,\;
-4\,2\,1^2,\;
-4\,2^2,\;
-4^2,
-\]
-\[
-5\,1^3,\;
-5\,2\,1,\;
-6\,1^2,\;
-6\,2,\;
-7\,1,\;
-8.
-\]
-
-Their multiplicities are respectively
-
-\[
-1,28,210,420,105,70,420,210,35,56,168,28,28,8,1.
-\]
-
-All signatures containing a 3-block are discarded by the same local-law mechanism already used in the lower ledgers.
-
-## 2. Pair/four-cycle base layer
-
-The all-singleton class contributes \(1\).
-
-There are \(28\) one-pair placements, each contributing \(1/3\).
-
-For two pairs, choose four endpoints in \(\binom84=70\) ways. Each four-set has two non-crossing pairings and one crossing pairing, giving
-
-\[
-140t_{\rm adj}+70t_{\rm opp}.
-\]
-
-There are \(70\) four-block placements, each contributing \(\Phi_4\).
-
-Therefore
-
-\[
-B_8^{\rm base}
-=
-1+\frac{28}{3}
-+140t_{\rm adj}
-+70t_{\rm opp}
-+70\Phi_4.
-\]
-
-With
-
-\[
-t_{\rm adj}=\frac7{60},\qquad
-t_{\rm opp}=\frac1{30},\qquad
-\Phi_4=-\frac1{60},
-\]
-
-this is exactly
-
-\[
-\boxed{B_8^{\rm base}=\frac{167}{6}}.
-\]
-
-## 3. Frozen-singleton lifts
-
-Deleting singleton blocks preserves overlap ranges.
-
-Thus
-
-\[
-2^3\,1^2:\qquad
-\frac{420}{15}\{2,2,2\}=28\{2,2,2\},
-\]
-
-because the six-cycle aggregate has \(15\) placements.
-
-Similarly,
-
-\[
-4\,2\,1^2:\qquad
-\frac{420}{15}\{4,2\}=28\{4,2\}.
-\]
-
-For the pure connected blocks,
-
-\[
-5\,1^3:\quad 56C_5,
-\]
-
-\[
-6\,1^2:\quad 28C_6,
-\]
-
-\[
-7\,1:\quad 8C_7.
-\]
-
-For the seventh-order joint class,
-
-\[
-5\,2\,1:\qquad
-\frac{168}{21}\{5,2\}=8\{5,2\}.
-\]
-
-## 4. Genuinely new eighth-order classes
-
-The five new objects are exactly
-
-\[
-\{2^4\},\qquad
-\{4,2,2\},\qquad
-\{4,4\},\qquad
-\{6,2\},\qquad
-C_8.
-\]
-
-Hence
-
-\[
-\boxed{
 m_8
 =
 \frac{167}{6}
@@ -148,22 +43,21 @@ m_8
 +28C_6
 +8C_7
 +A_8.
-}
 \]
 
-Using the exact lower-order values
+Using
 
 \[
-\{2,2,2\}=\frac{131}{420},\quad
-\{4,2\}=-\frac{23}{420},\quad
-C_5=\frac1{36},\quad
+\{2,2,2\}=\frac{131}{420},\qquad
+\{4,2\}=-\frac{23}{420},\qquad
+C_5=\frac1{36},\qquad
 C_6=-\frac1{126},
 \]
 
-and the current seventh-order candidates
+and the active seventh-order candidates
 
 \[
-\{5,2\}=\frac18,\qquad
+\{5,2\}=\frac7{72},\qquad
 C_7=-\frac{17}{360},
 \]
 
@@ -171,45 +65,48 @@ the inherited part is
 
 \[
 \boxed{
-m_8=\frac{3329}{90}+A_8.
+m_8=\frac{1103}{30}+A_8.
 }
 \]
 
-## 5. Exact target interval when \(m_7=862/45\)
+## 2. Corrected target geometry at \(m_7=3443/180\)
 
-If the seventh-moment candidate
-
-\[
-m_7=\frac{862}{45}
-\]
-
-is eventually certified, the ordinary Hankel moment constraint gives
+The ordinary Hankel constraint gives
 
 \[
-m_8\ge37.2618657631\ldots,
+m_8\ge
+\frac{27728631197}{748818000}
+=
+37.0298673336\ldots.
 \]
 
-so
+Thus
 
 \[
 \boxed{
-A_8\ge0.2729768742\ldots.
+A_8\ge
+\frac{197089397}{748818000}
+=
+0.2632006669\ldots.
 }
 \]
 
-The exact degree-four Christoffel target curves give:
+The exact Christoffel target curves give:
 
 ### 80%
 
 \[
-m_8\le37.4791244743\ldots
+m_8\le37.0303900256\ldots,
 \]
 
-or equivalently
+equivalently
 
 \[
 \boxed{
-A_8\le0.4902355854\ldots.
+A_8\le
+\frac{18073331}{68531400}
+=
+0.2637233589\ldots.
 }
 \]
 
@@ -217,7 +114,10 @@ A_8\le0.4902355854\ldots.
 
 \[
 \boxed{
-A_8\le0.4129766383\ldots.
+A_8\le
+\frac{1387353377}{5264349300}
+=
+0.2635374854\ldots.
 }
 \]
 
@@ -225,172 +125,90 @@ A_8\le0.4129766383\ldots.
 
 \[
 \boxed{
-A_8\le0.3290373911\ldots.
+A_8\le
+\frac{221473379}{841031100}
+=
+0.2633355401\ldots.
 }
 \]
 
 ### 90%
 
-At this moment order alone the required band would be
+At degree four alone,
 
 \[
 \boxed{
-A_8\le0.2768820728\ldots,
-}
-\]
-
-only slightly above the moment-cone floor. This quantifies why 90% will almost certainly require higher moments rather than merely sharpening the eighth-order calculation.
-
-## 6. Research priority
-
-For an 80% theorem, it is not necessary to identify every new eighth-order constant exactly.
-
-It is enough to prove the single aggregate upper bound
-
-\[
-\boxed{
-A_8\le0.4902355854\ldots.
-}
-\]
-
-Exact evaluation remains desirable for auditability and future rungs, but a rigorous aggregate upper bound is the shortest route to the headline.
-
-
-## 7. After the pre-registered four-pair candidate
-
-The independently refined four-pair computation now has the frozen candidate
-
-\[
-\{2^4\}=\frac{1661}{3780}.
-\]
-
-Define the remaining four-class aggregate
-
-\[
-R_8:=\{4,2,2\}+\{4,4\}+\{6,2\}+C_8.
-\]
-
-Then
-
-\[
-A_8=\frac{1661}{3780}+R_8.
-\]
-
-The target curves become:
-
-### 80%
-
-\[
-\boxed{
-R_8\le
-\frac{1160867}{22843800}
+A_8\le
+\frac{83626693}{317718450}
 =
-0.0508175960\ldots
+0.2632100622\ldots.
 }
 \]
 
-### 80.2%
+The corrected seventh moment lies only slightly above its Stieltjes floor, so the \(m_8\) window is much tighter than the earlier stale calculation based on \(\{5,2\}=1/8\).
+
+## 3. Current eighth-order candidates
+
+The private research branch currently has the following pre-registered numerical candidates:
 
 \[
 \boxed{
-R_8\le-0.0264413511\ldots
+\{2^4\}=\frac{1661}{3780}
 }
 \]
 
-### 81%
+from the 17-orbit four-pair calculation,
 
 \[
 \boxed{
-R_8\le-0.1103805983\ldots
+\{4,2,2\}=-\frac{127}{840}
 }
 \]
 
-Thus the shortest 80% route no longer requires exact evaluation of all five new eighth-order classes: after certifying the four-pair class, it is enough to prove one aggregate upper bound on the remaining four.
-
-
-## 8. After the pre-registered \(\{4,2,2\}\) candidate
-
-The independent dihedral-orbit midpoint calculation now has the frozen candidate
-
-\[
-\{4,2,2\}=-\frac{127}{840}.
-\]
-
-Define
-
-\[
-S_8:=\{4,4\}+\{6,2\}+C_8.
-\]
-
-Combining the two currently frozen eighth-order candidates,
-
-\[
-\{2^4\}=\frac{1661}{3780},
-\qquad
-\{4,2,2\}=-\frac{127}{840},
-\]
-
-the target residual becomes:
-
-### 80%
+from the 22-orbit four-block/two-pair calculation, and
 
 \[
 \boxed{
-S_8\le
-\frac{576829}{2855475}
+\{6,2\}=-\frac1{20}
+}
+\]
+
+from the six-block/pair reconnaissance.
+
+All three remain candidate-level until exact rational integration and arithmetic transport are complete.
+
+Their sum is
+
+\[
+\frac{1801}{7560}
 =
-0.2020080722\ldots
-}
+0.2382275132\ldots.
 \]
 
-### 80.2%
-
-\[
-\boxed{
-S_8\le0.1247491251\ldots
-}
-\]
-
-### 81%
-
-\[
-\boxed{
-S_8\le0.0408098779\ldots
-}
-\]
-
-Thus, conditional on exact certification of the two pre-registered candidates, the remaining burden for an 80% result is a comparatively coarse aggregate upper bound on just three classes.
-
-
-## 9. After the pre-registered \(\{6,2\}\) candidate
-
-The six-block/pair reconnaissance now has the frozen candidate
-
-\[
-\{6,2\}=-\frac1{20}.
-\]
-
-Define
+Define the remaining two-class aggregate
 
 \[
 T_8:=\{4,4\}+C_8.
 \]
 
-Combining the currently frozen candidates
+Then
 
 \[
-\{2^4\}=\frac{1661}{3780},\qquad
-\{4,2,2\}=-\frac{127}{840},\qquad
-\{6,2\}=-\frac1{20},
+A_8=\frac{1801}{7560}+T_8.
 \]
 
-the residual targets become:
+## 4. Residual target for \(\{4,4\}+C_8\)
+
+Conditional on exact certification of the three displayed candidates:
 
 ### 80%
 
 \[
 \boxed{
-T_8\le0.2520080722\ldots
+T_8\le
+\frac{291211}{11421900}
+=
+0.02549584570\ldots.
 }
 \]
 
@@ -398,7 +216,10 @@ T_8\le0.2520080722\ldots
 
 \[
 \boxed{
-T_8\le0.1747491251\ldots
+T_8\le
+\frac{88827023}{3509566200}
+=
+0.02530997221\ldots.
 }
 \]
 
@@ -406,8 +227,52 @@ T_8\le0.1747491251\ldots
 
 \[
 \boxed{
-T_8\le0.0908098779\ldots
+T_8\le
+\frac{42233263}{1682062200}
+=
+0.02510802692\ldots.
 }
 \]
 
-Thus, conditional on exact certification of the three pre-registered mixed/pairing candidates, an 80% result only requires a very coarse aggregate upper bound on \(\{4,4\}+C_8\).
+### 90%
+
+\[
+\boxed{
+T_8\le
+\frac{31749667}{1270873800}
+=
+0.02498254901\ldots.
+}
+\]
+
+The moment-cone floor corresponds to
+
+\[
+\boxed{
+T_8\ge
+\frac{6233449}{249606000}
+=
+0.02497315369\ldots.
+}
+\]
+
+So, after the corrected \(m_7\) input, the remaining degree-four improvement is controlled by a very narrow interval for \(\{4,4\}+C_8\):
+
+- about \(5.23\times10^{-4}\) of headroom for 80%;
+- about \(9.40\times10^{-6}\) for 90%.
+
+This makes exact evaluation of \(\{4,4\}\) and \(C_8\), or a rigorous aggregate bound on their sum, the decisive model-side \(k=8\) task.
+
+## 5. Research priority
+
+The shortest path to a defensible 80% result is now:
+
+1. exact-certify the active seventh-order \(\{5,2\}=7/72\) candidate and \(C_7=-17/360\);
+2. exact-certify the three current eighth-order candidates \(\{2^4\}\), \(\{4,2,2\}\), \(\{6,2\}\);
+3. prove
+   \[
+   \{4,4\}+C_8\le0.02549584570\ldots;
+   \]
+4. separately complete the arithmetic transports for all new classes.
+
+No theorem-level headline should consume any candidate before those gates close.
