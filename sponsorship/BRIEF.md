@@ -53,6 +53,15 @@ The proof uses an exact expected log-determinant identity, independently
 checked from the full Weyl density at five sizes. Arithmetic transport
 remains essential to any zeta-zero application of this model result.
 
+[The bandwidth theorem](../notes/cue_gram_bandwidth.md) extends these model
+results to rectangular CUE Gram matrices. It distinguishes the row law
+from the dimension-forced zero atom in the column law and derives an
+explicit fluctuation variance across the half-bandwidth overlap threshold.
+Independent exact checks compare both matrix representations. The
+[literature map](../notes/literature_map.md) credits prior Gram motivation,
+Vandermonde moment methods and CUE pair statistics, and specifies what
+requires further novelty assessment and mathematical review.
+
 [The quantitative arithmetic-core proof](../notes/arithmetic_core_limit.md)
 establishes the explicit prime-power model as -1/48+O(1/log T), including
 coefficient asymptotics, exceptional-class control and exact geometry.

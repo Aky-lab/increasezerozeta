@@ -97,17 +97,21 @@ def permutation_sign(p):
 
 
 class WeylJoint:
-    def __init__(self,n,max_order=3):
+    def __init__(self,n,max_order=3,rows=None):
         self.n = n
+        self.rows = n if rows is None else rows
+        if not 1<=self.rows<=n:
+            raise ValueError('row count must lie between 1 and n')
         zero = (0,)*(n-1)
         density = defaultdict(int)
         for p,q in product(permutations(range(n)),repeat=2):
             density[tuple(p[j]-q[j] for j in range(n-1))] += permutation_sign(p)*permutation_sign(q)
         self.density = dict(density)
         assert self.density[zero]==math.factorial(n)
-        # Column Gram n V*V: sum_a (z_k/z_j)^a.
+        # Column Gram n V*V: sum_a (z_k/z_j)^a. Its nonzero
+        # eigenvalues equal those of the row Gram, including rectangular V.
         entries = [[defaultdict(int) for _ in range(n)] for _ in range(n)]
-        for j,k,a in product(range(n),repeat=3):
+        for j,k,a in product(range(n),range(n),range(self.rows)):
             exponent = tuple(a*((i==k)-(i==j)) for i in range(n-1))
             entries[j][k][exponent] += 1
         power = [[{zero:int(j==k)} for k in range(n)] for j in range(n)]
@@ -130,7 +134,7 @@ class WeylJoint:
         for size in sizes:
             polynomial = poly_multiply(polynomial,self.traces[size])
         value = sum(c*self.density.get(tuple(-x for x in e),0) for e,c in polynomial.items())
-        return F(value,math.factorial(self.n)*self.n**(sum(sizes)+len(sizes)))
+        return F(value,math.factorial(self.n)*self.n**sum(sizes)*self.rows**len(sizes))
 
     def cumulant(self,sizes):
         value = F(0)

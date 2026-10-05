@@ -32,6 +32,10 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 [Logarithmic control](notes/cue_gram_logdet.md) proves that the limiting model measure has no atom at zero. The exact identity E[log det(G_n)]/n=H_n-1-log n gives a uniform bound on small-eigenvalue mass, which survives the weak limit. This all-order model conclusion is stronger than the finite-moment origin-mass certificate; arithmetic counting transport remains open.
 
+[The bandwidth extension](notes/cue_gram_bandwidth.md) proves strong spectral convergence, polynomial fluctuations and logarithmic control for rectangular CUE Gram matrices with m/n tending to any fixed 0<lambda<=1. The row law has no zero atom; the column law has zero mass exactly 1-lambda. Its second-moment fluctuation variance is 2*lambda^3/15-(2*lambda-1)_+^5/(30*lambda^2), with an overlap threshold at lambda=1/2. Independent exact Weyl checks cover every 1<=m<=n<=5.
+
+[The literature comparison](notes/literature_map.md) credits the earlier sine-process Gram motivation, independent-phase Vandermonde work and CUE pair-statistic results. It identifies the remaining global sine-process comparison and arithmetic transport obligations.
+
 [The quantitative arithmetic-core proof](notes/arithmetic_core_limit.md) establishes the explicitly defined class-subtracted prime-power model as -1/48+O(1/log T). It proves the universal coefficient asymptotic, controls exceptional moduli uniformly, and derives the overlap integral from cube and simplex volumes.
 
 [A cutoff obstruction](notes/fixed_cutoff_obstruction.md) proves the uniform bound C_ell,P=O((1+log P)/log T). Every subpower cutoff, including any fixed power of log T, leaves the entire leading model contribution in its tail. An absolute envelope for that same tail has lower limit at least 1/48, so the older 0.0111 finite-height charge cannot be promoted to such an asymptotic bound.
@@ -40,7 +44,7 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 ## Reproduction
 
-Run all sixteen project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all seventeen project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
@@ -103,7 +107,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all sixteen executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all seventeen executed checks.
 
 ## Project files
 

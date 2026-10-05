@@ -87,7 +87,8 @@ the positive moment cone and alternative supplied inputs.
 3. Establish the spectral/counting interface for these supplied moments.
 4. Replace the obstructed fixed-P absolute-tail estimate with a signed estimate or an actual-minus-model remainder bound in the separate [fourth-moment route](notes/class_subtracted_universality.md).
 5. Evaluate further moments and connected covariance coefficients efficiently, and extend the polynomial-statistic CLT to wider test-function classes.
-6. Assess prior literature for the network/Gram connection and reduced certificate method.
+6. Extend the [verified literature comparison](notes/literature_map.md) and review the network/Gram application and reduced certificate method.
+7. Identify the bandwidth-dependent CUE row and column laws with the appropriate global sine-process law, with explicit normalization and limit interchange.
 
 A certified finite integral, an assembled model moment and an established
 arithmetic zeta moment are distinct stages. The remaining analytic work is
@@ -143,6 +144,17 @@ EulerGamma-1<=integral log(x)dnu<0 and the explicit bound
 nu([0,epsilon])<=[1-EulerGamma+1/(2sqrt(3))]/|log epsilon|.
 This uses uniform logarithmic control, not only finite-matrix full rank.
 The model result does not supply the arithmetic counting interface.
+
+[The rectangular bandwidth theorem](notes/cue_gram_bandwidth.md) extends
+the strong limit and polynomial CLT to every fixed m/n->lambda in (0,1].
+A fixed integral coordinate chart and boundary-slab mesh estimate replace
+the square polynomial-reciprocity argument. The row measure has moments
+m1=1 and m2=1+lambda^2/3 and no zero atom; the column measure is
+(1-lambda)delta0+lambda*nu_lambda. The second-moment limiting variance is
+2*lambda^3/15-(2*lambda-1)_+^5/(30*lambda^2). Exact independent integration
+checks rectangular cases, and integer sums verify the finite variance
+formula across its threshold. Local kernel entry convergence alone does
+not establish a global sine-process spectral identification.
 
 ## Quantitative arithmetic model and a cutoff obstruction
 
