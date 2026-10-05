@@ -1,14 +1,6 @@
 # Actual-walk spectator audit — 5 October 2026
 
-**Status:** exact counterexample and elementary spectator reduction;
-numerical reconnaissance for the full joint constant. No theorem claim.
-
-**Later exact evaluation:** the subsequent integer-lattice calculation gives
-the corrected model constant {5,2}=1/8. See
-[the degree/period proof](../notes/spectator_52_exact_lattice.md) and
-[the raw exact record](spectator_52_exact_lattice_2026-10-05.json).
-The numerical table below is preserved as historical reconnaissance;
-the later certificate supersedes its unresolved-value disposition.
+The distance-three prefix correction changes the model integral. The corrected value is exactly {5,2}=1/8; see [the lattice proof](../notes/spectator_52_exact_lattice.md) and [integer record](spectator_52_exact_lattice_2026-10-05.json). The numerical comparison below isolates the effect of the error.
 
 ## Finding
 
@@ -48,9 +40,7 @@ Three Richardson probes `(4*fine-coarse)/3` for the corrected total:
 - 1/16 to 1/32: 0.125001343394;
 - 1/10 to 1/20: 0.125008793620.
 
-These support renewed exploration of 1/8. There is no error enclosure,
-and rational reconstruction is not proof. The pointwise counterexample
-does not alone prove a value for the signed full integral.
+These numerical probes approach the exact value 1/8 but provide no error enclosure. The proof of the full signed integral comes from the separate exact lattice calculation.
 
 ## Reproduction and scope
 
@@ -76,17 +66,8 @@ contains component values, historical comparisons, anchor values,
 mesh sizes, and timing. The [exact-check report](../sponsorship/evidence/actual-walk-2026-10-05.json)
 records executed hashes, including the reduction module.
 
-## Disposition
+## Consequences
 
-- Withdraw the historical explanation that 1/8 was a spectator
-  quadrature artifact.
-- Quarantine the historical 7/72 ladder and downstream scenario values.
-- Keep neither fraction as an exact-certified input.
-- Recompute downstream m7/m8 geometry only after the actual joint
-  constant and C7 have been certified.
-- Preserve prior notes and raw data with explicit superseded warnings.
+The 7/72 ladder evaluates a different fixed-prefix set. Seventh- and eighth-order scenario bounds derived from that value do not apply to the corrected model.
 
-The earlier sponsorship checker was also affected: it independently
-integrated the overlap of the erroneous superset. Passing that test
-did not establish agreement with the defining W3 walk. The new
-increment-based checker avoids that shared structural assumption.
+The earlier finite checker integrated the same erroneous superset, so it did not detect the structural error. The increment-based checker constructs the defining walk independently.
