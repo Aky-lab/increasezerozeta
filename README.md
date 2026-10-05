@@ -1,46 +1,42 @@
 # increasezerozeta
 
-Private research repository for rigorous improvements to unconditional lower bounds on the proportion of simple zeros of the Riemann zeta function on the critical line.
+Exact computation and analytic research on lower bounds for the proportion of simple zeros of the Riemann zeta function on the critical line.
 
-## Start here
+## Results and scope
 
-Read **HANDOFF.md** first. It is the authoritative continuation guide and records:
+The corrected continuum model integral **{5,2}=1/8** has an exact integer-lattice evaluation, with components 5/504, 1/360 and 13/2520. The [proof](notes/spectator_52_exact_lattice.md) establishes the polynomial degree and period used in the calculation; the [integer record](results/spectator_52_exact_lattice_2026-10-05.json) includes source hashes and held-out checks.
 
-- what is exact versus candidate-level;
-- the active research branch;
-- retired values that must not be reused;
-- the current 80% target;
-- the exact next mathematical steps.
+The repository also contains exact Christoffel/Hankel moment consumption and seventh/eighth-moment target geometry. The six-moment calculation gives lambda_3(0)=1415/13891 and the conditional simple-zero bound 11061/13891, approximately 79.627%.
 
-## Stable baseline on main
+These are model and algebraic results. Certification of C7 and the arithmetic transport to zeta moments remain open. They do not yet establish a new unconditional zeta-zero bound.
 
-The merged baseline contains:
+See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
-- the class-subtracted universality/core reduction, including the candidate exact continuum value C_core = -1/48;
-- the exact Christoffel/Hankel consumption framework;
-- the exact six-moment origin-mass value lambda_3(0)=1415/13891, giving 11061/13891 = 79.62709668...% within the same candidate analytic framework as the reference higher-moment programme;
-- exact k=8 target geometry in terms of m7 and m8;
-- reproducible exact-arithmetic checks.
+## Reproduction
 
-## Active frontier
+The baseline checks use the Python standard library:
 
-The active higher-moment work is on:
+```sh
+python scripts/verify_lemmas.py
+python scripts/christoffel_exact.py
+python scripts/k8_target.py
+python scripts/verify_spectator_reduction.py
+```
 
-research/k8-moments
+The exact lattice evaluator requires NumPy. The recorded calculation used Python 3.12.12 and NumPy 2.3.5:
 
-with draft PR #6.
+```sh
+python scripts/spectator_52_exact_lattice.py --out results/lattice_reproduction.json
+```
 
-An actual-walk audit found that the historical spectator reduction added an absent prefix in distance three. The evidence favoring {5,2}=7/72 is quarantined. Exact integer lattice evaluation of the corrected model now gives **{5,2}=1/8**, with a proved degree/period bound, held-out checks, and the independent C5=1/36 anchor. See [the proof and reproduction note](notes/spectator_52_exact_lattice.md). C7 and the arithmetic transport remain unresolved; this model calculation does not establish a new zeta theorem.
+To check the stored certificate, source hashes and rational calibration gates without repeating the large lattice sums:
+
+```sh
+python scripts/spectator_52_exact_lattice.py --out results/spectator_52_exact_lattice_2026-10-05.json --verify-only
+```
+
+The [spectator audit](results/spectator_actual_walk_audit.md) documents the distance-three prefix correction and the numerical comparison.
 
 ## Research support
 
-The [sponsorship brief](sponsorship/BRIEF.md) proposes a modest pilot to certify or refute higher-moment candidates. The [funding shortlist](sponsorship/PROGRAMS.md) records program fit and unresolved eligibility; the [application draft](sponsorship/APPLICATION.md) has not been submitted.
-
-Run `python scripts/sponsorship_evidence.py` for the baseline checks and an independent finite check of the spectator-frequency reduction. Passing these checks does not establish the surrounding analytic transport or a new zeta theorem.
-
-## Mathematical status
-
-This is research work in progress. Nothing here should be advertised as an established new unconditional record until the analytic moment-production/transport chain has been independently checked and all candidate constants consumed by a headline result have theorem-level certification.
-
-Keep the repository private until there is something concrete enough to circulate.
-
+The [research proposal](sponsorship/BRIEF.md) describes a six-week pilot for certificate review, higher-moment computation and analytic transport.
