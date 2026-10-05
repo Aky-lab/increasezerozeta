@@ -487,7 +487,7 @@ The degree-two Christoffel conversion then gives
 
 within that framework.
 
-The [fixed-cutoff theorem](fixed_cutoff_obstruction.md) proves that the same \(0.0111\) cannot be an asymptotic absolute envelope for its specified complementary model tail: that envelope has lower limit at least \(1/48\). Consequently the displayed \(70.3054\%\) remains formal conditional arithmetic, rather than a bound supported by the fixed-P model-tail method.
+The [cutoff theorem](fixed_cutoff_obstruction.md) proves that the same \(0.0111\) cannot be an asymptotic absolute envelope for its specified complementary model tail at any \(\log P=o(\log T)\): that envelope has lower limit at least \(1/48\). This includes fixed and polylogarithmic cutoffs. Consequently the displayed \(70.3054\%\) remains formal conditional arithmetic, rather than a bound supported by that model-tail method.
 
 More generally, if all *non-\(o(1)\)* remainder terms not included in the exact core are collected into a clearly defined quantity \(E\),
 

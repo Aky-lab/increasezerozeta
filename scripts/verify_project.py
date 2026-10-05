@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CHECKS = (
     ("verify_lemmas.py", "finite local algebra and conditional core arithmetic"),
     ("verify_arithmetic_transport.py", "exact coefficient convolution, prime-power factors and overlap geometry"),
+    ("verify_prime_pair_transport.py", "divisor-family aggregation and published-input prime-pair error bookkeeping"),
     ("christoffel_exact.py", "exact moment consumption for supplied moments"),
     ("k8_target.py", "exact target geometry for supplied moments"),
     ("verify_spectator_reduction.py", "finite rational checks of actual-walk exact-v reduction"),

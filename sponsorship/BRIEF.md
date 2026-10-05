@@ -44,10 +44,17 @@ zeros and priority in the literature remain separate questions.
 establishes the explicit prime-power model as -1/48+O(1/log T), including
 coefficient asymptotics, exceptional-class control and exact geometry.
 [A cutoff obstruction](../notes/fixed_cutoff_obstruction.md) identifies a
-failure of the older absolute-tail strategy: a fixed cutoff leaves the
-leading model contribution in its tail, so the finite-height 0.0111 charge
+failure of the older absolute-tail strategy: every subpower cutoff,
+including any fixed power of log T, leaves the leading model contribution
+in its tail, so the finite-height 0.0111 charge
 cannot certify that same asymptotic envelope. This directs the analytic
 work toward signed estimates and actual-minus-model discrepancies.
+
+[Prime-pair progression transport](../notes/prime_pair_progression_transport.md)
+resolves the full-dyadic, one-chain divisor-family aggregation step using a
+published prime-correlation theorem. Its weighted bound states the precise
+consumption budget. Short position windows and coupled prime chains remain
+open, with their missing scale estimates specified explicitly.
 
 ## Pilot milestones
 

@@ -371,7 +371,7 @@ The reference candidate quotes a charge \(0.0111\) at its operating point. A new
 
 Those are not interchangeable.
 
-For the precise fixed Ramanujan cutoff in the [obstruction theorem](fixed_cutoff_obstruction.md), an absolute envelope for the complementary model tail has lower limit at least \(1/48>0.0111\). Thus the first option cannot hold for that same absolute model tail. A viable arithmetic estimate must instead control a signed tail, use a different cutoff strategy, or bound a separately defined actual-minus-model discrepancy. The full core theorem already includes its infinite model tail.
+For the precise Ramanujan cutoff in the [obstruction theorem](fixed_cutoff_obstruction.md), the finite core is uniformly \(O((1+\log P)/\ell)\). Every subpower cutoff, including any fixed power of \(\log T\), therefore leaves an absolute complementary-tail envelope with lower limit at least \(1/48>0.0111\). Thus the first option cannot hold for that same absolute model tail. A viable arithmetic estimate must instead control a signed tail, use a sufficiently different cutoff strategy, or bound a separately defined actual-minus-model discrepancy. The full core theorem already includes its infinite model tail.
 
 ### \(E_{\mathrm{fixed}}\)
 
@@ -380,6 +380,13 @@ Any other non-vanishing deterministic allowance that survives the limit. At pres
 ### \(o(1)\)
 
 Only terms actually proved to vanish may be placed here: covered-zone errors, band/glue deviations, smoothing collars, low-zone terms, or analogous quantities must each have a cited estimate showing decay after the final normalisation.
+
+The [prime-pair progression theorem](prime_pair_progression_transport.md)
+now supplies arbitrary logarithmic mean-square savings for every divisor
+subfamily of full-dyadic, one-chain shifts \(h=qk\), in the published MRT
+range. Its weighted bound makes the required consumption norm explicit.
+It does not supply the short-position-window or multiple-chain estimates,
+and an application must still verify the shift range and weight budget.
 
 ## 7. Target for a full one-percentage-point improvement
 

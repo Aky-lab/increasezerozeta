@@ -82,6 +82,26 @@ def a_coefficient(n):
     return value
 
 
+def sigma(n):
+    return math.prod((p**(e+1)-1)//(p-1) for p,e in factors(n).items())
+
+
+def cutoff_weight(n):
+    return F(mobius(n)**2*sigma(n),phi(n)**2)
+
+
+def cutoff_h(n):
+    value = F(1)
+    for p,e in factors(n).items():
+        if e==1:
+            value *= F(3*p-1,p*(p-1)**2)
+        elif e==2:
+            value *= F(-p-1,p*(p-1)**2)
+        else:
+            return F(0)
+    return value
+
+
 def mobius(n):
     fs = factors(n)
     return 0 if any(e>1 for e in fs.values()) else (-1)**len(fs)
@@ -184,6 +204,37 @@ def main():
             for k in range(1,limit//r+1):
                 convolution[r*k] += h/k
     assert all(convolution[n]==a_coefficient(n) for n in range(1,limit+1))
+    # A second, independent positive weight controls growing q cutoffs.
+    cutoff_convolution = [F(0)]*(limit+1)
+    for r in range(1,limit+1):
+        h = cutoff_h(r)
+        if h:
+            for k in range(1,limit//r+1):
+                cutoff_convolution[r*k] += h/k
+    assert all(cutoff_convolution[n]==cutoff_weight(n) for n in range(1,limit+1))
+    for p in primes:
+        assert abs(cutoff_h(p))+abs(cutoff_h(p*p))==F(4,(p-1)**2)
+    # Compare direct q weights with the separated Euler-factor bound, without
+    # using the divisor sawtooth coefficients to generate the left side.
+    growing_cases = 0
+    cases = ((1,1),(3,5),(81,625),(2**8,7**4),(3**7,5**6),
+             (2,2),(2**4,2**7),(3,3),(3**4,3**7),(5**3,5**5))
+    for cutoff,(b1,b2) in product((8,32,128),cases):
+        ordinary = sum(cutoff_weight(q) for q in range(1,cutoff+1))
+        direct = sum(abs(beta_q(q,b1,b2))*sigma(q) for q in range(1,cutoff+1))
+        harmonic = sum(F(1,q) for q in range(1,cutoff+1))
+        assert ordinary<=37*harmonic
+        if math.gcd(b1,b2)==1:
+            special_odd = set(factors(b1*b2))-{2}
+            multiplier = math.prod(1+F(p+1,p-1) for p in special_odd)
+            assert multiplier<=9 and direct<=multiplier*ordinary
+        else:
+            assert direct<=8*min(b1,b2)*ordinary
+        growing_cases += 1
+    for p,a,b in product(primes,range(1,8),range(1,8)):
+        e = min(a,b)
+        weighted = sum(abs(beta_local(p,v,a,b))*sigma(p**v) for v in range(e+2))
+        assert weighted<=2*F(p,p-1)**2*p**e<=8*p**e
     geometry_checks = 0
     for i,j,k in product(range(13),range(7),range(7)):
         nu = 1+F(i,12)
@@ -223,6 +274,7 @@ def main():
         cutoff_cases += 1
     print(f"Independent beta/density/shifted-vector checks: {local_checks}")
     print(f"Exact Euler-convolution coefficients: {limit}")
+    print(f"Growing-cutoff convolution coefficients: {limit}; separated q-weight cases: {growing_cases}")
     print(f"Independent twelve-overlap/reduced-geometry checks: {geometry_checks}")
     print(f"Exact geometric mass {mass}; weighted mass {weighted}; model core {-2*weighted}")
     print(f"Exact Ramanujan identities: {ramanujan_checks}; independent cutoff decompositions: {cutoff_cases}")

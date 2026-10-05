@@ -131,11 +131,12 @@ gives A(M)=log M+EulerGamma-2+O_alpha(M^(-alpha)(1+log M)), for every
 estimates justify exceptional-modulus removal. The twelve-overlap geometry
 reduces to cube and simplex volumes, yielding weighted integral 1/96.
 
-[The fixed-cutoff theorem](notes/fixed_cutoff_obstruction.md) proves that
-every fixed finite Ramanujan piece has normalized core O_P(ell^(-1)),
-while its complementary model tail tends to -1/48. An absolute envelope
+[The cutoff theorem](notes/fixed_cutoff_obstruction.md) proves the uniform
+bound C_ell,P=O((1+log P)/ell). Every P=exp(o(ell)), including a fixed
+power of log T, has a vanishing finite core, while its complementary model
+tail tends to -1/48. An absolute envelope
 for that same tail therefore has lower limit at least 1/48. This rules out
-0.0111 as an asymptotic absolute-tail bound for the specified fixed-cutoff
+0.0111 as an asymptotic absolute-tail bound for the specified subpower-cutoff
 convention; it does not rule out a differently defined remainder or signed
 cancellation. The older 70.3054% figure remains only formal conditional
 consumption, with that tail assumption unestablished.
@@ -145,3 +146,24 @@ Euler convolution, overlap geometry and finite Ramanujan decompositions.
 The asymptotic proofs are mathematical arguments in the notes. Neither the
 model theorem nor its checks prove the reduction of actual zeta moments to
 the model functional.
+
+## A discharged prime-pair aggregation input
+
+[Prime-pair progression transport](notes/prime_pair_progression_transport.md)
+derives, from Matomaki–Radziwill–Tao Theorem 1.3(i), the uniform estimate
+
+    sum_((q,k) in E) |Delta_X(qk)|^2 = O_(A,epsilon)(H X^2 log(3X)^(-A))
+
+for every subset E of positive pairs qk<=H, in the published shift range
+X^(8/33+epsilon)<=H<=X^(1-epsilon). The proof treats exceptional shifts
+with a divisor second-moment bound; it does not assume variance
+factorization. A further Cauchy-Schwarz estimate makes the consumption
+weight budget explicit.
+
+This resolves the full-dyadic, one-chain divisor-family aggregation step.
+The note also states the endpoint error retained when passing to a shorter
+position window. Replacing the full-scale error X E(X) by Y E(X) requires
+a separate theorem; unrestricted window-mass replacement has elementary
+counterexamples. Short-window prime sums and multiple-chain variance
+remain distinct obligations. The new checker tests the divisor identities
+and aggregation bookkeeping with exact arithmetic.
