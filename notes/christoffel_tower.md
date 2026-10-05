@@ -1,11 +1,8 @@
 # Exact Christoffel consumption for the moment tower
 
-**Status:** rigorous algebraic reduction, conditional only on the same spectral-measure/counting interface used by the reference higher-moment programme.
-
-The current six-moment candidate uses a rationalised cubic whose roots are approximately
-\(0.5323,1.3122,2.0586\). Those numbers are not mysterious: they are approximations to the exact roots of the degree-three Christoffel minimiser at the origin for the exact moment sequence.
-
-The point of this note is broader than the small numerical improvement. Once exact moments through \(m_{2n}\) are known, the optimal origin-mass certificate is obtained automatically from the Hankel matrix. No bespoke LP atom search is needed.
+The mass bound below is exact algebra for a supplied positive moment
+sequence. Its application to zeta zeros additionally requires the
+spectral/counting interface and analytic moment identities.
 
 ## 1. General theorem
 
@@ -134,182 +131,57 @@ exactly the familiar \(13/18\) certificate.
 
 Thus that certificate is already a Christoffel polynomial in disguise.
 
-## 3. Exact six-moment certificate
+## 3. Audited six-moment inputs
 
-Now use the exact moments
+The current conditional model sequence is
 
-\[
-m_0=1,\qquad
-m_1=1,\qquad
-m_2=\frac43,\qquad
-m_3=2,\qquad
-m_4=\frac{13}{4},
-\]
+    (m0,...,m6) = (1,1,4/3,2,13/4,101/18,640/63).
 
-\[
-m_5=\frac{101}{18},\qquad
-m_6=\frac{12809}{1260}.
-\]
+The sixth-order value retains the reference ledger's other class inputs
+and replaces its three-pair aggregate with the directly certified 32/105.
+See the [pairing audit](../results/pairing_model_audit.md). The retained
+inputs and local identities still require analytic review.
 
-The \(4\times4\) Hankel matrix is
+For this sequence,
 
 \[
-H_3=
-\begin{pmatrix}
+H_3=\begin{pmatrix}
 1&1&4/3&2\\
 1&4/3&2&13/4\\
 4/3&2&13/4&101/18\\
-2&13/4&101/18&12809/1260
-\end{pmatrix}.
+2&13/4&101/18&640/63
+\end{pmatrix},\qquad
+\det H_3=\frac{247}{108864}>0.
 \]
 
-Its determinant is
+Exact inversion gives
 
 \[
-\det H_3=\frac{283}{108864}>0.
+\lambda_3(0)=\frac{247}{2519},\qquad
+q_3(x)=1-\frac{8232}{2519}x+\frac{7368}{2519}x^2
+-\frac{1932}{2519}x^3.
 \]
 
-A direct exact inversion gives
+Every coefficient of q_3(-t) is nonnegative, with constant term one.
+Thus q_3(x)^2>=1 for x<=0, and the same certificate bounds mass on
+the nonpositive half-line.
 
-\[
-e_0^TH_3^{-1}e_0=\frac{13891}{1415},
-\]
+If the analytic framework supplies these moments and the counting
+conversion, the resulting simple-zero fraction is
 
-hence
+    1-2*lambda_3(0) = 2025/2519 = 0.8038904327...,
 
-\[
-\boxed{
-\lambda_3(0)=\frac{1415}{13891}.
-}
-\]
+and the distinct-zero fraction is 2272/2519. These are conditional
+conversions, not established bounds for zeta zeros.
 
-The exact minimising cubic is
+## 4. Higher moments
 
-\[
-\boxed{
-q_3(x)
-=
-1-\frac{43428}{13891}x
-+\frac{37704}{13891}x^2
--\frac{9660}{13891}x^3.
-}
-\]
+For moments through m_(2n), form H_n, solve H_n c=e0 exactly and
+normalize c at zero. The reciprocal e0^T H_n^-1 e0 gives the
+Christoffel value. The remaining research concerns producing valid
+moments and proving their analytic interface.
 
-Equivalently,
-
-\[
-q_3(x)
-=
-\frac{13891-43428x+37704x^2-9660x^3}{13891}.
-\]
-
-Its three roots are approximately
-
-\[
-0.5323430232,\qquad
-1.3122059467,\qquad
-2.0585566202.
-\]
-
-These are precisely the values that the reference candidate rationalised to approximately
-
-\[
-0.5323,\qquad1.3122,\qquad2.0586.
-\]
-
-Because the coefficients alternate,
-
-\[
-q_3(-t)
-=
-1+\frac{43428}{13891}t
-+\frac{37704}{13891}t^2
-+\frac{9660}{13891}t^3
-\ge1
-\qquad(t\ge0),
-\]
-
-so \(q_3^2\ge1\) on \((-\infty,0]\) as well.
-
-The exact origin-mass bound is therefore
-
-\[
-w_0\le\frac{1415}{13891}.
-\]
-
-Under the same simple-zero counting conversion used in the reference moment programme,
-
-\[
-\boxed{
-\frac{N_0^s}{N}
-\ge
-1-2\frac{1415}{13891}
-=
-\frac{11061}{13891}
-=
-0.7962709668\ldots
-}
-\]
-
-and
-
-\[
-\boxed{
-\frac{N_d}{N}
-\ge
-1-\frac{1415}{13891}
-=
-\frac{12476}{13891}
-=
-0.8981354834\ldots.
-}
-\]
-
-This is slightly stronger than the rounded \(0.7962/0.8981\) headline, but the main gain is conceptual: the certificate is exact and canonical.
-
-## 4. Why this matters for higher moments
-
-Suppose moments through \(m_{2n}\) are pinned exactly.
-
-The consumption step becomes:
-
-1. form \(H_n=(m_{i+j})\);
-2. solve \(H_nc=e_0\) exactly;
-3. normalise \(c\) so that \(q(0)=1\);
-4. compute
-   \[
-   \lambda_n(0)=1/(e_0^TH_n^{-1}e_0);
-   \]
-5. feed \(1-2\lambda_n(0)\) into the same spectral counting interface.
-
-No atom fitting and no numerical LP are needed.
-
-This is especially relevant to the proposed \(k=8\) rung. Once exact \(m_7,m_8\) are supplied, the degree-four certificate is automatic. The open difficulty is therefore entirely on the moment-production side, not the consumption side.
-
-## 5. Research direction
-
-This suggests separating the programme into two engines.
-
-### Moment engine
-
-Prove exact or one-sided bounds for
-
-\[
-m_7,m_8,m_9,\dots
-\]
-
-from the arithmetic/compressed-matrix side.
-
-### Consumption engine
-
-Use exact Hankel/Christoffel algebra to convert any pinned even moment tower into the optimal moment-only mass-at-zero bound.
-
-The second engine is now essentially solved for exact moments.
-
-A longer-term structural question is whether the resulting Christoffel sequence
-
-\[
-\lambda_n(0)
-\]
-
-for the sine-model moment sequence can be analysed asymptotically without calculating every moment individually. If so, that could expose the rate at which the moment tower approaches \(100\%\).
+[Eighth-order target geometry](k8_target_geometry.md) derives the
+degree-four extension with the audited inputs. Run
+`python scripts/christoffel_exact.py` to check the degree-two and
+degree-three calculations with rational arithmetic.

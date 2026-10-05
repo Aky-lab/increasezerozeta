@@ -117,22 +117,29 @@ Substituting the exact lower-order constants gives
 \boxed{
 m_7
 =
-\frac{1717}{90}
+\frac{685}{36}
 +\{5,2\}
 +C_7.
 }
 \]
 
-## 6. Corrected model input
+## 6. Audited model inputs
 
-The [exact lattice calculation](spectator_52_exact_lattice.md) gives {5,2}=1/8. The ledger therefore becomes
+The [pairing certificate](paired_cycle_flow_polytopes.md) gives
+{2,2,2}=32/105. The retained lower-order inputs are {4,2}=-23/420,
+C5=1/36 and C6=-1/126. With these conventions the ledger is
 
-    m7 = 6913/360 + C7.
+    m7 = 685/36 + {5,2} + C7.
 
-The [flow-polytope certificate](pure_cycle_flow_polytopes.md) gives C7=-17/360 exactly. The resulting model ledger is m7=862/45. Its arithmetic interpretation still requires the transport and local identities.
+The [spectator certificate](spectator_52_exact_lattice.md) gives
+{5,2}=1/8 and the [flow certificate](pure_cycle_flow_polytopes.md)
+gives C7=-17/360. Hence the conditional model ledger is m7=3439/180.
 
-The Stieltjes floor implied by the supplied moments through m6 is
+The audited lower-moment inputs imply the Stieltjes floor
 
-    m7* = 25866469/1352400.
+    m7* = 1031677/54096.
 
-The calculator in `scripts/m7_ledger.py` uses the exact model values by default and accepts explicit overrides for alternative scenarios.
+The calculator in `scripts/m7_ledger.py` uses these model values by
+default and accepts explicit overrides. The retained mixed-class input,
+local identities and arithmetic transport remain analytic obligations;
+see [the pairing audit](../results/pairing_model_audit.md).

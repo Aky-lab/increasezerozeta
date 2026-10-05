@@ -11,6 +11,7 @@ import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+from model_moments import M7_BASE, MODEL_M7
 
 
 def require(condition, message):
@@ -95,8 +96,8 @@ def main():
     require(independent["additional_held_out"]["n"]==11 and
             independent["additional_held_out"]["signed_count"]==next_two,
             "additional held-out count differs")
-    m7 = F(1717,90)+7*sum(components)+values[7]
-    require(m7==F(862,45),"seventh-order model ledger differs")
+    m7 = M7_BASE+7*sum(components)+values[7]
+    require(m7==MODEL_M7==F(3439,180),"seventh-order model ledger differs")
     print("RECORDED INTEGER CERTIFICATES AND SOURCE HASHES VERIFIED")
     print("J52 =",7*sum(components),"; C7 =",values[7],"; model m7 =",m7)
     print("Scope: transcript arithmetic and provenance; analytic transport remains open.")

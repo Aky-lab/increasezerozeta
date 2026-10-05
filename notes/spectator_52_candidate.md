@@ -14,6 +14,9 @@ The initial numerical convergence toward 1/8 was consistent with the corrected m
 
 The conditional ledger is
 
-    m7 = 1717/90 + {5,2} + C7 = 6913/360 + C7.
+    m7 = 685/36 + {5,2} + C7 = 3439/180.
 
-The separate [flow-polytope certificate](pure_cycle_flow_polytopes.md) gives C7=-17/360 exactly. The resulting model ledger is m7=862/45; arithmetic transport remains open.
+The separate [flow-polytope certificate](pure_cycle_flow_polytopes.md) gives C7=-17/360 exactly. The resulting model ledger is m7=3439/180; arithmetic transport remains open.
+
+The lower-order base uses the audited three-pair value 32/105; see
+[the pairing audit](../results/pairing_model_audit.md) for retained assumptions.

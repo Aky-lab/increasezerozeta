@@ -10,11 +10,13 @@ The immediate objective is a reproducible route from model definitions to exact 
 
 The corrected four-dimensional model integral {5,2} is exactly 1/8. Its components are 5/504, 1/360 and 13/2520. The [proof](../notes/spectator_52_exact_lattice.md) bounds the degree and period of the weighted lattice sums; the [integer record](../results/spectator_52_exact_lattice_2026-10-05.json) includes held-out checks and source hashes. A separate C5 anchor evaluates to 1/36.
 
-The [pure-cycle calculation](../notes/pure_cycle_flow_polytopes.md) gives C7=-17/360 exactly using integral network-flow polytopes. Independent checks recover all 150 C5 term values from the reference certificates and twelve C6 term values. The two seventh-order model inputs together give m7=862/45.
+The [pure-cycle calculation](../notes/pure_cycle_flow_polytopes.md) gives C7=-17/360 exactly using integral network-flow polytopes. Independent checks recover all 150 C5 term values from the reference certificates and twelve C6 term values.
+
+The [pair-cycle certificate](../notes/paired_cycle_flow_polytopes.md) gives {2^4}=1661/3780. It also exposes a lower-order grouping error: adjacent and nested noncrossing matchings have integrals 3/70 and 17/420 respectively. Exact integration on 24 simplex cells independently confirms the corrected three-pair aggregate 32/105; see [the audit](../results/pairing_model_audit.md).
 
 The repository provides a standard-library engine for exact Christoffel/Hankel moment consumption and eighth-order target geometry. An independent spectator checker passes 7,203 rational cases and detects 358 failures of an earlier distance-three formula. The [audit](../results/spectator_actual_walk_audit.md) identifies the missing-prefix error.
 
-The six-moment algebra yields lambda_3(0)=1415/13891. Its zeta interpretation depends on the analytic moment framework. Eighth-order class evaluation and higher-order arithmetic transport remain open; the model calculations alone do not establish a new unconditional bound.
+Retaining the other reference inputs gives m6=640/63 and m7=3439/180. The six-moment algebra yields lambda_3(0)=247/2519. Its zeta interpretation depends on the analytic moment framework, including the remaining class inputs and local identities. Mixed eighth-order class evaluation and arithmetic transport remain open; the model calculations alone do not establish a new unconditional bound.
 
 See [the research overview](../RESEARCH.md) for conventions and proof obligations.
 

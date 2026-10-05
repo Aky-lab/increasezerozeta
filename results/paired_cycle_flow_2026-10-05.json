@@ -1,0 +1,6071 @@
+{
+  "schema_version": 1,
+  "records": [
+    {
+      "k": 1,
+      "n": 1,
+      "dilation_N": 0,
+      "signed_count": 0,
+      "placements": 1,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "absolute_sum_bound": 0,
+      "seconds": 0.0
+    },
+    {
+      "k": 1,
+      "n": 2,
+      "dilation_N": 1,
+      "signed_count": 2,
+      "placements": 1,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 2
+        }
+      ],
+      "absolute_sum_bound": 6,
+      "seconds": 0.0
+    },
+    {
+      "k": 1,
+      "n": 3,
+      "dilation_N": 2,
+      "signed_count": 8,
+      "placements": 1,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 8
+        }
+      ],
+      "absolute_sum_bound": 30,
+      "seconds": 0.0
+    },
+    {
+      "k": 1,
+      "n": 4,
+      "dilation_N": 3,
+      "signed_count": 20,
+      "placements": 1,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 20
+        }
+      ],
+      "absolute_sum_bound": 84,
+      "seconds": 0.0
+    },
+    {
+      "k": 1,
+      "n": 5,
+      "dilation_N": 4,
+      "signed_count": 40,
+      "placements": 1,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 40
+        }
+      ],
+      "absolute_sum_bound": 180,
+      "seconds": 0.0
+    },
+    {
+      "k": 2,
+      "n": 1,
+      "dilation_N": 0,
+      "signed_count": 0,
+      "placements": 3,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "absolute_sum_bound": 0,
+      "seconds": 0.0
+    },
+    {
+      "k": 2,
+      "n": 2,
+      "dilation_N": 1,
+      "signed_count": 4,
+      "placements": 3,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "absolute_sum_bound": 54,
+      "seconds": 0.0
+    },
+    {
+      "k": 2,
+      "n": 3,
+      "dilation_N": 2,
+      "signed_count": 48,
+      "placements": 3,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 22
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 4
+        }
+      ],
+      "absolute_sum_bound": 900,
+      "seconds": 0.0
+    },
+    {
+      "k": 2,
+      "n": 4,
+      "dilation_N": 3,
+      "signed_count": 232,
+      "placements": 3,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 104
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 24
+        }
+      ],
+      "absolute_sum_bound": 5292,
+      "seconds": 0.01600000000325963
+    },
+    {
+      "k": 2,
+      "n": 5,
+      "dilation_N": 4,
+      "signed_count": 752,
+      "placements": 3,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 334
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 84
+        }
+      ],
+      "absolute_sum_bound": 19440,
+      "seconds": 0.0
+    },
+    {
+      "k": 2,
+      "n": 6,
+      "dilation_N": 5,
+      "signed_count": 1932,
+      "placements": 3,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 854
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 224
+        }
+      ],
+      "absolute_sum_bound": 54450,
+      "seconds": 0.0
+    },
+    {
+      "k": 2,
+      "n": 7,
+      "dilation_N": 6,
+      "signed_count": 4256,
+      "placements": 3,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 1876
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 504
+        }
+      ],
+      "absolute_sum_bound": 127764,
+      "seconds": 0.0
+    },
+    {
+      "k": 3,
+      "n": 1,
+      "dilation_N": 0,
+      "signed_count": 0,
+      "placements": 15,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "absolute_sum_bound": 0,
+      "seconds": 0.0
+    },
+    {
+      "k": 3,
+      "n": 2,
+      "dilation_N": 1,
+      "signed_count": 12,
+      "placements": 15,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 2
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 2
+        }
+      ],
+      "absolute_sum_bound": 810,
+      "seconds": 0.0
+    },
+    {
+      "k": 3,
+      "n": 3,
+      "dilation_N": 2,
+      "signed_count": 408,
+      "placements": 15,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 62
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 10
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 60
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 4
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 32
+        }
+      ],
+      "absolute_sum_bound": 45000,
+      "seconds": 0.0
+    },
+    {
+      "k": 3,
+      "n": 4,
+      "dilation_N": 3,
+      "signed_count": 3816,
+      "placements": 15,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 560
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 116
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 536
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 52
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 236
+        }
+      ],
+      "absolute_sum_bound": 555660,
+      "seconds": 0.0
+    },
+    {
+      "k": 3,
+      "n": 5,
+      "dilation_N": 4,
+      "signed_count": 20088,
+      "placements": 15,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2902
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 658
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 2764
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 308
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 1120
+        }
+      ],
+      "absolute_sum_bound": 3499200,
+      "seconds": 0.0
+    },
+    {
+      "k": 3,
+      "n": 6,
+      "dilation_N": 5,
+      "signed_count": 75876,
+      "placements": 15,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 10870
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 2576
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 10326
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 1232
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 4006
+        }
+      ],
+      "absolute_sum_bound": 14973750,
+      "seconds": 0.0
+    },
+    {
+      "k": 3,
+      "n": 7,
+      "dilation_N": 6,
+      "signed_count": 230352,
+      "placements": 15,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 32836
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 7980
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 31144
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 3864
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 11776
+        }
+      ],
+      "absolute_sum_bound": 49827960,
+      "seconds": 0.0
+    },
+    {
+      "k": 3,
+      "n": 8,
+      "dilation_N": 7,
+      "signed_count": 598608,
+      "placements": 15,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 85056
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 21000
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 80592
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 10248
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 29976
+        }
+      ],
+      "absolute_sum_bound": 138915000,
+      "seconds": 0.0
+    },
+    {
+      "k": 3,
+      "n": 9,
+      "dilation_N": 8,
+      "signed_count": 1384272,
+      "placements": 15,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 196260
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "count": 48972
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 185832
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "count": 24024
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 68352
+        }
+      ],
+      "absolute_sum_bound": 339586560,
+      "seconds": 0.0
+    },
+    {
+      "k": 4,
+      "n": 1,
+      "dilation_N": 0,
+      "signed_count": 0,
+      "placements": 105,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "absolute_sum_bound": 0,
+      "seconds": 0.0
+    },
+    {
+      "k": 4,
+      "n": 2,
+      "dilation_N": 1,
+      "signed_count": 48,
+      "placements": 105,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 2
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 2
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 2
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 0
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2
+        },
+        {
+          "pairs": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 0
+        }
+      ],
+      "absolute_sum_bound": 17010,
+      "seconds": 0.015000000013969839
+    },
+    {
+      "k": 4,
+      "n": 3,
+      "dilation_N": 2,
+      "signed_count": 4480,
+      "placements": 105,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 178
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 26
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 168
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 10
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 24
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 90
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 10
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 26
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 28
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 164
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 6
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 4
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 12
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 4
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 22
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 70
+        },
+        {
+          "pairs": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 40
+        }
+      ],
+      "absolute_sum_bound": 3150000,
+      "seconds": 0.0
+    },
+    {
+      "k": 4,
+      "n": 4,
+      "dilation_N": 3,
+      "signed_count": 79968,
+      "placements": 105,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 3104
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 584
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 2864
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 252
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 544
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1244
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 248
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 576
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 608
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 2768
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 148
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 98
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 228
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 128
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 380
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 880
+        },
+        {
+          "pairs": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 656
+        }
+      ],
+      "absolute_sum_bound": 81682020,
+      "seconds": 0.01600000000325963
+    },
+    {
+      "k": 4,
+      "n": 5,
+      "dilation_N": 4,
+      "signed_count": 680544,
+      "placements": 105,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 26098
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 5386
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 23824
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 2430
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 5024
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 9418
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 2374
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 5274
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 5520
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 22916
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 1428
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 952
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1968
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 1324
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 3114
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 6378
+        },
+        {
+          "pairs": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 5208
+        }
+      ],
+      "absolute_sum_bound": 881798400,
+      "seconds": 0.0
+    },
+    {
+      "k": 4,
+      "n": 6,
+      "dilation_N": 5,
+      "signed_count": 3771728,
+      "placements": 105,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 143654
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 31024
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 130374
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 14312
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 28944
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 49014
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 13928
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 30256
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 31528
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 125078
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 8428
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 5648
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 10968
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 8048
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 16840
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 32430
+        },
+        {
+          "pairs": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 27616
+        }
+      ],
+      "absolute_sum_bound": 5764893750,
+      "seconds": 0.01600000000325963
+    },
+    {
+      "k": 4,
+      "n": 7,
+      "dilation_N": 6,
+      "signed_count": 15764256,
+      "placements": 105,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 597892
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 132516
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 540712
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 61920
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 123624
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 197284
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 60120
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 128916
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 133988
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 517928
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 36526
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 24564
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 45972
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 35424
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 69272
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 128744
+        },
+        {
+          "pairs": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 112160
+        }
+      ],
+      "absolute_sum_bound": 27206066160,
+      "seconds": 0.0
+    },
+    {
+      "k": 4,
+      "n": 8,
+      "dilation_N": 7,
+      "signed_count": 53905728,
+      "placements": 105,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 2038848
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 459312
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1839648
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 216360
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 428448
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 658392
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 209760
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 446112
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 462896
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 1760320
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 127792
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 86148
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 157464
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 125088
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 234344
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 425872
+        },
+        {
+          "pairs": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 376160
+        }
+      ],
+      "absolute_sum_bound": 102102525000,
+      "seconds": 0.015000000013969839
+    },
+    {
+      "k": 4,
+      "n": 9,
+      "dilation_N": 8,
+      "signed_count": 158575776,
+      "placements": 105,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 5986308
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1363428
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 5392968
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 645744
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1271688
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1904868
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 625416
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 1322772
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1370996
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 5156776
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 381766
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 257796
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 463716
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 375936
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 684200
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 1224760
+        },
+        {
+          "pairs": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 1091552
+        }
+      ],
+      "absolute_sum_bound": 323286405120,
+      "seconds": 0.030999999959021807
+    },
+    {
+      "k": 4,
+      "n": 10,
+      "dilation_N": 9,
+      "signed_count": 414887088,
+      "placements": 105,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 15640746
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 3589872
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 14074698
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1706760
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 3348048
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 4924986
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 1651848
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 3480048
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 3604040
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 13451482
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 1009756
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 682704
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1214136
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 998448
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 1780328
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 3153106
+        },
+        {
+          "pairs": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 2827616
+        }
+      ],
+      "absolute_sum_bound": 897787885050,
+      "seconds": 0.03200000000651926
+    },
+    {
+      "k": 4,
+      "n": 11,
+      "dilation_N": 10,
+      "signed_count": 988110816,
+      "placements": 105,
+      "orbits": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 37212758
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 8589438
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 33459008
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 4095234
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 8010288
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 11627198
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "count": 3961386
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 8321742
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 8613176
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 31965516
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 2424136
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 1640496
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "count": 2893176
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 2404116
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "count": 4222790
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "count": 7420710
+        },
+        {
+          "pairs": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "count": 6684392
+        }
+      ],
+      "absolute_sum_bound": 2246255550000,
+      "seconds": 0.07800000003771856
+    }
+  ],
+  "certificates": {
+    "1": {
+      "value": "1/3",
+      "degree_bound": 3,
+      "period": 1,
+      "held_out_n": 5,
+      "orbit_values": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "1/3"
+        }
+      ],
+      "scope": "exact continuum pair-model integral"
+    },
+    "2": {
+      "value": "4/15",
+      "degree_bound": 5,
+      "period": 1,
+      "held_out_n": 7,
+      "orbit_values": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "multiplicity": 2,
+          "value": "7/60"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "1/30"
+        }
+      ],
+      "scope": "exact continuum pair-model integral"
+    },
+    "3": {
+      "value": "32/105",
+      "degree_bound": 7,
+      "period": 1,
+      "held_out_n": 9,
+      "orbit_values": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 2,
+          "value": "3/70"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 6,
+          "value": "1/90"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          "multiplicity": 3,
+          "value": "17/420"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          "multiplicity": 3,
+          "value": "1/180"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              5
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "1/70"
+        }
+      ],
+      "scope": "exact continuum pair-model integral"
+    },
+    "4": {
+      "value": "1661/3780",
+      "degree_bound": 9,
+      "period": 1,
+      "held_out_n": 11,
+      "orbit_values": [
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              5
+            ],
+            [
+              6,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "value": "83/5040"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "59/15120"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "223/15120"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "19/10080"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              5,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "11/3024"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "5/1008"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 16,
+          "value": "11/6048"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "19/5040"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "353/90720"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              5
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "319/22680"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "29/25920"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              5,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "23/30240"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 8,
+          "value": "13/10080"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "17/15120"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 4,
+          "value": "167/90720"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              4,
+              7
+            ]
+          ],
+          "multiplicity": 2,
+          "value": "283/90720"
+        },
+        {
+          "pairs": [
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          "multiplicity": 1,
+          "value": "13/4536"
+        }
+      ],
+      "scope": "exact continuum pair-model integral"
+    }
+  },
+  "source_sha256": {
+    "scripts/paired_cycle_lattice.py": "13e6693457acc9bb0be5e14a33a9d9710ed05a9093f8b360e5ca3259f96eb864",
+    "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488"
+  }
+}

@@ -166,8 +166,11 @@ lattice enumeration.
 
 Combining C7=-17/360 with the exact corrected {5,2}=1/8 gives
 
-    1717/90 + {5,2} + C7 = 862/45.
+    685/36 + {5,2} + C7 = 3439/180.
 
 This closes those two finite model evaluations. The identification
 of that ledger with an arithmetic seventh moment still requires
 the frozen-singleton, vanishing and transport statements.
+
+The lower-order base uses the audited three-pair value 32/105; see
+[the pairing audit](../results/pairing_model_audit.md) for retained assumptions.

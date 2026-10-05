@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-05T10:37:27.164407+00:00",
+  "python_version": "3.12.12",
+  "runner_sha256": "4f9fa47ffcf225ab36530bd3209f64729340e860fa8bef85b6a6919116a69b8b",
+  "all_checks_passed": true,
+  "limitations": [
+    "Passing checks do not prove the surrounding analytic transport.",
+    "Mixed eighth-order classes and arithmetic transport remain unresolved.",
+    "Other reference class inputs and local identities remain conditional.",
+    "Spectator checks are finite examples, not an exhaustive proof.",
+    "Hashes identify the executed scripts, not a full repository revision."
+  ],
+  "checks": [
+    {
+      "script": "scripts/verify_lemmas.py",
+      "sha256": "a5d3fb7a7b7460a182773fc743b329d8e593e94a30ecf50d7a82bc9b1619a125",
+      "scope": "finite local algebra and conditional core arithmetic",
+      "exit_code": 0,
+      "stdout": "prime pairs checked: 300\nlargest (proved-bound)/(8/(p-1)+8/(q-1)) ratio: 0.802083 at (3, 5)\nintegral Q = 1/16 = 0.062500000000\nintegral (nu-1)Q = 1/96 = 0.010416666667\nC_core = -1/48 = -0.020833333333\nC_core + 0.0111 = -73/7500 = -0.009733333333\nLambda_2(0) = 457/3078 = 0.148473034438\nsimple-critical proportion (conditional consumption) = 1082/1539 = 70.305393112411%\nALL EXACT-ARITHMETIC CHECKS PASSED\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/christoffel_exact.py",
+      "sha256": "3ca58d46bc10e86a0c74d67a2412cd23a930040f68bcb566e100d52fdc5fdd7c",
+      "scope": "exact moment consumption for supplied moments",
+      "exit_code": 0,
+      "stdout": "degree 2:\n  det(H2) = 5/108\n  lambda_2(0) = 5/36\n  q2(x) = 1 + (-7/4)*x^1 + (2/3)*x^2\n  simple >= 0.7222222222222222\n\ndegree 3:\n  det(H3) = 247/108864\n  lambda_3(0) = 247/2519 = 0.0980547836443033\n  q3(x) = 1 + (-8232/2519)*x^1 + (7368/2519)*x^2 + (-1932/2519)*x^3\n  q3(-t)>=1 sign test: True\n  simple >= 2025/2519 = 0.8038904327113934\n  distinct >= 2272/2519 = 0.9019452163556967\n\nALL EXACT CHRISTOFFEL CHECKS PASSED\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/k8_target.py",
+      "sha256": "ed38f54aa252b248929ead80b4cf6f272a9ef091d9aa8775a22d133866bbba2d",
+      "scope": "exact target geometry for supplied moments",
+      "exit_code": 0,
+      "stdout": "CONTINUUM MODEL TARGETS: analytic transport remains open.\ndegree-three simple-zero conversion = 2025/2519 = 0.8038904327113934\nm7 Stieltjes floor = 1031677/54096 = 19.071225229222122\n80%: already reached by the degree-three model conversion\n80.2%: already reached by the degree-three model conversion\n81%: m8 <= 1264685921/33934950 = 37.26794708700027\n90%: m8 <= 3956262943/106766100 = 37.05542248897356\nALL EXACT TARGET AND DIRECT HANKEL CHECKS PASSED\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_spectator_reduction.py",
+      "sha256": "961694b4035b684b9f59ed78f5ad722c12ea29b38022721a8870929db5c4b6c1",
+      "scope": "finite rational checks of actual-walk exact-v reduction",
+      "dependency_sha256": {
+        "scripts/spectator_reduction.py": "a7d0e19523a5018a72166b54a8bb8357fcfbfab691539c0d2a42984f572b70b3"
+      },
+      "exit_code": 0,
+      "stdout": "actual-walk rational cases checked: 7203\ncases with nonzero integral: 2539\nhistorical distance-three mismatches: 358\ncounterexample: actual 2/75; historical 1/375\nALL FINITE ACTUAL-WALK SPECTATOR CHECKS PASSED\nScope: J_d only; no certification of the remaining C5 integral.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_model_certificates.py",
+      "sha256": "5004f42837197ef20520421f612b491a252307184f99786da47ca8c8ba8cbaa5",
+      "scope": "recorded integer certificates and source provenance",
+      "exit_code": 0,
+      "stdout": "RECORDED INTEGER CERTIFICATES AND SOURCE HASHES VERIFIED\nJ52 = 1/8 ; C7 = -17/360 ; model m7 = 3439/180\nScope: transcript arithmetic and provenance; analytic transport remains open.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_pairing_model.py",
+      "sha256": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
+      "scope": "pair-cycle certificates, direct counts and exact cell integration",
+      "exit_code": 0,
+      "stdout": "PAIR-MODEL CERTIFICATES, DIRECT COUNTS AND EXACT SIMPLEX CHECKS PASSED\n{2,2,2} = 32/105; {2^4} = 1661/3780\nScope: finite continuum model; analytic transport remains open.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/bell7_gate.py",
+      "sha256": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
+      "scope": "seventh-order partition multiplicities",
+      "exit_code": 0,
+      "stdout": "Bell(7) = 877\nblock-size classes:\n  (1, 1, 1, 1, 1, 1, 1) 1\n  (2, 1, 1, 1, 1, 1) 21\n  (3, 1, 1, 1, 1) 35\n  (2, 2, 1, 1, 1) 105\n  (4, 1, 1, 1) 35\n  (3, 2, 1, 1) 210\n  (2, 2, 2, 1) 105\n  (5, 1, 1) 21\n  (4, 2, 1) 105\n  (3, 3, 1) 70\n  (3, 2, 2) 105\n  (6, 1) 7\n  (5, 2) 21\n  (4, 3) 35\n  (7,) 1\n{5,2} cyclic-distance multiplicities: {1: 7, 2: 7, 3: 7}\nALL BELL(7) CHECKS PASSED\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/bell8_orbits.py",
+      "sha256": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
+      "scope": "eighth-order dihedral orbits and multiplicities",
+      "exit_code": 0,
+      "stdout": "(6, 2): 28 placements -> 4 dihedral orbits\n  orbit sizes: [4, 8, 8, 8]\n   0: size= 8 rep=((0, 1), (2, 3, 4, 5, 6, 7))\n   1: size= 8 rep=((0, 1, 2, 3, 4, 6), (5, 7))\n   2: size= 8 rep=((0, 1, 2, 3, 5, 6), (4, 7))\n   3: size= 4 rep=((0, 1, 2, 4, 5, 6), (3, 7))\n(4, 4): 35 placements -> 7 dihedral orbits\n  orbit sizes: [1, 2, 4, 4, 8, 8, 8]\n   0: size= 4 rep=((0, 1, 2, 3), (4, 5, 6, 7))\n   1: size= 8 rep=((0, 1, 2, 4), (3, 5, 6, 7))\n   2: size= 8 rep=((0, 1, 2, 5), (3, 4, 6, 7))\n   3: size= 8 rep=((0, 1, 3, 5), (2, 4, 6, 7))\n   4: size= 4 rep=((0, 1, 3, 6), (2, 4, 5, 7))\n   5: size= 2 rep=((0, 1, 4, 5), (2, 3, 6, 7))\n   6: size= 1 rep=((0, 2, 4, 6), (1, 3, 5, 7))\n(4, 2, 2): 210 placements -> 22 dihedral orbits\n  orbit sizes: [2, 4, 4, 4, 4, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 16, 16, 16, 16, 16, 16, 16]\n   0: size= 8 rep=((0, 1), (2, 3), (4, 5, 6, 7))\n   1: size=16 rep=((0, 1), (2, 3, 4, 6), (5, 7))\n   2: size= 8 rep=((0, 1), (2, 3, 4, 7), (5, 6))\n   3: size=16 rep=((0, 1), (2, 3, 5, 6), (4, 7))\n   4: size=16 rep=((0, 1), (2, 3, 5, 7), (4, 6))\n   5: size= 4 rep=((0, 1), (2, 3, 6, 7), (4, 5))\n   6: size=16 rep=((0, 1), (2, 4, 5, 6), (3, 7))\n   7: size= 8 rep=((0, 1), (2, 4, 5, 7), (3, 6))\n   8: size= 8 rep=((0, 1), (2, 7), (3, 4, 5, 6))\n   9: size= 8 rep=((0, 1, 2, 3), (4, 6), (5, 7))\n  10: size=16 rep=((0, 1, 2, 4), (3, 6), (5, 7))\n  11: size= 8 rep=((0, 1, 2, 5), (3, 6), (4, 7))\n  12: size= 8 rep=((0, 1, 2, 5), (3, 7), (4, 6))\n  13: size= 8 rep=((0, 1, 3, 4), (2, 6), (5, 7))\n  14: size=16 rep=((0, 1, 3, 5), (2, 6), (4, 7))\n  15: size=16 rep=((0, 1, 3, 5), (2, 7), (4, 6))\n  16: size= 8 rep=((0, 1, 3, 6), (2, 4), (5, 7))\n  17: size= 8 rep=((0, 1, 3, 6), (2, 5), (4, 7))\n  18: size= 4 rep=((0, 1, 4, 5), (2, 6), (3, 7))\n  19: size= 4 rep=((0, 1, 4, 5), (2, 7), (3, 6))\n  20: size= 4 rep=((0, 2), (1, 3, 5, 7), (4, 6))\n  21: size= 2 rep=((0, 2, 4, 6), (1, 5), (3, 7))\n(2, 2, 2, 2): 105 placements -> 17 dihedral orbits\n  orbit sizes: [1, 2, 2, 4, 4, 4, 4, 4, 8, 8, 8, 8, 8, 8, 8, 8, 16]\n   0: size= 2 rep=((0, 1), (2, 3), (4, 5), (6, 7))\n   1: size= 8 rep=((0, 1), (2, 3), (4, 6), (5, 7))\n   2: size= 8 rep=((0, 1), (2, 3), (4, 7), (5, 6))\n   3: size= 8 rep=((0, 1), (2, 4), (3, 6), (5, 7))\n   4: size= 8 rep=((0, 1), (2, 4), (3, 7), (5, 6))\n   5: size= 8 rep=((0, 1), (2, 5), (3, 6), (4, 7))\n   6: size=16 rep=((0, 1), (2, 5), (3, 7), (4, 6))\n   7: size= 4 rep=((0, 1), (2, 6), (3, 7), (4, 5))\n   8: size= 8 rep=((0, 1), (2, 7), (3, 5), (4, 6))\n   9: size= 4 rep=((0, 1), (2, 7), (3, 6), (4, 5))\n  10: size= 4 rep=((0, 2), (1, 3), (4, 6), (5, 7))\n  11: size= 8 rep=((0, 2), (1, 4), (3, 6), (5, 7))\n  12: size= 8 rep=((0, 2), (1, 5), (3, 6), (4, 7))\n  13: size= 4 rep=((0, 2), (1, 5), (3, 7), (4, 6))\n  14: size= 4 rep=((0, 3), (1, 5), (2, 6), (4, 7))\n  15: size= 2 rep=((0, 3), (1, 6), (2, 5), (4, 7))\n  16: size= 1 rep=((0, 4), (1, 5), (2, 6), (3, 7))\nALL BELL(8) DIHEDRAL ORBIT GATES PASSED\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/m7_ledger.py",
+      "sha256": "e4ef4842688f82817814570f1e427e8f166bf2e17c108f58b4b4afa1ff913af4",
+      "scope": "seventh-order continuum model ledger",
+      "exit_code": 0,
+      "stdout": "CONTINUUM MODEL LEDGER: arithmetic transport remains open.\npair/four layer = 67/4 = 16.75\nmodel m7 = 3439/180 = 19.105555555555554\nexact Stieltjes floor = 1031677/54096 = 19.071225229222122\ngap = 27857/811440 = 0.03433032633343192\nMODEL M7 ARITHMETIC CHECKS PASSED\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/m8_ledger.py",
+      "sha256": "fb0f72927d42f7e1a049fd27889e516edb4b1dca8b31d4eb366575dbdab0c751",
+      "scope": "eighth-order continuum model ledger and targets",
+      "exit_code": 0,
+      "stdout": "CONTINUUM MODEL TARGETS: arithmetic transport remains open.\nmodel m7 = 3439/180 = 19.105555555555554\nm8 = 3311/90 + A8\nA8 := {2^4}+{4,2,2}+{4,4}+{6,2}+C8\nexact {2^4} = 1661/3780\nm8 moment-cone floor = 968528321/26142480 = 37.04806586827264\nA8 floor = 6775529/26142480 = 0.2591769793837463\n80%: already reached by the degree-three model conversion\n80.2%: already reached by the degree-three model conversion\n81%: A8 <= 8128408/16967475 = 0.4790581981113866\n90%: A8 <= 28456753/106766100 = 0.2665336000846711\nMODEL BELL(8) ARITHMETIC CHECKS PASSED\n",
+      "stderr": "",
+      "passed": true
+    }
+  ]
+}

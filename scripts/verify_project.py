@@ -17,6 +17,7 @@ CHECKS = (
     ("k8_target.py", "exact target geometry for supplied moments"),
     ("verify_spectator_reduction.py", "finite rational checks of actual-walk exact-v reduction"),
     ("verify_model_certificates.py", "recorded integer certificates and source provenance"),
+    ("verify_pairing_model.py", "pair-cycle certificates, direct counts and exact cell integration"),
     ("bell7_gate.py", "seventh-order partition multiplicities"),
     ("bell8_orbits.py", "eighth-order dihedral orbits and multiplicities"),
     ("m7_ledger.py", "seventh-order continuum model ledger"),
@@ -60,7 +61,8 @@ def main():
         "all_checks_passed": all(c["passed"] for c in checks),
         "limitations": [
             "Passing checks do not prove the surrounding analytic transport.",
-            "Eighth-order class fractions and the 80% target remain candidates.",
+            "Mixed eighth-order classes and arithmetic transport remain unresolved.",
+            "Other reference class inputs and local identities remain conditional.",
             "Spectator checks are finite examples, not an exhaustive proof.",
             "Hashes identify the executed scripts, not a full repository revision.",
         ],

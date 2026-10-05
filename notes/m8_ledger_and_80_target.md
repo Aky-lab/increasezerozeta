@@ -1,53 +1,65 @@
-# Bell(8) ledger and the 80% target
+# Bell(8) ledger and conditional counting targets
 
-The combinatorial ledger is conditional on the frozen-singleton and 3-block-vanishing identities in the lower-order model. Its analytic transport remains open.
+The ledger assumes frozen-singleton and 3-block-vanishing identities.
+The other retained reference class inputs and arithmetic transport remain
+subject to analytic review.
 
-## New eighth-order classes
+## Eighth-order classes
 
 Define
 
     A8 = {2^4} + {4,2,2} + {4,4} + {6,2} + C8.
 
-The inherited contributions give
+The inherited contributions are
 
     m8 = 167/6 + 28{2,2,2} + 28{4,2} + 56C5
          + 8{5,2} + 28C6 + 8C7 + A8.
 
-Using {2,2,2}=131/420, {4,2}=-23/420, C5=1/36 and C6=-1/126 reduces this to
+Using the audited {2,2,2}=32/105, retained {4,2}=-23/420,
+C5=1/36 and C6=-1/126 gives
 
-    m8 = 1091/30 + 8{5,2} + 8C7 + A8.
+    m8 = 217/6 + 8{5,2} + 8C7 + A8.
 
-The corrected exact model input {5,2}=1/8 therefore gives
+The exact {5,2}=1/8 and C7=-17/360 certificates then give
 
-    m8 = 1121/30 + 8C7 + A8.
+    m7 = 3439/180,    m8 = 3311/90 + A8.
 
-The [exact flow-polytope value](pure_cycle_flow_polytopes.md) C7=-17/360 gives the model ledger m7=862/45 and m8=3329/90+A8. Arithmetic transport remains open.
+See [the pairing audit](../results/pairing_model_audit.md) for the
+lower-order correction and [the seventh-order ledger](m7_ledger_derivation.md).
 
-## Candidate class values
+## Class evaluation status
 
-| Class | Numerical candidate |
-|---|---:|
-| {2^4} | 1661/3780 |
-| {4,2,2} | -127/840 |
-| {6,2} | -1/20 |
+| Class | Value | Status |
+|---|---:|---|
+| {2^4} | 1661/3780 | Exact continuum-model certificate |
+| {4,2,2} | -127/840 | Numerical candidate |
+| {6,2} | -1/20 | Numerical candidate |
+| {4,4}, C8 | Unresolved | Evaluation needed |
 
-These values require exact computation or rigorous enclosure. Their sum is 1801/7560. Thus, under those additional assumptions,
+The [pair-cycle proof](paired_cycle_flow_polytopes.md) certifies the
+first row. If the two mixed-class candidates are also certified, their
+combined contribution with {2^4} is 1801/7560, so
 
     A8 = 1801/7560 + T8,    T8 = {4,4} + C8.
 
 ## Target geometry
 
-The degree-four Christoffel bound reaches a conditional simple-zero proportion of 80% when lambda_4(0)<=1/10. The permitted m8 interval depends on m7 and the lower moments.
+The audited degree-three certificate already gives the conditional
+counting conversion 2025/2519, approximately 80.389%. The calculator
+therefore imposes no extra eighth-moment cap for 80% or 80.2%.
 
-[The generic target derivation](k8_target_geometry.md) and `scripts/k8_target.py` give the Hankel floor and exact target curves. The calculator `scripts/m8_ledger.py` uses the exact seventh-order model inputs by default and accepts explicit overrides.
+At the default seventh-order inputs, the Hankel floor requires
 
-At m7=862/45 and m8=3329/90+A8, the moment-cone floor and conditional
-80% target give
+    A8 >= 6775529/26142480.
 
-    204409997/748818000 <= A8 <= 33596531/68531400.
+For an 81% conditional target the permitted interval is
 
-This is approximately 0.272977 <= A8 <= 0.490236. The interval is a
-constraint on supplied model moments; it does not certify any of the
-five eighth-order classes or their arithmetic transport.
+    6775529/26142480 <= A8 <= 8128408/16967475.
 
-Earlier thresholds based on {5,2}=7/72 use an erroneous distance-three prefix set and do not apply to the corrected model. Eighth-order class evaluations and arithmetic transport are needed before a zeta bound follows.
+The corresponding 90% upper cap is 28456753/106766100.
+These bounds constrain supplied model moments; they do not establish
+the remaining class values or any unconditional zeta-zero result.
+
+[The Schur-complement derivation](k8_target_geometry.md) gives the generic
+curves. `scripts/m8_ledger.py` uses the exact seventh-order model inputs
+by default and accepts explicit overrides for alternative scenarios.

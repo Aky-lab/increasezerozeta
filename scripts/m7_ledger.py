@@ -1,27 +1,24 @@
 #!/usr/bin/env python3
 """Bell(7) continuum ledger using exact finite model inputs.
 
-Defaults: {5,2}=1/8 and C7=-17/360, from the lattice certificates.
+Defaults: {5,2}=1/8, C7=-17/360 and audited {2,2,2}=32/105.
 The frozen-singleton identities and arithmetic transport remain analytic
 obligations. Explicit overrides calculate alternative model scenarios.
 """
 
 import argparse
 from fractions import Fraction as F
+from model_moments import T222, M7_BASE, MODEL_J52, MODEL_C7, MODEL_M7
+from k8_target import M7_STAR
 
 T_ADJ = F(7, 60)
 T_OPP = F(1, 30)
 PHI4 = F(-1, 60)
-T222 = F(131, 420)
 C5 = F(1, 36)
 J42 = F(-23, 420)
 C6 = F(-1, 126)
 
 # Exact finite model evaluations; see the lattice and flow-polytope notes.
-MODEL_J52 = F(1, 8)
-MODEL_C7 = F(-17, 360)
-
-M7_STAR = F(25866469, 1352400)
 
 
 def main():
@@ -30,10 +27,10 @@ def main():
     parser.add_argument("--c7", type=F, default=MODEL_C7, help="pure-cycle input; default -17/360")
     args = parser.parse_args()
     J52, C7 = args.j52, args.c7
-    M7 = F(1717, 90) + J52 + C7
+    M7 = M7_BASE + J52 + C7
     print("CONTINUUM MODEL LEDGER: arithmetic transport remains open.")
     if (J52, C7) == (MODEL_J52, MODEL_C7):
-        assert M7 == F(862, 45)
+        assert M7 == MODEL_M7
     else:
         print("Using explicit alternative model inputs.")
     # Pair/four-cycle layer:

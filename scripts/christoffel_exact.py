@@ -10,6 +10,7 @@ spectral/counting interface.  This file certifies only the moment algebra.
 """
 
 from fractions import Fraction as F
+from model_moments import MODEL_MOMENTS
 
 
 def solve_linear(A, b):
@@ -101,15 +102,7 @@ def alternating_negative_halfline(q):
 
 
 def main():
-    moments = {
-        0: F(1),
-        1: F(1),
-        2: F(4, 3),
-        3: F(2),
-        4: F(13, 4),
-        5: F(101, 18),
-        6: F(12809, 1260),
-    }
+    moments = MODEL_MOMENTS
 
     # Degree 2: recover 13/18.
     lam2, q2, det2 = christoffel_at_zero(moments, 2)
@@ -120,20 +113,20 @@ def main():
 
     # Degree 3: exact six-moment certificate.
     lam3, q3, det3 = christoffel_at_zero(moments, 3)
-    assert det3 == F(283, 108864)
-    assert lam3 == F(1415, 13891)
+    assert det3 == F(247, 108864)
+    assert lam3 == F(247, 2519)
     assert q3 == [
         F(1),
-        -F(43428, 13891),
-        F(37704, 13891),
-        -F(9660, 13891),
+        -F(8232, 2519),
+        F(7368, 2519),
+        -F(1932, 2519),
     ]
     assert alternating_negative_halfline(q3)
 
     simple = 1 - 2 * lam3
     distinct = 1 - lam3
-    assert simple == F(11061, 13891)
-    assert distinct == F(12476, 13891)
+    assert simple == F(2025, 2519)
+    assert distinct == F(2272, 2519)
 
     print("degree 2:")
     print("  det(H2) =", det2)
@@ -148,11 +141,6 @@ def main():
     print("  q3(-t)>=1 sign test:", alternating_negative_halfline(q3))
     print("  simple >=", simple, "=", float(simple))
     print("  distinct >=", distinct, "=", float(distinct))
-
-    # Compare the exact polynomial with the reference rationalised roots.
-    roots_approx = [F(5323, 10000), F(6561, 5000), F(10293, 5000)]
-    vals = [float(eval_poly(q3, r)) for r in roots_approx]
-    print("\nq3 at reference rationalised roots:", vals)
 
     print("\nALL EXACT CHRISTOFFEL CHECKS PASSED")
 

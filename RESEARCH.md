@@ -30,7 +30,7 @@ For a moment matrix H_n, the mass-at-origin bound is
 
     lambda_n(0) = 1 / (e0^T H_n^-1 e0).
 
-The supplied six-moment sequence gives lambda_3(0)=1415/13891. Under the spectral/counting interface, this yields the conditional simple-zero proportion 11061/13891. See [the Christoffel derivation](notes/christoffel_tower.md) and [eighth-order target geometry](notes/k8_target_geometry.md).
+The [pairing audit](results/pairing_model_audit.md) corrects the three-pair aggregate to 32/105. Retaining the other reference class inputs gives m6=640/63. The resulting exact algebra gives lambda_3(0)=247/2519 and the conditional counting conversion 2025/2519. The other class inputs, local identities and spectral/counting interface still require analytic review. See [the Christoffel derivation](notes/christoffel_tower.md) and [eighth-order target geometry](notes/k8_target_geometry.md).
 
 The [fourth-moment reduction](notes/class_subtracted_universality.md) and [arithmetic-to-continuum analysis](notes/arithmetic_to_continuum.md) form a separate analytic route, with a fixed-P tail obligation still open.
 
@@ -40,21 +40,21 @@ The [seventh-order ledger](notes/m7_ledger_derivation.md), [eighth-order ledger]
 
 The conditional seventh-order ledger is
 
-    m7 = 1717/90 + {5,2} + C7 = 6913/360 + C7.
+    m7 = 685/36 + {5,2} + C7 = 3439/180.
 
-Both new model inputs are exact: {5,2}=1/8 and C7=-17/360. The ledger therefore gives m7=862/45. Its interpretation as a zeta moment still requires the frozen-singleton, vanishing and arithmetic transport statements.
+The model inputs {5,2}=1/8, C7=-17/360 and {2,2,2}=32/105 have exact certificates. The retained mixed-class input {4,2}=-23/420 and the frozen-singleton, vanishing and arithmetic transport statements remain part of the conditional framework.
 
 The new eighth-order aggregate is
 
     A8 = {2^4} + {4,2,2} + {4,4} + {6,2} + C8.
 
-The model candidates {2^4}=1661/3780, {4,2,2}=-127/840 and {6,2}=-1/20 still require exact evaluation or rigorous enclosure. Bounds on {4,4}+C8 must use the current seventh-order inputs.
+The [four-pair certificate](notes/paired_cycle_flow_polytopes.md) establishes {2^4}=1661/3780 from 105 placements in 17 dihedral orbits. The mixed-class candidates {4,2,2}=-127/840 and {6,2}=-1/20 still require exact evaluation or rigorous enclosure. The current ledger is m8=3311/90+A8; bounds on {4,4}+C8 must use the audited lower-order inputs.
 
 ## Open problems
 
 1. Independently check the {5,2} certificate and reference normalization.
 2. Independently review the C7 flow-polytope certificate and volume normalization.
-3. Prove the arithmetic transport for the seventh-order classes.
+3. Review the pairing correction, remaining lower-order inputs and analytic local identities; prove arithmetic transport for the seventh-order classes.
 4. Certify the eighth-order classes and bound their remaining aggregate.
 5. Prove eighth-order transport and apply the exact moment-consumption engine.
 
