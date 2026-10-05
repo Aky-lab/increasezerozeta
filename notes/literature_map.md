@@ -19,8 +19,9 @@ The repository derives exact finite CUE identities and network certificates,
 and supplies proofs of moment determinacy, strong spectral convergence,
 polynomial fluctuations and logarithmic control for its stated model.
 These are candidate contributions to be assessed against prior work.
-An identification with a global infinite-window sine-process law and an
-arithmetic zeta-moment transport theorem require separate proofs.
+[The global comparison](sine_gram_identification.md) identifies the
+infinite-window sine-process law with the CUE column law. Arithmetic
+zeta-moment transport remains a separate proof obligation.
 
 ## Random Vandermonde matrices
 
@@ -50,6 +51,18 @@ outer coordinate box, distinguishes row and column laws, and derives an
 explicit second-moment variance across the overlap threshold. The exact
 finite variance is a specialization of the published pair-statistic formula.
 
+## Stationary determinantal processes and global spectral comparison
+
+[Soshnikov, Determinantal Random Point Fields (2000), Theorem 7](https://arxiv.org/pdf/math/0002099)
+establishes mixing and ergodicity for the translation-invariant process.
+[Meckes, The Random Matrix Theory of the Classical Compact Groups,
+Lemma 5.22](https://case.edu/artsci/math/mwmeckes/elizabeth/Haar_book.pdf)
+records the standard spectral-distance consequence of Hoffman--Wielandt.
+The global comparison applies these tools to finite-range Gram matrices,
+then controls long interactions uniformly. The matrix inequality and the
+ergodic theorem are established background; the specific application and
+its proof require independent review and further priority assessment.
+
 ## Review targets
 
 - Compare the finite CUE network representation with existing dependent-phase
@@ -58,8 +71,8 @@ finite variance is a specialization of the published pair-statistic formula.
   reciprocity and the rectangular mesh-count error.
 - Check normalization before relating the row law, column law and the
   frequency-dimensional trace convention of a zeta compression.
-- Establish the missing global sine-process identification or delimit the
-  comparison to the finite CUE model.
+- Review the global sine-process comparison, including boundary terms,
+  truncated-law determinacy and long-interaction removal.
 - Keep arithmetic moment identities separate from random-matrix theorems.
 
 No search result or absence of a search result establishes priority.

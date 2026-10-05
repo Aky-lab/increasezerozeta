@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T13:18:35.791997+00:00",
+  "generated_at_utc": "2026-10-05T13:32:04.731474+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "f9621c13106d46f12a042308db301b66cd97c6b758d379c2cafdd8ac13828b99",
+  "runner_sha256": "f17c03f9ac01cf447da591d725d90ceb672ef10cac5e284983c48b24d777df88",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -31,9 +31,10 @@
     "scripts/verify_model_certificates.py": "82eeb6c7bd3b4e4c22547fce0f4066f86927b22eb22a25b88ead8ff23cf25874",
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
     "scripts/verify_prime_pair_transport.py": "c2f0d53493c0cc0727a95faa6b157dd2e030548a2510041ca60a02dc4b209735",
-    "scripts/verify_project.py": "f9621c13106d46f12a042308db301b66cd97c6b758d379c2cafdd8ac13828b99",
+    "scripts/verify_project.py": "f17c03f9ac01cf447da591d725d90ceb672ef10cac5e284983c48b24d777df88",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
+    "scripts/verify_sine_bridge.py": "3798112cf615e8072eb45c03fb196209d1791d87fc6517f0f277e5a1f0a4edad",
     "scripts/verify_spectator_reduction.py": "961694b4035b684b9f59ed78f5ad722c12ea29b38022721a8870929db5c4b6c1"
   },
   "all_checks_passed": true,
@@ -162,6 +163,15 @@
       "scope": "rectangular Gram normalizations, Weyl/connected identities and exact bandwidth variance",
       "exit_code": 0,
       "stdout": "Exact rectangular Weyl/connected checks: 55\nFinite variance double-sum identities: 820\nBandwidth variance anchors, positivity and rational limits passed.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_sine_bridge.py",
+      "sha256": "3798112cf615e8072eb45c03fb196209d1791d87fc6517f0f277e5a1f0a4edad",
+      "scope": "finite determinantal Campbell expansion, exact Fourier gauge and sine second-moment normalization",
+      "exit_code": 0,
+      "stdout": "Discrete DPP Campbell partition checks: 10\nExact closed-walk Fourier gauge checks: 3400\n20 bandwidth second-moment anchors and Palm degree coefficients passed.\n",
       "stderr": "",
       "passed": true
     },

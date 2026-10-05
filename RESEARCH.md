@@ -88,7 +88,7 @@ the positive moment cone and alternative supplied inputs.
 4. Replace the obstructed fixed-P absolute-tail estimate with a signed estimate or an actual-minus-model remainder bound in the separate [fourth-moment route](notes/class_subtracted_universality.md).
 5. Evaluate further moments and connected covariance coefficients efficiently, and extend the polynomial-statistic CLT to wider test-function classes.
 6. Extend the [verified literature comparison](notes/literature_map.md) and review the network/Gram application and reduced certificate method.
-7. Identify the bandwidth-dependent CUE row and column laws with the appropriate global sine-process law, with explicit normalization and limit interchange.
+7. Independently review the global CUE/sine-process comparison, its normalization, boundary terms and removal of the interaction cutoff.
 
 A certified finite integral, an assembled model moment and an established
 arithmetic zeta moment are distinct stages. The remaining analytic work is
@@ -154,7 +154,15 @@ m1=1 and m2=1+lambda^2/3 and no zero atom; the column measure is
 2*lambda^3/15-(2*lambda-1)_+^5/(30*lambda^2). Exact independent integration
 checks rectangular cases, and integer sums verify the finite variance
 formula across its threshold. Local kernel entry convergence alone does
-not establish a global sine-process spectral identification.
+not establish a global sine-process spectral identification. A separate
+[global comparison](notes/sine_gram_identification.md) establishes that
+identification using compact rooted-walk integrals, ergodic averages and
+a uniform square-integrable interaction tail. The sine-window empirical
+measure converges almost surely in all moments to the CUE column law.
+Finite sine matrices are positive definite, while their limiting zero atom
+is exactly 1-lambda. At unit bandwidth the global sine law is nu_1.
+This resolves the model comparison; it does not prove arithmetic transport
+or transfer the finite-CUE CLT to growing sine windows.
 
 ## Quantitative arithmetic model and a cutoff obstruction
 

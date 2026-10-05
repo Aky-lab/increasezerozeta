@@ -62,6 +62,14 @@ Independent exact checks compare both matrix representations. The
 Vandermonde moment methods and CUE pair statistics, and specifies what
 requires further novelty assessment and mathematical review.
 
+[The global sine-process identification](../notes/sine_gram_identification.md)
+proves that the CUE column law is also the almost sure growing-window
+sine Gram law, with all moments converging. The proof supplies the missing
+global limit comparison using interaction truncation, ergodic averages
+and a uniform squared-kernel tail bound. It specifies the zero atom and
+the point/frequency normalization required by the model interface.
+The arithmetic zeta identities remain a separate research objective.
+
 [The quantitative arithmetic-core proof](../notes/arithmetic_core_limit.md)
 establishes the explicit prime-power model as -1/48+O(1/log T), including
 coefficient asymptotics, exceptional-class control and exact geometry.
@@ -83,7 +91,7 @@ open, with their missing scale estimates specified explicitly.
 | Period | Work | Deliverable |
 |---|---|---|
 | Week 1 | Review definitions, reference conventions and normalization | Reviewed specification and anchor cases |
-| Weeks 2–3 | Review reciprocity, Gram realization, strong spectral limit, fluctuations and class certificates | Reviewed proofs and certificates, corrections or counterexamples, literature comparison |
+| Weeks 2–3 | Review reciprocity, Gram realization, CUE/sine limit comparison, fluctuations and class certificates | Reviewed proofs and certificates, corrections or counterexamples, literature comparison |
 | Week 4 | Review the quantitative core and cutoff obstruction; audit moment reduction | Reviewed proofs, precise transport specification and missing lemmas |
 | Week 5 | Develop arithmetic-to-model transport and signed tail estimates | Proofs, counterexamples and a precise list of remaining lemmas |
 | Week 6 | Evaluate further moments and covariance coefficients; study wider fluctuation tests | Further results or explicit obstacles, reproduction bundle and resource report |

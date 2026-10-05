@@ -232,10 +232,12 @@ an angular separation 2 pi t/n is
 
     sin(pi m t/n)/(n sin(pi t/n)) -> sin(pi lambda t)/(pi t).
 
-Its diagonal tends to lambda. This is an exact local entry limit. It does
-not by itself identify a global sine-process empirical spectral law or
-justify exchanging an infinite-window and finite-CUE limit. Such an
-identification needs a separate argument.
+Its diagonal tends to lambda. This exact local entry limit alone does not
+justify a global spectral identification or an interchange of limits.
+[The global comparison proof](sine_gram_identification.md) supplies that
+separate argument, using finite-range ergodic averages and uniform
+Hilbert--Schmidt tail control. The growing sine-window law equals the
+CUE column law in (1), with almost sure convergence of all moments.
 
 Equation (1) specifies the normalization for any such comparison: trace
 per sampled point gives column moment lambda*m_B(lambda), whereas trace

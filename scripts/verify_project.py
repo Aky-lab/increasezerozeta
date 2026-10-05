@@ -25,6 +25,7 @@ CHECKS = (
     ("verify_cue_model.py", "independent exact Weyl-integration checks of Haar-unitary Gram moments"),
     ("verify_cue_fluctuations.py", "connected multi-cycle identities, exact Weyl joint cumulants and logarithmic determinant identity"),
     ("verify_cue_bandwidth.py", "rectangular Gram normalizations, Weyl/connected identities and exact bandwidth variance"),
+    ("verify_sine_bridge.py", "finite determinantal Campbell expansion, exact Fourier gauge and sine second-moment normalization"),
     ("bell7_gate.py", "seventh-order partition multiplicities"),
     ("bell8_orbits.py", "eighth-order dihedral orbits and multiplicities"),
     ("m7_ledger.py", "seventh-order continuum model ledger"),

@@ -34,7 +34,9 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 [The bandwidth extension](notes/cue_gram_bandwidth.md) proves strong spectral convergence, polynomial fluctuations and logarithmic control for rectangular CUE Gram matrices with m/n tending to any fixed 0<lambda<=1. The row law has no zero atom; the column law has zero mass exactly 1-lambda. Its second-moment fluctuation variance is 2*lambda^3/15-(2*lambda-1)_+^5/(30*lambda^2), with an overlap threshold at lambda=1/2. Independent exact Weyl checks cover every 1<=m<=n<=5.
 
-[The literature comparison](notes/literature_map.md) credits the earlier sine-process Gram motivation, independent-phase Vandermonde work and CUE pair-statistic results. It identifies the remaining global sine-process comparison and arithmetic transport obligations.
+[The global sine-process comparison](notes/sine_gram_identification.md) identifies the growing-window sine Gram law with the CUE column law, with almost sure convergence of all moments. At unit bandwidth it has the certified continuum moments; at smaller bandwidth its limiting zero atom is exactly 1-lambda, even though every finite sine Gram matrix is invertible. The proof controls long interactions and specifies the point/frequency normalization.
+
+[The literature comparison](notes/literature_map.md) credits the earlier sine-process Gram motivation, independent-phase Vandermonde work, CUE pair statistics and stationary determinantal-process background. Arithmetic transport and independent review of the model proofs remain open.
 
 [The quantitative arithmetic-core proof](notes/arithmetic_core_limit.md) establishes the explicitly defined class-subtracted prime-power model as -1/48+O(1/log T). It proves the universal coefficient asymptotic, controls exceptional moduli uniformly, and derives the overlap integral from cube and simplex volumes.
 
@@ -44,7 +46,7 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 ## Reproduction
 
-Run all seventeen project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all eighteen project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
@@ -107,7 +109,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all seventeen executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all eighteen executed checks.
 
 ## Project files
 
