@@ -254,3 +254,55 @@ A_8\le0.4902355854\ldots.
 \]
 
 Exact evaluation remains desirable for auditability and future rungs, but a rigorous aggregate upper bound is the shortest route to the headline.
+
+
+## 7. After the pre-registered four-pair candidate
+
+The independently refined four-pair computation now has the frozen candidate
+
+\[
+\{2^4\}=\frac{1661}{3780}.
+\]
+
+Define the remaining four-class aggregate
+
+\[
+R_8:=\{4,2,2\}+\{4,4\}+\{6,2\}+C_8.
+\]
+
+Then
+
+\[
+A_8=\frac{1661}{3780}+R_8.
+\]
+
+The target curves become:
+
+### 80%
+
+\[
+\boxed{
+R_8\le
+\frac{1160867}{22843800}
+=
+0.0508175960\ldots
+}
+\]
+
+### 80.2%
+
+\[
+\boxed{
+R_8\le-0.0264413511\ldots
+}
+\]
+
+### 81%
+
+\[
+\boxed{
+R_8\le-0.1103805983\ldots
+}
+\]
+
+Thus the shortest 80% route no longer requires exact evaluation of all five new eighth-order classes: after certifying the four-pair class, it is enough to prove one aggregate upper bound on the remaining four.
