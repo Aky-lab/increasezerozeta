@@ -12,8 +12,10 @@ The key estimate is, for every integer B>=1 and every n,
 Here Bell_d is the number of set partitions of d labels. The constant 42
 is deliberately coarse. The proof combines an elementary sampling inequality,
 a rank perturbation, and determinantal occupancy bounds. It establishes
-convergence of expected measures; fluctuations of the random empirical
-measures require an additional argument.
+convergence of expected measures. The additional
+[connected multi-cycle argument](cue_gram_fluctuations.md) proves almost
+sure convergence of the random empirical measures and Gaussian fluctuations
+of fixed polynomial statistics.
 
 ## 1. Sampling a separated set
 
@@ -141,6 +143,7 @@ are developed here. This is a proof for the stated model; priority for
 this application has not been established.
 
 The theorem resolves moment determinacy for the full model sequence,
-without needing higher-order class enumeration. It leaves open almost-sure
-spectral convergence, sharper spectral tails, evaluation of later moments,
-and the arithmetic-to-model transport needed for a zeta-zero bound.
+without needing higher-order class enumeration. The separate connected-cycle
+proof establishes almost sure spectral convergence. Sharper spectral tails,
+evaluation of later moments, wider fluctuation test classes, and the
+arithmetic-to-model transport needed for a zeta-zero bound remain open.

@@ -2,7 +2,7 @@
 
 Exact computation and analytic research on lower bounds for the proportion of simple zeros of the Riemann zeta function on the critical line.
 
-The project develops reproducible mathematical calculations toward stronger bounds. All class evaluations needed for the finite continuum model through eighth order are certified. The model also has a Haar-unitary Gram realization and a proof of convergence to a unique limiting spectral distribution. Arithmetic transport to zeta moments remains a central open problem.
+The project develops reproducible mathematical calculations toward stronger bounds. All class evaluations needed for the finite continuum model through eighth order are certified. The model also has a Haar-unitary Gram realization, almost sure convergence to a unique limiting spectral distribution, and a joint Gaussian limit for polynomial spectral statistics. Arithmetic transport to zeta moments remains a central open problem.
 
 ## Results and scope
 
@@ -28,6 +28,10 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 [An occupancy and moment-growth argument](notes/cue_limit_determinacy.md) proves that the expected spectral measures converge to a unique distribution with the continuum moments at every order. These derivations use established reciprocity, CUE and moment-problem results; priority for their specific application remains to be assessed.
 
+[Connected multi-cycle counts](notes/cue_gram_fluctuations.md) strengthen this to almost sure convergence of the random empirical spectrum and joint Gaussian fluctuations of fixed polynomial statistics. They give exact finite-size joint cumulants. The order-two/order-three limiting covariance matrix is [[1/10,1/3],[1/3,79/70]], with positive determinant 11/6300. Independent Weyl integration checks the joint certificates at sizes 1 through 5.
+
+[Logarithmic control](notes/cue_gram_logdet.md) proves that the limiting model measure has no atom at zero. The exact identity E[log det(G_n)]/n=H_n-1-log n gives a uniform bound on small-eigenvalue mass, which survives the weak limit. This all-order model conclusion is stronger than the finite-moment origin-mass certificate; arithmetic counting transport remains open.
+
 [The quantitative arithmetic-core proof](notes/arithmetic_core_limit.md) establishes the explicitly defined class-subtracted prime-power model as -1/48+O(1/log T). It proves the universal coefficient asymptotic, controls exceptional moduli uniformly, and derives the overlap integral from cube and simplex volumes.
 
 [A cutoff obstruction](notes/fixed_cutoff_obstruction.md) proves the uniform bound C_ell,P=O((1+log P)/log T). Every subpower cutoff, including any fixed power of log T, leaves the entire leading model contribution in its tail. An absolute envelope for that same tail has lower limit at least 1/48, so the older 0.0111 finite-height charge cannot be promoted to such an asymptotic bound.
@@ -36,13 +40,13 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 ## Reproduction
 
-Run all fifteen project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all sixteen project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
 ```
 
-This checks finite algebra, Euler convolution and prime-power coefficients, overlap geometry and Ramanujan cutoff decompositions, divisor-family error bookkeeping, exact moment targets, actual-walk examples, certificate records and source hashes, independent pairing counts and cell integrals, scalar mixed-class counts, the reduced reciprocity certificates, independent Weyl integration, Bell(7)/Bell(8) enumeration, and both moment ledgers. Use `--output verification.json` to save the full results.
+This checks finite algebra, Euler convolution and prime-power coefficients, overlap geometry and Ramanujan cutoff decompositions, divisor-family error bookkeeping, exact moment targets, actual-walk examples, certificate records and source hashes, independent pairing counts and cell integrals, scalar mixed-class counts, the reduced reciprocity certificates, independent Weyl moments and joint cumulants, connected multi-cycle identities, Bell(7)/Bell(8) enumeration, and both moment ledgers. Use `--output verification.json` to save the full results.
 
 The faster route to recompute all fourteen network certificates requires NumPy:
 
@@ -99,7 +103,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all fifteen executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all sixteen executed checks.
 
 ## Project files
 

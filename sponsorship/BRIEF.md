@@ -40,6 +40,19 @@ expected spectral measures to a unique limit. These are mathematical model
 results beyond the individual class evaluations. Their application to zeta
 zeros and priority in the literature remain separate questions.
 
+[Connected multi-cycle counts](../notes/cue_gram_fluctuations.md) further
+establish almost sure convergence of the random empirical spectrum and a
+joint Gaussian limit for fixed polynomial statistics. Exact joint cumulant
+certificates include a nondegenerate order-two/order-three covariance matrix,
+independently checked by Weyl integration at five matrix sizes. The argument
+extends the network method beyond individual expected moments.
+
+[Logarithmic control](../notes/cue_gram_logdet.md) proves that the limiting
+Gram measure has no atom at zero and bounds its small-eigenvalue mass.
+The proof uses an exact expected log-determinant identity, independently
+checked from the full Weyl density at five sizes. Arithmetic transport
+remains essential to any zeta-zero application of this model result.
+
 [The quantitative arithmetic-core proof](../notes/arithmetic_core_limit.md)
 establishes the explicit prime-power model as -1/48+O(1/log T), including
 coefficient asymptotics, exceptional-class control and exact geometry.
@@ -61,10 +74,10 @@ open, with their missing scale estimates specified explicitly.
 | Period | Work | Deliverable |
 |---|---|---|
 | Week 1 | Review definitions, reference conventions and normalization | Reviewed specification and anchor cases |
-| Weeks 2–3 | Review reciprocity, Gram realization, determinacy and class certificates | Reviewed proofs and certificates, corrections or counterexamples, literature comparison |
+| Weeks 2–3 | Review reciprocity, Gram realization, strong spectral limit, fluctuations and class certificates | Reviewed proofs and certificates, corrections or counterexamples, literature comparison |
 | Week 4 | Review the quantitative core and cutoff obstruction; audit moment reduction | Reviewed proofs, precise transport specification and missing lemmas |
 | Week 5 | Develop arithmetic-to-model transport and signed tail estimates | Proofs, counterexamples and a precise list of remaining lemmas |
-| Week 6 | Evaluate further moments and spectral fluctuations; package computations | Further results or explicit obstacles, reproduction bundle and resource report |
+| Week 6 | Evaluate further moments and covariance coefficients; study wider fluctuation tests | Further results or explicit obstacles, reproduction bundle and resource report |
 
 ## Resources and evaluation
 

@@ -118,6 +118,11 @@ Christoffel polynomial gives the valid model bound
 
     nu({0}) <= 12241115/162540559.
 
+The separate [log-determinant argument](cue_gram_logdet.md) strengthens this
+all-order model conclusion to nu({0})=0, with uniform control of mass near
+zero. The displayed Christoffel bound remains an exact finite-moment
+certificate.
+
 Transferring this measure or bound to a zeta-zero counting problem still
 requires the separate analytic interface.
 
@@ -165,7 +170,9 @@ for Weyl integration. The finite Gram identity, network interpretation and
 explicit correction polynomials are derived here from this background;
 priority for this specific combination remains to be assessed.
 
-The next questions concern fluctuations of the empirical spectrum, how to
-evaluate further moments efficiently, and which uniform estimates could
-connect the Gram formulation to arithmetic zeta moments. Resolving the
-random-matrix model alone does not resolve that last question.
+The [connected multi-cycle proof](cue_gram_fluctuations.md) establishes
+almost sure convergence of the empirical spectrum and Gaussian fluctuations
+of fixed polynomial statistics. Further questions concern wider fluctuation
+test classes, efficient evaluation of later moments and covariance coefficients,
+and the uniform estimates connecting the Gram formulation to arithmetic
+zeta moments. The counting interface remains a separate obligation.

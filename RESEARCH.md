@@ -86,7 +86,7 @@ the positive moment cone and alternative supplied inputs.
 2. Prove the arithmetic moment identities and their continuum transport through eighth order.
 3. Establish the spectral/counting interface for these supplied moments.
 4. Replace the obstructed fixed-P absolute-tail estimate with a signed estimate or an actual-minus-model remainder bound in the separate [fourth-moment route](notes/class_subtracted_universality.md).
-5. Develop efficient evaluation of further model moments and study fluctuations of the Gram spectrum.
+5. Evaluate further moments and connected covariance coefficients efficiently, and extend the polynomial-statistic CLT to wider test-function classes.
 6. Assess prior literature for the network/Gram connection and reduced certificate method.
 
 A certified finite integral, an assembled model moment and an established
@@ -113,13 +113,36 @@ uniform bound E[Tr(G_n^B)/n]<=42^B Bell_(B+1). Carleman's criterion then
 proves moment determinacy and weak convergence of the expected empirical
 spectral measures to a unique probability measure on [0,infinity).
 This resolves existence and uniqueness for the model sequence without
-enumerating later class integrals. It does not prove convergence of random
-empirical measures or transport to zeta zeros.
+enumerating later class integrals. The separate connected-cycle argument
+below proves convergence of random empirical measures. Transport to zeta
+zeros remains open.
 
 The underlying Ehrhart, determinantal-process and moment-problem theorems
 are established background cited in the proof notes. The applications are
 derived in this repository; a claim of priority requires further literature
 review and independent mathematical assessment.
+
+[The connected multi-cycle theorem](notes/cue_gram_fluctuations.md) proves
+that a joint cumulant of r normalized Gram traces, of total order L, has
+a rational polynomial numerator of degree at most L+1 and normalization
+n^(L+r). Only partitions connecting all outer cycles survive. The resulting
+O(n^(1-r)) cumulant bound gives almost sure convergence of every spectral
+moment and the empirical measure, on any coupling of the Haar marginals,
+and a joint Gaussian limit at scale sqrt(n) for fixed polynomial statistics.
+
+Exact Weyl certificates give the covariance coefficients c22=1/10,
+c23=1/3 and c33=79/70, and third cumulant coefficient c222=2/45.
+The two-dimensional covariance determinant is 11/6300>0. Independent
+constant-term integration at n=5 supplies held-out checks. Published CUE
+pair-statistic results are credited in the proof; priority for the broader
+Gram application remains to be assessed.
+
+[The logarithmic argument](notes/cue_gram_logdet.md) gives the exact identity
+E[log det(G_n)]/n=H_n-1-log n and proves nu({0})=0. It also establishes
+EulerGamma-1<=integral log(x)dnu<0 and the explicit bound
+nu([0,epsilon])<=[1-EulerGamma+1/(2sqrt(3))]/|log epsilon|.
+This uses uniform logarithmic control, not only finite-matrix full rank.
+The model result does not supply the arithmetic counting interface.
 
 ## Quantitative arithmetic model and a cutoff obstruction
 
