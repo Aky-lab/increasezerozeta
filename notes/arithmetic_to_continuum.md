@@ -1,8 +1,8 @@
 # Arithmetic-to-continuum passage and remainder ledger
 
-**Status:** research proof skeleton for external audit.
+**Status:** model-core limit proved with a quantitative rate; the surrounding arithmetic moment reduction remains open.
 
-This note isolates the limiting argument needed to turn the local class-subtracted universality estimate into the exact continuum constant. It deliberately separates that limit from the independent sawtooth-tail envelope and from the inherited covered-zone/band/glue analysis.
+The self-contained [quantitative core proof](arithmetic_core_limit.md) establishes the explicitly defined class-subtracted prime-power functional as \(-1/48+O(\ell^{-1})\), including the universal coefficient asymptotic, uniform exceptional-class bounds and exact overlap integration. This ledger separates that proved model limit from the fixed-P sawtooth-tail envelope and the covered-zone/band/glue analysis. The latter steps are not covered by the model theorem.
 
 ## 1. Normalised modulus measure
 
@@ -186,7 +186,7 @@ Therefore, uniformly over ordinary distinct prime pairs in the contributing regi
 \tag{3.4}
 \]
 
-whenever \(\nu\ge1+\delta\), with fixed \(\delta>0\).
+uniformly on the entire contributing region \(1\le\nu\le2\). The universal estimate extends to the bounded initial \(\theta\)-range by absolute summability, so a fixed \(\delta\)-strip is unnecessary.
 
 A global bound of the shape
 
@@ -289,9 +289,9 @@ o(1),
 \tag{5.2}
 \]
 
-after removing the higher-prime-power and diagonal classes using (1.2)-(1.3).
+for the explicitly defined model functional. Removing exceptional classes requires more than (1.2)-(1.3): the [quantitative proof](arithmetic_core_limit.md) supplies a uniform normalized transform bound for coprime prime powers and an integrated \(O(\ell^{-2})\) bound for shared-base pairs. The total exceptional error is \(O(\ell^{-1})\). Any further error introduced by reducing an actual arithmetic moment to this model must be proved separately.
 
-Using (3.4), (4.3), and then removing the \(\nu=1\) strip,
+Using the uniform estimate (3.4) and the quantitative product-measure passage proved in [the core theorem](arithmetic_core_limit.md),
 
 \[
 C_\ell
@@ -319,6 +319,8 @@ C_{\mathrm{core}}=-\frac1{48}.
 
 The factor \(2\) in (5.2) agrees with the reproduction code's 2*pi/(pi*l*ell1**4) normalisation after the scaled modulus sums and is the principal factor-of-two check in this passage.
 
+For the model functional specified exactly in that theorem, the stronger conclusion is \(C_\ell=-1/48+O(\ell^{-1})\). The measure discrepancy is \(O(\ell^{-1})\) by Mertens' estimate; integration by parts in the two modulus variables controls the moving interval endpoints because the overlap is continuous and piecewise affine.
+
 ## 6. Remainder ledger
 
 A theorem-level statement should not hide all unresolved terms under a single symbol. The proposed assembly should be recorded as
@@ -340,13 +342,13 @@ The terms mean:
 
 ### \(C_{\mathrm{core}}\)
 
-The arithmetic-to-continuum deterministic core. The proposed exact value is
+The deterministic model core, whose limit is proved for the explicitly defined functional. Its exact limiting value is
 
 \[
 C_{\mathrm{core}}=-\frac1{48}.
 \]
 
-The former numerical continuum-convergence allowance should **not** be retained once (5.4) is proved.
+The model-core convergence error is now proved to vanish. It does not require a non-vanishing numerical allowance; errors in an unproved arithmetic-to-model reduction remain separate obligations.
 
 ### \(E_{\mathrm{tail}}\)
 
@@ -368,6 +370,8 @@ The reference candidate quotes a charge \(0.0111\) at its operating point. A new
 - only finite-height evidence.
 
 Those are not interchangeable.
+
+For the precise fixed Ramanujan cutoff in the [obstruction theorem](fixed_cutoff_obstruction.md), an absolute envelope for the complementary model tail has lower limit at least \(1/48>0.0111\). Thus the first option cannot hold for that same absolute model tail. A viable arithmetic estimate must instead control a signed tail, use a different cutoff strategy, or bound a separately defined actual-minus-model discrepancy. The full core theorem already includes its infinite model tail.
 
 ### \(E_{\mathrm{fixed}}\)
 

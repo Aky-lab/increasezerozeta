@@ -40,14 +40,23 @@ expected spectral measures to a unique limit. These are mathematical model
 results beyond the individual class evaluations. Their application to zeta
 zeros and priority in the literature remain separate questions.
 
+[The quantitative arithmetic-core proof](../notes/arithmetic_core_limit.md)
+establishes the explicit prime-power model as -1/48+O(1/log T), including
+coefficient asymptotics, exceptional-class control and exact geometry.
+[A cutoff obstruction](../notes/fixed_cutoff_obstruction.md) identifies a
+failure of the older absolute-tail strategy: a fixed cutoff leaves the
+leading model contribution in its tail, so the finite-height 0.0111 charge
+cannot certify that same asymptotic envelope. This directs the analytic
+work toward signed estimates and actual-minus-model discrepancies.
+
 ## Pilot milestones
 
 | Period | Work | Deliverable |
 |---|---|---|
 | Week 1 | Review definitions, reference conventions and normalization | Reviewed specification and anchor cases |
 | Weeks 2–3 | Review reciprocity, Gram realization, determinacy and class certificates | Reviewed proofs and certificates, corrections or counterexamples, literature comparison |
-| Week 4 | Audit the analytic moment-production framework | Precise transport specification and missing lemmas |
-| Week 5 | Develop arithmetic-to-model transport | Proofs and a precise list of remaining lemmas |
+| Week 4 | Review the quantitative core and cutoff obstruction; audit moment reduction | Reviewed proofs, precise transport specification and missing lemmas |
+| Week 5 | Develop arithmetic-to-model transport and signed tail estimates | Proofs, counterexamples and a precise list of remaining lemmas |
 | Week 6 | Evaluate further moments and spectral fluctuations; package computations | Further results or explicit obstacles, reproduction bundle and resource report |
 
 ## Resources and evaluation

@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T11:39:12.340419+00:00",
+  "generated_at_utc": "2026-10-05T12:11:35.325655+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "4ecad9496a3794246445ff07e2a57defeb8dec8fbd0ff304648fd34b64470855",
+  "runner_sha256": "53bd0b5a98ce3943f05be55f293c0bb4a5b506e11de3584bc52b126af14717bc",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -21,13 +21,14 @@
     "scripts/spectator_52_midpoint.py": "e56e929cd82d36bbdeb74e66c24c61799dc4f40967f973988f39e61a34314dd9",
     "scripts/spectator_52_reduced_midpoint.py": "f654eebb2ad7d189532c2846c3a972438bf9254f57408552d65a2e28fe041498",
     "scripts/spectator_reduction.py": "a7d0e19523a5018a72166b54a8bb8357fcfbfab691539c0d2a42984f572b70b3",
+    "scripts/verify_arithmetic_transport.py": "0f9c43ade3c98c8629c4ac9cb9cba1fd9ce64b2a033ac89e6bb3f707f3e8d06f",
     "scripts/verify_cue_model.py": "7ade82e2b9c104ca851f6b9bf73b73653926888bdd90c4736472920f182646e2",
     "scripts/verify_cycle_eight_lattice.py": "a5aaae108761fdf0291cbddcb561aea3628c162d59cfdc1f83215eb1f449dae4",
     "scripts/verify_lemmas.py": "a5d3fb7a7b7460a182773fc743b329d8e593e94a30ecf50d7a82bc9b1619a125",
     "scripts/verify_mixed_cycles.py": "1773ecc9ef8357e6f3406f2262350bb50cfb8d47966a81174c30efd870ab1663",
     "scripts/verify_model_certificates.py": "82eeb6c7bd3b4e4c22547fce0f4066f86927b22eb22a25b88ead8ff23cf25874",
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
-    "scripts/verify_project.py": "4ecad9496a3794246445ff07e2a57defeb8dec8fbd0ff304648fd34b64470855",
+    "scripts/verify_project.py": "53bd0b5a98ce3943f05be55f293c0bb4a5b506e11de3584bc52b126af14717bc",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
     "scripts/verify_spectator_reduction.py": "961694b4035b684b9f59ed78f5ad722c12ea29b38022721a8870929db5c4b6c1"
@@ -47,6 +48,15 @@
       "scope": "finite local algebra and conditional core arithmetic",
       "exit_code": 0,
       "stdout": "prime pairs checked: 300\nlargest (proved-bound)/(8/(p-1)+8/(q-1)) ratio: 0.802083 at (3, 5)\nintegral Q = 1/16 = 0.062500000000\nintegral (nu-1)Q = 1/96 = 0.010416666667\nC_core = -1/48 = -0.020833333333\nC_core + 0.0111 = -73/7500 = -0.009733333333\nLambda_2(0) = 457/3078 = 0.148473034438\nsimple-critical proportion (conditional consumption) = 1082/1539 = 70.305393112411%\nALL EXACT-ARITHMETIC CHECKS PASSED\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_arithmetic_transport.py",
+      "sha256": "0f9c43ade3c98c8629c4ac9cb9cba1fd9ce64b2a033ac89e6bb3f707f3e8d06f",
+      "scope": "exact coefficient convolution, prime-power factors and overlap geometry",
+      "exit_code": 0,
+      "stdout": "Independent beta/density/shifted-vector checks: 4550\nExact Euler-convolution coefficients: 2000\nIndependent twelve-overlap/reduced-geometry checks: 637\nExact geometric mass 1/16; weighted mass 1/96; model core -1/48\nExact Ramanujan identities: 1600; independent cutoff decompositions: 24\nFinite identities passed. Asymptotic proofs and zeta-moment reduction are distinct.\n",
       "stderr": "",
       "passed": true
     },

@@ -1,14 +1,14 @@
 # Class-subtracted \(\ell^1\) universality and the exact fourth-moment core
 
-**Research status:** proof note for review. This note proves a local arithmetic lemma for the coefficient convention used by the reference reproduction code and records its consequence for the proposed continuum limit. It does **not** by itself certify the surrounding fourth-moment analytic chain.
+**Research status:** local coefficient proof. This note proves a local arithmetic lemma for the coefficient convention used by the reference reproduction code. The separate [quantitative core proof](arithmetic_core_limit.md) supplies the universal coefficient asymptotic, exceptional-class bounds and exact continuum geometry. The surrounding fourth-moment analytic reduction remains unproved here.
 
-Reference implementation inspected while deriving this note:
+Reference convention, pinned to revision `d85bddfe9d8f12856fba735fc9cb3ca23b48b3a8`:
 
-- \`JoshuaHKU/zeta-0.7947-reproduction/scripts/tail_bound.py\`
-- \`JoshuaHKU/zeta-0.7947-reproduction/scripts/mains_envelope.py\`
-- \`JoshuaHKU/zeta-0.7947-reproduction/scripts/m1_suite.py\`
+- [tail_bound.py](https://github.com/JoshuaHKU/zeta-0.7947-reproduction/blob/d85bddfe9d8f12856fba735fc9cb3ca23b48b3a8/scripts/tail_bound.py)
+- [mains_envelope.py](https://github.com/JoshuaHKU/zeta-0.7947-reproduction/blob/d85bddfe9d8f12856fba735fc9cb3ca23b48b3a8/scripts/mains_envelope.py)
+- [m1_suite.py](https://github.com/JoshuaHKU/zeta-0.7947-reproduction/blob/d85bddfe9d8f12856fba735fc9cb3ca23b48b3a8/scripts/m1_suite.py)
 
-The key point is that the implementation does not use a bare Euler tensor: after constructing it, \`gamma_signed_array\` performs the "class-\(d\) exact replacement". The proposition below includes that replacement exactly.
+After constructing the Euler tensor, `gamma_signed_array` performs the class-\(d\) exact replacement. The proposition below includes that replacement exactly.
 
 ## 1. Local vectors
 
@@ -67,7 +67,7 @@ so
 \|g_p\|_1=1.
 \]
 
-At \(2\), because \(p,q\) are odd, both modulus pairs have the same local vector and it forces \(v_2(d)=1\). Thus it plays no role in the comparison except for the common factor \(2\).
+At \(2\), because \(p,q\) are odd, both modulus pairs have the same local vector and it forces \(v_2(d)=1\). Its coefficient mass is one; the common forced divisor \(2\) does not change the \(\ell^1\) comparison.
 
 ## 2. The full Euler tensor
 
@@ -124,13 +124,13 @@ For \(b_1=p,b_2=q\), the special-prime set is
 S=\{2,p,q\}.
 \]
 
-The function \`_gamma_free_exact\` replaces the full coefficient whenever all prime divisors of \(d\) lie in \(S\). Because the local \(2\)-vector forces exponent \(1\), and the \(p,q\) local vectors vanish for exponents \(\ge2\), the only non-zero affected coefficients occur at
+The function `_gamma_free_exact` replaces the full coefficient whenever all prime divisors of \(d\) lie in \(S\). Because the local \(2\)-vector forces exponent \(1\), and the \(p,q\) local vectors vanish for exponents \(\ge2\), the only non-zero affected coefficients occur at
 
 \[
 d\in\{2,2p,2q,2pq\}.
 \]
 
-Inspecting \`_gamma_free_exact\`, the replacement subtracts exactly the finite signed measure
+The replacement subtracts exactly the finite signed measure
 
 \[
 C^{p,q}
@@ -286,7 +286,7 @@ Thus distinct prime modulus pairs have the same leading sawtooth law, uniformly 
 
 ## 5. Universal \((1,1)\) sawtooth slope
 
-In the archive convention, the \((1,1)\) coefficients obey
+The [Euler-convolution proof](arithmetic_core_limit.md) establishes, in the pinned convention,
 
 \[
 A(M)
@@ -357,7 +357,7 @@ uniformly for distinct prime moduli in the contributing zone.
 
 ## 6. Exceptional modulus classes
 
-The remaining modulus configurations can be separated rather than approximated.
+The remaining modulus configurations require uniform transform control in addition to small measure mass. The [quantitative core proof](arithmetic_core_limit.md) provides that control and separates coprime pairs from shared-base pairs.
 
 Higher prime powers have total one-dimensional normalised Mertens mass
 
@@ -369,7 +369,7 @@ Higher prime powers have total one-dimensional normalised Mertens mass
 O(\ell^{-1}),
 \]
 
-so any configuration containing a genuine higher prime power contributes \(o(1)\) after normalisation.
+For coprime prime-power pairs, the normalized sawtooth transform is uniformly bounded on the contributing region. Thus configurations containing a genuine higher prime power contribute \(O(\ell^{-1})\). The pair \(b=2\) is handled by the same bound and its \(O(\ell^{-1})\) mass.
 
 The diagonal prime class satisfies
 
@@ -379,7 +379,14 @@ The diagonal prime class satisfies
 O(\ell^{-2}),
 \]
 
-so \(p=q\) is also negligible.
+This mass estimate alone is insufficient for the transform. For all shared-base pairs \((p^a,p^b)\), the coefficient \(\ell^1\) bound and the region's upper limit on \(\nu\) give a total contribution
+
+\[
+O\!\left(\ell^{-4}\sum_{p^a,p^b\le e^\ell}
+\frac{(\log p)^2}{p^{\max(a,b)}}\right)=O(\ell^{-2}).
+\]
+
+This proves negligibility of ordinary diagonal primes and shared-base higher powers without assuming a uniform normalized transform for those pairs.
 
 Thus ordinary distinct primes carry the limiting modulus mass.
 
@@ -400,7 +407,7 @@ This avoids the need for a sharp global \(O(1/\ell)\) "universality-collapse rat
 
 ## 7. Exact continuum geometry
 
-After logarithmic scaling, the integrated overlap geometry is
+The cube/simplex derivation in the [quantitative core proof](arithmetic_core_limit.md) gives the integrated overlap geometry
 
 \[
 \boxed{
@@ -452,7 +459,7 @@ consistent with the independent numerical continuum estimate near \(-0.0209\) in
 
 This section is a **conditional consumption statement**: it assumes the surrounding one-sided fourth-moment analytic chain from the reference candidate.
 
-If its separately certified sawtooth-tail charge is retained as
+For a precisely defined remainder distinct from the obstructed absolute fixed-cutoff model tail, if a separate asymptotic estimate is established as
 
 \[
 E_{\mathrm{tail}}\le0.0111,
@@ -480,6 +487,8 @@ The degree-two Christoffel conversion then gives
 
 within that framework.
 
+The [fixed-cutoff theorem](fixed_cutoff_obstruction.md) proves that the same \(0.0111\) cannot be an asymptotic absolute envelope for its specified complementary model tail: that envelope has lower limit at least \(1/48\). Consequently the displayed \(70.3054\%\) remains formal conditional arithmetic, rather than a bound supported by the fixed-P model-tail method.
+
 More generally, if all *non-\(o(1)\)* remainder terms not included in the exact core are collected into a clearly defined quantity \(E\),
 
 \[
@@ -504,11 +513,12 @@ The notation \(E\) must not silently absorb unrelated analytic gaps: a final the
 
 ## 9. What remains
 
-The local class-subtracted arithmetic comparison is now explicit. The main remaining work is to make the following surrounding steps self-contained enough for external review:
+The local comparison and the explicitly defined model-core limit are proved in the notes. The remaining work concerns the surrounding analytic chain:
 
-1. write the arithmetic-to-continuum passage with the boundary-strip argument in full theorem-proof form;
-2. audit every normalisation in the definition of the finite core against (7.3);
-3. give a named remainder ledger distinguishing the fixed sawtooth-tail charge from terms that are genuinely \(o(1)\);
-4. independently review the covered-zone/band/glue inputs inherited from the candidate fourth-moment chain.
+1. prove the reduction of the actual arithmetic moment to the specified class-subtracted model functional;
+2. audit the normalization of that analytic reduction against (7.3);
+3. replace the obstructed fixed-P absolute-tail estimate with a signed or actual-minus-model bound, with a named remainder ledger;
+4. prove or independently review the covered-zone/band/glue inputs and their decay after normalization;
+5. independently review the new coefficient, geometry and quantitative model-core proofs.
 
 Until those steps are externally checked, the \(70.3054\%\) figure should be described as a consequence **within the candidate framework**, not as an established unconditional record.

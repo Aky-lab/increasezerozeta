@@ -28,15 +28,19 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 [An occupancy and moment-growth argument](notes/cue_limit_determinacy.md) proves that the expected spectral measures converge to a unique distribution with the continuum moments at every order. These derivations use established reciprocity, CUE and moment-problem results; priority for their specific application remains to be assessed.
 
+[The quantitative arithmetic-core proof](notes/arithmetic_core_limit.md) establishes the explicitly defined class-subtracted prime-power model as -1/48+O(1/log T). It proves the universal coefficient asymptotic, controls exceptional moduli uniformly, and derives the overlap integral from cube and simplex volumes.
+
+[A fixed-cutoff obstruction](notes/fixed_cutoff_obstruction.md) shows that every fixed Ramanujan cutoff leaves the entire leading model contribution in its tail. An absolute envelope for that same tail has lower limit at least 1/48, so the older 0.0111 finite-height charge cannot be promoted to such an asymptotic bound. The actual arithmetic moment reduction and tail mismatch require separate proofs.
+
 ## Reproduction
 
-Run all thirteen project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all fourteen project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
 ```
 
-This checks finite algebra, exact moment targets, actual-walk examples, certificate records and source hashes, independent pairing counts and cell integrals, scalar mixed-class counts, the reduced reciprocity certificates, independent Weyl integration, Bell(7)/Bell(8) enumeration, and both moment ledgers. Use `--output verification.json` to save the full results.
+This checks finite algebra, Euler convolution and prime-power coefficients, overlap geometry and Ramanujan cutoff decompositions, exact moment targets, actual-walk examples, certificate records and source hashes, independent pairing counts and cell integrals, scalar mixed-class counts, the reduced reciprocity certificates, independent Weyl integration, Bell(7)/Bell(8) enumeration, and both moment ledgers. Use `--output verification.json` to save the full results.
 
 The faster route to recompute all fourteen network certificates requires NumPy:
 
@@ -93,7 +97,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all thirteen executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all fourteen executed checks.
 
 ## Project files
 

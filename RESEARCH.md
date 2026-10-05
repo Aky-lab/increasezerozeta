@@ -85,7 +85,7 @@ the positive moment cone and alternative supplied inputs.
 1. Independently review the structural proofs, finite certificates and normalization.
 2. Prove the arithmetic moment identities and their continuum transport through eighth order.
 3. Establish the spectral/counting interface for these supplied moments.
-4. Resolve the fixed-P tail obligation in the separate [fourth-moment route](notes/class_subtracted_universality.md) and [arithmetic analysis](notes/arithmetic_to_continuum.md).
+4. Replace the obstructed fixed-P absolute-tail estimate with a signed estimate or an actual-minus-model remainder bound in the separate [fourth-moment route](notes/class_subtracted_universality.md).
 5. Develop efficient evaluation of further model moments and study fluctuations of the Gram spectrum.
 6. Assess prior literature for the network/Gram connection and reduced certificate method.
 
@@ -120,3 +120,28 @@ The underlying Ehrhart, determinantal-process and moment-problem theorems
 are established background cited in the proof notes. The applications are
 derived in this repository; a claim of priority requires further literature
 review and independent mathematical assessment.
+
+## Quantitative arithmetic model and a cutoff obstruction
+
+[The arithmetic-core theorem](notes/arithmetic_core_limit.md) proves
+C_ell=-1/48+O(ell^(-1)) for the explicitly defined class-subtracted
+prime-power/sawtooth functional. An absolutely convergent Euler convolution
+gives A(M)=log M+EulerGamma-2+O_alpha(M^(-alpha)(1+log M)), for every
+0<alpha<1/2. Uniform coprime transform bounds and integrated shared-base
+estimates justify exceptional-modulus removal. The twelve-overlap geometry
+reduces to cube and simplex volumes, yielding weighted integral 1/96.
+
+[The fixed-cutoff theorem](notes/fixed_cutoff_obstruction.md) proves that
+every fixed finite Ramanujan piece has normalized core O_P(ell^(-1)),
+while its complementary model tail tends to -1/48. An absolute envelope
+for that same tail therefore has lower limit at least 1/48. This rules out
+0.0111 as an asymptotic absolute-tail bound for the specified fixed-cutoff
+convention; it does not rule out a differently defined remainder or signed
+cancellation. The older 70.3054% figure remains only formal conditional
+consumption, with that tail assumption unestablished.
+
+The new standard-library checker independently verifies local coefficients,
+Euler convolution, overlap geometry and finite Ramanujan decompositions.
+The asymptotic proofs are mathematical arguments in the notes. Neither the
+model theorem nor its checks prove the reduction of actual zeta moments to
+the model functional.
