@@ -1,7 +1,7 @@
 # A reflected-square certificate with positive resolvent weights
 
-**Status:** scalar identities and conditional counting reduction. The
-actual arithmetic inequalities (5), (7) and (9) below remain unproved.
+**Status:** exact scalar certificates and conditional counting reductions.
+The actual arithmetic trace and resolvent estimates remain unproved.
 The scalar majorization and finite counting implication are
 [formalized in Lean](../formal/README.md).
 
@@ -197,19 +197,138 @@ conditional prime-phase terms and correlated covariance trace still
 require arithmetic estimates; removing a prime base does not establish
 statistical independence.
 
+## 5. A rational one-point criterion
+
+The integer polynomials Q and D from section 1 satisfy the global bound
+
+    f_m(x) <= A(x)-(221/625)*x/(x^2+1/16),                 (10)
+    A(x)=10119/10000-(947/1000)*x+(291/1000)*x^2.
+
+This bound has a direct exact proof, with no algebraic pole construction.
+Both D(x) and x^2+1/16 are positive. Define the integer polynomial
+
+    Z(x)=160000*[A(x)*D(x)*(x^2+1/16)
+                 -(221/625)*x*D(x)-Q(x)^2*(x^2+1/16)].
+
+Its ascending coefficients are
+
+    (755097959, -4357552606, 43027979006, 57315066112,
+     810605696640, -327459190272, 5298392930544,
+     -8736579090144, 4026592652256, -565567188480,
+     173790973440).
+
+The exact signed Euclidean remainder sequence for Z,Z' has degrees
+10,9,...,0. Positive rational rescaling to primitive integer coefficients
+does not change its signs. At minus and plus infinity these are
+
+    -infinity: (+,-,-,+,-,-,-,-,+,-,-),
+    +infinity: (+,+,-,-,-,+,-,+,+,+,-).
+
+Both have five sign variations. The final nonzero constant remainder
+also proves that Z is squarefree. By
+[Sturm's theorem](https://leanprover-community.github.io/mathlib4_docs/Mathlib/Algebra/Polynomial/Sturm/Sequence.html),
+Z has no real root. Since Z(0)=755097959>0, Z is positive everywhere,
+which proves (10). The complete integer chain is supplied in the
+[exact record](../results/mirror_certificate_2026-10-05.json).
+The checker verifies every Euclidean division identity and checks the
+root counter on 30 explicit factored examples, including repeated roots.
+
+Apply (10) directly to the finite actual symmetric matrix B_T. Write
+tau_d=Tr/d and A_T=I-H_T. The established prime moments and normalized
+Schatten-two approximation give
+
+    tau_d(B_T)=1+o(1),   tau_d(B_T^2)=4/3+o(1).
+
+For the second identity, use
+|tau_d(B_T^2-A_T^2)|<=||B_T-A_T||_(2,d)*
+(||B_T||_(2,d)+||A_T||_(2,d)); the norms remain bounded by the
+second prime moment and the approximation. Spectral functional calculus
+therefore yields
+
+    tau_d f_m(B_T) <=4529/10000
+       -(221/625)*Re tau_d(B_T-iI/4)^(-1)+o(1).
+
+The resolvent identity transfers this single rational point:
+
+    |tau_d(B_T-iI/4)^(-1)-tau_d(A_T-iI/4)^(-1)|
+        <=16*||B_T-A_T||_(2,d)=o(1).
+
+The [block compression bound](bounded_resolvent_bridge.md) and fixed-taper
+leakage give tau_d(A_T-iI/4)^(-1)=m_T(i/4)+o(1). No trace of
+an infinite-dimensional identity and no compression assertion for f_m
+itself is needed for this deduction. Consequently
+
+    limsup tau_d f_m(B_T)
+       <=4529/10000-(221/625)*liminf Re m_T(i/4).           (11)
+
+The entirely rational sufficient arithmetic target for 80% is
+
+    liminf Re m_T(i/4) >=3529/3536.                        (12)
+
+The cleaner, slightly stronger hypothesis liminf Re m_T(i/4)>=1
+would give a trace cap of 993/10000 and, by the counting bridge,
+
+    liminf N_simple,on-line(T,2T)/N(T,2T)
+        >=1-2*(993/10000)=4007/5000=0.8014.               (13)
+
+Here d/N tends to one, the collar loss vanishes, and the globally
+bounded derivative of f_m handles the vanishing spectral threshold.
+These are conditional implications. Neither (12) nor its stronger
+version at one has been established for the actual prime operator.
+
+The arithmetic content can be stated in the prime-removal variables.
+Set t=1-i/4 and Y_T=Z_1+B_1+G_1 at z=i/4. The deterministic
+identity t*m_T=1+Y_T+O(ell^-2) gives
+
+    Re m_T(i/4)=16/17+Re(Y_T/t)+o(1).
+
+Thus the sufficient bound at one is equivalent to the closing estimate
+
+    liminf Re[(Z_1+B_1+G_1)(i/4)/(1-i/4)] >=1/17.         (14)
+
+Alternatively, write Xi_T=Tr[P*K_T*(J_T-iI/4)^(-1)*K_T*P]/d.
+The exact two-prime insertion identity and the vanishing first prime
+moment give m_T=1/t+Xi_T/t^2+o(1). Since
+1/t^2=(240+128*i)/289, (14) is also equivalent to
+
+    liminf [240*Re Xi_T-128*Im Xi_T] >=17.
+
+For the positive measure kappa_T(E)=Tr[P*K_T*1_E(J_T)*K_T*P]/d,
+this statistic is the integral of (240*x-32)/(x^2+1/16).
+Its total mass tends to 1/3, which alone does not determine this signed
+integral. These identities isolate the phase and covariance estimate
+still needed; they do not assume independence of the prime-removal terms.
+
+There is also an exact scalar stability estimate at this rational pole:
+
+    24255*(16*x^2+1)^2-295680*x
+      =55*(21-128*x-96*x^2)^2
+       +32*(55*x-384*x^2)^2+983808*x^4 >=0.
+
+Apply the identity at x and -x and divide by the positive denominator
+to obtain |x|/(x^2+1/16)^2<=21. Thus for v>=1/16,
+
+    |x/(x^2+v)-x/(x^2+1/16)|<=21*(v-1/16).
+
+Lean checks the cleared identity, both signs of its inequality and
+the exact rational constants in (11)--(13). The Sturm root count and
+the analytic operator transfers remain outside that formalization.
+
 ## Reproduction and scope
 
 Run `python scripts/verify_mirror_certificate.py`. The
 [exact record](../results/mirror_certificate_2026-10-05.json) contains
 the square coefficients, endpoint signs, refined rational pole and
-weight intervals, and the isolated one-point target. A separate
+weight intervals, the isolated one-point target and the rational
+majorant's complete Sturm certificate. A separate
 companion-matrix determinant/adjugate identity verifies the complete
 partial fractions by coefficient comparison. No sampled numerical
 evaluation is used as a polynomial proof.
 
 The [Lean file](../formal/CountingBridge.lean) proves denominator
 positivity, the bounds in (1), denominator comparison, threshold
-majorization and the conditional finite counting conversion. Pole
+majorization, the rational-pole sum of squares, exact conditional
+constants and the conditional finite counting conversion. Pole
 construction, functional calculus, compression and arithmetic cap
 are outside that formalization. The symmetrization and partial-fraction
 steps are elementary; no general novelty claim for them is made.

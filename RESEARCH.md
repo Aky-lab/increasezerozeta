@@ -41,17 +41,19 @@ The certificates use polynomial lattice counts with justified degree and period 
 | Note | Content and status |
 |---|---|
 | [Spectral counting bridge](notes/spectral_counting_bridge.md) | Finite inertia/collar argument and zero-tail reduction. A trace cap of 1/10 is sufficient for the 80% target; the actual cap is open. |
-| [Lean formalization](formal/README.md) | 28 kernel-checked theorems for scalar majorization, boundedness, quadratic resolvent minorization, threshold counts and conditional finite counting. Matrix identification, inertia and arithmetic estimates are supplied hypotheses. |
+| [Lean formalization](formal/README.md) | 31 kernel-checked theorems for scalar majorization, boundedness, resolvent minorization, the rational-pole sum of squares, exact constants and conditional finite counting. Matrix identification, inertia and arithmetic estimates are supplied hypotheses. |
 | [Actual prime trace](notes/actual_prime_trace.md) | Proof draft reducing the Weil matrix to a prime matrix and evaluating its multiplicatively balanced terms. The required signed off-balance estimate is open. |
 | [Second prime moment](notes/prime_second_moment.md) | Deduction from sampled Montgomery–Vaughan input, with finite-frame errors. Higher-word boundary costs remain. |
 | [Bounded resolvent bridge](notes/bounded_resolvent_bridge.md) | Bounded rational certificate, partial fractions and compression estimate. The signed arithmetic resolvent combination remains open. |
 | [Prime-removal expansion](notes/prime_removal_resolvent.md) | Deterministic remainder and covariance-map bounds. Conditional-phase cancellation and the nonlinear covariance trace remain open. |
-| [Reflected-square certificate](notes/mirror_resolvent_certificate.md) | A certificate in [0,2] with positive weights on three first resolvents. A sufficient arithmetic lower bound at one point remains open. |
+| [Reflected-square certificate](notes/mirror_resolvent_certificate.md) | A certificate in [0,2] and an exact rational majorant. A lower bound at i/4 alone would imply 80.14%; that arithmetic estimate remains open. |
 | [Fixed-taper projection](notes/fixed_taper_projection.md) | A dimension-independent leakage bound, exact Fourier kernel, high-frequency gauge and a whole-space norm obstruction. The projected arithmetic statistic remains unestimated. |
 
 At unit bandwidth, the balanced second, fourth and sixth prime moments are `1/3`, `4/15` and `32/105`. The cubic polynomial certificate's balanced trace is approximately 0.160833; meeting its 0.1 cap requires a signed off-balance contribution at most -0.060833. Small prime increments and operator-norm bounds alone do not establish this cancellation.
 
 The bounded alternative uses `f(x)=q3(x)^2/(1+(1932/2519)^(2/3)*x^2)^3`. It majorizes the nonpositive half-line and reduces the target to three resolvent powers at one nonreal point. This route avoids assuming a sixth-moment limit, while retaining an explicit arithmetic estimate to prove.
+
+The [rational one-point criterion](notes/mirror_resolvent_certificate.md#5-a-rational-one-point-criterion) applies a globally verified majorant directly to the actual symmetric matrix. Its first two moments and resolvent transfer show that `liminf Re m_T(i/4) >= 3529/3536` suffices for 80%. The slightly stronger bound at one gives 80.14%. The scalar proof uses an exact degree-ten Sturm certificate; it assumes no higher arithmetic moment limits.
 
 ## Random-matrix model
 
@@ -83,7 +85,7 @@ The published-input deductions cover specified averaged windows or limited dilat
 ## Research priorities
 
 1. Review the actual-matrix counting bridge and its normalization, including the correspondence with the formal finite theorem.
-2. Estimate the signed prime-phase terms and nonlinear covariance statistic in the bounded resolvent route, or prove suitable one-sided polynomial trace bounds.
+2. Prove or refute the sufficient lower bound at i/4, using the prime-removal phase and covariance identities or another arithmetic approach.
 3. Obtain independent mathematical review of the CUE/sine comparison and continuum certificate definitions.
 4. Resolve the weighted positive-power transport gap in the fourth-moment route.
 

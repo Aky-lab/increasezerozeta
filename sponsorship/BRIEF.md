@@ -4,7 +4,7 @@
 
 Support a six-month investigation of the arithmetic estimate needed to turn an exact continuum moment model into a stronger bound on simple critical-line zeros of the Riemann zeta function. The plan begins with a six-week pilot. The requested budget is **$5,000 in AI credits**, with research subscription access where available. Deterministic computations run locally.
 
-The immediate target is a signed trace estimate for the actual prime operator. Exact finite-model certificates and a conditional counting implication are available; the central arithmetic estimate remains open.
+The immediate target is a lower bound for the actual prime operator's resolvent at i/4. Exact finite-model certificates and a conditional counting implication are available; the central arithmetic estimate remains open.
 
 ## Evidence
 
@@ -15,8 +15,8 @@ The immediate target is a signed trace estimate for the actual prime operator. E
 | [Counting bridge](../notes/spectral_counting_bridge.md) | A sufficient actual-matrix trace hypothesis for the 80% target |
 | [Bounded resolvent reduction](../notes/bounded_resolvent_bridge.md) | An alternative target with controlled compression error and three resolvent powers |
 | [Prime-removal expansion](../notes/prime_removal_resolvent.md) | Local remainder bounds and explicit conditional-phase/covariance terms to estimate |
-| [Positive-weight resolvent criterion](../notes/mirror_resolvent_certificate.md) | A bounded certificate with three first resolvents and a sufficient single-point estimate |
-| [Lean formalization](../formal/README.md) | 28 kernel-checked scalar and conditional finite counting theorems, with an axiom audit |
+| [Rational one-point criterion](../notes/mirror_resolvent_certificate.md) | An exact global majorant; a lower bound of one at i/4 would imply 80.14%, with no higher arithmetic moment hypothesis |
+| [Lean formalization](../formal/README.md) | 31 kernel-checked scalar and conditional finite counting theorems, with an axiom audit |
 | [Local verification record](../results/project_verification_2026-10-05.json) | 33 Python checks and the separate Lean proof audit, including source hashes |
 
 The eighth-order model certificate has origin-mass value `12241115/162540559`, corresponding to a conditional counting conversion of approximately 84.938%. It does not establish a new unconditional zeta-zero bound. Analytic proof notes require independent mathematical review.

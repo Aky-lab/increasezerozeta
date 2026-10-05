@@ -284,6 +284,30 @@ theorem resolvent_quadratic_minorant (r S x : R) (hr : 0 < r) (hS : 0 < S) :
   simp only [Field.div_eq_mul_inv]
   simpa only [Semiring.mul_one] using hp2
 
+omit [LE R] [LT R] [LawfulOrderLT R] [IsLinearOrder R] [OrderedRing R] in
+/-- An integer-coefficient sum of squares for the rational pole i/4. -/
+theorem rational_pole_sos_identity (x : R) :
+    24255*(16*x^2+1)^2-295680*x
+      =55*(21-128*x-96*x^2)^2+32*(55*x-384*x^2)^2+983808*x^4 := by
+  grind
+
+/-- Both signs of the cleared derivative envelope hold on the real line. -/
+theorem rational_pole_derivative_envelope (x : R) :
+    295680*x ≤ 24255*(16*x^2+1)^2 ∧
+    -295680*x ≤ 24255*(16*x^2+1)^2 := by
+  have hpos (t : R) : 0 ≤ 24255*(16*t^2+1)^2-295680*t := by
+    have h1 := OrderedRing.sq_nonneg (a := 21-128*t-96*t^2)
+    have h2 := OrderedRing.sq_nonneg (a := 55*t-384*t^2)
+    have h3 := OrderedRing.sq_nonneg (a := t^2)
+    have h4 := OrderedRing.mul_nonneg (OrderedRing.ofNat_nonneg (R := R) 55) h1
+    have h5 := OrderedRing.mul_nonneg (OrderedRing.ofNat_nonneg (R := R) 32) h2
+    have h6 := OrderedRing.mul_nonneg (OrderedRing.ofNat_nonneg (R := R) 983808) h3
+    have hid := rational_pole_sos_identity t
+    grind
+  have hp := hpos x
+  have hn := hpos (-x)
+  constructor <;> grind
+
 variable [DecidableLE R]
 
 /-- The bad count includes equality at the spectral threshold. -/
@@ -372,6 +396,15 @@ theorem rational_parameter_admissible :
     (0 : Rat) ≤ 4/5 ∧ (4 : Rat)/5 ≤ 1 ∧
       (2519 : Rat)^2*((4 : Rat)/5)^3 ≤ (1932 : Rat)^2 := by decide +kernel
 
+/-- Exact constants for the rational one-point conditional criterion. -/
+theorem rational_one_point_constants :
+    (10119 : Rat)/10000-947/1000+(291/1000)*(4/3)=4529/10000 ∧
+    ((4529 : Rat)/10000-1/10)/(221/625)=3529/3536 ∧
+    (3529 : Rat)/3536 < 1 ∧
+    (4529 : Rat)/10000-221/625=993/10000 ∧
+    (993 : Rat)/10000 < 1/10 ∧
+    (1 : Rat)-2*(993/10000)=4007/5000 := by decide +kernel
+
 end ZeroZeta
 
 #print axioms ZeroZeta.simple_accounting
@@ -402,3 +435,6 @@ end ZeroZeta
 #print axioms ZeroZeta.finite_mirror_certificate_counting
 #print axioms ZeroZeta.resolvent_quadratic_identity
 #print axioms ZeroZeta.resolvent_quadratic_minorant
+#print axioms ZeroZeta.rational_pole_sos_identity
+#print axioms ZeroZeta.rational_pole_derivative_envelope
+#print axioms ZeroZeta.rational_one_point_constants

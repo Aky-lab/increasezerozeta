@@ -29,7 +29,7 @@ CHECKS = (
     ("verify_prime_trace.py", "exact cyclic Fourier normalization, balanced/off-balance word ledgers, open/closed-loop overlaps, prime-base classification, noncommuting telescoping, two-sided projection leakage, sampled mean-value calibrations and signed trace budgets"),
     ("verify_bounded_certificate.py", "exact negative-side majorant coefficients, algebraic partial fractions at a triple pole, block resolvent-power identities, finite two-prime insertion identities, trace bounds and low-moment block obstruction"),
     ("verify_prime_removal.py", "exact noncommuting prime-removal and differentiated grouped trace identities, balanced/unbalanced separation, covariance geometry and small-increment obstruction"),
-    ("verify_mirror_certificate.py", "exact reflected-square certificate, imaginary pole isolation, positive residues, complete rational partial fractions and one-point sufficient target"),
+    ("verify_mirror_certificate.py", "exact reflected-square identities, partial fractions, pole intervals and rational one-point Sturm majorant"),
     ("christoffel_exact.py", "exact moment consumption for supplied moments"),
     ("k8_target.py", "exact target geometry for supplied moments"),
     ("verify_spectator_reduction.py", "finite rational checks of actual-walk exact-v reduction"),

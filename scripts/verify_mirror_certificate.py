@@ -6,7 +6,7 @@ from fractions import Fraction as F
 import hashlib
 from itertools import permutations
 import json
-from math import isqrt
+from math import gcd, isqrt, lcm
 from pathlib import Path
 
 Q = [F(2519), F(-8232), F(7368), F(-1932)]
@@ -14,6 +14,76 @@ D = list(map(F, (6345361, 104885808, 86095872, 3732624)))
 N = list(map(F, (41472816, 131040168, 28469952)))
 P = [a*(-1)**j for j, a in enumerate(D)]
 BRACKETS = [(F(1,16), F(1,15)), (F(1), F(2)), (F(20), F(24))]
+
+
+def trim(p):
+    p = list(p)
+    while len(p)>1 and p[-1]==0:
+        p.pop()
+    return p
+
+
+def primitive(p):
+    """Scale by a positive rational to primitive integer coefficients."""
+    p = trim(p)
+    common = lcm(*(x.denominator for x in p))
+    integers = [int(x*common) for x in p]
+    content = gcd(*integers)
+    return [F(x//content) for x in integers] if content else [F(0)]
+
+
+def divide(a,b):
+    """Exact Euclidean division with an independently checked identity."""
+    a,b = trim(a),trim(b)
+    assert b!=[0]
+    r = list(a)
+    q = [F(0)]*max(1,len(a)-len(b)+1)
+    while r!=[0] and len(r)>=len(b):
+        k = len(r)-len(b)
+        c = r[-1]/b[-1]
+        q[k] += c
+        for j,x in enumerate(b):
+            r[j+k] -= c*x
+        r = trim(r)
+    assert trim(add(mul(q,b),r))==a
+    assert r==[0] or len(r)<len(b)
+    return trim(q),r
+
+
+def sturm(p):
+    """Signed remainder chain, retaining sign under positive rescaling."""
+    p = primitive(p)
+    assert len(p)>1
+    out = [p,primitive([F(j)*p[j] for j in range(1,len(p))])]
+    while out[-1]!=[0] and len(out[-1])>1:
+        _,r = divide(out[-2],out[-1])
+        if r==[0]:
+            break
+        out.append(primitive(scale(r,F(-1))))
+    signs = [[(-1 if q[-1]<0 else 1)*
+              ((-1)**(len(q)-1) if side<0 else 1)
+              for q in out] for side in (-1,1)]
+    variations = [sum(a!=b for a,b in zip(s,s[1:])) for s in signs]
+    return out,signs,variations
+
+
+def sturm_self_checks():
+    # Include repeated roots, mixed real/nonreal roots, sign reversal and
+    # no-root polynomials; the expected counts follow from explicit factors.
+    cases = 0
+    for roots in ((),(F(0),),(F(-2),F(1)),(F(-2),F(-2),F(1)),
+                  (F(-3),F(-1),F(0),F(2),F(2))):
+        for nonreal in (1,2,3):
+            p = [F(1)]
+            for root in roots:
+                p = mul(p,[-root,F(1)])
+            for _ in range(nonreal):
+                p = mul(p,[F(nonreal),F(0),F(1)])
+            for sign in (F(-1),F(1)):
+                _,_,variations = sturm(scale(p,sign))
+                assert variations[0]-variations[1]==len(set(roots))
+                cases += 1
+    return cases
 
 
 def add(a, b):
@@ -229,15 +299,71 @@ def two_moment_minorants():
     return cases
 
 
+def rational_one_point_certificate():
+    """Prove the global majorant directly with a rational Sturm certificate."""
+    d = [F(0)]*7
+    for j,c in enumerate(D):
+        d[2*j] = c
+    a = [F(10119,10000),F(-947,1000),F(291,1000)]
+    gden = [F(1,16),F(0),F(1)]
+    weight = F(221,625)
+    residual = add(add(mul(mul(a,d),gden),
+                       scale(mul([F(0),F(1)],d),-weight)),
+                   scale(mul(mul(Q,Q),gden),F(-1)))
+    integer_residual = list(map(F,(755097959,-4357552606,43027979006,
+        57315066112,810605696640,-327459190272,5298392930544,
+        -8736579090144,4026592652256,-565567188480,173790973440)))
+    assert scale(residual,F(160000))==integer_residual
+    chain,signs,variations = sturm(integer_residual)
+    assert [len(p)-1 for p in chain]==list(range(10,-1,-1))
+    assert signs==[[1,-1,-1,1,-1,-1,-1,-1,1,-1,-1],
+                  [1,1,-1,-1,-1,1,-1,1,1,1,-1]]
+    assert variations==[5,5] and integer_residual[0]>0
+    # The nonzero constant final remainder proves squarefreeness; Sturm's
+    # theorem and positivity at zero then prove positivity everywhere.
+    assert len(chain[-1])==1 and chain[-1][0]!=0
+    # Independent coefficient comparison for the rational-pole SOS.
+    sos = add(add(scale(mul([F(21),F(-128),F(-96)],
+                           [F(21),F(-128),F(-96)]),F(55)),
+                  scale(mul([F(0),F(55),F(-384)],
+                            [F(0),F(55),F(-384)]),F(32))),
+              [F(0),F(0),F(0),F(0),F(983808)])
+    assert sos==add(scale(mul([F(1),F(0),F(16)],
+                             [F(1),F(0),F(16)]),F(24255)),
+                    [F(0),F(-295680)])
+    expectation = a[0]+a[1]+F(4,3)*a[2]
+    threshold = (expectation-F(1,10))/weight
+    cap = expectation-weight
+    conversion = F(1)-2*cap
+    assert expectation==F(4529,10000)
+    assert threshold==F(3529,3536)<1
+    assert cap==F(993,10000)<F(1,10)
+    assert conversion==F(4007,5000)
+    return dict(majorant_polynomial=list(map(str,a)),
+                rational_pole='1/4',resolvent_weight=str(weight),
+                cleared_residual_multiplier='160000',
+                cleared_residual_coefficients=list(map(str,integer_residual)),
+                sturm_chain_coefficients=[list(map(str,p)) for p in chain],
+                sturm_signs_at_infinities=signs,sturm_variations=variations,
+                positive_value_at_zero=str(integer_residual[0]),
+                sturm_self_check_cases=sturm_self_checks(),
+                cleared_derivative_sos_coefficients=list(map(str,sos)),
+                moment_expectation=str(expectation),
+                sufficient_actual_resolvent_threshold=str(threshold),
+                conditional_trace_cap_at_resolvent_one=str(cap),
+                conditional_simple_zero_proportion=str(conversion))
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path)
     args = parser.parse_args()
     isolated,contribution,target = poles()
-    record = dict(schema_version=1,generated_at_utc=datetime.now(timezone.utc).isoformat(),
+    record = dict(schema_version=2,generated_at_utc=datetime.now(timezone.utc).isoformat(),
                   checker_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                   scalar=scalar_identities(),partial_fractions=partial_fractions(),
                   two_moment_quadratic_minorants=two_moment_minorants(),
+                  rational_one_point_certificate=rational_one_point_certificate(),
                   isolated_poles=isolated,
                   large_pole_moment_contribution_interval=list(map(str,contribution)),
                   sufficient_small_pole_target_interval=list(map(str,target)),
@@ -246,7 +372,7 @@ def main():
     if args.output:
         args.output.write_text(json.dumps(record,indent=2)+'\n',encoding='utf-8')
     print('PASS: mirror square identities; three simple imaginary pole pairs; positive weights;')
-    print('complete rational partial fractions; quadratic lower bound; isolated one-point target.')
+    print('partial fractions; quadratic lower bounds; exact rational one-point Sturm majorant.')
     print('The actual arithmetic resolvent inequality remains unproved.')
 
 

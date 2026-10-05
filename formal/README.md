@@ -1,6 +1,6 @@
 # Formal scope of the counting bridge
 
-[CountingBridge.lean](CountingBridge.lean) contains 28 kernel-checked
+[CountingBridge.lean](CountingBridge.lean) contains 31 kernel-checked
 theorems using Lean 4.33.0 and its standard library. It requires neither
 Mathlib nor a package download. The file checks the scalar certificate
 and the finite count implication conditional on the spectral inputs.
@@ -14,7 +14,8 @@ and the finite count implication conditional on the spectral inputs.
 | Finite spectral list | Pointwise majorization bounds the number of bad entries by the certificate sum; a one-tenth sum cap implies a one-tenth count cap. |
 | Conditional counting conversion | The finite trace-cap input gives `4*N <= 5*S + 10*C + 9*delta`. |
 | Resolvent minorant | A cleared polynomial-square identity gives a global quadratic lower bound for `x/(x^2+r^2)`, for positive r and S. |
-| Exact rational arithmetic | The supplied cubic model moments give 247/2519, margin 49/25190 and conversion 2025/2519. A rational parameter witness is checked. |
+| Rational-pole stability | An integer sum of squares proves both signs of the cleared envelope underlying `abs(x)/(x^2+1/16)^2<=21`. |
+| Exact rational arithmetic | The supplied cubic model constants and parameter witness are checked, as are the one-point threshold 3529/3536, conditional cap 993/10000 and conversion 4007/5000. |
 
 Here N is the target multiplicity, S its simple-on-line count, C the
 collar multiplicity, and delta a nonnegative dimension deficit satisfying
@@ -61,6 +62,18 @@ Choosing S=(r^2+4/3)/(r+1) and taking the supplied first two
 moments gives the [sharp two-moment lower bound](../notes/mirror_resolvent_certificate.md)
 in the proof note. The moment limits, sharpness construction and
 operator functional calculus are outside this Lean file.
+
+The rational-pole lemmas check the exact integer sum of squares
+
+    24255*(16*x^2+1)^2-295680*x
+      =55*(21-128*x-96*x^2)^2
+       +32*(55*x-384*x^2)^2+983808*x^4,
+
+and the corresponding nonnegative inequalities at x and -x. The
+one-point constants theorem uses kernel reduction to check the six
+rational equalities and comparisons used in the conditional criterion.
+The degree-ten Sturm certificate for the global rational majorant is
+verified by the Python checker and the proof note, outside Lean.
 
 ## What is still an input
 
