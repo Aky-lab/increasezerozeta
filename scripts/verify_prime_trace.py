@@ -11,7 +11,8 @@ from datetime import datetime, timezone
 from fractions import Fraction as F
 from itertools import product
 import json
-from math import comb, factorial, log, pi, sin, sqrt
+import hashlib
+from math import comb, factorial, floor, isfinite, log, pi, sin, sqrt
 from pathlib import Path
 import random
 
@@ -436,6 +437,120 @@ def fixed_taper_geometry():
                 continuous_leakage_proof='notes/fixed_taper_projection.md')
 
 
+def midpoint_alias_checks():
+    # At two centered midpoint nodes, fourth roots of unity are Gaussian
+    # rationals. Independently compare direct samples with the signed aliases.
+    cases = 0
+    for k in (-1,0,1):
+        for degree in range(1,15):
+            coefficients = {j:F(-1 if j%2 else 1,abs(j)+1) for j in range(-degree,degree+1)}
+            sampled = sum(c*(ROOTS[(j-k)%4]+ROOTS[-(j-k)%4])*F(1,2)
+                          for j,c in coefficients.items())
+            aliased = sum(c*(-1 if ((j-k)//2)%2 else 1)
+                          for j,c in coefficients.items() if (j-k)%2==0)
+            assert sampled==G(F(aliased))
+            cases += 1
+    # Rational comparison in the reciprocal-square tail; the integral of
+    # (t-1/2)^-2 from 1 to infinity is two, and its first term is four.
+    assert F(4)+F(2)==6
+    for q in range(2,100):
+        assert F(1,1)/(F(q)-F(1,2))**2 <= F(1,1)/(F(q-1)-F(1,2))**2
+    return cases
+
+
+def audit_prime_probe_record():
+    root = Path(__file__).resolve().parents[1]
+    record = json.loads((root/'results/prime_matrix_probe_2026-10-05.json').read_text())
+    assert record['script_sha256']==hashlib.sha256((root/'scripts/prime_matrix_probe.py').read_bytes()).hexdigest()
+    assert record['arithmetic_cap_proved'] is False and record['numeric_interval_certified'] is False
+    assert record['aliasing_bound_excludes_roundoff'] is True and record['pole']=='11/40'
+    assert record['closed_kernel_calibration']['cases']==15
+    assert record['closed_kernel_calibration']['maximum_absolute_error']<1e-10
+    assert [c['height'] for c in record['cases']]==[128,256,512,1024]
+    case_count = 0
+    for c in record['cases']:
+        height,ell,ell1 = c['height'],c['ell'],c['ell1']
+        d,nodes = c['dimension'],c['midpoint_nodes']
+        assert abs(ell-log(height/(2*pi)))<1e-14
+        assert abs(ell1-ell-2*log(2)+1)<1e-14
+        assert d==floor(ell*height/(2*pi)) and nodes>=2*d and nodes%2==0
+        assert c['comparison_nodes']==2*nodes and c['bandwidth']==1
+        cutoff = c['prime_cutoff']
+        assert cutoff==floor(height/(2*pi))
+        # Independent trial division, rather than the experiment's sieve.
+        powers = []
+        for n in range(2,cutoff+1):
+            p = next(p for p in range(2,n+1) if n%p==0)
+            left,exponent = n,0
+            while left%p==0:
+                left //= p
+                exponent += 1
+            if left==1:
+                powers.append((n,p,exponent))
+        assert c['prime_power_count']==len(powers)
+        assert c['ordinary_prime_count']==sum(e==1 for n,p,e in powers)
+        weight_sum = sum(log(p)/sqrt(n) for n,p,e in powers)
+        assert abs(c['prime_power_weight_sum']-weight_sum)<1e-13
+        coefficient_error = 15*ell/(2*nodes**2)
+        entry_error = 2*weight_sum*coefficient_error/ell1
+        hs_error = sqrt(d)*entry_error
+        frozen_hs_error = sqrt(d)*(entry_error+coefficient_error)
+        bounds = dict(analytic_coefficient_aliasing_bound=coefficient_error,
+                      analytic_entry_aliasing_bound=entry_error,
+                      analytic_normalized_hs_aliasing_bound=hs_error,
+                      analytic_resolvent_aliasing_bound=hs_error/(11/40)**2,
+                      analytic_mirror_trace_aliasing_bound=7*hs_error,
+                      analytic_frozen_normalized_hs_aliasing_bound=frozen_hs_error,
+                      analytic_frozen_resolvent_aliasing_bound=frozen_hs_error/(11/40)**2,
+                      analytic_frozen_mirror_trace_aliasing_bound=7*frozen_hs_error)
+        for name,value in bounds.items():
+            assert abs(c[name]-value)<1e-15
+        assert c['grid_difference_normalized_hs']<=1.25*hs_error+1e-12
+        assert c['grid_difference_frozen_normalized_hs']<=1.25*frozen_hs_error+1e-12
+        assert c['grid_difference_resolvent_real']<=1.25*hs_error/(11/40)**2+1e-12
+        assert c['grid_difference_mirror_trace']<=1.25*7*hs_error+1e-12
+        assert c['matrix_symmetry_error']<1e-14
+        assert c['centered_coefficient_imaginary_residual']<1e-12
+        assert len(c['original_entry_integral_checks'])==4
+        direct_error = max(abs(row['fft_entry']-row['direct_entry'])
+                           for row in c['original_entry_integral_checks'])
+        assert direct_error==c['original_entry_integral_maximum_error']<1e-9
+        ramp = list(map(F,(0,0,0,10,-15,6)))
+        ramp_square = square(ramp)
+        ramp_squared_integral = sum(coefficient/F(j+1) for j,coefficient in enumerate(ramp_square))
+        assert ramp_squared_integral==F(181,462)
+        deficit_constant = 2-2*ramp_squared_integral
+        assert deficit_constant==F(281,231)
+        deficit = float(deficit_constant)/ell
+        assert abs(c['frozen_taper_trace']-(1-deficit))<1e-12
+        assert abs(c['exact_frozen_taper_trace_formula']-(1-deficit))<1e-14
+        assert deficit-1e-12<=c['frozen_taper_normalized_hs_deficit']<=sqrt(deficit)+1e-12
+        for label,key in (('compressed_prime_statistics','compressed_prime_eigenvalues'),
+                          ('frozen_archimedean_statistics','frozen_archimedean_eigenvalues')):
+            eigen = c[key]
+            assert len(eigen)==d and all(isfinite(x) for x in eigen)
+            first,second = sum(eigen)/d,sum(x*x for x in eigen)/d
+            r = 11/40
+            resolvent_real = sum(x/(x*x+r*r) for x in eigen)/d
+            resolvent_imag = sum(r/(x*x+r*r) for x in eigen)/d
+            mirror = sum((2519-8232*x+7368*x*x-1932*x**3)**2/
+                         (6345361+104885808*x*x+86095872*x**4+3732624*x**6)
+                         for x in eigen)/d
+            stats = c[label]
+            expected = dict(first_moment=first,second_moment=second,
+                            resolvent_real=resolvent_real,resolvent_imaginary=resolvent_imag,
+                            mirror_trace=mirror,minimum_eigenvalue=min(eigen),maximum_eigenvalue=max(eigen),
+                            nonpositive_fraction=sum(x<=0 for x in eigen)/d,
+                            rational_majorant_trace_bound=1.00912-.83810*first+.22949*second-.41501*resolvent_real)
+            for name,value in expected.items():
+                assert abs(stats[name]-value)<1e-11
+            assert mirror<=stats['rational_majorant_trace_bound']+1e-11
+        case_count += 1
+    return dict(cases=case_count,independent_prime_power_trial_division=True,
+                eigenvalue_aggregates_recomputed=True,source_hash_checked=True,
+                rigorous_numerical_interval=False)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path)
@@ -481,6 +596,8 @@ def main():
     telescope = telescoping_checks(q)
     double_leakage = double_leakage_checks()
     taper_geometry = fixed_taper_geometry()
+    alias_cases = midpoint_alias_checks()
+    prime_probe = audit_prime_probe_record()
     means,geometric,aliases,envelopes = logarithmic_mean_value_calibrations()
     leakage = 0
     for d in range(1,12):
@@ -511,6 +628,8 @@ def main():
         'projection_leakage_count_cases':leakage,
         'exact_double_projection_and_open_word_cases':double_leakage,
         'fixed_taper_geometry':taper_geometry,
+        'exact_midpoint_alias_calibration_cases':alias_cases,
+        'finite_prime_probe_record_audit':prime_probe,
         'numerical_logarithmic_sampled_mean_value_cases':means,
         'numerical_geometric_endpoint_cases':geometric,
         'numerical_same_sign_alias_cases':aliases,

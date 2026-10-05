@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T20:53:44.408028+00:00",
+  "generated_at_utc": "2026-10-05T21:10:25.222688+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "683204a48a3d368ff303e4c8d590d5f782d2bc0c81306b66b3c19ab4df920dea",
+  "runner_sha256": "10e22721729e2aa44ee4d2efffd26a8b43f899358eeab6e1ed045c015f06386c",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -14,6 +14,7 @@
     "scripts/mixed_cycle_lattice.py": "f935aa37d440c506a9e87204e7a244b5208f8558a9fc99fb564815992c3fa0a0",
     "scripts/model_moments.py": "1887303965ad29d161b420892d8317867e6790b59c6db15de61244bcf035d28c",
     "scripts/paired_cycle_lattice.py": "13e6693457acc9bb0be5e14a33a9d9710ed05a9093f8b360e5ca3259f96eb864",
+    "scripts/prime_matrix_probe.py": "023c2633188718e698e4abe79aa9a56872fea146a206d1f10348e212f1944dcd",
     "scripts/pure_cycle_eight.py": "2c549e382c153f685e04e5d550d903b04cb6cba5a788d20461c8b9c86133f9e0",
     "scripts/pure_cycle_lattice.py": "e581cbfa542d9d10746e4e8703cd4490e3ab3d014ca13b5c6a5d96e4c37466d8",
     "scripts/reciprocity_certificates.py": "572cd5d4e30450ca0f341c608b456a0d8d6c3b15b6eb2aab953693b1fd0a06b0",
@@ -33,16 +34,16 @@
     "scripts/verify_lean_counting.py": "81f3be04a77fed3dcfb0ba9884158fc796557e15bce8311b78d954ca3c646368",
     "scripts/verify_lemmas.py": "a5d3fb7a7b7460a182773fc743b329d8e593e94a30ecf50d7a82bc9b1619a125",
     "scripts/verify_lock_frame.py": "31c66514072a4e4f71b53b7938513e8489b9bbf943c857dbe5163fce3944ec56",
-    "scripts/verify_mirror_certificate.py": "af9bc5993ba98b94c8c0527a3674244758ec239293c360e4c8b858365854f352",
+    "scripts/verify_mirror_certificate.py": "201f29db2efb16778f7fc6466877dd9a93e0d73c2926ad47460f5b783184680a",
     "scripts/verify_mixed_cycles.py": "1773ecc9ef8357e6f3406f2262350bb50cfb8d47966a81174c30efd870ab1663",
     "scripts/verify_model_certificates.py": "82eeb6c7bd3b4e4c22547fce0f4066f86927b22eb22a25b88ead8ff23cf25874",
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
     "scripts/verify_presieved_pairs.py": "93bf6795ea056efe1f8d67cc2146da87fab0bbf0b53ebe3db6d3bbf9889df995",
     "scripts/verify_prime_pair_transport.py": "c2f0d53493c0cc0727a95faa6b157dd2e030548a2510041ca60a02dc4b209735",
     "scripts/verify_prime_removal.py": "c95e2af10c155d57b96aa1e016eefc3065ee8404bcebb01d3c71e923ea795918",
-    "scripts/verify_prime_trace.py": "9cdc54e5b1cbe757521d15f38ac669248fdec30791714d2e4a742c64ba60e792",
+    "scripts/verify_prime_trace.py": "f4d9b45e0ccbe733d4b1058c0bb8c010e7e23eb2e39741084baf70e5c8f56ae4",
     "scripts/verify_progression_profile.py": "3f271788f9d1fd5340cbea4855cc5d35a844052b6d30731d94b5a181221a751a",
-    "scripts/verify_project.py": "683204a48a3d368ff303e4c8d590d5f782d2bc0c81306b66b3c19ab4df920dea",
+    "scripts/verify_project.py": "10e22721729e2aa44ee4d2efffd26a8b43f899358eeab6e1ed045c015f06386c",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
     "scripts/verify_rectangle_tail.py": "057311dda5e6a07a5fca63fc4f127fde7568145dd3745544effa604dbd54ea59",
@@ -191,8 +192,12 @@
     },
     {
       "script": "scripts/verify_prime_trace.py",
-      "sha256": "9cdc54e5b1cbe757521d15f38ac669248fdec30791714d2e4a742c64ba60e792",
-      "scope": "exact cyclic Fourier normalization, balanced/off-balance word ledgers, open/closed-loop overlaps, prime-base classification, noncommuting telescoping, two-sided projection leakage, sampled mean-value calibrations and signed trace budgets",
+      "sha256": "f4d9b45e0ccbe733d4b1058c0bb8c010e7e23eb2e39741084baf70e5c8f56ae4",
+      "scope": "exact cyclic Fourier normalization, word ledgers, projection leakage, midpoint aliases, sampled mean-value calibrations and finite prime-matrix record audit",
+      "dependency_sha256": {
+        "scripts/prime_matrix_probe.py": "023c2633188718e698e4abe79aa9a56872fea146a206d1f10348e212f1944dcd",
+        "results/prime_matrix_probe_2026-10-05.json": "ae9cae8dc0b257754be703bea5e5799d56bd073f8437254588729f167ae9c54d"
+      },
       "exit_code": 0,
       "stdout": "PASS: 63 exact Fourier entries, six word-ledger degrees,\n      174 periodic closed loops and 24 noncommuting telescopes.\n      147 exact double-leakage cases, 36 sampled mean-value calibrations.\nBalanced trace limit: 5102709/31726805\nUnproved off-balance cap for 80%: -3860057/63453610\n",
       "stderr": "",
@@ -218,7 +223,7 @@
     },
     {
       "script": "scripts/verify_mirror_certificate.py",
-      "sha256": "af9bc5993ba98b94c8c0527a3674244758ec239293c360e4c8b858365854f352",
+      "sha256": "201f29db2efb16778f7fc6466877dd9a93e0d73c2926ad47460f5b783184680a",
       "scope": "exact reflected-square identities, partial fractions, pole intervals, rational one-point Sturm majorant and model-moment Bessel disks",
       "dependency_sha256": {
         "scripts/model_moments.py": "1887303965ad29d161b420892d8317867e6790b59c6db15de61244bcf035d28c",

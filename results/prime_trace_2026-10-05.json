@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-05T20:14:27.127109+00:00",
+  "generated_at_utc": "2026-10-05T21:08:50.018873+00:00",
   "status": "finite algebra and numerical calibrations checked; analytic proof draft; higher off-balance target unproved",
   "p3_coefficients": [
     "-277/2519",
@@ -168,6 +168,14 @@
     "numerical_direct_overlap_kernel_cases": 24,
     "numerical_direct_overlap_max_error": 3.9968028886505635e-14,
     "continuous_leakage_proof": "notes/fixed_taper_projection.md"
+  },
+  "exact_midpoint_alias_calibration_cases": 42,
+  "finite_prime_probe_record_audit": {
+    "cases": 4,
+    "independent_prime_power_trial_division": true,
+    "eigenvalue_aggregates_recomputed": true,
+    "source_hash_checked": true,
+    "rigorous_numerical_interval": false
   },
   "numerical_logarithmic_sampled_mean_value_cases": 36,
   "numerical_geometric_endpoint_cases": 4104,

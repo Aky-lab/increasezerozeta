@@ -16,6 +16,7 @@ The immediate target is a lower bound for the actual prime operator's resolvent 
 | [Bounded resolvent reduction](../notes/bounded_resolvent_bridge.md) | An alternative target with controlled compression error and three resolvent powers |
 | [Prime-removal expansion](../notes/prime_removal_resolvent.md) | Local remainder bounds and explicit conditional-phase/covariance terms to estimate |
 | [Rational one-point criterion](../notes/mirror_resolvent_certificate.md) | An exact global majorant; a lower bound of 0.91 at 11i/40 would imply approximately 80.13%, with no higher arithmetic moment hypothesis. The certified model bound exceeds 0.9112. |
+| [Finite prime-matrix experiments](../notes/fixed_taper_projection.md#4-finite-prime-matrix-experiments) | Actual prime-power sums at four heights, explicit sampling bounds and finite taper-loss diagnostics; no asymptotic cap is inferred |
 | [Lean formalization](../formal/README.md) | 31 kernel-checked scalar and conditional finite counting theorems, with an axiom audit |
 | [Local verification record](../results/project_verification_2026-10-05.json) | 33 Python checks and the separate Lean proof audit, including source hashes |
 

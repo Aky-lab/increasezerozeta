@@ -199,6 +199,99 @@ directions has I-K eigenvalues 0,2,1,1,1,1. Its normalized moments
 are 1 and 4/3, but its reflected-square certificate trace is at least
 1/6>1/10. This is an abstract example, not an actual prime operator.
 
+## 4. Finite prime-matrix experiments
+
+The optional [experiment](../scripts/prime_matrix_probe.py) constructs
+the matrix in (8) for the specified C2 quintic taper, including all
+prime powers up to X. It retains the height phases and indices
+0,...,d-1. It evaluates the compressed matrix I-H_T, not the full
+projected resolvent of J_T and not the zero-sum Weil matrix B_T.
+NumPy is needed for the FFT and symmetric eigensolver.
+The implementation uses the
+[documented real FFT](https://numpy.org/doc/2.3/reference/generated/numpy.fft.rfft.html),
+divides its forward output by N and applies the centered midpoint phase.
+
+For even N, sample the centered overlap on the midpoint grid
+u_j=-L/2+(j+1/2)*L/N. Absolute Fourier convergence gives the exact
+sampling identity
+
+    c_k^grid=sum_(q in Z) (-1)^q*c_(k+q*N).
+
+If N>=2*d and |k|<d, the second envelope in (1), C2=45/2 and
+the monotone integral bound
+
+    sum_(q!=0) 1/(k+q*N)^2
+       <=(2/N^2)*sum_(q>=1) 1/(q-1/2)^2
+       <=12/N^2
+
+give, using pi>3,
+
+    |c_k^grid-c_k|<=15*L/(2*N^2)=epsilon_c.                (14)
+
+Indeed the last positive-index sum is at most its first term four
+plus the integral from one to infinity, which is two.
+Put W=sum_(n<=X) Lambda(n)/sqrt(n). The analytical aliasing bounds are
+
+    max_(a,b) |H_ab^grid-H_ab|<=2*W*epsilon_c/ell1=epsilon_H,
+    ||H^grid-H||_(2,d)<=sqrt(d)*epsilon_H,
+    |tau_d(I-H^grid-i*r)^(-1)-tau_d(I-H-i*r)^(-1)|
+        <=r^(-2)*sqrt(d)*epsilon_H.                       (15)
+
+The [positive-residue decomposition](mirror_resolvent_certificate.md)
+also gives ||f_m'||_infinity<=sum_j w_j/v_j=16464/2519<7.
+Hoffman--Wielandt and Cauchy--Schwarz therefore bound the corresponding
+f_m trace error by 7*sqrt(d)*epsilon_H.
+
+These are analytical sampling-error bounds. They exclude roundoff in
+the FFT, logarithms, phase evaluation and eigensolver; the stored
+numbers are not rigorously certified numerical intervals.
+Each run also doubles the grid, checks fifteen coefficients against
+the closed formula (9), and compares four matrix entries with direct
+integration of the original uncentered F_ab formula.
+
+There is an exact finite-height taper deficit. Let A0 be the Toeplitz
+Gram matrix of phi^2 from the archimedean reduction. Direct polynomial
+integration gives
+
+    integral_0^1 chi(v)^2 dv=181/462,
+    tau_d A0=1-281/(231*L).                               (16)
+
+Since 0<=A0<=I, its normalized Schatten-two deficit lies between
+281/(231L) and sqrt(281/(231L)). It need not be small at the benchmark
+heights. To expose this effect, the experiment also evaluates A0-H_T.
+This freezes the gamma-factor density and omits the pole term; it is
+an illustrative approximation, not the exact Weil matrix. Its aliasing
+bound uses epsilon_H+epsilon_c because A0 is sampled too.
+
+The [record](../results/prime_matrix_probe_2026-10-05.json) uses N=32768
+and the rational pole r=11/40. Rounded values are
+
+| T | d | Re tau_d(I-H_T-11i/40)^(-1) | tau_d f_m(I-H_T) | tau_d f_m(A0-H_T) | tau_d A0 |
+|---:|---:|---:|---:|---:|---:|
+| 128 | 61 | 0.956162 | 0.000417 | 0.261628 | 0.596421 |
+| 256 | 151 | 0.972467 | 0.000473 | 0.221000 | 0.671877 |
+| 512 | 358 | 0.983629 | 0.001066 | 0.193600 | 0.723562 |
+| 1024 | 830 | 0.992760 | 0.002502 | 0.174873 | 0.761180 |
+
+The I-H_T second moments range from about 1.041 to 1.107, below the
+proved limiting value 4/3. The analytical resolvent aliasing bounds
+range from about 8.4e-6 to 1.2e-4; grid differences are much smaller.
+Thus the finite traces and resolvents must be read alongside the
+normalization errors. These four heights establish no limiting cap,
+model convergence, or improvement in zeta-zero counts.
+
+Reproduce the default run from the repository root:
+
+```sh
+python scripts/prime_matrix_probe.py --output prime_matrix_experiment.json
+```
+
+The standard-library checker audits the stored source hash, independently
+enumerates prime powers by trial division, recomputes eigenvalue
+aggregates and checks the sampling bounds and exact taper deficit.
+It does not rerun the NumPy experiment or certify floating-point
+roundoff. The optional command above performs the numerical reproduction.
+
 ## Reproduction and proof scope
 
 `python scripts/verify_prime_trace.py` checks the quintic polynomial,

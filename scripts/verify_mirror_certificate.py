@@ -236,9 +236,11 @@ def partial_fractions():
         for j in range(3):
             numerator = add(numerator,scale(adj[j][i],w[i][j]))
     assert numerator == scale(N,1/D[3])
+    assert numerator[0]/determinant[0]==F(16464,2519)<7
     assert sum(w[i][i] for i in range(3)) == N[2]/D[3]
     return dict(companion_determinant=list(map(str,determinant)),
                 trace_adjugate_numerator=list(map(str,numerator)),
+                mirror_global_lipschitz_bound=str(F(16464,2519)),
                 sum_weights=str(N[2]/D[3]))
 
 

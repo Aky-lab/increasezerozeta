@@ -48,6 +48,7 @@ The certificates use polynomial lattice counts with justified degree and period 
 | [Prime-removal expansion](notes/prime_removal_resolvent.md) | Deterministic remainder and covariance-map bounds. Conditional-phase cancellation and the nonlinear covariance trace remain open. |
 | [Reflected-square certificate](notes/mirror_resolvent_certificate.md) | A certificate in [0,2] and an exact rational majorant. A lower bound of 0.91 at 11i/40 would imply approximately 80.13%; the model supports the threshold, while the actual arithmetic estimate remains open. |
 | [Fixed-taper projection](notes/fixed_taper_projection.md) | A dimension-independent leakage bound, exact Fourier kernel, high-frequency gauge and a whole-space norm obstruction. The projected arithmetic statistic remains unestimated. |
+| [Finite prime-matrix experiments](notes/fixed_taper_projection.md#4-finite-prime-matrix-experiments) | Four deterministic heights, analytical Fourier-aliasing bounds, doubled grids and a quantified taper deficit. These are finite numerical results, not an asymptotic cap. |
 
 At unit bandwidth, the balanced second, fourth and sixth prime moments are `1/3`, `4/15` and `32/105`. The cubic polynomial certificate's balanced trace is approximately 0.160833; meeting its 0.1 cap requires a signed off-balance contribution at most -0.060833. Small prime increments and operator-norm bounds alone do not establish this cancellation.
 

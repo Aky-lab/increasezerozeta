@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "generated_at_utc": "2026-10-05T20:52:43.276215+00:00",
-  "checker_sha256": "af9bc5993ba98b94c8c0527a3674244758ec239293c360e4c8b858365854f352",
+  "generated_at_utc": "2026-10-05T21:06:07.390154+00:00",
+  "checker_sha256": "201f29db2efb16778f7fc6466877dd9a93e0d73c2926ad47460f5b783184680a",
   "scalar": {
     "square_coefficients": [
       "6345361",
@@ -28,6 +28,7 @@
       "780001/22218",
       "1228/161"
     ],
+    "mirror_global_lipschitz_bound": "16464/2519",
     "sum_weights": "1228/161"
   },
   "two_moment_quadratic_minorants": [

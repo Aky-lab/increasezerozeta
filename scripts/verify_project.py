@@ -26,7 +26,7 @@ CHECKS = (
     ("verify_dilation_coverage.py", "independent original-overlap polygon integrals, full piecewise cutoff law, affine-root integration, exact quantiles and reduced prime-power classification"),
     ("verify_progression_profile.py", "physical coefficient-scale mapping, closed profile law, original-overlap slice cubics, polyhedral breakpoints and exact larger-profile certificates"),
     ("verify_spectral_bridge.py", "actual-matrix certificate algebra, exact indefinite inertia, threshold and collar accounting, one-sided trace budgets and Fourier/progression range obstructions"),
-    ("verify_prime_trace.py", "exact cyclic Fourier normalization, balanced/off-balance word ledgers, open/closed-loop overlaps, prime-base classification, noncommuting telescoping, two-sided projection leakage, sampled mean-value calibrations and signed trace budgets"),
+    ("verify_prime_trace.py", "exact cyclic Fourier normalization, word ledgers, projection leakage, midpoint aliases, sampled mean-value calibrations and finite prime-matrix record audit"),
     ("verify_bounded_certificate.py", "exact negative-side majorant coefficients, algebraic partial fractions at a triple pole, block resolvent-power identities, finite two-prime insertion identities, trace bounds and low-moment block obstruction"),
     ("verify_prime_removal.py", "exact noncommuting prime-removal and differentiated grouped trace identities, balanced/unbalanced separation, covariance geometry and small-increment obstruction"),
     ("verify_mirror_certificate.py", "exact reflected-square identities, partial fractions, pole intervals, rational one-point Sturm majorant and model-moment Bessel disks"),
@@ -72,6 +72,11 @@ def main():
             record["dependency_sha256"] = {
                 "scripts/"+dependency: hashlib.sha256((ROOT/"scripts"/dependency).read_bytes()).hexdigest()
                 for dependency in ("model_moments.py","christoffel_exact.py")
+            }
+        if name == "verify_prime_trace.py":
+            record["dependency_sha256"] = {
+                dependency: hashlib.sha256((ROOT/dependency).read_bytes()).hexdigest()
+                for dependency in ("scripts/prime_matrix_probe.py", "results/prime_matrix_probe_2026-10-05.json")
             }
         if name == "verify_lean_counting.py":
             record["dependency_sha256"] = {

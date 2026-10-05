@@ -52,6 +52,14 @@ python scripts/verify_cue_model.py --record results/reciprocity_reproduction.jso
 
 Individual evaluators and their independent checks are linked from the [research guide](RESEARCH.md).
 
+With NumPy installed, reproduce the [finite prime-matrix experiments](notes/fixed_taper_projection.md#4-finite-prime-matrix-experiments):
+
+```sh
+python scripts/prime_matrix_probe.py --output prime_matrix_experiment.json
+```
+
+This compares the compressed prime statistic with the frozen taper Gram matrix, records analytical aliasing bounds and checks a doubled Fourier grid. Finite numerical results do not establish the limiting arithmetic estimate.
+
 ## Review and support
 
 Mathematical review is especially useful for the model normalization, the CUE/sine comparison and the connection between the spectral counting argument and the actual prime operator. Review comments should identify the statement, its assumptions and the step requiring justification.
