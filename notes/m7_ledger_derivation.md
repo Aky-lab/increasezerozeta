@@ -1,3 +1,5 @@
+> **SUPERSEDED — actual-walk audit, 5 October 2026:** The historical distance-three spectator reduction added an absent s1 prefix. Its 7/72 numerical preference and dependent m7/m8 scenarios are quarantined. The reason stated below for retiring 1/8 is withdrawn. Neither fraction is certified. Read `results/spectator_actual_walk_audit.md` and the corrected `notes/spectator_52_eliminate_v.md`. The material below is preserved as historical evidence, not the current candidate policy.
+
 # Bell(7) derivation of the seventh-moment ledger
 
 **Status:** exact combinatorial reduction, conditional on extending the same frozen-singleton identities and 3-block vanishing rule already consumed at \(m_5,m_6\). The numerical value of \(m_7\) remains candidate-level because \(\{5,2\}\) and \(C_7\) are not yet both exact-certified.

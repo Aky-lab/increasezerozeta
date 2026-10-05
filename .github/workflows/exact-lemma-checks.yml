@@ -15,19 +15,10 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Run universality and core checks
-        run: python scripts/verify_lemmas.py
-      - name: Run exact Christoffel checks
-        run: python scripts/christoffel_exact.py
-      - name: Run exact k=8 target checks
-        run: python scripts/k8_target.py
-      - name: Run Bell(7) gate
-        run: python scripts/bell7_gate.py
-      - name: Run candidate m7 ledger
-        run: python scripts/m7_ledger.py
-      - name: Run candidate m8 aggregate ledger
-        run: python scripts/m8_ledger.py
-      - name: Run Bell(8) orbit gates
-        run: python scripts/bell8_orbits.py
-      - name: Benchmark one exact {5,2} polytope term
-        run: timeout 600 python scripts/exact_polytope_52.py 1 --terms 0:1
+      - name: Run scoped research checks and record evidence
+        run: python scripts/sponsorship_evidence.py --output research-evidence.json
+
+      - name: Run frontier combinatorial gates
+        run: |
+          python scripts/bell7_gate.py
+          python scripts/bell8_orbits.py
