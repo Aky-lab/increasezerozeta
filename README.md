@@ -34,6 +34,14 @@ arithmetic condition is one signed combination of three resolvent powers
 at a single nonreal point. Its estimate remains open; exact finite checks
 verify the partial fractions and block identities.
 
+The [prime-removal expansion](notes/prime_removal_resolvent.md) groups
+all powers of each prime and bounds the cubic resolvent remainder by
+O((log T)^(-3)). Quadratic higher-power removal costs O((log T)^(-2)),
+and the retained covariance map has norm at most 1/2+o(1). The draft
+keeps two explicit conditional-phase sums and a nonlinear covariance
+trace; their required signed estimate remains unproved. A finite
+counterexample rules out inferring cancellation from small increments.
+
 ## Structural research
 
 [Centered Ehrhart reciprocity](notes/centered_reciprocity.md) reduces an eighth-order class certificate to four fit counts and one held-out count. The new method reproduces all fourteen class integrals, including a separate period-one certificate for {5,2}. Its polynomials match all 119 earlier aggregate counts and 641 orbit counts.
@@ -80,7 +88,7 @@ verify the partial fractions and block identities.
 
 ## Reproduction
 
-Run all thirty-one project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all thirty-two project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
@@ -143,7 +151,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all thirty-one executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all thirty-two executed checks.
 
 ## Project files
 

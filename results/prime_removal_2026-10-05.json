@@ -1,0 +1,29 @@
+{
+  "generated_at_utc": "2026-10-05T18:56:28.044777+00:00",
+  "status": "finite exact identities and bounds checked; analytic prime-removal draft; signed arithmetic target unproved",
+  "exact_grouped_derivative_trace_identities": 9,
+  "exact_large_outside_background_identities": 3,
+  "exact_balanced_unbalanced_phase_separations": 12,
+  "exact_finite_covariance_profile_entries": 152,
+  "exact_small_increment_obstruction_cases": 24,
+  "small_increment_limit_at_z_i": [
+    "-1/15",
+    "2/15"
+  ],
+  "analytic_cubic_remainder_envelope": "O_z((log T)^(-3))",
+  "analytic_quadratic_prime_power_replacement_envelope": "O_z((log T)^(-2))",
+  "covariance_map_norm_upper_limit": "1/2",
+  "covariance_map_normalized_identity_trace_limit": "1/3",
+  "remaining_statistics": [
+    "linear prime-power conditional phases",
+    "ordinary-prime second conditional harmonics",
+    "nonlinear balanced covariance trace"
+  ],
+  "limitations": [
+    "Rational matrices calibrate noncommutative identities; they are not the actual prime operator.",
+    "Finite covariance profiles do not prove the continuous Mertens passage.",
+    "Prime-removal remainder bounds do not imply independence or cancellation of actual prime phases.",
+    "The nonlinear covariance trace has not been factorized or evaluated.",
+    "No new unconditional zeta-zero bound follows."
+  ]
+}

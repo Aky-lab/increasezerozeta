@@ -50,6 +50,14 @@ finite-mode compression has vanishing cost for this statistic. Exact
 algebraic-field and block-matrix checks verify the reduction's identities;
 the arithmetic estimate itself remains open.
 
+The [prime-removal proof draft](../notes/prime_removal_resolvent.md)
+now controls the local cubic remainder and quadratic higher-power cost,
+with a geometric covariance-map bound. This makes the outstanding
+conditional-phase and nonlinear resolvent statistics explicit. Exact
+matrix checks audit the identities, and a counterexample rejects the
+shortcut from small perturbations to phase cancellation. Evaluating the
+remaining signed statistic is still an analytic support milestone.
+
 [Centered reciprocity](../notes/centered_reciprocity.md) reduces the number of
 fit counts for an order-B class to floor(B/2). At eighth order the largest
 outer cube shrinks from 214358881 to 1679616 points. All fourteen class

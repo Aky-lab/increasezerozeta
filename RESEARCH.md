@@ -108,6 +108,15 @@ resolvent powers one through three bounded above by -9/20.
 This analytically weaker alternative avoids the absolute higher-word
 boundary cost; it does not evaluate the required arithmetic combination.
 
+The [prime-removal deduction](notes/prime_removal_resolvent.md) further
+controls the deterministic local expansion error without assuming a
+bounded full operator norm. The next arithmetic estimate must retain
+the first prime-power conditional phases, the ordinary-prime second
+harmonics, and the nonlinear balanced covariance trace. The covariance
+map's norm is at most 1/2+o(1), but no factorization or automatic phase
+independence is available. Exact noncommuting checks and a small-increment
+counterexample distinguish these norm bounds from the missing cancellation.
+
 The direct bridge reduces the endpoint target to Tr(q3(B_T)^2)/d or
 Tr(q4(B_T)^2)/d, where B_T is the actual normalized Weil matrix.
 A limsup at most 1/10 suffices for an 80% simple-on-line bound. The

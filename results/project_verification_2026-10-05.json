@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T18:43:22.559667+00:00",
+  "generated_at_utc": "2026-10-05T18:58:05.331708+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "038f15ce6c54a542d512c201526d8b4bf7400ac17af570aef71074d32f5c16cf",
+  "runner_sha256": "1d85d786df9a2f61ce51e0ae039935fc3c84b24c5e84573c564d44fcd66105f6",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -37,9 +37,10 @@
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
     "scripts/verify_presieved_pairs.py": "93bf6795ea056efe1f8d67cc2146da87fab0bbf0b53ebe3db6d3bbf9889df995",
     "scripts/verify_prime_pair_transport.py": "c2f0d53493c0cc0727a95faa6b157dd2e030548a2510041ca60a02dc4b209735",
+    "scripts/verify_prime_removal.py": "c95e2af10c155d57b96aa1e016eefc3065ee8404bcebb01d3c71e923ea795918",
     "scripts/verify_prime_trace.py": "bd6d00670593bc431b255e9f1f65d21d3a3c9ad0026382aa8ca7d707baa0843a",
     "scripts/verify_progression_profile.py": "3f271788f9d1fd5340cbea4855cc5d35a844052b6d30731d94b5a181221a751a",
-    "scripts/verify_project.py": "038f15ce6c54a542d512c201526d8b4bf7400ac17af570aef71074d32f5c16cf",
+    "scripts/verify_project.py": "1d85d786df9a2f61ce51e0ae039935fc3c84b24c5e84573c564d44fcd66105f6",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
     "scripts/verify_rectangle_tail.py": "057311dda5e6a07a5fca63fc4f127fde7568145dd3745544effa604dbd54ea59",
@@ -200,6 +201,15 @@
       "scope": "exact negative-side majorant coefficients, algebraic partial fractions at a triple pole, block resolvent-power identities, finite two-prime insertion identities, trace bounds and low-moment block obstruction",
       "exit_code": 0,
       "stdout": "PASS: 7 exact partial-fraction coefficients, 18 exact block resolvent-power cases, 18 exact insertion identities, 385 leakage counts.\nUnproved signed actual-prime resolvent target: -9/20.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_prime_removal.py",
+      "sha256": "c95e2af10c155d57b96aa1e016eefc3065ee8404bcebb01d3c71e923ea795918",
+      "scope": "exact noncommuting prime-removal and differentiated grouped trace identities, balanced/unbalanced separation, covariance geometry and small-increment obstruction",
+      "exit_code": 0,
+      "stdout": "PASS: 9 grouped derivative traces, 3 outside-background identities, 12 phase separations, 152 covariance entries, 24 obstruction cases.\n",
       "stderr": "",
       "passed": true
     },
