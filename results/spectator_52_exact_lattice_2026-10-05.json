@@ -1,0 +1,150 @@
+{
+  "source_sha256": {
+    "spectator_52_exact_lattice.py": "2495805e087c1e28d78610b269e983ea63d6a6b86655e701c92c7cf24bcecd24",
+    "spectator_reduction.py": "a7d0e19523a5018a72166b54a8bb8357fcfbfab691539c0d2a42984f572b70b3",
+    "spectator_52_reduced_midpoint.py": "f654eebb2ad7d189532c2846c3a972438bf9254f57408552d65a2e28fe041498"
+  },
+  "gates": {
+    "maximum_binary_determinant": 3,
+    "rational_spectator_cases": 2118,
+    "cache_and_negation_comparison_scales": [
+      1,
+      2
+    ]
+  },
+  "records": [
+    {
+      "N": 6,
+      "S": [
+        85856,
+        23072,
+        46688
+      ],
+      "pure_S": 1120,
+      "sorted_tuples": 252,
+      "absolute_sum_bound": 33313550400,
+      "seconds": 0.0
+    },
+    {
+      "N": 12,
+      "S": [
+        24671504,
+        6838832,
+        12975248
+      ],
+      "pure_S": 80080,
+      "sorted_tuples": 2649,
+      "absolute_sum_bound": 7290000000000,
+      "seconds": 0.03200000000651926
+    },
+    {
+      "N": 18,
+      "S": [
+        645400512,
+        179908416,
+        337305024
+      ],
+      "pure_S": 930240,
+      "sorted_tuples": 11538,
+      "absolute_sum_bound": 177067732622400,
+      "seconds": 0.23399999999674037
+    },
+    {
+      "N": 24,
+      "S": [
+        6492749120,
+        1813423040,
+        3385828160
+      ],
+      "pure_S": 5262400,
+      "sorted_tuples": 33751,
+      "absolute_sum_bound": 1721360354918400,
+      "seconds": 0.7660000000032596
+    },
+    {
+      "N": 30,
+      "S": [
+        38827018880,
+        10854166400,
+        20226780800
+      ],
+      "pure_S": 20137600,
+      "sorted_tuples": 78602,
+      "absolute_sum_bound": 10093618089000000,
+      "seconds": 1.7650000000139698
+    },
+    {
+      "N": 36,
+      "S": [
+        167246500752,
+        46776978864,
+        87078045456
+      ],
+      "pure_S": 60233040,
+      "sorted_tuples": 157891,
+      "absolute_sum_bound": 42928325959910400,
+      "seconds": 4.35899999999674
+    },
+    {
+      "N": 42,
+      "S": [
+        574641585056,
+        160768280288,
+        299090947232
+      ],
+      "pure_S": 152041120,
+      "sorted_tuples": 285900,
+      "absolute_sum_bound": 146189228409000000,
+      "seconds": 8.375
+    },
+    {
+      "N": 48,
+      "S": [
+        1673534670080,
+        468296810240,
+        870856367360
+      ],
+      "pure_S": 339001600,
+      "sorted_tuples": 479397,
+      "absolute_sum_bound": 422955226556006400,
+      "seconds": 13.827999999979511
+    },
+    {
+      "N": 54,
+      "S": [
+        4295976800544,
+        1202279446368,
+        2235162058272
+      ],
+      "pure_S": 687566880,
+      "sorted_tuples": 757632,
+      "absolute_sum_bound": 1080248173056014400,
+      "seconds": 22.81200000003446
+    },
+    {
+      "N": 60,
+      "S": [
+        9983203045520,
+        2794178663600,
+        5193626205200
+      ],
+      "pure_S": 1294200400,
+      "sorted_tuples": 1142341,
+      "absolute_sum_bound": 2500281987984000000,
+      "seconds": 33.71899999998277
+    }
+  ],
+  "certificate": {
+    "U": [
+      "5/504",
+      "1/360",
+      "13/2520"
+    ],
+    "J52": "1/8",
+    "pure_C5_anchor": "1/36",
+    "held_out_N": 60,
+    "scope": "exact stated model integral; analytic moment transport unresolved"
+  },
+  "numpy_version": "2.3.5",
+  "python_version": "3.12.12"
+}

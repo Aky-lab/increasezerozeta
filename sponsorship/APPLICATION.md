@@ -8,7 +8,7 @@ Auditable AI-assisted exact computation for higher moments in Riemann zeta resea
 
 ## Short summary
 
-We request a $1,000 API-credit pilot to investigate higher-moment candidates in research on simple zeros of the Riemann zeta function. The project combines exact rational computation, independent checks, and explicit tracking of unresolved proof obligations. Existing code reproduces the moment-consumption algebra and target inequalities. The immediate task is to certify or refute a candidate four-dimensional piecewise-polynomial integral. We will report both accepted certificates and failed attempts, with reproducible artifacts and actual resource usage. No new unconditional zeta-zero record is claimed.
+We request a $1,000 API-credit pilot to investigate higher-moment candidates in research on simple zeros of the Riemann zeta function. The project combines exact rational computation, independent checks, and explicit tracking of unresolved proof obligations. Existing code reproduces the moment-consumption algebra and target inequalities. A corrected four-dimensional model integral has now been evaluated exactly as {5,2}=1/8 using integer lattice sums, with a written degree/period proof and held-out checks. The next work is independent review, C7 certification, and analytic transport. We will report accepted certificates and failed attempts with reproducible artifacts and actual resource usage. No new unconditional zeta-zero record is claimed.
 
 ## Research question and significance
 
@@ -22,7 +22,7 @@ The private repository contains exact Christoffel/Hankel consumption, seventh/ei
 
 The higher-moment analytic framework is inherited from the reference implementation identified in HANDOFF.md. Its assumptions and conventions require independent review. We do not claim to have established that framework, a new unconditional record, or a proof of the Riemann hypothesis.
 
-An actual-walk audit found a structural error in the spectator elimination that had motivated replacing `1/8` with `7/72`. The earlier preference is quarantined, and the reason for retiring `1/8` is withdrawn. The corrected finite gate passes 7,203 rational cases and detects 358 failures of the old formula. Corrected numerical refinement approaches `1/8`, but neither fraction is certified. A numerical reconstruction is not a theorem input.
+An actual-walk audit found a structural error in the spectator elimination that had motivated replacing `1/8` with `7/72`. The earlier preference is quarantined. The corrected finite gate passes 7,203 rational cases and detects 358 failures of the old formula. Subsequent exact integer lattice evaluation gives `1/8`, with component values 5/504, 1/360 and 13/2520. All held-out polynomial checks pass, and the separate pure C5 anchor is exactly 1/36. This is a finite model-integral result with a degree/period proof, not numerical rational reconstruction or a proof of the analytic transport. Reproduction materials are linked in the sponsorship brief.
 
 ## Planned use of Claude
 
@@ -48,7 +48,7 @@ Subject: AI for Science eligibility — independent mathematics research pilot
 
 Hello,
 
-I am developing an auditable exact-computation project on higher moments in Riemann zeta research. The current repository contains reproducible rational-arithmetic checks and a ledger of unresolved analytic obligations; it does not claim a new unconditional record. I would like to request a modest $1,000 API-credit pilot to certify or refute a specific higher-moment integral.
+I am developing an auditable exact-computation project on higher moments in Riemann zeta research. The current repository contains reproducible rational-arithmetic checks, an exact model-integral certificate, and a ledger of unresolved analytic obligations; it does not claim a new unconditional record. I would like to request a modest $1,000 API-credit pilot for independent verification, the next higher-moment calculation, and analytic transport analysis.
 
 Your expanded program welcomes mathematics, while the application emphasizes academic and nonprofit credentials. Could you confirm whether a researcher with my stated affiliation/status can be considered, and what credentials or review materials would be most useful?
 

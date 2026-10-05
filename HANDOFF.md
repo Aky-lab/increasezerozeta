@@ -60,13 +60,18 @@ This branch contains candidate-level seventh/eighth-moment work.
 
 The historical spectator elimination added an absent s1 prefix to the distance-three walk. An exact counterexample gives J3=2/75 against the historical 1/375. The corrected reduction and regression gates are on main in notes/spectator_52_eliminate_v.md and scripts/verify_spectator_reduction.py.
 
-The earlier 7/72 preference is quarantined. The stated reason for retiring 1/8 is withdrawn. Corrected numerical refinement approaches 1/8, but neither fraction is certified. Read results/spectator_actual_walk_audit.md before older candidate notes.
+The earlier 7/72 preference is quarantined. Exact integer lattice evaluation of the corrected model gives {5,2}=1/8, with U1=5/504, U2=1/360 and U3=13/2520. The degree-eight/period-six argument and exact sums are in notes/spectator_52_exact_lattice.md and results/spectator_52_exact_lattice_2026-10-05.json. All held-out tests pass, including the independent C5=1/36 anchor. This is an exact computer-assisted model evaluation; arithmetic transport is unresolved. Read results/spectator_actual_walk_audit.md for the correction history before older candidate notes.
 
 ### Seventh moment
 
 The exact Bell(7) ledger is
 
 m7 = 1717/90 + {5,2} + C7.
+
+Using the exact corrected model value gives m7 = 13826/720 + C7.
+If the still-unproved C7 candidate -17/360 is also supplied, the scenario
+becomes m7=862/45. Neither that C7 input nor the moment transport is
+certified. The explicit-input ledger remains a scenario calculator.
 
 For historical scenario analysis only, substituting {5,2}=7/72 and C7=-17/360 gives
 
@@ -124,7 +129,7 @@ These scenario-specific bounds must be recomputed after the actual seventh-order
 
 compute/exact52-batch was created when 1/8 was still the pre-registered {5,2} target.
 
-It is historical/experimental. Both this branch and research/k8-moments must be interpreted through the actual-walk correction; no fraction is currently certified.
+It is historical/experimental. Interpret its numerical claims through the actual-walk correction and the new exact model evaluation. Its older work is not the source of the {5,2}=1/8 certificate.
 
 The latest correction is recorded on main; older research-branch candidate notes are superseded until repaired.
 
@@ -132,7 +137,7 @@ The latest correction is recorded on main; older research-branch candidate notes
 
 In recommended order:
 
-1. Use the corrected actual-walk spectator elimination, then exact-certify {5,2} by rational piecewise/polytope integration, without baking either candidate into the result.
+1. Independently review the completed {5,2}=1/8 lattice certificate and its normalization; the value is derived without baking either candidate into the calculation.
 2. Exact-certify C7=-17/360 rather than relying on numerical identification.
 3. Prove the arithmetic transport for all seventh-order classes, yielding theorem-grade m7.
 4. Exact-certify or rigorously enclose {2^4}, {4,2,2}, {6,2}.
@@ -178,7 +183,7 @@ A new researcher should:
 3. checkout research/k8-moments;
 4. read results/spectator_actual_walk_audit.md and the corrected elimination note before any older {5,2} note;
 5. run the Bell(7)/Bell(8) gates and ledgers;
-6. work on exact {5,2} certification first.
+6. reproduce the exact {5,2} lattice certificate (NumPy required), then work on C7 certification and arithmetic transport.
 
 No mathematical step should require private chat context after following this handoff. If a future decision depends on something not written here or in a cited note/script, add it to the repository before relying on it.
 
