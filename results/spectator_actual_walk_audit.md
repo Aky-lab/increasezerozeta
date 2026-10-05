@@ -3,6 +3,13 @@
 **Status:** exact counterexample and elementary spectator reduction;
 numerical reconnaissance for the full joint constant. No theorem claim.
 
+**Later exact evaluation:** the subsequent integer-lattice calculation gives
+the corrected model constant {5,2}=1/8. See
+[the degree/period proof](../notes/spectator_52_exact_lattice.md) and
+[the raw exact record](spectator_52_exact_lattice_2026-10-05.json).
+The numerical table below is preserved as historical reconnaissance;
+the later certificate supersedes its unresolved-value disposition.
+
 ## Finding
 
 The historical distance-three elimination used the fixed set
