@@ -1,0 +1,128 @@
+{
+  "scope": "corrected actual walks; outer support in [-1,1]^4",
+  "float_weight_vs_rational_cases": 300,
+  "numpy_version": "2.3.5",
+  "results": [
+    {
+      "step": "1/4",
+      "grid_points_per_axis": 8,
+      "corrected_U": [
+        0.0103759765625,
+        0.00298309326171875,
+        0.0058441162109375
+      ],
+      "historical_U": [
+        0.0103759765625,
+        0.00298309326171875,
+        0.001270294189453125
+      ],
+      "corrected_joint": 0.13442230224609375,
+      "historical_joint": 0.10240554809570312,
+      "pure_C5_anchor": 0.029296875,
+      "anchor_target": "1/36",
+      "wall_seconds": 0.01600000000325963,
+      "status": "numerical reconnaissance; not a rigorous enclosure"
+    },
+    {
+      "step": "1/8",
+      "grid_points_per_axis": 16,
+      "corrected_U": [
+        0.01005744934082031,
+        0.002838015556335449,
+        0.005334615707397462
+      ],
+      "historical_U": [
+        0.01005744934082031,
+        0.002838015556335449,
+        0.0012164711952209475
+      ],
+      "corrected_joint": 0.12761056423187256,
+      "historical_joint": 0.09878355264663695,
+      "pure_C5_anchor": 0.0281982421875,
+      "anchor_target": "1/36",
+      "wall_seconds": 0.10899999999674037,
+      "status": "numerical reconnaissance; not a rigorous enclosure"
+    },
+    {
+      "step": "1/10",
+      "grid_points_per_axis": 20,
+      "corrected_U": [
+        0.010010000000000005,
+        0.0028170312499999953,
+        0.005271612500000005
+      ],
+      "historical_U": [
+        0.010010000000000005,
+        0.0028170312499999953,
+        0.0012075812499999987
+      ],
+      "corrected_joint": 0.12669050625000003,
+      "historical_joint": 0.0982422875,
+      "pure_C5_anchor": 0.028050000000000023,
+      "anchor_target": "1/36",
+      "wall_seconds": 0.29699999996228144,
+      "status": "numerical reconnaissance; not a rigorous enclosure"
+    },
+    {
+      "step": "1/16",
+      "grid_points_per_axis": 32,
+      "corrected_U": [
+        0.009956310192743937,
+        0.002793409551183382,
+        0.0052029552559057874
+      ],
+      "historical_U": [
+        0.009956310192743937,
+        0.002793409551183382,
+        0.001197356420258681
+      ],
+      "corrected_joint": 0.12566872499883175,
+      "historical_joint": 0.09762953314930199,
+      "pure_C5_anchor": 0.02788543701171875,
+      "anchor_target": "1/36",
+      "wall_seconds": 4.079000000027008,
+      "status": "numerical reconnaissance; not a rigorous enclosure"
+    },
+    {
+      "step": "1/20",
+      "grid_points_per_axis": 40,
+      "corrected_U": [
+        0.00994358072916667,
+        0.002787826334635418,
+        0.005187053190104171
+      ],
+      "historical_U": [
+        0.00994358072916667,
+        0.002787826334635418,
+        0.0011949089029947935
+      ],
+      "corrected_joint": 0.12542922177734384,
+      "historical_joint": 0.09748421176757817,
+      "pure_C5_anchor": 0.02784687500000001,
+      "anchor_target": "1/36",
+      "wall_seconds": 11.28100000001723,
+      "status": "numerical reconnaissance; not a rigorous enclosure"
+    },
+    {
+      "step": "1/32",
+      "grid_points_per_axis": 64,
+      "corrected_U": [
+        0.009929646272212267,
+        0.002781721734208986,
+        0.005169801821466535
+      ],
+      "historical_U": [
+        0.009929646272212267,
+        0.002781721734208986,
+        0.0011922201520064846
+      ],
+      "corrected_joint": 0.12516818879521452,
+      "historical_joint": 0.09732511710899416,
+      "pure_C5_anchor": 0.027804851531982422,
+      "anchor_target": "1/36",
+      "wall_seconds": 111.14000000001397,
+      "status": "numerical reconnaissance; not a rigorous enclosure"
+    }
+  ],
+  "historical_status": "quarantined: distance-three fixed prefix set contains an absent s1"
+}

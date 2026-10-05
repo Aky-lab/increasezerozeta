@@ -1,157 +1,101 @@
-# Exact elimination of the spectator frequency in \(\{5,2\}\)
+# Correct spectator-frequency elimination for {5,2}
 
-**Status:** exact elementary reduction.  This removes one integration
-dimension from the model-side \(\{5,2\}\) problem.
+**Status:** elementary exact reduction of the spectator integral only.
+The remaining C5 integral and arithmetic transport are unresolved.
 
-Let the five-block prefix set be
+## 1. Correction to the historical reduction
 
-\[
-B=\{0,s_1,s_2,s_3,s_4\},
-\qquad
-s_j=c_1+\cdots+c_j,
-\]
+At frontier revision `b90e747da2fed0395402396d5b755bdd3a21ad05`,
+the elimination note used the fixed prefix set
+`{0,s1,s2,s3,s4}` for every distance. This is correct for distances
+one and two, but adds an absent `s1` to the distance-three walk.
 
-and write
+From the defining increments, with `sj=c1+...+cj`, the actual sets are:
 
-\[
-m=\min B,\qquad M=\max B,\qquad R=M-m.
-\]
+| Distance | Fixed set B_d | Shifted set A_d |
+|---|---|---|
+| 1 | {0,s1,s2,s3,s4} | {0} |
+| 2 | {0,s1,s2,s3,s4} | {0,s1} |
+| 3 | {0,s2,s3,s4} | {0,s1,s2} |
 
-For pair distance \(d=1,2,3\), the pair-shifted prefix subset is
+Thus `W_d(v)=B_d union (v+A_d)`, ignoring repeated points.
+In distance three, A_d need not be a subset of B_d.
 
-\[
-A_1=\{0\},\qquad
-A_2=\{0,s_1\},\qquad
-A_3=\{0,s_1,s_2\}.
-\]
+## 2. Exact counterexample
 
-Write
+Take `(s1,s2,s3,s4)=(4/5,1/5,3/10,2/5)`.
+At `v=-2/5`, the actual overlap is `1/5`; the historical
+superset overlap is zero. Integration over v gives:
 
-\[
-a=\min A_d,\qquad A=\max A_d,
-\]
+- actual distance-three integral: `2/75`;
+- historical cubic: `1/375`;
+- discrepancy: `3/125`.
 
-and define the margins
+This disproves the distance-three reduction. It does not by itself
+evaluate the signed C5-weighted integral: pointwise errors could
+cancel after multiplication by C5.
 
-\[
-\alpha=a-m\ge0,\qquad
-\beta=M-A\ge0.
-\]
+## 3. General reduction without a nesting assumption
 
-Because \(A_d\subseteq B\),
+Write `m=min B_d`, `M=max B_d`, `a=min A_d`, `A=max A_d`.
+If `max(M-m,A-a)>=1`, the overlap is identically zero.
 
-\[
-A-a\le M-m=R.
-\]
+Otherwise define:
 
-If \(R\ge1\), the outer seven-cycle overlap is identically zero for
-all spectator frequencies \(v\).  Assume \(R<1\).
+```text
+l = M-a-1
+u = 1+m-A
+b = m-a
+c = M-A
+r = min(b,c)
+t = max(b,c)
+h = 1-max(M-m,A-a)
+```
 
-The full outer prefix set is
+Then `l<r<=t<u`. The overlap is `v-l` on [l,r],
+`h` on [r,t], `u-v` on [t,u], and zero outside.
+This follows by checking the switches in
+`max(M,v+A)-min(m,v+a)`; it works for both possible orders
+of b and c, without assuming either one straddles zero.
 
-\[
-B\cup(v+A_d).
-\]
+Both prefix sets contain 0, so nonzero overlap implies `|v|<1`.
+Consequently `C2(v)=min(|v|,1)=|v|` throughout the support.
 
-Its overlap is
+The distributional second derivative of the overlap is
+`delta_l-delta_b-delta_c+delta_u`.
+Since `(|v|^3/6)''=|v|`, integration by parts twice, with
+vanishing boundary terms for the compactly supported overlap, yields:
 
-\[
-O_7(v)
-=
-\left[
-1-
-\left(
-\max(M,v+A)-\min(m,v+a)
-\right)
-\right]_+.
-\]
+```text
+J_d = (|l|^3 + |u|^3 - |b|^3 - |c|^3) / 6.
+```
 
-Since \(A_d\subseteq B\), the four breakpoints are ordered as
+This is implemented with rational arithmetic in
+`scripts/spectator_reduction.py`. It is piecewise cubic with rational
+coefficients. The remaining definition stays
+`U_d=integral J_d*C5 dc1...dc4` and `{5,2}=7*(U1+U2+U3)`.
 
-\[
-\ell=M-a-1
-<
-b=m-a\le0\le
-c=M-A
-<
-u=1+m-A.
-\]
+## 4. Independent finite gates
 
-Thus
+`scripts/verify_spectator_reduction.py` constructs the walks from
+increments independently and integrates the actual piecewise overlap.
+On a seven-point rational grid for each of s1,...,s4:
 
-\[
-O_7(v)=
-\begin{cases}
-v-\ell,&\ell\le v\le b,\\
-1-R,&b\le v\le c,\\
-u-v,&c\le v\le u,\\
-0,&\text{otherwise}.
-\end{cases}
-\]
+- 7,203 distance/grid cases agree with the corrected reduction;
+- 2,539 have nonzero integrals;
+- the historical distance-three cubic fails 358 cases;
+- the explicit counterexample is checked exactly.
 
-The pair cumulant is \(C_2(v)=|v|\) on this support.  Therefore the
-spectator frequency can be integrated exactly:
+The earlier sponsorship checker compared the historical formula
+against the same erroneous fixed prefix set. Its pass established
+a finite identity for that superset, not correctness against W3.
+The counterexample and this limitation are retained in the audit.
 
-\[
-J_d(c_1,\ldots,c_4)
-:=
-\int_{\mathbb R}|v|O_7(v)\,dv.
-\]
+## 5. Candidate policy
 
-Splitting at \(b,0,c\) and integrating elementary quadratics gives
-
-\[
-\boxed{
-J_d
-=
-\frac{1-R}{6}
-\left[
-2R^2
--3R(\alpha+\beta)
--4R
-+3\alpha^2+3\alpha
-+3\beta^2+3\beta
-+2
-\right].
-}
-\]
-
-Hence
-
-\[
-\boxed{
-U_d
-=
-\int_{\mathbb R^4}
-J_d(c_1,\ldots,c_4)
-\,C_5(c_1,\ldots,c_5)
-\,dc_1\cdots dc_4,
-}
-\]
-
-with \(c_5=-c_1-c_2-c_3-c_4\), and
-
-\[
-\boxed{\{5,2\}=7(U_1+U_2+U_3).}
-\]
-
-## Why this matters computationally
-
-The original definition is a five-dimensional weighted integral.
-After this reduction:
-
-- the spectator variable is eliminated exactly;
-- the remaining domain is four-dimensional;
-- on every order chamber of the five-block prefix walk,
-  \(J_d\) is a cubic polynomial;
-- each partition-cyclic term of \(C_5\) contributes one further
-  linear overlap factor.
-
-Thus every term is a degree-at-most-four polynomial on a rational
-polyhedral cell.  The kink hyperplanes are the same small-integer
-prefix-difference family already used in the exact lower-moment
-integrators.
-
-This makes exact rational integration of \(\{5,2\}\) substantially
-closer in complexity to the already-certified four-dimensional
-\(C_5\) computation than to a new five-dimensional weighted problem.
+The historical four-dimensional ladder and its preference for 7/72
+are quarantined. The reason given for retiring 1/8 is withdrawn.
+Corrected numerical refinement again approaches 1/8, but neither
+fraction is certified. See the actual-walk audit for reproducible
+numbers. No downstream m7, m8, or target bound may be advertised
+as current merely by substituting either candidate.

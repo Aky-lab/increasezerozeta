@@ -1,3 +1,5 @@
+> **SUPERSEDED — actual-walk audit, 5 October 2026:** The historical distance-three spectator reduction added an absent s1 prefix. Its 7/72 numerical preference and dependent m7/m8 scenarios are quarantined. The reason stated below for retiring 1/8 is withdrawn. Neither fraction is certified. Read `results/spectator_actual_walk_audit.md` and the corrected `notes/spectator_52_eliminate_v.md`. The material below is preserved as historical evidence, not the current candidate policy.
+
 # {5,2} numerical reconnaissance
 
 **Status: model-side falsifier only. Nothing here is consumed as proof.**

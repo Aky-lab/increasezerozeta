@@ -4,11 +4,12 @@
 The five genuinely new eighth-order classes are collected into A8:
     A8 = {2^4} + {4,2,2} + {4,4} + {6,2} + C8.
 
-This script uses the currently pre-registered seventh-order candidates
-{5,2}=7/72 and C7=-17/360.  Therefore the resulting inherited baseline
-is candidate-level until those inputs are certified.
+This script requires explicit --j52 and --c7 scenario inputs. The former
+7/72 preference is quarantined after the actual-walk audit. No supplied
+fraction is implicitly promoted to a certified research input.
 """
 
+import argparse
 from fractions import Fraction as F
 
 T_ADJ = F(7, 60)
@@ -19,10 +20,7 @@ J42 = F(-23, 420)
 C5 = F(1, 36)
 C6 = F(-1, 126)
 
-J52 = F(7, 72)      # active exact-v numerical candidate
-C7 = F(-17, 360)    # identified in source, not yet exact-certified
 
-M7 = F(3443, 180)   # candidate assembled from the same seventh inputs
 M7_STAR = F(25866469, 1352400)
 LAMBDA3 = F(1415, 13891)
 C_GAP = F(18663120, 3931153)
@@ -47,6 +45,22 @@ def m8_target(m7, simple_target):
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Unverified-input scenario calculator")
+    parser.add_argument("--j52", type=F, help="explicit, unverified joint input")
+    parser.add_argument("--c7", type=F, help="explicit, unverified C7 input")
+    args = parser.parse_args()
+    if args.j52 is None or args.c7 is None:
+        if args.j52 is not None or args.c7 is not None:
+            parser.error("provide both --j52 and --c7")
+        print("UNRESOLVED: no certified J52 or C7 is supplied.")
+        print("The historical 7/72 preference is quarantined; see actual-walk audit.")
+        print("Pass --j52 and --c7 explicitly for scenario arithmetic only.")
+        return
+    J52, C7 = args.j52, args.c7
+    M7 = F(1717, 90) + J52 + C7
+    if M7 < M7_STAR:
+        parser.error("scenario m7 is below the pinned Stieltjes floor")
+    print("SCENARIO ONLY: supplied fractions are not certified research inputs.")
     base = (
         F(1)
         + F(28, 3)
@@ -65,15 +79,16 @@ def main():
         + 28 * C6
         + 8 * C7
     )
-    assert inherited == F(1103, 30)
+    if J52 == F(7, 72) and C7 == F(-17, 360):
+        assert inherited == F(1103, 30)
 
     print("Bell(8) base pair/four layer =", base, "=", float(base))
-    print("candidate inherited m8 baseline =", inherited, "=", float(inherited))
-    print("m8 = 1103/30 + A8")
+    print("scenario inherited m8 baseline =", inherited, "=", float(inherited))
+    print(f"m8 = {inherited} + A8")
     print("A8 := {2^4}+{4,2,2}+{4,4}+{6,2}+C8")
 
     floor = m8_floor(M7)
-    print("\nAt candidate m7=3443/180:")
+    print(f"\nAt scenario m7={M7}:")
     print("  m8 Stieltjes floor =", floor, "=", float(floor))
     print("  A8 floor =", floor - inherited, "=", float(floor - inherited))
 
@@ -92,9 +107,10 @@ def main():
 
     # Exact 80% aggregate cap.
     cap80 = m8_target(M7, F(4, 5)) - inherited
-    assert cap80 == F(18073331, 68531400)
+    if J52 == F(7, 72) and C7 == F(-17, 360):
+        assert cap80 == F(18073331, 68531400)
 
-    print("\nCANDIDATE BELL(8) LEDGER CHECKS PASSED")
+    print("\nSCENARIO BELL(8) ARITHMETIC CHECKS PASSED")
 
 
 if __name__ == "__main__":
