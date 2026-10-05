@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T16:57:37.959813+00:00",
+  "generated_at_utc": "2026-10-05T17:30:25.837081+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "e840e54ff868aa38ebbea3badadb4fccd0da18cbc007ccaa0dfa708def345997",
+  "runner_sha256": "4f0b4f690d70d0d7d52715a73126aa4c006d76e88444767b67d034a33fd731a2",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -37,7 +37,7 @@
     "scripts/verify_presieved_pairs.py": "93bf6795ea056efe1f8d67cc2146da87fab0bbf0b53ebe3db6d3bbf9889df995",
     "scripts/verify_prime_pair_transport.py": "c2f0d53493c0cc0727a95faa6b157dd2e030548a2510041ca60a02dc4b209735",
     "scripts/verify_progression_profile.py": "3f271788f9d1fd5340cbea4855cc5d35a844052b6d30731d94b5a181221a751a",
-    "scripts/verify_project.py": "e840e54ff868aa38ebbea3badadb4fccd0da18cbc007ccaa0dfa708def345997",
+    "scripts/verify_project.py": "4f0b4f690d70d0d7d52715a73126aa4c006d76e88444767b67d034a33fd731a2",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
     "scripts/verify_rectangle_tail.py": "057311dda5e6a07a5fca63fc4f127fde7568145dd3745544effa604dbd54ea59",
@@ -45,6 +45,7 @@
     "scripts/verify_short_window_transport.py": "6a70c7c764aebb31b28505e7b7aa5a214e08224a4bf63c4b7099daca584c7ef1",
     "scripts/verify_sine_bridge.py": "3798112cf615e8072eb45c03fb196209d1791d87fc6517f0f277e5a1f0a4edad",
     "scripts/verify_spectator_reduction.py": "961694b4035b684b9f59ed78f5ad722c12ea29b38022721a8870929db5c4b6c1",
+    "scripts/verify_spectral_bridge.py": "a91f781d8e88a4d7816e9f954f906cafb641570509bb289170e0b310eefe1082",
     "scripts/verify_weighted_dilations.py": "5b79affc1dc279fe5fe1c047bd70294a539891b0bcc7accaef6ba1c6a44ff1b4"
   },
   "all_checks_passed": true,
@@ -170,6 +171,15 @@
       "scope": "physical coefficient-scale mapping, closed profile law, original-overlap slice cubics, polyhedral breakpoints and exact larger-profile certificates",
       "exit_code": 0,
       "stdout": "PASS: 5 exact profile fractions, 35 proved-degree slice cubics,\n      140 independent held-out/endpoint evaluations, 20 closed-form geometries,\n      4374 coefficient/progression scale cases and exact coverage containment bounds.\nProfile fractions: [('1/2', '107/600'), ('2/3', '73/150'), ('3/4', '10243/15750'), ('9/10', '256636537/277981875'), ('1', '1')]\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_spectral_bridge.py",
+      "sha256": "a91f781d8e88a4d7816e9f954f906cafb641570509bb289170e0b310eefe1082",
+      "scope": "actual-matrix certificate algebra, exact indefinite inertia, threshold and collar accounting, one-sided trace budgets and Fourier/progression range obstructions",
+      "exit_code": 0,
+      "stdout": "PASS: 108 exact matrix/perturbation cases, 30 shifts,\n      3250 collar cases and 2500 progression scales.\nConditional trace cap for 80%: 1/10; model trace: 12241115/162540559\nUnproved arithmetic target: actual polynomial trace <= that cap asymptotically.\n",
       "stderr": "",
       "passed": true
     },

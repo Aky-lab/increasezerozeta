@@ -18,6 +18,8 @@ With [finite-model local identities](notes/model_local_identities.md), the exact
 
 These are finite model and algebraic results. Arithmetic transport to zeta moments remains open; the calculations do not yet establish a new unconditional zeta-zero bound.
 
+The [direct counting bridge](notes/spectral_counting_bridge.md) states and derives a sufficient condition on the **actual** compressed Weil matrix: one asymptotic polynomial-trace upper bound would give the conditional counting target. An 80% target permits an exact excess of 40129409/1625405590 over the model trace. The note handles indefinite matrices, the tail threshold and boundary zeros, and writes the arithmetic target as exact prime-side cyclic integrals. That trace bound remains unproved. Restricted higher-correlation results and the audited large-progression input do not by themselves establish it.
+
 See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 ## Structural research
@@ -66,7 +68,7 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 ## Reproduction
 
-Run all twenty-eight project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all twenty-nine project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
@@ -129,7 +131,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all twenty-eight executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all twenty-nine executed checks.
 
 ## Project files
 

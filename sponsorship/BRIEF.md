@@ -18,7 +18,7 @@ The repository provides a standard-library engine for exact Christoffel/Hankel m
 
 The [eighth-order certificate](../notes/eighth_order_certificate.md) completes the remaining finite classes: {4,2,2}=-127/840, {4,4}=23/4536, {6,2}=-563/11340 and C8=157/4032. It rejects the earlier {6,2}=-1/20 guess. Independent scalar frequency sums check the mixed classes; a separate compiler and unsorted cube enumeration check the pure eighth-order cycle.
 
-The assembled model moments are m6=640/63, m7=3439/180 and m8=747361/20160. Exact degree-four Hankel algebra gives a conditional counting conversion of approximately 84.938%. The finite-model local identities are proved, while their arithmetic transport and the spectral/counting interface remain open. These calculations do not establish a new unconditional zeta-zero bound.
+The assembled model moments are m6=640/63, m7=3439/180 and m8=747361/20160. Exact degree-four Hankel algebra gives a conditional counting conversion of approximately 84.938%. The finite-model local identities have written proofs, and the [direct counting bridge](../notes/spectral_counting_bridge.md) supplies an explicit sufficient polynomial-trace condition on the actual Weil matrix. The required arithmetic trace bound remains unproved. These calculations do not establish a new unconditional zeta-zero bound.
 
 See [the research overview](../RESEARCH.md) for conventions and proof obligations.
 

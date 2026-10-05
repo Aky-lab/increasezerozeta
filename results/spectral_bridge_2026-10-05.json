@@ -1,0 +1,42 @@
+{
+  "generated_at_utc": "2026-10-05T17:29:02.677142+00:00",
+  "status": "finite certificate and counting checks; arithmetic trace target unproved",
+  "q4_coefficients": [
+    "1",
+    "-851656632/162540559",
+    "1278096456/162540559",
+    "-729534540/162540559",
+    "140399280/162540559"
+  ],
+  "squared_coefficients": [
+    "1",
+    "-1703313264/162540559",
+    "1140804043657901232/26419433320032481",
+    "-2414156550059008104/26419433320032481",
+    "2921797564276693536/26419433320032481",
+    "-2103974976087230400/26419433320032481",
+    "891108289438914960/26419433320032481",
+    "-204852248302262400/26419433320032481",
+    "19711957824518400/26419433320032481"
+  ],
+  "model_trace": "12241115/162540559",
+  "conditional_simple_bound": "138058329/162540559",
+  "trace_cap_for_80_percent": "1/10",
+  "excess_margin_for_80_percent": "40129409/1625405590",
+  "conservative_uniform_positive_order_moment_tolerance": "6522656571199631/99732631197292036080",
+  "matrix_perturbation_cases": 108,
+  "inertia_signature_grid_cases": 122,
+  "shifted_polynomial_cases": 30,
+  "collar_cases": 3250,
+  "progression_exponent_cases": 2500,
+  "cyclic_fourier_support_cases": 1524,
+  "eighth_cycle_unit_bandwidth_support_radius": 8,
+  "quarter_profile_model_coverage": "1109/144000",
+  "low_moment_counterexample_trace": "112893835992998552/26419433320032481",
+  "limitations": [
+    "Finite checks do not establish any actual zeta trace asymptotic.",
+    "The polynomial-trace cap and its prime-side transport remain unproved.",
+    "The published large-progression input has exceptional moduli and a restricted range.",
+    "Model coverage is not a proved fraction of an actual arithmetic error."
+  ]
+}

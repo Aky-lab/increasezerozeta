@@ -10,9 +10,11 @@ Each block's frequencies sum to zero, with one frequency eliminated.
 
 The [finite-model identities](notes/model_local_identities.md) prove
 singleton deletion and three-block vanishing on outer-overlap support.
-These identities assemble the finite model ledger. The class-d replacement,
-arithmetic-to-continuum transport and spectral/counting interface remain
-separate analytic obligations.
+These identities assemble the finite model ledger. The class-d replacement
+and arithmetic-to-continuum transport remain separate analytic obligations.
+The [direct counting bridge](notes/spectral_counting_bridge.md) derives the
+finite spectral implication and an adequate zero-side tail bound; its
+actual arithmetic polynomial-trace hypothesis remains unproved.
 
 ## Exact model evaluations
 
@@ -84,7 +86,7 @@ the positive moment cone and alternative supplied inputs.
 
 1. Independently review the structural proofs, finite certificates and normalization.
 2. Prove the arithmetic moment identities and their continuum transport through eighth order.
-3. Establish the spectral/counting interface for these supplied moments.
+3. Independently review the direct spectral/counting implication and prove its actual polynomial-trace upper bound, or suitable one-sided moment estimates.
 4. Replace the obstructed fixed-P absolute-tail estimate with a signed estimate or an actual-minus-model remainder bound in the separate [fourth-moment route](notes/class_subtracted_universality.md).
 5. Evaluate further moments and connected covariance coefficients efficiently, and extend the polynomial-statistic CLT to wider test-function classes.
 6. Extend the [verified literature comparison](notes/literature_map.md) and review the network/Gram application and reduced certificate method.
@@ -94,6 +96,16 @@ the positive moment cone and alternative supplied inputs.
 A certified finite integral, an assembled model moment and an established
 arithmetic zeta moment are distinct stages. The remaining analytic work is
 essential to any unconditional simple-zero bound.
+
+The direct bridge reduces the endpoint target to
+Tr(q4(B_T-epsilon_T*I)^2)/d, where B_T is the actual normalized Weil
+matrix. A limsup at most 1/10 would suffice for an 80% simple-on-line
+bound; the model value is 12241115/162540559. The note gives exact signed
+prime-side integrals and one-sided error budgets. It also audits the
+published large-progression input and the cyclic Fourier support:
+the eighth-order test reaches support radius 8 at unit bandwidth, while
+the restricted correlation theorem covers radius below 2. Neither a
+small-dilation comparison nor model spectral positivity proves the cap.
 
 ## Structural results beyond enumeration
 
