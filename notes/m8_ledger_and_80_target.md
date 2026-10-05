@@ -306,3 +306,57 @@ R_8\le-0.1103805983\ldots
 \]
 
 Thus the shortest 80% route no longer requires exact evaluation of all five new eighth-order classes: after certifying the four-pair class, it is enough to prove one aggregate upper bound on the remaining four.
+
+
+## 8. After the pre-registered \(\{4,2,2\}\) candidate
+
+The independent dihedral-orbit midpoint calculation now has the frozen candidate
+
+\[
+\{4,2,2\}=-\frac{127}{840}.
+\]
+
+Define
+
+\[
+S_8:=\{4,4\}+\{6,2\}+C_8.
+\]
+
+Combining the two currently frozen eighth-order candidates,
+
+\[
+\{2^4\}=\frac{1661}{3780},
+\qquad
+\{4,2,2\}=-\frac{127}{840},
+\]
+
+the target residual becomes:
+
+### 80%
+
+\[
+\boxed{
+S_8\le
+\frac{576829}{2855475}
+=
+0.2020080722\ldots
+}
+\]
+
+### 80.2%
+
+\[
+\boxed{
+S_8\le0.1247491251\ldots
+}
+\]
+
+### 81%
+
+\[
+\boxed{
+S_8\le0.0408098779\ldots
+}
+\]
+
+Thus, conditional on exact certification of the two pre-registered candidates, the remaining burden for an 80% result is a comparatively coarse aggregate upper bound on just three classes.
