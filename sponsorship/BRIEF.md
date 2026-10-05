@@ -86,6 +86,13 @@ published prime-correlation theorem. Its weighted bound states the precise
 consumption budget. Short position windows and coupled prime chains remain
 open, with their missing scale estimates specified explicitly.
 
+[Short-window Fourier transport](../notes/short_window_fourier_transport.md)
+derives a newer position-averaged prime-model replacement and controls
+coupled products with explicit marginal concentration budgets. A separate
+longer-window pointwise option is available. The work replaces an invalid
+unrestricted endpoint deduction with verified ranges and a presieved main
+term whose consumption remains an analytic research target.
+
 ## Pilot milestones
 
 | Period | Work | Deliverable |

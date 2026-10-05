@@ -388,6 +388,15 @@ range. Its weighted bound makes the required consumption norm explicit.
 It does not supply the short-position-window or multiple-chain estimates,
 and an application must still verify the shift range and weight budget.
 
+The [short-window Fourier transport](short_window_fourier_transport.md)
+adds a position-averaged replacement of single-prime sums by Lambda_sharp
+for Y>=X^(1/3+epsilon), and a longer-window pointwise option at
+Y>=j^(5/8+epsilon). Coupled products are controlled by actual weighted
+start histograms, rather than an assumed variance factorization. To consume
+this input, the dilated lattice scales and concentration budget must be
+verified, and the presieved main term must be identified with the proposed
+comb. These steps remain part of the analytic reduction.
+
 ## 7. Target for a full one-percentage-point improvement
 
 If all non-vanishing remainder terms are combined *after being individually identified* into

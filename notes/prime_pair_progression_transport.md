@@ -174,3 +174,12 @@ does not close the short-position-window major/minor arc estimates, the
 two-modulus four-prime variance, or the assertion that a multiple-chain
 variance factorizes. The exact model moments and their zeta counting
 conversion retain those analytic obligations.
+
+A separate [short-window Fourier theorem](short_window_fourier_transport.md)
+now supplies an averaged replacement by a presieved prime model for
+integer lengths Y>=X^(1/3+epsilon), using newer published uniformity input.
+It controls coupled products of single sums through weighted start
+histograms. A longer-window pointwise version uses Y>=j^(5/8+epsilon)
+and a model at each base j. These are additional inputs with explicit
+position and weight budgets; neither identifies the required continuum
+comb or justifies a common-position multiple-prime factorization.

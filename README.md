@@ -44,9 +44,11 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 [Prime-pair progression transport](notes/prime_pair_progression_transport.md) uses the published Matomaki–Radziwill–Tao theorem to control arbitrary divisor subfamilies of shifts h=qk. It supplies a weighted error budget and resolves the full-dyadic, one-chain aggregation step. Short position windows, coupled prime chains and the actual zeta-moment reduction remain open.
 
+[Short-window Fourier transport](notes/short_window_fourier_transport.md) applies published higher-uniformity results to replace single-prime sums by a presieved model. It derives an integer-position mean-square bound and controls coupled products through weighted start histograms. The averaged range begins at X^(1/3+epsilon); a longer pointwise range begins at j^(5/8+epsilon). Identifying and consuming the resulting main term remains open.
+
 ## Reproduction
 
-Run all eighteen project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all nineteen project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
@@ -109,7 +111,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all eighteen executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all nineteen executed checks.
 
 ## Project files
 

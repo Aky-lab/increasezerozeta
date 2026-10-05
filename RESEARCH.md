@@ -210,3 +210,23 @@ a separate theorem; unrestricted window-mass replacement has elementary
 counterexamples. Short-window prime sums and multiple-chain variance
 remain distinct obligations. The new checker tests the divisor identities
 and aggregation bookkeeping with exact arithmetic.
+
+## A short-window prime-model replacement
+
+[Short-window Fourier transport](notes/short_window_fourier_transport.md)
+uses the published short-interval uniformity theorems of Matomaki,
+Radziwill, Shao, Tao and Teravainen. The deduction gives
+sum_j D(j)^2=O_(A,epsilon)(X Y^2 log(3X)^(-A)) for integer window lengths
+X^(1/3+epsilon)<=Y<=X^(1-epsilon), where D is a maximal Fourier/AP
+discrepancy between Lambda and the specified presieved Lambda_sharp.
+The integer-position passage uses unit-cell constancy, not an assumption
+that a real exceptional measure automatically controls integer samples.
+
+Bounded-variation weights and coupled products of single sums inherit
+an error budget determined by weighted start histograms. Effective start
+counts at least X times an inverse power of log X suffice for normalized
+logarithmic savings. Highly concentrated fixed starts need further input.
+A longer-window theorem supplies a pointwise alternative with a model
+depending on each start. No independence or variance factorization is used.
+The actual dilated lattice ranges, weight budgets, presieved comb and
+arithmetic-to-continuum identities must still be established in an application.
