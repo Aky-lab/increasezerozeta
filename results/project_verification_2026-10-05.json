@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T16:18:48.101169+00:00",
+  "generated_at_utc": "2026-10-05T16:37:35.787251+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "4415c9e3eb03315741bb7977e77bd53dee1d7f411eb00e16d040553d4cb5a593",
+  "runner_sha256": "79777accfa0f33d201bef93a8557112ee55d69135ee637e282d4c465701ce84d",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -27,7 +27,7 @@
     "scripts/verify_cue_model.py": "7ade82e2b9c104ca851f6b9bf73b73653926888bdd90c4736472920f182646e2",
     "scripts/verify_cycle_eight_lattice.py": "a5aaae108761fdf0291cbddcb561aea3628c162d59cfdc1f83215eb1f449dae4",
     "scripts/verify_dilated_rectangles.py": "53945eeb2767bea9e2d5489b5f9fc72b10f3df49d2b83687fd362640156c4b1b",
-    "scripts/verify_dilation_coverage.py": "ee80d149b49199f492a8c30c3419cabeae4bda507912d841c7e4f545367a6547",
+    "scripts/verify_dilation_coverage.py": "2ea0dc7c5d7c5a7c97709818609bf2c93769d267b7d41e7ec4a3e70db7a9b0a4",
     "scripts/verify_full_window_transport.py": "a75386e7aaa8c7aab1a274f85ea974f8e21ff545ed596c64af6652c2d5c2900b",
     "scripts/verify_lemmas.py": "a5d3fb7a7b7460a182773fc743b329d8e593e94a30ecf50d7a82bc9b1619a125",
     "scripts/verify_lock_frame.py": "31c66514072a4e4f71b53b7938513e8489b9bbf943c857dbe5163fce3944ec56",
@@ -36,7 +36,7 @@
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
     "scripts/verify_presieved_pairs.py": "93bf6795ea056efe1f8d67cc2146da87fab0bbf0b53ebe3db6d3bbf9889df995",
     "scripts/verify_prime_pair_transport.py": "c2f0d53493c0cc0727a95faa6b157dd2e030548a2510041ca60a02dc4b209735",
-    "scripts/verify_project.py": "4415c9e3eb03315741bb7977e77bd53dee1d7f411eb00e16d040553d4cb5a593",
+    "scripts/verify_project.py": "79777accfa0f33d201bef93a8557112ee55d69135ee637e282d4c465701ce84d",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
     "scripts/verify_rectangle_tail.py": "057311dda5e6a07a5fca63fc4f127fde7568145dd3745544effa604dbd54ea59",
@@ -156,10 +156,10 @@
     },
     {
       "script": "scripts/verify_dilation_coverage.py",
-      "sha256": "ee80d149b49199f492a8c30c3419cabeae4bda507912d841c7e4f545367a6547",
-      "scope": "independent rational integration of original overlaps, cutoff core polynomial, branch threshold and reduced prime-power classification",
+      "sha256": "2ea0dc7c5d7c5a7c97709818609bf2c93769d267b7d41e7ec4a3e70db7a9b0a4",
+      "scope": "independent original-overlap polygon integrals, full piecewise cutoff law, affine-root integration, exact quantiles and reduced prime-power classification",
       "exit_code": 0,
-      "stdout": "PASS: 20 original-overlap polygon integrals, 1620 pointwise overlaps,\n      4 exact core integrals, threshold countercheck and 1536 cutoff cases.\n",
+      "stdout": "Coverage values: [('1/3', '59/1215'), ('1/2', '11/32'), ('2/3', '959/1215'), ('3/4', '147/160'), ('4/5', '15049/15625'), ('9/10', '15582/15625')]\nQuantile brackets (millionths): [('1/2', (551320, 551321)), ('9/10', (734423, 734424)), ('99/100', (859563, 859564))]\nPASS: 20 original-overlap polygon integrals, 1620 pointwise overlaps,\n      4 exact core integrals, threshold countercheck and 1536 cutoff cases.\n      66 full-range polygon integrals, 61 piecewise core integrations,\n      4 symbolic density identities with branch joins and exact quantile brackets.\n",
       "stderr": "",
       "passed": true
     },

@@ -151,12 +151,16 @@ main term on nondegenerate locks and covers the reference's fixed-dilation
 default windows. Genuine short prescribed windows and the positive-power
 dilation range remain research targets.
 
-[The dilation coverage theorem](../notes/dilation_core_coverage.md) measures
-that gap: a cutoff R=exp(delta ell), with delta<=1/3, contributes
--59 delta^5/240+O(1/ell) to the explicit core. Even the cube-root cutoff
-captures only about 4.856% of its leading coefficient. Subpower cutoffs
-capture none in the limit. This directs further research toward a
-substantial arithmetic range rather than a slowly growing extension.
+[The complete dilation distribution](../notes/dilation_core_coverage.md)
+measures that gap with an exact piecewise polynomial for every cutoff
+R=exp(delta ell), 0<=delta<=1. The cube-root cutoff captures about 4.856%
+of the leading model term; 99% coverage requires an exponent in
+(0.859563,0.859564]. Subpower cutoffs capture none in the limit.
+The [standalone review manuscript source](../papers/dilation_core_distribution.tex)
+defines the model, derives the distribution from a clipped-cube volume,
+states the uniform arithmetic error and provides independent reproduction
+instructions. It gives reviewers a focused result with explicit analytic
+limits and directs further research toward a substantial arithmetic range.
 
 ## Pilot milestones
 

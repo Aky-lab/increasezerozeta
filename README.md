@@ -60,7 +60,7 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 [Prescribed full-window transport](notes/full_window_prime_transport.md) uses published global cubic uniformity to obtain a double-logarithmic saving at every start when window lengths are comparable to their positions. It covers arbitrary coprime dilations up to a small fixed power of log log H and identifies the full singular-series main term on nondegenerate locks. Prescribed starts are therefore covered for the reference's fixed-dilation default full windows; genuine short prescribed windows and positive-power dilations remain open.
 
-[The dilation coverage calculation](notes/dilation_core_coverage.md) quantifies the remaining range gap. Restricting the core to reduced dilations at most exp(delta*ell), for 0<=delta<=1/3, gives -59*delta^5/240+O(1/ell). At the cube-root cutoff this is only 59/1215 of the full leading coefficient. Every subpower dilation cutoff contributes zero in the limit. Independent rational polygon integration checks the original twelve overlaps.
+[The full dilation distribution](notes/dilation_core_coverage.md) quantifies the remaining range gap with an exact piecewise polynomial for every cutoff exponent 0<=delta<=1. The cube-root cutoff captures only 59/1215 of the leading model term; capturing 99% requires an exponent between 0.859563 and 0.859564. Every subpower dilation cutoff contributes zero in the limit. A clipped-cube identity derives the formula, and independent rational polygon integration checks the original twelve overlaps. The [standalone manuscript source](papers/dilation_core_distribution.tex) includes the proof, distribution plot, arithmetic hypotheses and reproduction instructions.
 
 ## Reproduction
 

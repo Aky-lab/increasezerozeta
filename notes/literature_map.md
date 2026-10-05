@@ -103,10 +103,15 @@ The deduction restricts by prefix subtraction, pays the progression
 extraction loss, and retains the unrestricted-modulus Euler head.
 Global quantitative uniformity is published background; this specific
 physical lock deduction needs independent review and priority assessment.
-The [dilation cutoff polynomial](dilation_core_coverage.md) uses the
+The [complete dilation cutoff distribution](dilation_core_coverage.md) uses the
 reference's original overlap convention and the classical Mertens
 measure passage proved in the core note. Its model restriction does
 not supply an actual prime-correlation theorem.
+The full-range extension derives its piecewise polynomial by half a
+clipped-cube volume and exact positive-part integration. That elementary
+volume method is established geometry; priority for this specific model
+distribution is not claimed. The standalone manuscript credits the
+coefficient convention and separates the model from the zeta interface.
 
 - Compare the finite CUE network representation with existing dependent-phase
   Vandermonde and sine-process spectral literature.

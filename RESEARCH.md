@@ -435,6 +435,16 @@ uniformly for 0<=delta<=1/3,
     C_ell^red[R]=-59 delta^5/240+O(1/ell).
 
 The relative leading fraction is 59 delta^5/5, or 59/1215 at delta=1/3.
+The complete extension covers every 0<=delta<=1 with branch transitions
+at 1/3, 1/2 and 2/3. Its new geometry identity expresses one overlap
+as half a clipped cube, so every coefficient comes from exact integration.
+At delta=1/2,2/3,3/4 the leading fractions are 11/32,959/1215,147/160.
+For delta>=2/3 the remaining fraction is exactly
+32(1-delta)^4-(224/5)(1-delta)^5. Rational bisection bounds the exponents
+for 50%,90%,99% coverage by (0.551320,0.551321],
+(0.734423,0.734424],(0.859563,0.859564], respectively.
+The [standalone manuscript](papers/dilation_core_distribution.tex)
+defines the arithmetic model and gives the full proof and reproduction route.
 Every subpower reduced-dilation cutoff has a vanishing contribution;
 its complement retains the entire -1/48 leading term. Shared-base
 prime-power pairs do not change the formula because their full absolute
