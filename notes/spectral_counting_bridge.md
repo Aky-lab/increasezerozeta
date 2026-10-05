@@ -67,8 +67,16 @@ Use the test family and explicit-formula normalization in
 Put ell=log(T/(2*pi)), ell1=ell+2*log(2)-1, L=lambda*ell,
 X=exp(L), d=floor(L*T/(2*pi)), and tau_k=T+2*pi*k/L for 0<=k<d.
 Here lambda is the bandwidth, not a Christoffel bound.
-Let phi be a real even C2 taper supported in [-L/2,L/2], with
-||phi''||_1 bounded independently of T. A fixed-width smooth ramp suffices.
+Fix a smooth step function chi taking values in [0,1], equal to zero
+on (-infinity,0] and one on [1,infinity), and use the unit-height taper
+
+    phi_T(u)=chi(L/2+u)*chi(L/2-u).
+
+For L>2 this is real, even, smooth, supported in [-L/2,L/2], and equal
+to one on [-L/2+1,L/2-1]. Its second derivative has uniformly bounded
+L1 norm. The unit-height flat top is part of the arithmetic target:
+arbitrary C2 tapers, including zero or constant rescalings, do not have
+the same proposed model normalization.
 
 For rho=beta+i*gamma, its spectral argument is
 
@@ -78,6 +86,9 @@ For rho=beta+i*gamma, its spectral argument is
 Define the normalized actual matrix
 
     B_T = (L*ell1)^(-1) sum_rho m_rho*u_rho*u_rho^T.             (4)
+
+The sum runs over distinct nontrivial zeros; m_rho supplies their
+multiplicity exactly once.
 
 The transpose in (4) is not a conjugate transpose. Replacing it by a
 conjugate transpose would make every summand positive and lose the
@@ -108,6 +119,31 @@ bound in (5); epsilon_T=T^(-1/4) is admissible for all sufficiently large
 T and tends to zero. This weaker collar is adequate for (3).
 The proof does not require a trace-norm bound or transfer of the model's
 positive definiteness to the actual matrix.
+
+### Removing the vanishing threshold from the arithmetic target
+
+Let q be any fixed real polynomial of degree r>=1 with nonzero leading
+coefficient, and put f=q^2. Polynomial growth gives constants depending
+only on q such that, for real x and |e|<=1,
+
+    |x|^(2*r) <= C*(1+f(x)),
+    |f(x-e)-f(x)| <= C*|e|*(1+|x|^(2*r)).
+
+The first inequality follows from the positive leading coefficient of f
+and a bound on a compact interval. For the second, apply the mean-value
+theorem to f and bound f' on [x-1,x+1]. Applying both inequalities to
+the real eigenvalues of any symmetric B gives
+
+    |Tr(f(B-e*I))/d-Tr(f(B))/d|
+      <= C*|e|*(1+Tr(f(B))/d).
+
+Applying the same argument to B-e*I with shift -e gives the reverse
+bound in terms of its shifted trace. Thus, if epsilon_T tends to zero,
+either finite limsup cap implies the same cap for the other statistic.
+No separately assumed convergence of individual moments is necessary.
+Consequently the shifted targets below are equivalent to their unshifted
+forms whenever the proposed cap is finite. This simplification does not
+prove either cap.
 
 The underlying Weil/inertia construction is prior work. This note supplies
 an explicit application to the repository's corrected certificate and
@@ -147,6 +183,33 @@ To reach the endpoint by taking lambda->1 after T->infinity, a trace bound
 in that same order of limits is needed. Endpoint model moments alone do
 not justify moving the two limits.
 
+### A degree-three alternative for the 80% target
+
+The [degree-three model certificate](christoffel_tower.md) is
+
+    q3(x)=1-(8232/2519)*x+(7368/2519)*x^2-(1932/2519)*x^3.
+
+Again q3(x)>=1 on x<=0. Its model squared norm is L3=247/2519.
+At unit bandwidth, the single **unproved** estimate
+
+    limsup_(T->infinity) Tr(q3(B_T)^2)/d <= 1/10
+
+therefore suffices for an 80% simple-on-line bound. It involves only
+moments through order six. With gamma_j=Tr(B_T^j)/d, gamma_0=1, its
+exact unshifted statistic is
+
+    [6345361-41472816*gamma_1+104885808*gamma_2
+       -131040168*gamma_3+86095872*gamma_4
+       -28469952*gamma_5+3732624*gamma_6]/6345361.
+
+The allowable signed excess above the model is
+
+    1/10-L3 = 49/25190 = 0.00194521635....
+
+Matching L3 would give 2025/2519, approximately 80.3890%, in (3).
+This route avoids seventh and eighth moments but has a smaller error
+budget than (8); no comparison with actual prime weights is asserted.
+
 ### Exact prime-side expression for the target
 
 Let v(t)=(hat(phi)(t-tau_k))_k and K_T(t,s)=v(t)^T*v(s). The explicit
@@ -154,7 +217,7 @@ formula gives B_T=(L*ell1)^(-1) integral v(t)*v(t)^T*nu_X(t) dt, where
 
     nu_X(t)=mu(t)+Pi_X(t)+P_X(t),
     mu(t)=Re[Gamma'/Gamma(1/4+i*t/2)]/(2*pi)-log(pi)/(2*pi),
-    Pi_X(t)=1/[2*pi*(1/4+t^2)]+Re[(X^(1/2+i*t)-1)/(1/2+i*t)]/pi,
+    Pi_X(t)=Re[X^(1/2+i*t)/(1/2+i*t)]/pi,
     P_X(t)=-(1/pi) sum_(n<=X) Lambda(n)/sqrt(n)*cos(t*log(n)).
 
 For j>=1, multiplication of these finite matrices gives the exact formula
@@ -179,6 +242,13 @@ weights. They make no replacement by a sine kernel, presieved primes,
 separate autocorrelations or a continuum volume. Bounding their signed
 combination is an alternative to evaluating eight limits separately;
 it is not automatically easier than doing so.
+For q3 the same identities hold with degree six in place of eight.
+
+The [actual prime-matrix derivation](actual_prime_trace.md) gives the
+entries explicitly, removes the archimedean and pole terms in a normalized
+Schatten norm, and evaluates the multiplicatively balanced contributions.
+It reduces the degree-three target to one specified signed off-balance
+estimate, which remains unproved.
 
 ## 4. Error directions, and why finite checks cannot establish (6)
 
@@ -276,6 +346,9 @@ test only when lambda<1/4. At such a bandwidth, even the impossible best
 case Q=0 in (3) gives 2*lambda-1<0. It yields no positive simple-zero
 bound through this certificate. At unit bandwidth the eight-point support
 reaches 8, well beyond the restricted theorem's range.
+The degree-three alternative has a six-cycle reaching 6*lambda and
+requires lambda<1/3 for direct coverage of its entire ideal cycle.
+That bandwidth also gives no positive bound through (3).
 
 The single signed trace target does not automatically cancel this
 obstacle: its eight-distinct-point cycle has coefficient a_8=q4_4^2>0,

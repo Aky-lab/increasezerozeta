@@ -86,7 +86,7 @@ the positive moment cone and alternative supplied inputs.
 
 1. Independently review the structural proofs, finite certificates and normalization.
 2. Prove the arithmetic moment identities and their continuum transport through eighth order.
-3. Independently review the direct spectral/counting implication and prove its actual polynomial-trace upper bound, or suitable one-sided moment estimates.
+3. Independently review the direct spectral/counting implication, normalized Schatten reduction and balanced-prime evaluation; prove the actual signed off-balance bound, or suitable one-sided moment estimates.
 4. Replace the obstructed fixed-P absolute-tail estimate with a signed estimate or an actual-minus-model remainder bound in the separate [fourth-moment route](notes/class_subtracted_universality.md).
 5. Evaluate further moments and connected covariance coefficients efficiently, and extend the polynomial-statistic CLT to wider test-function classes.
 6. Extend the [verified literature comparison](notes/literature_map.md) and review the network/Gram application and reduced certificate method.
@@ -97,15 +97,33 @@ A certified finite integral, an assembled model moment and an established
 arithmetic zeta moment are distinct stages. The remaining analytic work is
 essential to any unconditional simple-zero bound.
 
-The direct bridge reduces the endpoint target to
-Tr(q4(B_T-epsilon_T*I)^2)/d, where B_T is the actual normalized Weil
-matrix. A limsup at most 1/10 would suffice for an 80% simple-on-line
-bound; the model value is 12241115/162540559. The note gives exact signed
-prime-side integrals and one-sided error budgets. It also audits the
-published large-progression input and the cyclic Fourier support:
-the eighth-order test reaches support radius 8 at unit bandwidth, while
-the restricted correlation theorem covers radius below 2. Neither a
-small-dilation comparison nor model spectral positivity proves the cap.
+The direct bridge reduces the endpoint target to Tr(q3(B_T)^2)/d or
+Tr(q4(B_T)^2)/d, where B_T is the actual normalized Weil matrix.
+A limsup at most 1/10 suffices for an 80% simple-on-line bound. The
+vanishing threshold can be removed by polynomial coercivity, without
+assuming separate moment limits. The cubic model value is 247/2519,
+with excess allowance 49/25190; the quartic value is 12241115/162540559.
+The six- and eight-cycle Fourier supports reach radii 6 and 8 at unit
+bandwidth, beyond the restricted correlation theorem's radius below 2.
+
+The [prime-matrix proof draft](notes/actual_prime_trace.md) derives its
+exact entries and removes the archimedean and pole terms in normalized
+Schatten-six norm. A noncommuting polynomial-stability argument preserves
+any finite trace cap. Uniform finite-frame leakage bounds, unique
+factorization and Mertens estimates then evaluate the multiplicatively
+balanced moments: D_(2r)->lambda^(2r)*{2^r}, while odd balanced moments
+vanish. Higher prime powers and repeated prime bases are negligible.
+This connects the exact pair-cycle integrals to specified actual prime
+terms; it does not evaluate the full moments.
+
+For the cubic certificate, the balanced limit is 5102709/31726805.
+The precise remaining requirement is a signed off-balance upper bound
+-3860057/63453610, approximately -0.060833. The model predicts
+-1991744/31726805, leaving the same 49/25190 budget. The note defines
+every off-balance sum with its finite kernel and multiplicative phase;
+it does not assume that six-prime configurations reduce to four-prime
+locks. These analytic deductions await independent review, and the
+off-balance estimate remains unproved.
 
 ## Structural results beyond enumeration
 

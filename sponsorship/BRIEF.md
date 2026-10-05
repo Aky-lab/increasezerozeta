@@ -22,6 +22,17 @@ The assembled model moments are m6=640/63, m7=3439/180 and m8=747361/20160. Exac
 
 See [the research overview](../RESEARCH.md) for conventions and proof obligations.
 
+The [actual prime-matrix proof draft](../notes/actual_prime_trace.md)
+now connects the pair-cycle certificates to the multiplicatively balanced
+terms of the actual arithmetic matrix. It removes archimedean and pole
+terms in a normalized Schatten norm and evaluates the balanced moments
+through degree six as 1/3, 4/15 and 32/105 at unit bandwidth. The cubic
+80% target becomes one precisely specified signed off-balance estimate.
+Its balanced contribution is approximately 0.160833, so at least
+0.060833 of negative off-balance contribution is needed. Developing and
+independently reviewing that cancellation is a concrete support milestone;
+the estimate itself remains open.
+
 ## Structural research and computational value
 
 [Centered reciprocity](../notes/centered_reciprocity.md) reduces the number of

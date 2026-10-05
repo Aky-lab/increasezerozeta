@@ -18,7 +18,9 @@ With [finite-model local identities](notes/model_local_identities.md), the exact
 
 These are finite model and algebraic results. Arithmetic transport to zeta moments remains open; the calculations do not yet establish a new unconditional zeta-zero bound.
 
-The [direct counting bridge](notes/spectral_counting_bridge.md) states and derives a sufficient condition on the **actual** compressed Weil matrix: one asymptotic polynomial-trace upper bound would give the conditional counting target. An 80% target permits an exact excess of 40129409/1625405590 over the model trace. The note handles indefinite matrices, the tail threshold and boundary zeros, and writes the arithmetic target as exact prime-side cyclic integrals. That trace bound remains unproved. Restricted higher-correlation results and the audited large-progression input do not by themselves establish it.
+The [direct counting bridge](notes/spectral_counting_bridge.md) states and derives a sufficient condition on the **actual** compressed Weil matrix: one asymptotic polynomial-trace upper bound would give the conditional counting target. For 80%, a cubic certificate needs only moments through order six and permits an excess of 49/25190 over its model trace; the degree-four alternative permits 40129409/1625405590. The note handles indefinite matrices, the tail threshold and boundary zeros. Both arithmetic trace bounds remain unproved.
+
+The [actual prime-matrix derivation](notes/actual_prime_trace.md) removes the archimedean and pole terms in a normalized Schatten norm and evaluates the multiplicatively balanced prime contributions. At unit bandwidth their second, fourth and sixth moments tend to 1/3, 4/15 and 32/105, connecting actual arithmetic terms to the exact pair-cycle integrals. The cubic certificate's balanced contribution is approximately 0.160833. Its remaining signed off-balance contribution must be at most -0.060833 to meet the 0.1 cap. This analytic proof draft isolates the missing cancellation; it does not establish that estimate or a new zeta bound. Independent review remains necessary.
 
 See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
@@ -68,7 +70,7 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 ## Reproduction
 
-Run all twenty-nine project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all thirty project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
@@ -131,7 +133,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all twenty-nine executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all thirty executed checks.
 
 ## Project files
 

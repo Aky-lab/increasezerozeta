@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-05T17:29:02.677142+00:00",
+  "generated_at_utc": "2026-10-05T17:46:31.868772+00:00",
   "status": "finite certificate and counting checks; arithmetic trace target unproved",
   "q4_coefficients": [
     "1",
@@ -8,6 +8,25 @@
     "-729534540/162540559",
     "140399280/162540559"
   ],
+  "q3_coefficients": [
+    "1",
+    "-8232/2519",
+    "7368/2519",
+    "-1932/2519"
+  ],
+  "q3_squared_coefficients": [
+    "1",
+    "-16464/2519",
+    "104885808/6345361",
+    "-131040168/6345361",
+    "86095872/6345361",
+    "-28469952/6345361",
+    "3732624/6345361"
+  ],
+  "q3_model_trace": "247/2519",
+  "q3_conditional_simple_bound": "2025/2519",
+  "q3_excess_margin_for_80_percent": "49/25190",
+  "q3_matrix_perturbation_cases": 108,
   "squared_coefficients": [
     "1",
     "-1703313264/162540559",

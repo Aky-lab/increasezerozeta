@@ -160,10 +160,10 @@ def matrix_checks(q):
             assert qtrace == sum(x*x for row in qb for x in row)
             assert qtrace >= n-above
             powers = [eye(n)]
-            for _ in range(8):
+            for _ in range(2*(len(q)-1)):
                 powers.append(multiply(powers[-1],b))
             coeff = shift(square(q),epsilon)
-            assert sum(coeff[k]*trace(powers[k]) for k in range(9)) == qtrace
+            assert sum(coeff[k]*trace(powers[k]) for k in range(len(coeff))) == qtrace
             assert s1 >= 2*(n-qtrace)-multiplicity
             cases += 1
     # Strict threshold must include an eigenvalue equal to epsilon.
@@ -196,6 +196,18 @@ def main():
     tolerance = margin/sensitivity
     assert tolerance == F(6522656571199631,99732631197292036080)
 
+    lam3,q3,_ = christoffel_at_zero(MODEL_MOMENTS,3)
+    assert q3 == [F(1),-F(8232,2519),F(7368,2519),-F(1932,2519)]
+    assert lam3 == F(247,2519)
+    coeff3 = square(q3)
+    assert coeff3 == [F(c,6345361) for c in
+                      (6345361,-41472816,104885808,-131040168,
+                       86095872,-28469952,3732624)]
+    assert sum(coeff3[k]*MODEL_MOMENTS[k] for k in range(7)) == lam3
+    assert all(c*(-1)**k > 0 for k,c in enumerate(coeff3))
+    assert F(1,10)-lam3 == F(49,25190)
+    assert 1-2*lam3 == F(2025,2519)
+
     shifts = 0
     for epsilon in (F(0),F(1,10000),F(1,100),F(1,4),F(1)):
         shifted = shift(coeff,epsilon)
@@ -216,6 +228,7 @@ def main():
         assert excess == sum(abs(shifted[k])*tolerance for k in range(1,9))
 
     finite,calibrations = matrix_checks(q)
+    finite3,_ = matrix_checks(q3)
     collar_checks = 0
     for s1,s2,p in product(range(5),repeat=3):
         nprime = s1+2*s2+2*p
@@ -270,6 +283,12 @@ def main():
         'generated_at_utc':datetime.now(timezone.utc).isoformat(),
         'status':'finite certificate and counting checks; arithmetic trace target unproved',
         'q4_coefficients':[str(c) for c in q],
+        'q3_coefficients':[str(c) for c in q3],
+        'q3_squared_coefficients':[str(c) for c in coeff3],
+        'q3_model_trace':str(lam3),
+        'q3_conditional_simple_bound':str(1-2*lam3),
+        'q3_excess_margin_for_80_percent':str(F(1,10)-lam3),
+        'q3_matrix_perturbation_cases':finite3,
         'squared_coefficients':[str(c) for c in coeff],
         'model_trace':str(lam),
         'conditional_simple_bound':str(1-2*lam),

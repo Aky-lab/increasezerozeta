@@ -1,0 +1,141 @@
+{
+  "generated_at_utc": "2026-10-05T18:06:05.070849+00:00",
+  "status": "finite algebra checked; analytic proof draft; off-balance target unproved",
+  "p3_coefficients": [
+    "-277/2519",
+    "-708/2519",
+    "1572/2519",
+    "1932/2519"
+  ],
+  "squared_prime_polynomial_coefficients": [
+    "76729/6345361",
+    "392232/6345361",
+    "-369624/6345361",
+    "-3296280/6345361",
+    "-24048/576851",
+    "6074208/6345361",
+    "3732624/6345361"
+  ],
+  "unit_bandwidth_balanced_limits": [
+    "1",
+    "0",
+    "1/3",
+    "0",
+    "4/15",
+    "0",
+    "32/105"
+  ],
+  "centered_model_moments": [
+    "1",
+    "0",
+    "1/3",
+    "0",
+    "1/4",
+    "-1/36",
+    "61/252"
+  ],
+  "model_off_balance_targets": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "-1/60",
+    "-1/36",
+    "-79/1260"
+  ],
+  "balanced_polynomial_trace_limit": "5102709/31726805",
+  "model_off_balance_polynomial_trace": "-1991744/31726805",
+  "off_balance_cap_for_80_percent": "-3860057/63453610",
+  "excess_margin": "49/25190",
+  "q4_balanced_polynomial_trace_limit": "38601698857019973/132097166600162405",
+  "q4_model_off_balance_polynomial_trace": "-28653310482603548/132097166600162405",
+  "q4_off_balance_cap_for_80_percent": "-10156792878801493/52838866640064962",
+  "q4_excess_margin": "40129409/1625405590",
+  "exact_cyclic_fourier_entry_cases": 63,
+  "exact_finite_frame_word_ledger": [
+    {
+      "degree": 1,
+      "balance_cells": 6,
+      "moment": "1/48",
+      "balanced": "0",
+      "off_balance": "1/48"
+    },
+    {
+      "degree": 2,
+      "balance_cells": 19,
+      "moment": "19/96",
+      "balanced": "65/768",
+      "off_balance": "29/256"
+    },
+    {
+      "degree": 3,
+      "balance_cells": 41,
+      "moment": "749/24576",
+      "balanced": "1/256",
+      "off_balance": "653/24576"
+    },
+    {
+      "degree": 4,
+      "balance_cells": 71,
+      "moment": "7933/131072",
+      "balanced": "165/8192",
+      "off_balance": "5293/131072"
+    },
+    {
+      "degree": 5,
+      "balance_cells": 109,
+      "moment": "190489/12582912",
+      "balanced": "5785/3145728",
+      "off_balance": "55783/4194304"
+    },
+    {
+      "degree": 6,
+      "balance_cells": 155,
+      "moment": "964385/50331648",
+      "balanced": "2367391/402653184",
+      "off_balance": "1782563/134217728"
+    }
+  ],
+  "exact_periodic_closed_loop_cases": 174,
+  "integer_product_classifications": [
+    {
+      "degree": 1,
+      "balanced_words": 0,
+      "distinct_ordinary_prime_pair_words": 0
+    },
+    {
+      "degree": 2,
+      "balanced_words": 6,
+      "distinct_ordinary_prime_pair_words": 4
+    },
+    {
+      "degree": 3,
+      "balanced_words": 6,
+      "distinct_ordinary_prime_pair_words": 0
+    },
+    {
+      "degree": 4,
+      "balanced_words": 90,
+      "distinct_ordinary_prime_pair_words": 24
+    },
+    {
+      "degree": 5,
+      "balanced_words": 220,
+      "distinct_ordinary_prime_pair_words": 0
+    },
+    {
+      "degree": 6,
+      "balanced_words": 1890,
+      "distinct_ordinary_prime_pair_words": 0
+    }
+  ],
+  "noncommuting_telescoping_cases": 24,
+  "projection_leakage_count_cases": 385,
+  "limitations": [
+    "Finite cyclic frames calibrate Fourier algebra, not continuous asymptotics.",
+    "The analytic Schatten and balanced-prime proofs require independent review.",
+    "No actual off-balance prime estimate is established by these checks.",
+    "Model off-balance constants are targets, not actual prime moment evaluations.",
+    "No new unconditional zeta-zero counting bound follows."
+  ]
+}
