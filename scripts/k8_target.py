@@ -73,7 +73,7 @@ def main():
         c = delta_budget(s)
         print(f"  {name:>5}: {c} = {float(c):.12f}")
 
-    for m7 in (F(19130, 1000), F(19136, 1000), F(3443, 180)):
+    for m7 in (F(19130, 1000), F(19136, 1000), F(862, 45)):
         floor = m8_floor(m7)
         b80 = m8_target(m7, F(4, 5))
         print(f"\nm7={float(m7):.6f}")

@@ -36,7 +36,7 @@ The [fourth-moment reduction](notes/class_subtracted_universality.md) and [arith
 
 ## Higher-moment frontier
 
-The [research/k8-moments branch](https://github.com/Aky-lab/increasezerozeta/tree/research/k8-moments) contains Bell(7)/Bell(8) enumeration, moment ledgers and candidate computations.
+The [seventh-order ledger](notes/m7_ledger_derivation.md), [eighth-order ledger](notes/m8_ledger_and_80_target.md), Bell(7)/Bell(8) enumerators and candidate computations are included in this repository.
 
 The conditional seventh-order ledger is
 

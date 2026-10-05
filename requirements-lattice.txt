@@ -1,0 +1,3 @@
+# Optional: exact lattice enumeration and exploratory numerical tools.
+# The standard-library verification command needs no third-party packages.
+numpy==2.3.5

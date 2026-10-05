@@ -2,6 +2,8 @@
 
 Exact computation and analytic research on lower bounds for the proportion of simple zeros of the Riemann zeta function on the critical line.
 
+The project develops reproducible mathematical calculations toward stronger bounds. Its exact model results are available below; the remaining research is to evaluate the eighth-order classes and prove their connection to zeta moments.
+
 ## Results and scope
 
 The corrected continuum model integral **{5,2}=1/8** has an exact integer-lattice evaluation, with components 5/504, 1/360 and 13/2520. The [proof](notes/spectator_52_exact_lattice.md) establishes the polynomial degree and period used in the calculation; the [integer record](results/spectator_52_exact_lattice_2026-10-05.json) includes source hashes and held-out checks.
@@ -16,19 +18,25 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 ## Reproduction
 
-The baseline checks use the Python standard library:
+Run all nine project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
-python scripts/verify_lemmas.py
-python scripts/christoffel_exact.py
-python scripts/k8_target.py
-python scripts/verify_spectator_reduction.py
-python scripts/verify_model_certificates.py
+python scripts/verify_project.py
+```
+
+This checks finite algebra, exact moment targets, actual-walk examples, certificate records and source hashes, Bell(7)/Bell(8) enumeration, and both moment ledgers. Use `--output verification.json` to save the full results.
+
+The seventh- and eighth-order calculators are available directly:
+
+```sh
+python scripts/m7_ledger.py
+python scripts/m8_ledger.py
 ```
 
 The exact lattice evaluator requires NumPy. The recorded calculation used Python 3.12.12 and NumPy 2.3.5:
 
 ```sh
+python -m pip install -r requirements-lattice.txt
 python scripts/spectator_52_exact_lattice.py --out results/lattice_reproduction.json
 ```
 
@@ -48,6 +56,13 @@ python scripts/verify_pure_cycle_lattice.py --out results/pure_cycle_checks.json
 ```
 
 The standard-library certificate check verifies recorded integer differences, held-out counts and source hashes. The NumPy tools perform the lattice enumeration and independent cross-checks.
+
+## Project files
+
+- [RESEARCH.md](RESEARCH.md): model conventions, references and open mathematical problems.
+- [Seventh-order ledger](notes/m7_ledger_derivation.md) and [eighth-order targets](notes/m8_ledger_and_80_target.md): the current calculations and the unresolved classes.
+- `scripts/`: executable checks, exact evaluators and exploratory numerical tools.
+- `results/`: integer records and computational audits supporting the mathematical notes.
 
 ## Research support
 

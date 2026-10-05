@@ -22,8 +22,9 @@ before an exact polytope implementation is attempted.
 
 import argparse
 import itertools
-import math
-import os
+from pathlib import Path
+import hashlib
+import tempfile
 import time
 
 import numpy as np
@@ -150,7 +151,7 @@ def walks(v, c1, c2, c3, c4):
     return w1, w2, w3
 
 
-def run(dv, use_sym=False, checkpoint=True):
+def run(dv, use_sym=False, checkpoint=True, checkpoint_dir=None):
     # The overlap support is contained in [-2,2] in every free
     # frequency; midpoint grid matches the lower-order engines.
     g = np.arange(-2.0 + dv / 2.0, 2.0, dv)
@@ -162,13 +163,19 @@ def run(dv, use_sym=False, checkpoint=True):
         vgrid = g
         sym_factor = 1.0
 
-    tag = f"/tmp/increasezerozeta_52_dv{dv}_sym{int(use_sym)}.npz"
+    directory = Path(checkpoint_dir) if checkpoint_dir else Path(tempfile.gettempdir()) / "increasezerozeta"
+    source = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()[:16]
+    tag = directory / f"52_{source}_dv{dv:.17g}_sym{int(use_sym)}.npz"
     acc = np.zeros(3, dtype=float)
     done = 0
-    if checkpoint and os.path.exists(tag):
-        d = np.load(tag)
-        acc = d["acc"].astype(float)
-        done = int(d["done"])
+    if checkpoint:
+        directory.mkdir(parents=True, exist_ok=True)
+        if tag.exists():
+            with np.load(tag, allow_pickle=False) as saved:
+                acc = saved["acc"].astype(float)
+                done = int(saved["done"])
+            if acc.shape != (3,) or not np.all(np.isfinite(acc)) or not 0 <= done <= len(g)*len(vgrid):
+                raise ValueError("invalid midpoint checkpoint")
 
     t0 = time.time()
 
@@ -230,10 +237,11 @@ def main():
     ap.add_argument("dv", type=float)
     ap.add_argument("--sym", action="store_true")
     ap.add_argument("--no-checkpoint", action="store_true")
+    ap.add_argument("--checkpoint-dir", type=Path, help="checkpoint directory; default: system temporary directory")
     args = ap.parse_args()
     if args.dv <= 0 or args.dv > 1:
         raise SystemExit("choose 0 < dv <= 1")
-    run(args.dv, use_sym=args.sym, checkpoint=not args.no_checkpoint)
+    run(args.dv, use_sym=args.sym, checkpoint=not args.no_checkpoint, checkpoint_dir=args.checkpoint_dir)
 
 
 if __name__ == "__main__":

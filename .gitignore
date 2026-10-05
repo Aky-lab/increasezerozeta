@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+verification.json
+research-evidence.json
+results/*reproduction*.json
+results/lattice_reproduction.json
+results/pure_cycle_checks.json
+*.npz
