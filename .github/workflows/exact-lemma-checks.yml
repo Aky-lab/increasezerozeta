@@ -15,9 +15,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Run universality and core checks
-        run: python scripts/verify_lemmas.py
-      - name: Run exact Christoffel checks
-        run: python scripts/christoffel_exact.py
-      - name: Run exact k=8 target checks
-        run: python scripts/k8_target.py
+      - name: Run scoped research checks and record evidence
+        run: python scripts/sponsorship_evidence.py --output research-evidence.json
+
