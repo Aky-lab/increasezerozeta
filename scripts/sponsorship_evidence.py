@@ -15,7 +15,7 @@ CHECKS = (
     ("verify_lemmas.py", "finite local algebra and conditional core arithmetic"),
     ("christoffel_exact.py", "exact moment consumption for supplied moments"),
     ("k8_target.py", "exact target geometry for supplied moments"),
-    ("verify_spectator_reduction.py", "finite rational checks of exact-v reduction"),
+    ("verify_spectator_reduction.py", "finite rational checks of actual-walk exact-v reduction"),
 )
 
 
@@ -31,6 +31,11 @@ def main():
             "sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
             "scope": scope,
         }
+        if name == "verify_spectator_reduction.py":
+            dependency = ROOT / "scripts" / "spectator_reduction.py"
+            record["dependency_sha256"] = {
+                "scripts/spectator_reduction.py": hashlib.sha256(dependency.read_bytes()).hexdigest()
+            }
         try:
             completed = subprocess.run(
                 [sys.executable, "-B", str(path)], cwd=ROOT,

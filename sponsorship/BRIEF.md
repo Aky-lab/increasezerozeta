@@ -14,11 +14,11 @@ The repository has a standard-library Python engine for exact Christoffel/Hankel
 
 The existing six-moment algebra gives `lambda_3(0) = 1415/13891`. Its zeta interpretation depends on the surrounding candidate analytic framework. It is **not an independently established unconditional record**. The 80% target remains a research target.
 
-A useful example of the verification discipline is the retirement of the early `{5,2}=1/8` candidate after eliminating the spectator frequency exactly. The replacement `7/72` is still a numerical candidate. The remaining four-dimensional integral must be evaluated exactly or rigorously enclosed before either value could be used as a theorem input.
+A later actual-walk audit found a structural error in the spectator elimination used to prefer `7/72` over `1/8`. That preference is quarantined, and the stated reason for retiring `1/8` is withdrawn. Corrected numerical refinement approaches `1/8`, but neither fraction is certified. The remaining integral still needs exact evaluation or rigorous enclosure.
 
 ## Evidence produced in this preparation
 
-All three existing main-branch check scripts passed locally. A new independent check integrates the piecewise-linear spectator overlap directly and compares it with the frontier cubic formula over 7,203 rational cases; 2,343 have nonzero integrals. All comparisons agree exactly.
+All three existing main-branch check scripts passed locally. The corrected independent checker constructs the actual walks from increments, integrates their piecewise-linear overlap, and compares with the corrected formula over 7,203 rational cases; 2,539 have nonzero integrals. All corrected comparisons agree exactly; the historical formula fails 358 distance-three cases. An explicit counterexample gives 2/75 instead of 1/375.
 
 These are checks of finite algebra and a reduction. They do not certify the full integral, arithmetic transport, or a new zeta theorem.
 
@@ -28,7 +28,7 @@ Reproduce with Python 3.12 or later, without third-party packages:
 python scripts/sponsorship_evidence.py --output sponsorship/evidence/local.json
 ```
 
-The [recorded evidence](evidence/baseline-2026-10-05.json) includes script hashes, outputs, Python version, return codes, and limitations. It identifies executed files; it does not claim a complete upstream checkout. The frontier formula was inspected at `b90e747da2fed0395402396d5b755bdd3a21ad05`.
+The [current evidence](evidence/actual-walk-2026-10-05.json) includes script hashes, outputs, Python version, return codes, and limitations. It identifies executed files; it does not claim a complete upstream checkout. The historical frontier formula was inspected at `b90e747da2fed0395402396d5b755bdd3a21ad05`; see the actual-walk audit for its correction. The earlier evidence report is retained with a superseded-scope warning.
 
 ## Six-week pilot and acceptance gates
 
@@ -36,7 +36,7 @@ The [recorded evidence](evidence/baseline-2026-10-05.json) includes script hashe
 |---|---|---|
 | Week 1 | Freeze definitions, conventions, and anchor cases | Versioned specification and normalization ledger |
 | Weeks 2–3 | Implement exact rational cell integration for the reduced `{5,2}` problem | Rational cell certificates and independent anchor checks |
-| Week 4 | Compare the exact result with `7/72` | Certified value/enclosure, or a documented rejection of the candidate |
+| Week 4 | Compare the exact result with the candidate history | Certified value/enclosure, or a documented rejection of the candidate |
 | Week 5 | Review the arithmetic-to-model transport | Explicit proof obligations with resolved/unresolved status |
 | Week 6 | Package evidence and assess the next stage | Reproduction bundle, resource report, and review memorandum |
 

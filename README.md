@@ -30,7 +30,7 @@ research/k8-moments
 
 with draft PR #6.
 
-Important: the early {5,2}=1/8 midpoint candidate is retired. The active corrected candidate after exact spectator-frequency elimination is {5,2}=7/72. See HANDOFF.md before using any research-branch number.
+Important: an actual-walk audit found that the historical spectator reduction added an absent prefix in distance three. The evidence favoring {5,2}=7/72 is quarantined, and the reason for retiring 1/8 is withdrawn. Neither fraction is certified. See HANDOFF.md and results/spectator_actual_walk_audit.md before using research-branch numbers.
 
 ## Research support
 
