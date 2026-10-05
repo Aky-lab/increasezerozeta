@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
-"""Exact Bell(7) ledger for the seventh moment.
+"""Bell(7) continuum ledger using exact finite model inputs.
 
-This file separates:
-- identities already certified at lower order;
-- the historical, quarantined {5,2}=7/72 scenario;
-- the C7=-17/360 identification candidate.
-
-It computes only explicitly requested scenarios; no moment input is certified.
+Defaults: {5,2}=1/8 and C7=-17/360, from the lattice certificates.
+The frozen-singleton identities and arithmetic transport remain analytic
+obligations. Explicit overrides calculate alternative model scenarios.
 """
 
 import argparse
@@ -20,26 +17,25 @@ C5 = F(1, 36)
 J42 = F(-23, 420)
 C6 = F(-1, 126)
 
-# k=7 research inputs not yet symbolically certified in this repo.
+# Exact finite model evaluations; see the lattice and flow-polytope notes.
+MODEL_J52 = F(1, 8)
+MODEL_C7 = F(-17, 360)
 
 M7_STAR = F(25866469, 1352400)
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Unverified-input scenario calculator")
-    parser.add_argument("--j52", type=F, help="explicit, unverified joint input")
-    parser.add_argument("--c7", type=F, help="explicit, unverified C7 input")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--j52", type=F, default=MODEL_J52, help="joint model input; default 1/8")
+    parser.add_argument("--c7", type=F, default=MODEL_C7, help="pure-cycle input; default -17/360")
     args = parser.parse_args()
-    if args.j52 is None or args.c7 is None:
-        if args.j52 is not None or args.c7 is not None:
-            parser.error("provide both --j52 and --c7")
-        print("UNRESOLVED: no certified J52 or C7 is supplied.")
-        print("The historical 7/72 preference is quarantined; see actual-walk audit.")
-        print("Pass --j52 and --c7 explicitly for scenario arithmetic only.")
-        return
     J52, C7 = args.j52, args.c7
     M7 = F(1717, 90) + J52 + C7
-    print("SCENARIO ONLY: supplied fractions are not certified research inputs.")
+    print("CONTINUUM MODEL LEDGER: arithmetic transport remains open.")
+    if (J52, C7) == (MODEL_J52, MODEL_C7):
+        assert M7 == F(862, 45)
+    else:
+        print("Using explicit alternative model inputs.")
     # Pair/four-cycle layer:
     # 1 singleton class;
     # C(7,2)=21 one-pair classes, each 1/3;
@@ -73,15 +69,11 @@ def main():
     assert m7 == M7
 
     print("pair/four layer =", pair4, "=", float(pair4))
-    print("scenario m7 =", m7, "=", float(m7))
+    print("model m7 =", m7, "=", float(m7))
     print("exact Stieltjes floor =", M7_STAR, "=", float(M7_STAR))
     print("gap =", m7 - M7_STAR, "=", float(m7 - M7_STAR))
 
-    # The source outlook's historical lower endpoint 19.123 is
-    # already below the exact floor implied by pinned m0..m6.
-    assert F(19123, 1000) < M7_STAR
-    print("NOTE: source reconnaissance lower endpoint 19.123 is stale")
-    print("SCENARIO M7 ARITHMETIC CHECKS PASSED")
+    print("MODEL M7 ARITHMETIC CHECKS PASSED")
 
 
 if __name__ == "__main__":

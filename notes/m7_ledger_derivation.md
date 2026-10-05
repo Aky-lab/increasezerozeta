@@ -1,6 +1,6 @@
 # Bell(7) derivation of the seventh-moment ledger
 
-The combinatorial reduction assumes the frozen-singleton identities and 3-block vanishing rule used at m5 and m6. The corrected model value {5,2}=1/8 is exact; C7 and arithmetic transport remain unresolved.
+The combinatorial reduction assumes the frozen-singleton identities and 3-block vanishing rule used at m5 and m6. The corrected model values {5,2}=1/8 and C7=-17/360 are exact; arithmetic transport remains unresolved.
 
 ## 1. Bell(7) classes
 
@@ -129,10 +129,10 @@ The [exact lattice calculation](spectator_52_exact_lattice.md) gives {5,2}=1/8. 
 
     m7 = 6913/360 + C7.
 
-The numerical C7 candidate -17/360 would give m7=862/45. This remains a conditional scenario until C7 and the arithmetic transports are established.
+The [flow-polytope certificate](pure_cycle_flow_polytopes.md) gives C7=-17/360 exactly. The resulting model ledger is m7=862/45. Its arithmetic interpretation still requires the transport and local identities.
 
 The Stieltjes floor implied by the supplied moments through m6 is
 
     m7* = 25866469/1352400.
 
-The explicit-input calculator in `scripts/m7_ledger.py` keeps scenario arithmetic separate from moment certification.
+The calculator in `scripts/m7_ledger.py` uses the exact model values by default and accepts explicit overrides for alternative scenarios.

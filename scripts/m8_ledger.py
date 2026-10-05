@@ -4,9 +4,9 @@
 The five genuinely new eighth-order classes are collected into A8:
     A8 = {2^4} + {4,2,2} + {4,4} + {6,2} + C8.
 
-This script requires explicit --j52 and --c7 scenario inputs. The former
-7/72 preference is quarantined after the actual-walk audit. No supplied
-fraction is implicitly promoted to a certified research input.
+The default seventh-order model inputs are {5,2}=1/8 and C7=-17/360.
+Explicit overrides calculate alternative model scenarios. Eighth-order
+class values and arithmetic transport remain unresolved.
 """
 
 import argparse
@@ -19,6 +19,8 @@ T222 = F(131, 420)
 J42 = F(-23, 420)
 C5 = F(1, 36)
 C6 = F(-1, 126)
+MODEL_J52 = F(1, 8)
+MODEL_C7 = F(-17, 360)
 
 
 M7_STAR = F(25866469, 1352400)
@@ -45,22 +47,15 @@ def m8_target(m7, simple_target):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Unverified-input scenario calculator")
-    parser.add_argument("--j52", type=F, help="explicit, unverified joint input")
-    parser.add_argument("--c7", type=F, help="explicit, unverified C7 input")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--j52", type=F, default=MODEL_J52, help="joint model input; default 1/8")
+    parser.add_argument("--c7", type=F, default=MODEL_C7, help="pure-cycle input; default -17/360")
     args = parser.parse_args()
-    if args.j52 is None or args.c7 is None:
-        if args.j52 is not None or args.c7 is not None:
-            parser.error("provide both --j52 and --c7")
-        print("UNRESOLVED: no certified J52 or C7 is supplied.")
-        print("The historical 7/72 preference is quarantined; see actual-walk audit.")
-        print("Pass --j52 and --c7 explicitly for scenario arithmetic only.")
-        return
     J52, C7 = args.j52, args.c7
     M7 = F(1717, 90) + J52 + C7
     if M7 < M7_STAR:
         parser.error("scenario m7 is below the pinned Stieltjes floor")
-    print("SCENARIO ONLY: supplied fractions are not certified research inputs.")
+    print("CONTINUUM MODEL TARGETS: arithmetic transport remains open.")
     base = (
         F(1)
         + F(28, 3)
@@ -81,14 +76,16 @@ def main():
     )
     if J52 == F(7, 72) and C7 == F(-17, 360):
         assert inherited == F(1103, 30)
+    if (J52, C7) == (MODEL_J52, MODEL_C7):
+        assert M7 == F(862, 45) and inherited == F(3329, 90)
 
     print("Bell(8) base pair/four layer =", base, "=", float(base))
-    print("scenario inherited m8 baseline =", inherited, "=", float(inherited))
+    print("model inherited m8 baseline =", inherited, "=", float(inherited))
     print(f"m8 = {inherited} + A8")
     print("A8 := {2^4}+{4,2,2}+{4,4}+{6,2}+C8")
 
     floor = m8_floor(M7)
-    print(f"\nAt scenario m7={M7}:")
+    print(f"\nAt model m7={M7}:")
     print("  m8 Stieltjes floor =", floor, "=", float(floor))
     print("  A8 floor =", floor - inherited, "=", float(floor - inherited))
 
@@ -110,7 +107,7 @@ def main():
     if J52 == F(7, 72) and C7 == F(-17, 360):
         assert cap80 == F(18073331, 68531400)
 
-    print("\nSCENARIO BELL(8) ARITHMETIC CHECKS PASSED")
+    print("\nMODEL BELL(8) ARITHMETIC CHECKS PASSED")
 
 
 if __name__ == "__main__":

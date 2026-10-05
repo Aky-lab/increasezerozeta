@@ -22,6 +22,8 @@ The [spectator reduction](notes/spectator_52_eliminate_v.md) integrates the pair
 
 The chamber normals have binary entries up to sign. Their determinant bound gives period dividing six, and the weighted sum has degree at most eight on each residue class. Nine samples determine the leading coefficient; a tenth sample checks the prediction. The [raw record](results/spectator_52_exact_lattice_2026-10-05.json) contains exact sums and source hashes.
 
+The [pure-cycle flow-polytope method](notes/pure_cycle_flow_polytopes.md) gives C7=-17/360. Each lifted term is an integral bounded circulation polytope, so its lattice count is polynomial with period one. The calculation recovers C4=-1/60, C5=1/36 and C6=-1/126; independent checks reproduce 150 C5 term certificates and twelve C6 term certificates. See [the cycle counts](results/pure_cycle_flow_2026-10-05.json) and [independent checks](results/pure_cycle_independent_checks_2026-10-05.json).
+
 ## Moment consumption
 
 For a moment matrix H_n, the mass-at-origin bound is
@@ -40,7 +42,7 @@ The conditional seventh-order ledger is
 
     m7 = 1717/90 + {5,2} + C7 = 6913/360 + C7.
 
-C7=-17/360 remains a numerical candidate. With that additional assumption, m7=862/45; this is scenario arithmetic, not a certified zeta moment.
+Both new model inputs are exact: {5,2}=1/8 and C7=-17/360. The ledger therefore gives m7=862/45. Its interpretation as a zeta moment still requires the frozen-singleton, vanishing and arithmetic transport statements.
 
 The new eighth-order aggregate is
 
@@ -51,7 +53,7 @@ The model candidates {2^4}=1661/3780, {4,2,2}=-127/840 and {6,2}=-1/20 still req
 ## Open problems
 
 1. Independently check the {5,2} certificate and reference normalization.
-2. Evaluate C7 exactly or obtain a rigorous enclosure.
+2. Independently review the C7 flow-polytope certificate and volume normalization.
 3. Prove the arithmetic transport for the seventh-order classes.
 4. Certify the eighth-order classes and bound their remaining aggregate.
 5. Prove eighth-order transport and apply the exact moment-consumption engine.
