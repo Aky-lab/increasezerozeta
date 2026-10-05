@@ -95,6 +95,19 @@ as established by the present literature comparison.
 
 ## Review targets
 
+[Tao and Teravainen, Quantitative bounds for Gowers uniformity of the
+Mobius and von Mangoldt functions, JEMS 27 (2025), Theorem 1.4](https://ems.press/journals/jems/articles/13625437)
+is the global quantitative input for
+[prescribed full-window transport](full_window_prime_transport.md).
+The deduction restricts by prefix subtraction, pays the progression
+extraction loss, and retains the unrestricted-modulus Euler head.
+Global quantitative uniformity is published background; this specific
+physical lock deduction needs independent review and priority assessment.
+The [dilation cutoff polynomial](dilation_core_coverage.md) uses the
+reference's original overlap convention and the classical Mertens
+measure passage proved in the core note. Its model restriction does
+not supply an actual prime-correlation theorem.
+
 - Compare the finite CUE network representation with existing dependent-phase
   Vandermonde and sine-process spectral literature.
 - Review the connected-partition cancellation, integral lattice chart,

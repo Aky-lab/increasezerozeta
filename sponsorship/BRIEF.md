@@ -143,6 +143,21 @@ locks. The proof retains endpoint errors and the progression extraction
 loss; its cutoff and saving are qualitative. Positive-power moduli,
 prescribed windows and the final weighted zeta conversion remain open.
 
+[Prescribed full-window transport](../notes/full_window_prime_transport.md)
+gives a quantitative double-logarithmic saving at every start for windows
+comparable to their positions, with a small power of log log H allowed
+for arbitrary coprime dilations. It identifies the full singular-series
+main term on nondegenerate locks and covers the reference's fixed-dilation
+default windows. Genuine short prescribed windows and the positive-power
+dilation range remain research targets.
+
+[The dilation coverage theorem](../notes/dilation_core_coverage.md) measures
+that gap: a cutoff R=exp(delta ell), with delta<=1/3, contributes
+-59 delta^5/240+O(1/ell) to the explicit core. Even the cube-root cutoff
+captures only about 4.856% of its leading coefficient. Subpower cutoffs
+capture none in the limit. This directs further research toward a
+substantial arithmetic range rather than a slowly growing extension.
+
 ## Pilot milestones
 
 | Period | Work | Deliverable |

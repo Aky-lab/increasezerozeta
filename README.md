@@ -58,9 +58,13 @@ See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 [Weighted dilated prime transport](notes/weighted_dilated_prime_transport.md) supplies the replacement for every fixed dilation and a sufficiently slowly growing prime-power family. It allows coupled start weights with bounded marginal density, preserves the balanced raw scale and identifies the full singular-series main term on nondegenerate locks. A translated short-box Euler-tail bound includes its endpoint remainder. The cutoff and saving are qualitative; prescribed starts and the positive-power modulus region in the zeta reduction remain open.
 
+[Prescribed full-window transport](notes/full_window_prime_transport.md) uses published global cubic uniformity to obtain a double-logarithmic saving at every start when window lengths are comparable to their positions. It covers arbitrary coprime dilations up to a small fixed power of log log H and identifies the full singular-series main term on nondegenerate locks. Prescribed starts are therefore covered for the reference's fixed-dilation default full windows; genuine short prescribed windows and positive-power dilations remain open.
+
+[The dilation coverage calculation](notes/dilation_core_coverage.md) quantifies the remaining range gap. Restricting the core to reduced dilations at most exp(delta*ell), for 0<=delta<=1/3, gives -59*delta^5/240+O(1/ell). At the cube-root cutoff this is only 59/1215 of the full leading coefficient. Every subpower dilation cutoff contributes zero in the limit. Independent rational polygon integration checks the original twelve overlaps.
+
 ## Reproduction
 
-Run all twenty-five project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all twenty-seven project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
@@ -123,7 +127,7 @@ python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
 python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all twenty-five executed checks.
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all twenty-seven executed checks.
 
 ## Project files
 

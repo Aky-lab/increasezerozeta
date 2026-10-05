@@ -407,3 +407,42 @@ starts and positive-power dilations are not inferred from the qualitative
 saving. Those regions and the reference's zeta normalization remain open.
 The result is a deduction from published uniformity input with new explicit
 geometry and tail bookkeeping; priority and independent review remain open.
+
+## Prescribed full windows and quantitative dilation coverage
+
+[The full-window theorem](notes/full_window_prime_transport.md) instead
+uses Tao--Teravainen's published global quantitative cubic uniformity.
+Prefix subtraction gives the needed interval norm at every prescribed
+start, provided the window length is comparable to its position. Paying
+the sqrt(d) progression loss explicitly yields
+
+    sum_(k,J:Delta!=0) |N_(i,j)(Lambda;k,J)-Z S_(r,q)(k,J)|^2
+      <<_K rqH^4 (log log H)^(-kappa)
+
+for balanced windows (i,i+rH],(j,j+qH], starts bounded by KrH,KqH,
+and arbitrary coprime r,q<=(log log H)^kappa. The positive exponent
+kappa depends on the exponent in the published input. The same finite
+product bound retains degenerate locks. Nonnegative weights on these
+starts need no marginal concentration condition. The translated Euler
+tail proof tracks the growing factor [rq/phi(rq)]^8 for unrestricted
+coprime moduli. Fixed-dilation default full windows of the reference
+are covered; genuine short prescribed windows are outside this result.
+
+[The model coverage theorem](notes/dilation_core_coverage.md) computes
+what a reduced-dilation cutoff actually captures. For R=exp(delta ell),
+uniformly for 0<=delta<=1/3,
+
+    C_ell^red[R]=-59 delta^5/240+O(1/ell).
+
+The relative leading fraction is 59 delta^5/5, or 59/1215 at delta=1/3.
+Every subpower reduced-dilation cutoff has a vanishing contribution;
+its complement retains the entire -1/48 leading term. Shared-base
+prime-power pairs do not change the formula because their full absolute
+contribution is O(ell^(-2)). Exact clipping integrates the original
+twelve overlaps independently of the reduced geometry.
+
+This is a cutoff on physical dilations, separate from the Ramanujan
+denominator obstruction. The quantitative prime theorem and the model
+coverage theorem together specify a concrete remaining gap: positive-
+power dilation transport and the signed, consumption-normalized zeta
+interface. Neither theorem establishes a new zeta-zero counting bound.
