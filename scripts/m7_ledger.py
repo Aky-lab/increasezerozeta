@@ -3,7 +3,7 @@
 
 This file separates:
 - identities already certified at lower order;
-- the pre-registered {5,2}=1/8 candidate;
+- the active {5,2}=7/72 candidate;
 - the C7=-17/360 identification candidate.
 
 It therefore computes a *candidate* m7, not yet a theorem-level input.
@@ -20,7 +20,7 @@ J42 = F(-23, 420)
 C6 = F(-1, 126)
 
 # k=7 research inputs not yet symbolically certified in this repo.
-J52 = F(1, 8)        # pre-registered candidate
+J52 = F(7, 72)       # active exact-v numerical candidate
 C7 = F(-17, 360)     # source identification candidate
 
 M7_STAR = F(25866469, 1352400)
@@ -57,7 +57,7 @@ def main():
         + C7
     )
 
-    assert m7 == F(862, 45)
+    assert m7 == F(3443, 180)
 
     print("pair/four layer =", pair4, "=", float(pair4))
     print("candidate m7 =", m7, "=", float(m7))
