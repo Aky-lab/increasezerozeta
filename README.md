@@ -6,9 +6,11 @@ Exact computation and analytic research on lower bounds for the proportion of si
 
 The corrected continuum model integral **{5,2}=1/8** has an exact integer-lattice evaluation, with components 5/504, 1/360 and 13/2520. The [proof](notes/spectator_52_exact_lattice.md) establishes the polynomial degree and period used in the calculation; the [integer record](results/spectator_52_exact_lattice_2026-10-05.json) includes source hashes and held-out checks.
 
+The pure-cycle integral **C7=-17/360** is also exact. Its [flow-polytope proof](notes/pure_cycle_flow_polytopes.md) reduces the calculation to nine integer lattice counts and recovers the known lower-order constants. Together these values give the conditional seventh-order model ledger m7=862/45.
+
 The repository also contains exact Christoffel/Hankel moment consumption and seventh/eighth-moment target geometry. The six-moment calculation gives lambda_3(0)=1415/13891 and the conditional simple-zero bound 11061/13891, approximately 79.627%.
 
-These are model and algebraic results. Certification of C7 and the arithmetic transport to zeta moments remain open. They do not yet establish a new unconditional zeta-zero bound.
+These are model and algebraic results. The arithmetic transport to zeta moments and eighth-order class evaluations remain open. They do not yet establish a new unconditional zeta-zero bound.
 
 See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
@@ -21,6 +23,7 @@ python scripts/verify_lemmas.py
 python scripts/christoffel_exact.py
 python scripts/k8_target.py
 python scripts/verify_spectator_reduction.py
+python scripts/verify_model_certificates.py
 ```
 
 The exact lattice evaluator requires NumPy. The recorded calculation used Python 3.12.12 and NumPy 2.3.5:
@@ -36,6 +39,15 @@ python scripts/spectator_52_exact_lattice.py --out results/spectator_52_exact_la
 ```
 
 The [spectator audit](results/spectator_actual_walk_audit.md) documents the distance-three prefix correction and the numerical comparison.
+
+Recompute the pure-cycle counts and their independent term checks with NumPy:
+
+```sh
+python scripts/pure_cycle_lattice.py --out results/pure_cycle_reproduction.json
+python scripts/verify_pure_cycle_lattice.py --out results/pure_cycle_checks.json
+```
+
+The standard-library certificate check verifies recorded integer differences, held-out counts and source hashes. The NumPy tools perform the lattice enumeration and independent cross-checks.
 
 ## Research support
 
