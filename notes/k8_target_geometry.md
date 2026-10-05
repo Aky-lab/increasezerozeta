@@ -8,8 +8,8 @@ Use the audited lower moments
 
     (m0,...,m6) = (1,1,4/3,2,13/4,101/18,640/63).
 
-Their provenance and retained assumptions are in the
-[pairing audit](../results/pairing_model_audit.md).
+Their reconstruction is in the [local-identity proof](model_local_identities.md),
+with the correction documented in the [pairing audit](../results/pairing_model_audit.md).
 
 ## Stieltjes floor
 
@@ -77,8 +77,9 @@ The stronger conditional targets require
 | 81% | 8128408/16967475 = 0.4790581981... |
 | 90% | 28456753/106766100 = 0.2665336001... |
 
-These are target constraints, not evaluations of A8. Its mixed classes
-and arithmetic transport remain unresolved.
+These are target constraints. The [complete finite certificate](eighth_order_certificate.md)
+gives A8=633/2240, inside the 81% interval and above the 90% cap.
+Arithmetic transport remains unresolved.
 
 `scripts/k8_target.py` derives all constants from the shared moment
 sequence. It checks the gap formula against direct five-by-five rational

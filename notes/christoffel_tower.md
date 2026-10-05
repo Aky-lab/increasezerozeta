@@ -137,10 +137,11 @@ The current conditional model sequence is
 
     (m0,...,m6) = (1,1,4/3,2,13/4,101/18,640/63).
 
-The sixth-order value retains the reference ledger's other class inputs
-and replaces its three-pair aggregate with the directly certified 32/105.
-See the [pairing audit](../results/pairing_model_audit.md). The retained
-inputs and local identities still require analytic review.
+The sixth-order value is assembled from certified class values and the
+[finite-model local identities](model_local_identities.md). The
+[pairing audit](../results/pairing_model_audit.md) explains its difference
+from the earlier supplied reference moment. Arithmetic transport and the
+spectral/counting interface remain open.
 
 For this sequence,
 

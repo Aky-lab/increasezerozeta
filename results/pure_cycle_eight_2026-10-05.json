@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "source_sha256": {
+    "scripts/pure_cycle_eight.py": "2c549e382c153f685e04e5d550d903b04cb6cba5a788d20461c8b9c86133f9e0",
+    "scripts/mixed_cycle_lattice.py": "f935aa37d440c506a9e87204e7a244b5208f8558a9fc99fb564815992c3fa0a0",
+    "scripts/pure_cycle_lattice.py": "e581cbfa542d9d10746e4e8703cd4490e3ab3d014ca13b5c6a5d96e4c37466d8",
+    "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488"
+  },
+  "records": [
+    {
+      "b": 8,
+      "n": 1,
+      "dilation_N": 0,
+      "signed_count": 0,
+      "terms": 94586,
+      "cube_points": 1,
+      "sorted_frequency_tuples": 1,
+      "absolute_sum_bound": 94586,
+      "seconds": 0.6720000000204891
+    },
+    {
+      "b": 8,
+      "n": 2,
+      "dilation_N": 1,
+      "signed_count": 12,
+      "terms": 94586,
+      "cube_points": 256,
+      "sorted_frequency_tuples": 5,
+      "absolute_sum_bound": 48428032,
+      "seconds": 0.6869999999762513
+    },
+    {
+      "b": 8,
+      "n": 3,
+      "dilation_N": 2,
+      "signed_count": 666,
+      "terms": 94586,
+      "cube_points": 6561,
+      "sorted_frequency_tuples": 33,
+      "absolute_sum_bound": 1861736238,
+      "seconds": 0.7189999999827705
+    },
+    {
+      "b": 8,
+      "n": 4,
+      "dilation_N": 3,
+      "signed_count": 9656,
+      "terms": 94586,
+      "cube_points": 65536,
+      "sorted_frequency_tuples": 151,
+      "absolute_sum_bound": 24795152384,
+      "seconds": 1.1560000000172295
+    },
+    {
+      "b": 8,
+      "n": 5,
+      "dilation_N": 4,
+      "signed_count": 73972,
+      "terms": 94586,
+      "cube_points": 390625,
+      "sorted_frequency_tuples": 526,
+      "absolute_sum_bound": 184738281250,
+      "seconds": 1.4380000000237487
+    },
+    {
+      "b": 8,
+      "n": 6,
+      "dilation_N": 5,
+      "signed_count": 386136,
+      "terms": 94586,
+      "cube_points": 1679616,
+      "sorted_frequency_tuples": 1514,
+      "absolute_sum_bound": 953208953856,
+      "seconds": 1.9540000000270084
+    },
+    {
+      "b": 8,
+      "n": 7,
+      "dilation_N": 6,
+      "signed_count": 1555050,
+      "terms": 94586,
+      "cube_points": 5764801,
+      "sorted_frequency_tuples": 3788,
+      "absolute_sum_bound": 3816886271702,
+      "seconds": 3.5619999999762513
+    },
+    {
+      "b": 8,
+      "n": 8,
+      "dilation_N": 7,
+      "signed_count": 5188584,
+      "terms": 94586,
+      "cube_points": 16777216,
+      "sorted_frequency_tuples": 8512,
+      "absolute_sum_bound": 12695118020608,
+      "seconds": 7.797000000020489
+    },
+    {
+      "b": 8,
+      "n": 9,
+      "dilation_N": 8,
+      "signed_count": 15005682,
+      "terms": 94586,
+      "cube_points": 43046721,
+      "sorted_frequency_tuples": 17575,
+      "absolute_sum_bound": 36644554372554,
+      "seconds": 17.71799999999348
+    },
+    {
+      "b": 8,
+      "n": 10,
+      "dilation_N": 9,
+      "signed_count": 38780544,
+      "terms": 94586,
+      "cube_points": 100000000,
+      "sorted_frequency_tuples": 33885,
+      "absolute_sum_bound": 94586000000000,
+      "seconds": 40.21899999998277
+    },
+    {
+      "b": 8,
+      "n": 11,
+      "dilation_N": 10,
+      "signed_count": 91520352,
+      "terms": 94586,
+      "cube_points": 214358881,
+      "sorted_frequency_tuples": 61731,
+      "absolute_sum_bound": 223028840300926,
+      "seconds": 151.375
+    }
+  ],
+  "certificate": {
+    "C": "157/4032",
+    "degree_bound": 9,
+    "period": 1,
+    "held_out_n": 11,
+    "scope": "exact continuum eighth-order pure-cycle integral"
+  },
+  "python_version": "3.12.12",
+  "numpy_version": "2.3.5"
+}

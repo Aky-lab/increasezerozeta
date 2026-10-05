@@ -1,61 +1,93 @@
 # Research overview
 
-## Model conventions
+## Definitions and analytic scope
 
-The higher-moment conventions follow [JoshuaHKU/zeta-0.7947-reproduction](https://github.com/JoshuaHKU/zeta-0.7947-reproduction/tree/d85bddfe9d8f12856fba735fc9cb3ca23b48b3a8), revision `d85bddfe9d8f12856fba735fc9cb3ca23b48b3a8`. The class-d replacement, cumulant normalization and frozen-singleton identities are part of the analytic framework requiring review.
+The continuum cumulants and outer prefix walks follow
+[JoshuaHKU/zeta-0.7947-reproduction](https://github.com/JoshuaHKU/zeta-0.7947-reproduction/tree/d85bddfe9d8f12856fba735fc9cb3ca23b48b3a8),
+revision `d85bddfe9d8f12856fba735fc9cb3ca23b48b3a8`. A class signature
+denotes the aggregate over all placements of those block sizes on a cycle.
+Each block's frequencies sum to zero, with one frequency eliminated.
 
-The notation {5,2} denotes the aggregate over all 21 placements of a five-block and a pair in a seven-cycle. It equals 7(U1+U2+U3), where the three U terms correspond to cyclic distances one, two and three.
+The [finite-model identities](notes/model_local_identities.md) prove
+singleton deletion and three-block vanishing on outer-overlap support.
+These identities assemble the finite model ledger. The class-d replacement,
+arithmetic-to-continuum transport and spectral/counting interface remain
+separate analytic obligations.
 
-## Exact model calculation
+## Exact model evaluations
 
-The [spectator reduction](notes/spectator_52_eliminate_v.md) integrates the pair frequency exactly. In distance three the fixed prefix set is {0,s2,s3,s4}; adding s1 changes the integral.
+| Class | Exact value | Method |
+|---|---:|---|
+| {2} | 1/3 | Pair-cycle lift |
+| {2,2} | 4/15 | Pair-cycle lift |
+| {2,2,2} | 32/105 | Pair-cycle lift and simplex audit |
+| {2^4} | 1661/3780 | Pair-cycle lift |
+| C4 | -1/60 | Pure-cycle lift |
+| C5 | 1/36 | Pure-cycle lift and spectator anchor |
+| C6 | -1/126 | Pure-cycle lift |
+| C7 | -17/360 | Pure-cycle lift |
+| C8 | 157/4032 | Pure-cycle lift |
+| {4,2} | -23/420 | Mixed-cycle lift |
+| {5,2} | 1/8 | Weighted spectator lattice calculation |
+| {6,2} | -563/11340 | Mixed-cycle lift |
+| {4,2,2} | -127/840 | Mixed-cycle lift |
+| {4,4} | 23/4536 | Mixed-cycle lift |
 
-[Weighted integer lattice evaluation](notes/spectator_52_exact_lattice.md) then gives:
+The [pair-cycle proof](notes/paired_cycle_flow_polytopes.md),
+[pure-cycle proof](notes/pure_cycle_flow_polytopes.md),
+[mixed-cycle proof](notes/mixed_cycle_flow_polytopes.md) and
+[spectator proof](notes/spectator_52_exact_lattice.md) fix the volume
+normalization and polynomial-degree bounds before interpolation.
+Their records include source hashes and held-out integer counts.
 
-| Quantity | Exact value |
-|---|---:|
-| U1 | 5/504 |
-| U2 | 1/360 |
-| U3 | 13/2520 |
-| {5,2} | 1/8 |
-| Pure C5 anchor | 1/36 |
+The {5,2} distance components are U1=5/504, U2=1/360 and U3=13/2520,
+with {5,2}=7(U1+U2+U3). The defining distance-three fixed prefix set is
+{0,s2,s3,s4}. Adding s1 changes the integral; see
+[the spectator audit](results/spectator_actual_walk_audit.md).
 
-The chamber normals have binary entries up to sign. Their determinant bound gives period dividing six, and the weighted sum has degree at most eight on each residue class. Nine samples determine the leading coefficient; a tenth sample checks the prediction. The [raw record](results/spectator_52_exact_lattice_2026-10-05.json) contains exact sums and source hashes.
+The [pairing audit](results/pairing_model_audit.md) separates adjacent
+and nested noncrossing patterns, whose integrals are 3/70 and 17/420.
+Exact integration on 24 simplex cells independently confirms the corrected
+three-pair aggregate 32/105. The {6,2} certificate also rejects the earlier
+-1/20 candidate, which differs from the exact value by 1/2835.
 
-The [pure-cycle flow-polytope method](notes/pure_cycle_flow_polytopes.md) gives C7=-17/360. Each lifted term is an integral bounded circulation polytope, so its lattice count is polynomial with period one. The calculation recovers C4=-1/60, C5=1/36 and C6=-1/126; independent checks reproduce 150 C5 term certificates and twelve C6 term certificates. See [the cycle counts](results/pure_cycle_flow_2026-10-05.json) and [independent checks](results/pure_cycle_independent_checks_2026-10-05.json).
+## Complete eighth-order ledger and consumption
 
-## Moment consumption
+The exact model sequence through eighth order is
 
-For a moment matrix H_n, the mass-at-origin bound is
-
-    lambda_n(0) = 1 / (e0^T H_n^-1 e0).
-
-The [pairing audit](results/pairing_model_audit.md) corrects the three-pair aggregate to 32/105. Retaining the other reference class inputs gives m6=640/63. The resulting exact algebra gives lambda_3(0)=247/2519 and the conditional counting conversion 2025/2519. The other class inputs, local identities and spectral/counting interface still require analytic review. See [the Christoffel derivation](notes/christoffel_tower.md) and [eighth-order target geometry](notes/k8_target_geometry.md).
-
-The [fourth-moment reduction](notes/class_subtracted_universality.md) and [arithmetic-to-continuum analysis](notes/arithmetic_to_continuum.md) form a separate analytic route, with a fixed-P tail obligation still open.
-
-## Higher-moment frontier
-
-The [seventh-order ledger](notes/m7_ledger_derivation.md), [eighth-order ledger](notes/m8_ledger_and_80_target.md), Bell(7)/Bell(8) enumerators and candidate computations are included in this repository.
-
-The conditional seventh-order ledger is
-
-    m7 = 685/36 + {5,2} + C7 = 3439/180.
-
-The model inputs {5,2}=1/8, C7=-17/360 and {2,2,2}=32/105 have exact certificates. The retained mixed-class input {4,2}=-23/420 and the frozen-singleton, vanishing and arithmetic transport statements remain part of the conditional framework.
+    (m0,...,m8) = (1,1,4/3,2,13/4,101/18,640/63,3439/180,747361/20160).
 
 The new eighth-order aggregate is
 
-    A8 = {2^4} + {4,2,2} + {4,4} + {6,2} + C8.
+    A8 = {2^4}+{4,2,2}+{4,4}+{6,2}+C8 = 633/2240,
+    m8 = 3311/90+A8.
 
-The [four-pair certificate](notes/paired_cycle_flow_polytopes.md) establishes {2^4}=1661/3780 from 105 placements in 17 dihedral orbits. The mixed-class candidates {4,2,2}=-127/840 and {6,2}=-1/20 still require exact evaluation or rigorous enclosure. The current ledger is m8=3311/90+A8; bounds on {4,4}+C8 must use the audited lower-order inputs.
+[The full certificate](notes/eighth_order_certificate.md) includes the
+pure C8 counts, an independent compiler and unsorted cube checks.
+The [seventh-order](notes/m7_ledger_derivation.md) and
+[eighth-order](notes/m8_ledger_and_80_target.md) notes give Bell-class
+multiplicities and exact assembly.
 
-## Open problems
+For H_n=(m_(i+j)), the origin-mass bound is
 
-1. Independently check the {5,2} certificate and reference normalization.
-2. Independently review the C7 flow-polytope certificate and volume normalization.
-3. Review the pairing correction, remaining lower-order inputs and analytic local identities; prove arithmetic transport for the seventh-order classes.
-4. Certify the eighth-order classes and bound their remaining aggregate.
-5. Prove eighth-order transport and apply the exact moment-consumption engine.
+    lambda_n(0) = 1/(e0^T H_n^-1 e0).
 
-A model integral, numerical candidate and analytically established zeta moment have different roles. The outstanding transports are essential to any unconditional simple-zero bound.
+The [Christoffel derivation](notes/christoffel_tower.md) gives the
+degree-three value 247/2519. The complete eighth-order model gives
+lambda4(0)=12241115/162540559. Under the analytic counting interface,
+1-2*lambda4(0)=138058329/162540559, approximately 84.938%.
+This is a conditional conversion, not an established zeta-zero bound.
+The [target geometry](notes/k8_target_geometry.md) separately describes
+the positive moment cone and alternative supplied inputs.
+
+## Open research
+
+1. Independently review the finite certificates, normalization and grouping corrections.
+2. Prove the arithmetic moment identities and their continuum transport through eighth order.
+3. Establish the spectral/counting interface for these supplied moments.
+4. Resolve the fixed-P tail obligation in the separate [fourth-moment route](notes/class_subtracted_universality.md) and [arithmetic analysis](notes/arithmetic_to_continuum.md).
+5. Assess further model orders after the analytic interface is validated.
+
+A certified finite integral, an assembled model moment and an established
+arithmetic zeta moment are distinct stages. The remaining analytic work is
+essential to any unconditional simple-zero bound.

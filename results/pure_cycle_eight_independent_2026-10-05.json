@@ -1,0 +1,22 @@
+{
+  "all_checks_passed": true,
+  "independent_cyclic_terms": 94586,
+  "full_cube_checks": [
+    {
+      "n": 2,
+      "signed_count": 12,
+      "cube_points": 256
+    },
+    {
+      "n": 3,
+      "signed_count": 666,
+      "cube_points": 6561
+    }
+  ],
+  "source_sha256": {
+    "scripts/verify_cycle_eight_lattice.py": "a5aaae108761fdf0291cbddcb561aea3628c162d59cfdc1f83215eb1f449dae4",
+    "scripts/pure_cycle_lattice.py": "e581cbfa542d9d10746e4e8703cd4490e3ab3d014ca13b5c6a5d96e4c37466d8",
+    "results/pure_cycle_eight_2026-10-05.json": "5b49e69c84adfa7612cf1b28e4405cd42813113d0b051cec1142eac2a39021b0"
+  },
+  "seconds": 4.98399999999674
+}

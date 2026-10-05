@@ -1,6 +1,6 @@
 # Bell(7) derivation of the seventh-moment ledger
 
-The combinatorial reduction assumes the frozen-singleton identities and 3-block vanishing rule used at m5 and m6. The corrected model values {5,2}=1/8 and C7=-17/360 are exact; arithmetic transport remains unresolved.
+The [finite-model local identities](model_local_identities.md) prove singleton deletion and 3-block vanishing. The corrected model values {5,2}=1/8 and C7=-17/360 are exact; arithmetic transport remains unresolved.
 
 ## 1. Bell(7) classes
 
@@ -126,7 +126,7 @@ m_7
 ## 6. Audited model inputs
 
 The [pairing certificate](paired_cycle_flow_polytopes.md) gives
-{2,2,2}=32/105. The retained lower-order inputs are {4,2}=-23/420,
+{2,2,2}=32/105. The [mixed certificate](mixed_cycle_flow_polytopes.md) gives {4,2}=-23/420,
 C5=1/36 and C6=-1/126. With these conventions the ledger is
 
     m7 = 685/36 + {5,2} + C7.
@@ -140,6 +140,6 @@ The audited lower-moment inputs imply the Stieltjes floor
     m7* = 1031677/54096.
 
 The calculator in `scripts/m7_ledger.py` uses these model values by
-default and accepts explicit overrides. The retained mixed-class input,
-local identities and arithmetic transport remain analytic obligations;
-see [the pairing audit](../results/pairing_model_audit.md).
+by default and accepts explicit overrides. Arithmetic transport and the
+spectral/counting interface remain analytic obligations; see
+[the pairing audit](../results/pairing_model_audit.md) for the lower-order correction.

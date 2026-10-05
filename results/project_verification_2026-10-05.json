@@ -1,13 +1,39 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T10:37:27.164407+00:00",
+  "generated_at_utc": "2026-10-05T11:06:50.839189+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "4f9fa47ffcf225ab36530bd3209f64729340e860fa8bef85b6a6919116a69b8b",
+  "runner_sha256": "b4ed9a5e2ce1033d0726fc471bd744e977d03744c5cc57508f2580aafb1df2c2",
+  "script_sources_sha256": {
+    "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
+    "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
+    "scripts/christoffel_exact.py": "3ca58d46bc10e86a0c74d67a2412cd23a930040f68bcb566e100d52fdc5fdd7c",
+    "scripts/exact_polytope_52.py": "4df6427e7033683289b93674dfd93cb768f8f15f47b34a70bce784669dbe6d90",
+    "scripts/k8_target.py": "ed38f54aa252b248929ead80b4cf6f272a9ef091d9aa8775a22d133866bbba2d",
+    "scripts/m7_ledger.py": "9139369bb9106197e388afaf20b16adb860aab1bcaa3958562a25a8ff5f8b477",
+    "scripts/m8_ledger.py": "aabef3064c49f23524f15b8094f06b395ef6af689a1cce05384e9d2b3a2e2fd6",
+    "scripts/mixed_cycle_lattice.py": "f935aa37d440c506a9e87204e7a244b5208f8558a9fc99fb564815992c3fa0a0",
+    "scripts/model_moments.py": "1887303965ad29d161b420892d8317867e6790b59c6db15de61244bcf035d28c",
+    "scripts/paired_cycle_lattice.py": "13e6693457acc9bb0be5e14a33a9d9710ed05a9093f8b360e5ca3259f96eb864",
+    "scripts/pure_cycle_eight.py": "2c549e382c153f685e04e5d550d903b04cb6cba5a788d20461c8b9c86133f9e0",
+    "scripts/pure_cycle_lattice.py": "e581cbfa542d9d10746e4e8703cd4490e3ab3d014ca13b5c6a5d96e4c37466d8",
+    "scripts/spectator_52_exact_lattice.py": "2495805e087c1e28d78610b269e983ea63d6a6b86655e701c92c7cf24bcecd24",
+    "scripts/spectator_52_midpoint.py": "e56e929cd82d36bbdeb74e66c24c61799dc4f40967f973988f39e61a34314dd9",
+    "scripts/spectator_52_reduced_midpoint.py": "f654eebb2ad7d189532c2846c3a972438bf9254f57408552d65a2e28fe041498",
+    "scripts/spectator_reduction.py": "a7d0e19523a5018a72166b54a8bb8357fcfbfab691539c0d2a42984f572b70b3",
+    "scripts/verify_cycle_eight_lattice.py": "a5aaae108761fdf0291cbddcb561aea3628c162d59cfdc1f83215eb1f449dae4",
+    "scripts/verify_lemmas.py": "a5d3fb7a7b7460a182773fc743b329d8e593e94a30ecf50d7a82bc9b1619a125",
+    "scripts/verify_mixed_cycles.py": "1773ecc9ef8357e6f3406f2262350bb50cfb8d47966a81174c30efd870ab1663",
+    "scripts/verify_model_certificates.py": "82eeb6c7bd3b4e4c22547fce0f4066f86927b22eb22a25b88ead8ff23cf25874",
+    "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
+    "scripts/verify_project.py": "b4ed9a5e2ce1033d0726fc471bd744e977d03744c5cc57508f2580aafb1df2c2",
+    "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
+    "scripts/verify_spectator_reduction.py": "961694b4035b684b9f59ed78f5ad722c12ea29b38022721a8870929db5c4b6c1"
+  },
   "all_checks_passed": true,
   "limitations": [
     "Passing checks do not prove the surrounding analytic transport.",
-    "Mixed eighth-order classes and arithmetic transport remain unresolved.",
-    "Other reference class inputs and local identities remain conditional.",
+    "Finite model moments do not establish arithmetic transport to zeta zeros.",
+    "The eighth-order independent NumPy checks are verified from their stored record.",
     "Spectator checks are finite examples, not an exhaustive proof.",
     "Hashes identify the executed scripts, not a full repository revision."
   ],
@@ -53,10 +79,10 @@
     },
     {
       "script": "scripts/verify_model_certificates.py",
-      "sha256": "5004f42837197ef20520421f612b491a252307184f99786da47ca8c8ba8cbaa5",
+      "sha256": "82eeb6c7bd3b4e4c22547fce0f4066f86927b22eb22a25b88ead8ff23cf25874",
       "scope": "recorded integer certificates and source provenance",
       "exit_code": 0,
-      "stdout": "RECORDED INTEGER CERTIFICATES AND SOURCE HASHES VERIFIED\nJ52 = 1/8 ; C7 = -17/360 ; model m7 = 3439/180\nScope: transcript arithmetic and provenance; analytic transport remains open.\n",
+      "stdout": "RECORDED INTEGER CERTIFICATES AND SOURCE HASHES VERIFIED\nJ52 = 1/8 ; C7 = -17/360 ; model m7 = 3439/180\nC8 = 157/4032 ; model m8 = 747361/20160\nScope: transcript arithmetic and provenance; analytic transport remains open.\n",
       "stderr": "",
       "passed": true
     },
@@ -66,6 +92,15 @@
       "scope": "pair-cycle certificates, direct counts and exact cell integration",
       "exit_code": 0,
       "stdout": "PAIR-MODEL CERTIFICATES, DIRECT COUNTS AND EXACT SIMPLEX CHECKS PASSED\n{2,2,2} = 32/105; {2^4} = 1661/3780\nScope: finite continuum model; analytic transport remains open.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_mixed_cycles.py",
+      "sha256": "1773ecc9ef8357e6f3406f2262350bb50cfb8d47966a81174c30efd870ab1663",
+      "scope": "mixed-cycle certificates and independent scalar frequency sums",
+      "exit_code": 0,
+      "stdout": "{4,2} = -23/420; exact record and independent scalar checks passed\n{6,2} = -563/11340; exact record and independent scalar checks passed\n{4,2,2} = -127/840; exact record and independent scalar checks passed\n{4,4} = 23/4536; exact record and independent scalar checks passed\nALL MIXED-CYCLE CERTIFICATE CHECKS PASSED\nScope: continuum model; analytic transport remains open.\n",
       "stderr": "",
       "passed": true
     },
@@ -89,7 +124,7 @@
     },
     {
       "script": "scripts/m7_ledger.py",
-      "sha256": "e4ef4842688f82817814570f1e427e8f166bf2e17c108f58b4b4afa1ff913af4",
+      "sha256": "9139369bb9106197e388afaf20b16adb860aab1bcaa3958562a25a8ff5f8b477",
       "scope": "seventh-order continuum model ledger",
       "exit_code": 0,
       "stdout": "CONTINUUM MODEL LEDGER: arithmetic transport remains open.\npair/four layer = 67/4 = 16.75\nmodel m7 = 3439/180 = 19.105555555555554\nexact Stieltjes floor = 1031677/54096 = 19.071225229222122\ngap = 27857/811440 = 0.03433032633343192\nMODEL M7 ARITHMETIC CHECKS PASSED\n",
@@ -98,10 +133,10 @@
     },
     {
       "script": "scripts/m8_ledger.py",
-      "sha256": "fb0f72927d42f7e1a049fd27889e516edb4b1dca8b31d4eb366575dbdab0c751",
+      "sha256": "aabef3064c49f23524f15b8094f06b395ef6af689a1cce05384e9d2b3a2e2fd6",
       "scope": "eighth-order continuum model ledger and targets",
       "exit_code": 0,
-      "stdout": "CONTINUUM MODEL TARGETS: arithmetic transport remains open.\nmodel m7 = 3439/180 = 19.105555555555554\nm8 = 3311/90 + A8\nA8 := {2^4}+{4,2,2}+{4,4}+{6,2}+C8\nexact {2^4} = 1661/3780\nm8 moment-cone floor = 968528321/26142480 = 37.04806586827264\nA8 floor = 6775529/26142480 = 0.2591769793837463\n80%: already reached by the degree-three model conversion\n80.2%: already reached by the degree-three model conversion\n81%: A8 <= 8128408/16967475 = 0.4790581981113866\n90%: A8 <= 28456753/106766100 = 0.2665336000846711\nMODEL BELL(8) ARITHMETIC CHECKS PASSED\n",
+      "stdout": "CONTINUUM MODEL TARGETS: arithmetic transport remains open.\nmodel m7 = 3439/180 = 19.105555555555554\nm8 = 3311/90 + A8\nA8 := {2^4}+{4,2,2}+{4,4}+{6,2}+C8\nexact {2^4} = 1661/3780\nexact {4,2,2} = -127/840 ; {4,4} = 23/4536\nexact {6,2} = -563/11340 ; C8 = 157/4032\nexact A8 = 633/2240\nm8 moment-cone floor = 968528321/26142480 = 37.04806586827264\nA8 floor = 6775529/26142480 = 0.2591769793837463\nmodel m8 = 747361/20160 = 37.07147817460317\ndegree-four lambda(0) = 12241115/162540559 = 0.07531114126413212\nconditional simple-zero conversion = 138058329/162540559 = 0.8493777174717357\n80%: already reached by the degree-three model conversion\n80.2%: already reached by the degree-three model conversion\n81%: A8 <= 8128408/16967475 = 0.4790581981113866\n90%: A8 <= 28456753/106766100 = 0.2665336000846711\nMODEL BELL(8) ARITHMETIC CHECKS PASSED\n",
       "stderr": "",
       "passed": true
     }

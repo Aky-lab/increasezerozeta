@@ -2,7 +2,7 @@
 
 Exact computation and analytic research on lower bounds for the proportion of simple zeros of the Riemann zeta function on the critical line.
 
-The project develops reproducible mathematical calculations toward stronger bounds. Its exact model results are available below; the remaining research is to evaluate the eighth-order classes and prove their connection to zeta moments.
+The project develops reproducible mathematical calculations toward stronger bounds. All class evaluations needed for the finite continuum model through eighth order are now certified. The remaining research is to independently review those certificates and prove their connection to zeta moments.
 
 ## Results and scope
 
@@ -12,21 +12,23 @@ The pure-cycle integral **C7=-17/360** is also exact. Its [flow-polytope proof](
 
 The [pair-cycle calculation](notes/paired_cycle_flow_polytopes.md) gives **{2^4}=1661/3780**. Its lower-order checks exposed a grouping error: the direct three-pair aggregate is **32/105**, because adjacent and nested noncrossing patterns have different integrals. The [pairing audit](results/pairing_model_audit.md) includes an independent exact integration of both patterns.
 
-Retaining the framework's other class inputs and local identities, the corrected ledger gives m6=640/63 and m7=3439/180. Exact Christoffel/Hankel algebra then gives lambda_3(0)=247/2519 and the conditional counting conversion 2025/2519, approximately 80.389%. These percentages depend on the unresolved analytic framework; they are not established zeta bounds.
+The [complete eighth-order certificate](notes/eighth_order_certificate.md) gives {4,2,2}=-127/840, {4,4}=23/4536, {6,2}=-563/11340 and C8=157/4032. It rejects the earlier {6,2}=-1/20 guess. All mixed-class orbits and the pure cycle pass held-out integer-count predictions and independent small-grid checks.
 
-These are model and algebraic results. The arithmetic transport to zeta moments and eighth-order class evaluations remain open. They do not yet establish a new unconditional zeta-zero bound.
+With [finite-model local identities](notes/model_local_identities.md), the exact ledgers give m6=640/63, m7=3439/180 and m8=747361/20160. Rational Hankel inversion gives lambda_4(0)=12241115/162540559 and a **conditional counting conversion of approximately 84.938%**. This depends on the unresolved analytic interface and is not an established zeta bound.
+
+These are finite model and algebraic results. Arithmetic transport to zeta moments remains open; the calculations do not yet establish a new unconditional zeta-zero bound.
 
 See [RESEARCH.md](RESEARCH.md) for definitions, references and open problems.
 
 ## Reproduction
 
-Run all ten project checks from the repository root with Python 3.12 or later. They use only the standard library:
+Run all eleven project checks from the repository root with Python 3.12 or later. They use only the standard library:
 
 ```sh
 python scripts/verify_project.py
 ```
 
-This checks finite algebra, exact moment targets, actual-walk examples, certificate records and source hashes, independent pairing counts and cell integrals, Bell(7)/Bell(8) enumeration, and both moment ledgers. Use `--output verification.json` to save the full results.
+This checks finite algebra, exact moment targets, actual-walk examples, certificate records and source hashes, independent pairing counts and cell integrals, scalar mixed-class counts, Bell(7)/Bell(8) enumeration, and both moment ledgers. Use `--output verification.json` to save the full results.
 
 The seventh- and eighth-order calculators are available directly:
 
@@ -64,12 +66,20 @@ python scripts/paired_cycle_lattice.py --out results/paired_cycle_reproduction.j
 python scripts/verify_pairing_model.py
 ```
 
-The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared conditional moment inputs are defined in `scripts/model_moments.py`.
+Recompute the mixed classes and the pure eighth-order cycle with NumPy:
+
+```sh
+python scripts/mixed_cycle_lattice.py --out results/mixed_cycle_reproduction.json
+python scripts/pure_cycle_eight.py --out results/cycle_eight_reproduction.json
+python scripts/verify_cycle_eight_lattice.py --out results/cycle_eight_checks.json
+```
+
+The standard-library certificate checks verify recorded integer differences, held-out counts and source hashes. The NumPy tools perform the full lattice enumeration. Shared finite model moments are defined in `scripts/model_moments.py`. The [verification record](results/project_verification_2026-10-05.json) identifies all eleven executed checks.
 
 ## Project files
 
 - [RESEARCH.md](RESEARCH.md): model conventions, references and open mathematical problems.
-- [Seventh-order ledger](notes/m7_ledger_derivation.md) and [eighth-order targets](notes/m8_ledger_and_80_target.md): the current calculations and the unresolved classes.
+- [Seventh-order ledger](notes/m7_ledger_derivation.md) and [eighth-order targets](notes/m8_ledger_and_80_target.md): the exact class assembly and conditional counting targets.
 - `scripts/`: executable checks, exact evaluators and exploratory numerical tools.
 - `results/`: integer records and computational audits supporting the mathematical notes.
 

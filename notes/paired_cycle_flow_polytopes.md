@@ -75,6 +75,7 @@ python scripts/verify_pairing_model.py
 ```
 
 The first command requires NumPy; the second uses only the standard
-library. These are finite continuum-model certificates. The remaining
-class inputs, local identities and arithmetic transport must be checked
-before any model moment is interpreted as a zeta moment.
+library. These are finite continuum-model certificates. The
+[complete eighth-order assembly](eighth_order_certificate.md) uses them with
+the finite-model local identities. Arithmetic transport and the counting
+interface remain necessary before any zeta-zero bound follows.

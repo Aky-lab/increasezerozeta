@@ -45,8 +45,7 @@ lattice-count or orbit implementation with the primary evaluator.
 
 ## Consequences for the supplied model ledger
 
-Retaining the reference framework's other class inputs and conditional
-frozen-singleton identities, the pairing correction gives
+Relative to the earlier supplied reference ledgers, the pairing correction gives
 
     m6 = 12809/1260 - 1/140 = 640/63,
     m7 = 862/45 - 7/140 = 3439/180,
@@ -61,3 +60,8 @@ value for the direct perfect-matching model.
 The {5,2}=1/8 and C7=-17/360 certificates are unchanged. This audit
 does not establish arithmetic transport, validate the entire reference
 analytic framework, or claim an unconditional zeta-zero bound.
+
+The [local-identity proof](../notes/model_local_identities.md) now reconstructs
+these lower model moments directly from certified class inputs. The
+[complete eighth-order certificate](../notes/eighth_order_certificate.md)
+extends this assembly; it does not establish arithmetic transport.

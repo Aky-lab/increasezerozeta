@@ -23,4 +23,5 @@ and nested patterns. The exact four-pair value follows from its own
 certificate rather than that calibration.
 
 This certifies a finite continuum-model class. Its arithmetic
-interpretation and the remaining eighth-order classes are still open.
+interpretation remains open. The [complete eighth-order certificate](eighth_order_certificate.md)
+assembles it with the other certified finite classes.

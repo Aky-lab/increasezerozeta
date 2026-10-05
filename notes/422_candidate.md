@@ -1,53 +1,22 @@
-# Pre-registered candidate for \(\{4,2,2\}\)
+# Exact {4,2,2} class
 
-**Status:** numerical identification candidate, frozen before exact symbolic evaluation.
+The class consists of one connected four-block and two pairs on an
+eight-cycle. Its 210 placements split into 22 dihedral orbits.
+The [mixed-cycle certificate](mixed_cycle_flow_polytopes.md) confirms
+the earlier numerical candidate exactly:
 
-The class consists of one connected four-block and two pair blocks on the 8-cycle. The \(210\) placements reduce to \(22\) dihedral orbits.
+    {4,2,2} = -127/840.
 
-An independent midpoint implementation uses:
+Each lifted signed term is an integral network polytope of dimension
+nine. Ten integer counts determine each orbit's degree-nine polynomial;
+the eleventh checks every orbit and the aggregate. The
+[raw record](../results/mixed_cycle_flow_2026-10-05.json) includes all
+counts, multiplicities, source hashes and exact orbit values.
 
-- the 26-term partition-cyclic \(C_4\) evaluator;
-- pair factors \(C_2(v)=|v|\) and \(C_2(w)=|w|\) on the overlap support;
-- the outer 8-walk overlap;
-- exact dihedral orbit multiplicities.
+The independent standard-library verifier generates all placements,
+uses scalar closed frequencies and reconstructs the outer walk. Its
+inner cumulant compiler uses permutations and cuts, independent of the
+primary coordinate elimination and sorted-frequency cache.
 
-## Refinement ladder
-
-| \(h\) | total |
-|---:|---:|
-| 0.250 | -0.2377166748046875 |
-| 0.200 | -0.207316992000000 |
-| 0.125 | -0.1734153628349304 |
-| 0.100 | -0.1654571820000001 |
-
-These values strongly indicate
-
-\[
-\boxed{
-\{4,2,2\}=-\frac{127}{840}
-=-0.151190476190476\ldots
-}
-\]
-
-The error divided by \(h^2\) is:
-
-| \(h\) | \((M_h+127/840)/h^2\) |
-|---:|---:|
-| 0.250 | -1.38442 |
-| 0.200 | -1.40316 |
-| 0.125 | -1.42239 |
-| 0.100 | -1.42667 |
-
-consistent with a stable midpoint \(O(h^2)\) expansion.
-
-## Pre-registered falsifier
-
-The candidate is now frozen as
-
-\[
-\boxed{\{4,2,2\}=-127/840}.
-\]
-
-It must be rejected or revised if finer grids, an independent implementation, or exact rational integration disagree.
-
-No theorem-level \(m_8\) calculation should consume this value before exact certification.
+This is an exact finite continuum-model evaluation. Its arithmetic
+interpretation is addressed by the remaining transport obligations.

@@ -19,4 +19,5 @@ The conditional ledger is
 The separate [flow-polytope certificate](pure_cycle_flow_polytopes.md) gives C7=-17/360 exactly. The resulting model ledger is m7=3439/180; arithmetic transport remains open.
 
 The lower-order base uses the audited three-pair value 32/105; see
-[the pairing audit](../results/pairing_model_audit.md) for retained assumptions.
+[the pairing audit](../results/pairing_model_audit.md) and the
+[finite-model local identities](model_local_identities.md) for its assembly.

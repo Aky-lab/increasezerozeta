@@ -170,7 +170,12 @@ Combining C7=-17/360 with the exact corrected {5,2}=1/8 gives
 
 This closes those two finite model evaluations. The identification
 of that ledger with an arithmetic seventh moment still requires
-the frozen-singleton, vanishing and transport statements.
+the arithmetic transport and spectral/counting interface.
 
 The lower-order base uses the audited three-pair value 32/105; see
-[the pairing audit](../results/pairing_model_audit.md) for retained assumptions.
+[the pairing audit](../results/pairing_model_audit.md) and the
+[finite-model local identities](model_local_identities.md) for its assembly.
+
+The same network proof extends to order eight. The
+[eighth-order certificate](eighth_order_certificate.md) gives C8=157/4032,
+with an independent compiler and unsorted full-cube checks.

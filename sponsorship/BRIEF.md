@@ -4,7 +4,7 @@
 
 Develop auditable exact computations for higher moments in research on simple zeros of the Riemann zeta function. A six-week pilot seeks **$1,000 in AI API credits** for independent derivations, computation and analytic proof development.
 
-The immediate objective is a reproducible route from model definitions to exact integrals and clearly specified transport lemmas.
+The immediate objective is independent review of the complete eighth-order finite model and progress on the lemmas connecting it to arithmetic zeta moments.
 
 ## Existing results
 
@@ -16,7 +16,9 @@ The [pair-cycle certificate](../notes/paired_cycle_flow_polytopes.md) gives {2^4
 
 The repository provides a standard-library engine for exact Christoffel/Hankel moment consumption and eighth-order target geometry. An independent spectator checker passes 7,203 rational cases and detects 358 failures of an earlier distance-three formula. The [audit](../results/spectator_actual_walk_audit.md) identifies the missing-prefix error.
 
-Retaining the other reference inputs gives m6=640/63 and m7=3439/180. The six-moment algebra yields lambda_3(0)=247/2519. Its zeta interpretation depends on the analytic moment framework, including the remaining class inputs and local identities. Mixed eighth-order class evaluation and arithmetic transport remain open; the model calculations alone do not establish a new unconditional bound.
+The [eighth-order certificate](../notes/eighth_order_certificate.md) completes the remaining finite classes: {4,2,2}=-127/840, {4,4}=23/4536, {6,2}=-563/11340 and C8=157/4032. It rejects the earlier {6,2}=-1/20 guess. Independent scalar frequency sums check the mixed classes; a separate compiler and unsorted cube enumeration check the pure eighth-order cycle.
+
+The assembled model moments are m6=640/63, m7=3439/180 and m8=747361/20160. Exact degree-four Hankel algebra gives a conditional counting conversion of approximately 84.938%. The finite-model local identities are proved, while their arithmetic transport and the spectral/counting interface remain open. These calculations do not establish a new unconditional zeta-zero bound.
 
 See [the research overview](../RESEARCH.md) for conventions and proof obligations.
 
@@ -25,8 +27,8 @@ See [the research overview](../RESEARCH.md) for conventions and proof obligation
 | Period | Work | Deliverable |
 |---|---|---|
 | Week 1 | Review definitions, reference conventions and normalization | Reviewed specification and anchor cases |
-| Weeks 2–3 | Independently review the seventh-order certificates and extend the method to eighth-order classes | Certificate review and exact class values or documented obstructions |
-| Week 4 | Audit remaining higher-moment candidates | Exact values, enclosures or counterexamples |
+| Weeks 2–3 | Independently review the complete seventh/eighth-order certificates | Reviewed counts, normalization and corrections or counterexamples |
+| Week 4 | Audit the analytic moment-production framework | Precise transport specification and missing lemmas |
 | Week 5 | Develop arithmetic-to-model transport | Proofs and a precise list of remaining lemmas |
 | Week 6 | Package computations and evaluate the next stage | Reproduction bundle, resource report and mathematical review |
 

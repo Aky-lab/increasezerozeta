@@ -11,7 +11,7 @@ import math
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-from model_moments import M7_BASE, MODEL_M7
+from model_moments import M7_BASE, MODEL_M7, MODEL_C8, MODEL_A8, MODEL_M8
 
 
 def require(condition, message):
@@ -98,8 +98,36 @@ def main():
             "additional held-out count differs")
     m7 = M7_BASE+7*sum(components)+values[7]
     require(m7==MODEL_M7==F(3439,180),"seventh-order model ledger differs")
+    eight_path = ROOT/"results/pure_cycle_eight_2026-10-05.json"
+    eight = json.loads(eight_path.read_text())
+    expected_sources = {"scripts/pure_cycle_eight.py","scripts/mixed_cycle_lattice.py",
+                        "scripts/pure_cycle_lattice.py","scripts/bell8_orbits.py"}
+    require(set(eight["source_sha256"])==expected_sources,"C8 source inventory differs")
+    for path,digest in eight["source_sha256"].items():
+        hash_matches(path,digest)
+    c8 = pure_cycle_value(eight["records"],8)
+    cert = eight["certificate"]
+    require((cert["degree_bound"],cert["period"],cert["held_out_n"])==(9,1,11),
+            "C8 certificate parameters differ")
+    require(c8==MODEL_C8==F(cert["C"])==F(157,4032),"C8 value differs")
+    eight_independent = json.loads((ROOT/"results/pure_cycle_eight_independent_2026-10-05.json").read_text())
+    require(eight_independent["all_checks_passed"] and
+            eight_independent["independent_cyclic_terms"]==94586,"C8 independent compiler differs")
+    require(set(eight_independent["source_sha256"])=={
+        "scripts/verify_cycle_eight_lattice.py","scripts/pure_cycle_lattice.py",
+        "results/pure_cycle_eight_2026-10-05.json"},"C8 independent source inventory differs")
+    for path,digest in eight_independent["source_sha256"].items():
+        hash_matches(path,digest)
+    observed = {r["n"]:r["signed_count"] for r in eight["records"]}
+    require([r["n"] for r in eight_independent["full_cube_checks"]]==[2,3],
+            "C8 direct check inventory differs")
+    for check in eight_independent["full_cube_checks"]:
+        require(check["cube_points"]==check["n"]**8 and
+                check["signed_count"]==observed[check["n"]],"C8 direct check differs")
+    require(MODEL_A8==F(633,2240) and MODEL_M8==F(747361,20160),"eighth-order model ledger differs")
     print("RECORDED INTEGER CERTIFICATES AND SOURCE HASHES VERIFIED")
     print("J52 =",7*sum(components),"; C7 =",values[7],"; model m7 =",m7)
+    print("C8 =",c8,"; model m8 =",MODEL_M8)
     print("Scope: transcript arithmetic and provenance; analytic transport remains open.")
 
 

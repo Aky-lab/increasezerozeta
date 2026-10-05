@@ -2,8 +2,8 @@
 """Bell(7) continuum ledger using exact finite model inputs.
 
 Defaults: {5,2}=1/8, C7=-17/360 and audited {2,2,2}=32/105.
-The frozen-singleton identities and arithmetic transport remain analytic
-obligations. Explicit overrides calculate alternative model scenarios.
+Finite-model singleton deletion and three-block vanishing are proved;
+arithmetic transport remains open. Explicit overrides calculate alternative model scenarios.
 """
 
 import argparse

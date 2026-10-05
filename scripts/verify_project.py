@@ -18,6 +18,7 @@ CHECKS = (
     ("verify_spectator_reduction.py", "finite rational checks of actual-walk exact-v reduction"),
     ("verify_model_certificates.py", "recorded integer certificates and source provenance"),
     ("verify_pairing_model.py", "pair-cycle certificates, direct counts and exact cell integration"),
+    ("verify_mixed_cycles.py", "mixed-cycle certificates and independent scalar frequency sums"),
     ("bell7_gate.py", "seventh-order partition multiplicities"),
     ("bell8_orbits.py", "eighth-order dihedral orbits and multiplicities"),
     ("m7_ledger.py", "seventh-order continuum model ledger"),
@@ -58,11 +59,15 @@ def main():
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "python_version": platform.python_version(),
         "runner_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        "script_sources_sha256": {
+            path.relative_to(ROOT).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+            for path in sorted((ROOT/"scripts").glob("*.py"))
+        },
         "all_checks_passed": all(c["passed"] for c in checks),
         "limitations": [
             "Passing checks do not prove the surrounding analytic transport.",
-            "Mixed eighth-order classes and arithmetic transport remain unresolved.",
-            "Other reference class inputs and local identities remain conditional.",
+            "Finite model moments do not establish arithmetic transport to zeta zeros.",
+            "The eighth-order independent NumPy checks are verified from their stored record.",
             "Spectator checks are finite examples, not an exhaustive proof.",
             "Hashes identify the executed scripts, not a full repository revision.",
         ],
