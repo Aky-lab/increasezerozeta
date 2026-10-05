@@ -134,6 +134,15 @@ Their complete-period second-moment budget stays uniformly bounded for
 prime-power moduli of any exponent. The remaining large-progression prime
 norms and weighted consumption are explicit research targets.
 
+[Weighted dilated transport](../notes/weighted_dilated_prime_transport.md)
+supplies actual prime replacement for fixed coefficients and a sufficiently
+slowly growing prime-power family. It permits coupled nonuniform starts
+under an explicit marginal-density condition. A translated short-box tail
+estimate identifies the full singular-series main term on nondegenerate
+locks. The proof retains endpoint errors and the progression extraction
+loss; its cutoff and saving are qualitative. Positive-power moduli,
+prescribed windows and the final weighted zeta conversion remain open.
+
 ## Pilot milestones
 
 | Period | Work | Deliverable |

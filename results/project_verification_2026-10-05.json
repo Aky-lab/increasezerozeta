@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T15:26:02.755101+00:00",
+  "generated_at_utc": "2026-10-05T15:48:35.705747+00:00",
   "python_version": "3.12.12",
-  "runner_sha256": "25fd66de3aaab4be70753dd4e69372fd4731e9af6cc6cd0a00644c40a5232c16",
+  "runner_sha256": "0356d87133d6fdd24b376a9364e0d416db77ed0807697adb41d490fc23c0706a",
   "script_sources_sha256": {
     "scripts/bell7_gate.py": "fc8a12c57f3327f9be00fa74d27a3d8599eaf50b23efae51dba1e3977b135a35",
     "scripts/bell8_orbits.py": "10e28623d01f8f52e73ff9823929654105491235ec0564067508a92de8860488",
@@ -34,14 +34,15 @@
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
     "scripts/verify_presieved_pairs.py": "93bf6795ea056efe1f8d67cc2146da87fab0bbf0b53ebe3db6d3bbf9889df995",
     "scripts/verify_prime_pair_transport.py": "c2f0d53493c0cc0727a95faa6b157dd2e030548a2510041ca60a02dc4b209735",
-    "scripts/verify_project.py": "25fd66de3aaab4be70753dd4e69372fd4731e9af6cc6cd0a00644c40a5232c16",
+    "scripts/verify_project.py": "0356d87133d6fdd24b376a9364e0d416db77ed0807697adb41d490fc23c0706a",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
     "scripts/verify_reciprocity.py": "869d094cee3f71ad6ac2a2b0587894a24ff4799d93bd7af12ecba47c301266bd",
     "scripts/verify_rectangle_tail.py": "057311dda5e6a07a5fca63fc4f127fde7568145dd3745544effa604dbd54ea59",
     "scripts/verify_rectangle_transport.py": "3f2cdc0d2d4f1dcb38f92e637b895e62199a336815d3e2875c4ab0a220fb500e",
     "scripts/verify_short_window_transport.py": "6a70c7c764aebb31b28505e7b7aa5a214e08224a4bf63c4b7099daca584c7ef1",
     "scripts/verify_sine_bridge.py": "3798112cf615e8072eb45c03fb196209d1791d87fc6517f0f277e5a1f0a4edad",
-    "scripts/verify_spectator_reduction.py": "961694b4035b684b9f59ed78f5ad722c12ea29b38022721a8870929db5c4b6c1"
+    "scripts/verify_spectator_reduction.py": "961694b4035b684b9f59ed78f5ad722c12ea29b38022721a8870929db5c4b6c1",
+    "scripts/verify_weighted_dilations.py": "5b79affc1dc279fe5fe1c047bd70294a539891b0bcc7accaef6ba1c6a44ff1b4"
   },
   "all_checks_passed": true,
   "limitations": [
@@ -130,6 +131,15 @@
       "scope": "heterogeneous lock cubes, progression-norm criterion, exceptional-prime budgets, raw overlaps and finite CRT main terms",
       "exit_code": 0,
       "stdout": "Resolved squared counts, cubes and exact progression-norm criterion: 19\nCoset cube identity, sharp extraction loss and selected-progression examples: 13\nPrime-field and CRT local second-moment budgets: (25, 15)\nBezout-independent raw overlaps and presieved main terms: 2625\nDilated rectangle finite audits passed; growing-modulus prime uniformity remains open.\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_weighted_dilations.py",
+      "sha256": "5b79affc1dc279fe5fe1c047bd70294a539891b0bcc7accaef6ba1c6a44ff1b4",
+      "scope": "translated divisor/prime endpoint moments, dilated discriminants, carry/progression splitting and weighted consumption",
+      "exit_code": 0,
+      "stdout": "Translated positive-divisor expansions and endpoint bounds: 16\nTranslated repeated-prime moments and lcm endpoint counts: 6\nDilated discriminant support and translated-box multiplicities: (2336, 15)\nHeterogeneous W-residue, carry and progression splitting: 8067\nWeighted exceptional mass and consumption inequality: 9\nWeighted dilation finite audits passed; the asymptotic claims use the written proofs and published input.\n",
       "stderr": "",
       "passed": true
     },

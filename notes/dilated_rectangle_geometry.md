@@ -4,8 +4,11 @@ The [resolved lock frame](resolved_lock_frame.md) gives the physical
 four-point count. This note derives its heterogeneous cube, its exact
 presieved main term, and a uniformly bounded local second-moment budget
 for prime-power moduli. It also states a deterministic progression-norm
-criterion at the correct physical scale. The missing prime estimate must
-control those progression norms and the actual consumption weights.
+criterion at the correct physical scale. The prime estimate must control
+those progression norms and the actual consumption weights. The subsequent
+[weighted transport theorem](weighted_dilated_prime_transport.md) supplies
+this for fixed coefficients and a sufficiently slowly growing prime-power
+family, with explicit start-weight and consumption conditions.
 
 ## 1. Remove the lock without collapsing the variance
 

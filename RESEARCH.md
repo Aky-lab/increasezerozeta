@@ -374,3 +374,36 @@ It distinguishes that raw cardinality from the consumption-normalized
 volume. The large-progression prime estimate, incomplete weighted ranges
 and the final zeta normalization remain open. The scale audit records
 the progression length before any short-window theorem is invoked.
+
+## Weighted transport for a slowly growing dilation family
+
+[The weighted dilation theorem](notes/weighted_dilated_prime_transport.md)
+uses the published W-tricked prime input and the explicit progression
+extraction to supply the replacement for fixed coprime r,q, and uniformly
+for a sufficiently slowly growing family of prime powers or 1. For
+balanced windows of lengths rH,qH and nonnegative start weights of total
+mass A whose two marginal maxima are at most (A/X)log(3X)^C, it proves
+
+    sum_(i,j) omega_(i,j) sum_(k,J)
+      |N_(i,j)(Lambda;k,J)-Z_(i,j;r,q)(k,J)S_(w;r,q)(k,J)|^2
+        =o(A rq H^4).
+
+The range is X^(1/3+epsilon)<=H<=X^(1-epsilon). The two starts may be
+coupled, and their weights need not be uniform; the diagonal family
+satisfies the marginal condition. The local residue budget stays bounded,
+while the norm loss is explicitly sqrt(max(r,q)) times the qualitative
+prime discrepancy. The slowly growing cutoff has no asserted rate.
+
+The full singular series replaces the finite main term on
+k J(rqk-J)(rqk+J)!=0. A translated short-box Euler-tail estimate proves
+this uniformly in the same growing family. Positive divisor expansions
+retain the endpoint term O_s(log(3X)^(15s)), and repeated-prime moments
+retain O_m((1+log log(3X))^m); the polynomial window length absorbs them.
+
+Weighted Cauchy--Schwarz states the actual consumption norm. Logarithmic
+concentration of start weights is charged against the quantitative
+exceptional measure. Additional growing consumption norms, prescribed
+starts and positive-power dilations are not inferred from the qualitative
+saving. Those regions and the reference's zeta normalization remain open.
+The result is a deduction from published uniformity input with new explicit
+geometry and tail bookkeeping; priority and independent review remain open.

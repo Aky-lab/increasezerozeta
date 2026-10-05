@@ -433,6 +433,15 @@ correct balanced raw scale. Uniform prime norms on the shorter progression
 windows and the consumed weight ranges are still needed; an ordinary
 W-tricked bound is not silently promoted to a growing-modulus estimate.
 
+[Weighted dilation transport](weighted_dilated_prime_transport.md)
+now supplies the prime replacement and full nondegenerate singular-series
+main term for fixed coefficients and a sufficiently slowly growing
+prime-power family. Its coupled start-weight condition and consumption
+norm are explicit. This resolves that restricted progression transfer,
+including translated short-box Euler tails. The positive-power modulus
+region, prescribed starts, remaining singular weights and the reference's
+consumption normalization still need separate estimates.
+
 ## 7. Target for a full one-percentage-point improvement
 
 If all non-vanishing remainder terms are combined *after being individually identified* into

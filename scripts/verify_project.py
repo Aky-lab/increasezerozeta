@@ -21,6 +21,7 @@ CHECKS = (
     ("verify_rectangle_transport.py", "cube rank/minor certificate, admissible residue budget, carry splitting, boundaries and finite rectangle main term"),
     ("verify_rectangle_tail.py", "rectangle discriminant support, positive divisor moments, repeated-prime partitions and finite Euler-tail decompositions"),
     ("verify_dilated_rectangles.py", "heterogeneous lock cubes, progression-norm criterion, exceptional-prime budgets, raw overlaps and finite CRT main terms"),
+    ("verify_weighted_dilations.py", "translated divisor/prime endpoint moments, dilated discriminants, carry/progression splitting and weighted consumption"),
     ("christoffel_exact.py", "exact moment consumption for supplied moments"),
     ("k8_target.py", "exact target geometry for supplied moments"),
     ("verify_spectator_reduction.py", "finite rational checks of actual-walk exact-v reduction"),
