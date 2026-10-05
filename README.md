@@ -30,7 +30,7 @@ research/k8-moments
 
 with draft PR #6.
 
-Important: an actual-walk audit found that the historical spectator reduction added an absent prefix in distance three. The evidence favoring {5,2}=7/72 is quarantined, and the reason for retiring 1/8 is withdrawn. Neither fraction is certified. See HANDOFF.md and results/spectator_actual_walk_audit.md before using research-branch numbers.
+An actual-walk audit found that the historical spectator reduction added an absent prefix in distance three. The evidence favoring {5,2}=7/72 is quarantined. Exact integer lattice evaluation of the corrected model now gives **{5,2}=1/8**, with a proved degree/period bound, held-out checks, and the independent C5=1/36 anchor. See [the proof and reproduction note](notes/spectator_52_exact_lattice.md). C7 and the arithmetic transport remain unresolved; this model calculation does not establish a new zeta theorem.
 
 ## Research support
 

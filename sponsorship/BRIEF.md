@@ -14,13 +14,13 @@ The repository has a standard-library Python engine for exact Christoffel/Hankel
 
 The existing six-moment algebra gives `lambda_3(0) = 1415/13891`. Its zeta interpretation depends on the surrounding candidate analytic framework. It is **not an independently established unconditional record**. The 80% target remains a research target.
 
-A later actual-walk audit found a structural error in the spectator elimination used to prefer `7/72` over `1/8`. That preference is quarantined, and the stated reason for retiring `1/8` is withdrawn. Corrected numerical refinement approaches `1/8`, but neither fraction is certified. The remaining integral still needs exact evaluation or rigorous enclosure.
+A later actual-walk audit found a structural error in the spectator elimination used to prefer `7/72` over `1/8`. That preference is quarantined. The corrected model integral is now evaluated exactly as **{5,2}=1/8** by integer lattice sums with proved polynomial-degree and period bounds. Its components are 5/504, 1/360 and 13/2520; the independent C5 anchor is 1/36. All held-out checks pass. The [proof and reproduction note](../notes/spectator_52_exact_lattice.md) and [raw integer record](../results/spectator_52_exact_lattice_2026-10-05.json) provide concrete review materials. C7 and the arithmetic transport remain unresolved.
 
 ## Evidence produced in this preparation
 
 All three existing main-branch check scripts passed locally. The corrected independent checker constructs the actual walks from increments, integrates their piecewise-linear overlap, and compares with the corrected formula over 7,203 rational cases; 2,539 have nonzero integrals. All corrected comparisons agree exactly; the historical formula fails 358 distance-three cases. An explicit counterexample gives 2/75 instead of 1/375.
 
-These are checks of finite algebra and a reduction. They do not certify the full integral, arithmetic transport, or a new zeta theorem.
+The standard-library checks cover finite algebra and the spectator reduction. The separate NumPy lattice certificate evaluates the stated model integral exactly; neither layer proves arithmetic transport or a new zeta theorem.
 
 Reproduce with Python 3.12 or later, without third-party packages:
 
@@ -35,8 +35,8 @@ The [current evidence](evidence/actual-walk-2026-10-05.json) includes script has
 | Period | Work | Reviewable output |
 |---|---|---|
 | Week 1 | Freeze definitions, conventions, and anchor cases | Versioned specification and normalization ledger |
-| Weeks 2–3 | Implement exact rational cell integration for the reduced `{5,2}` problem | Rational cell certificates and independent anchor checks |
-| Week 4 | Compare the exact result with the candidate history | Certified value/enclosure, or a documented rejection of the candidate |
+| Weeks 2–3 | Review the completed `{5,2}` certificate and extend exact computation to C7 | Independent certificate review and C7 computation or obstruction |
+| Week 4 | Audit normalizations and the remaining candidate history | Exact results/enclosures, or documented candidate rejections |
 | Week 5 | Review the arithmetic-to-model transport | Explicit proof obligations with resolved/unresolved status |
 | Week 6 | Package evidence and assess the next stage | Reproduction bundle, resource report, and review memorandum |
 
