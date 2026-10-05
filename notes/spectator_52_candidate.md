@@ -1,115 +1,19 @@
-> **SUPERSEDED — actual-walk audit, 5 October 2026:** The historical distance-three spectator reduction added an absent s1 prefix. Its 7/72 numerical preference and dependent m7/m8 scenarios are quarantined. The reason stated below for retiring 1/8 is withdrawn. Neither fraction is certified. Read `results/spectator_actual_walk_audit.md` and the corrected `notes/spectator_52_eliminate_v.md`. The material below is preserved as historical evidence, not the current candidate policy.
+# The {5,2} model integral
 
-# Seventh-moment joint class \(\{5,2\}\): candidate history and active target
+The corrected integral is exactly **{5,2}=1/8**, with U1=5/504, U2=1/360 and U3=13/2520. See [the lattice proof](spectator_52_exact_lattice.md) and [integer record](../results/spectator_52_exact_lattice_2026-10-05.json).
 
-**Status:** unresolved model-side constant. The original \(1/8\) candidate is **retired**. The active numerical candidate is
+## Numerical discrepancy
 
-\[
-\boxed{\{5,2\}=\frac7{72}=0.0972222222\ldots}
-\]
+An earlier spectator reduction used {0,s1,s2,s3,s4} as the distance-three fixed set. The defining walk uses {0,s2,s3,s4}. Including s1 produces a different integral and the numerical ladder near 7/72.
 
-and must not be consumed as a theorem-level value until exact rational integration agrees.
+At (s1,s2,s3,s4)=(4/5,1/5,3/10,2/5), the actual spectator integral is 2/75; the extra-prefix formula gives 1/375. The [reduction proof](spectator_52_eliminate_v.md) identifies the error, and the [numerical audit](../results/spectator_actual_walk_audit.md) compares both definitions on the same grids.
 
-## 1. Retired first candidate
+The initial numerical convergence toward 1/8 was consistent with the corrected model. It was not a proof; exact lattice evaluation supplies the value.
 
-The first five-dimensional midpoint discretisation treated the spectator frequency \(v\) numerically together with the four \(C_5\) variables. Coarse rungs drifted towards
+## Seventh-order ledger
 
-\[
-\{5,2\}=\frac18.
-\]
+The conditional ledger is
 
-That candidate was correctly pre-registered before finer work, but it did **not** survive the next structural check.
+    m7 = 1717/90 + {5,2} + C7 = 6913/360 + C7.
 
-The exact spectator-frequency elimination in
-`notes/spectator_52_eliminate_v.md`
-showed that the apparent \(1/8\) convergence was a quadrature artefact caused by crossing rational kink hyperplanes in the \(v\)-direction.
-
-Therefore
-
-\[
-\boxed{\{5,2\}=1/8\quad\text{is retired.}}
-\]
-
-Any script or note still using \(1/8\) is stale and should be corrected rather than interpreted as an alternative candidate.
-
-## 2. Exact-\(v\) reduction
-
-For fixed five-block frequencies, the \(v\)-integral
-
-\[
-\int |v|\,O_7(v)\,dv
-\]
-
-is evaluated analytically. This reduces the problem from a five-dimensional midpoint quadrature to a four-dimensional piecewise-polynomial integral.
-
-The exact formula and derivation are in
-`notes/spectator_52_eliminate_v.md`.
-
-## 3. Corrected numerical ladder
-
-With \(v\) eliminated exactly, the corrected total
-\(\{5,2\}=7(U_1+U_2+U_3)\) is:
-
-| mesh \(dc\) | corrected total |
-|---:|---:|
-| 0.2500 | 0.1024055481 |
-| 0.2000 | 0.1008627200 |
-| 0.1250 | 0.0987835526 |
-| 0.1000 | 0.0982422875 |
-| 0.0800 | 0.0970260964 |
-| 0.0625 | 0.0976295331 |
-| 0.0500 | 0.0974842118 |
-
-Because the remaining four-dimensional midpoint rule still crosses rational kink hyperplanes, these values are **not enclosures** and need not be monotone.
-
-Two genuinely dyadic Richardson probes are:
-
-\[
-0.125\to0.0625:\quad0.09724485998,
-\]
-
-\[
-0.100\to0.0500:\quad0.09723151986.
-\]
-
-Both are close to
-
-\[
-\frac7{72}=0.09722222222\ldots.
-\]
-
-Thus the active candidate to falsify is
-
-\[
-\boxed{\{5,2\}=\frac7{72}}.
-\]
-
-## 4. Required decisive gate
-
-The exact-\(v\) reduction leaves a four-dimensional rational piecewise-polynomial integral. The decisive next step is exact rational cell/polytope integration.
-
-The active candidate must be rejected or revised if that exact computation disagrees.
-
-## 5. Downstream consequence if certified
-
-Together with the source identification
-
-\[
-C_7=-\frac{17}{360},
-\]
-
-the exact Bell(7) ledger would give
-
-\[
-m_7
-=
-\frac{1717}{90}
-+\frac7{72}
--\frac{17}{360}
-=
-\boxed{\frac{3443}{180}}
-=
-19.1277777\ldots.
-\]
-
-This lies only slightly above the exact Stieltjes floor from \(m_0,\ldots,m_6\), so the \(k=8\) target geometry is correspondingly tight.
+C7=-17/360 remains a numerical candidate. That assumption would give m7=862/45. Certification of C7 and arithmetic transport are separate requirements.

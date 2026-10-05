@@ -1,7 +1,7 @@
 # Correct spectator-frequency elimination for {5,2}
 
 **Status:** elementary exact reduction of the spectator integral only.
-The remaining C5 integral and arithmetic transport are unresolved.
+The full corrected model integral is evaluated in [the lattice certificate](spectator_52_exact_lattice.md). Arithmetic transport remains unresolved.
 
 ## 1. Correction to the historical reduction
 
@@ -91,11 +91,6 @@ against the same erroneous fixed prefix set. Its pass established
 a finite identity for that superset, not correctness against W3.
 The counterexample and this limitation are retained in the audit.
 
-## 5. Candidate policy
+## 5. Full model integral
 
-The historical four-dimensional ladder and its preference for 7/72
-are quarantined. The reason given for retiring 1/8 is withdrawn.
-Corrected numerical refinement again approaches 1/8, but neither
-fraction is certified. See the actual-walk audit for reproducible
-numbers. No downstream m7, m8, or target bound may be advertised
-as current merely by substituting either candidate.
+The corrected reduction gives {5,2}=1/8 by [exact lattice evaluation](spectator_52_exact_lattice.md). The 7/72 numerical ladder used the additional distance-three prefix and does not evaluate the stated model. C7 and the arithmetic transport are separate open problems.

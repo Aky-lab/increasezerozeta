@@ -1,8 +1,6 @@
-> **SUPERSEDED — actual-walk audit, 5 October 2026:** The historical distance-three spectator reduction added an absent s1 prefix. Its 7/72 numerical preference and dependent m7/m8 scenarios are quarantined. The reason stated below for retiring 1/8 is withdrawn. Neither fraction is certified. Read `results/spectator_actual_walk_audit.md` and the corrected `notes/spectator_52_eliminate_v.md`. The material below is preserved as historical evidence, not the current candidate policy.
-
 # Bell(7) derivation of the seventh-moment ledger
 
-**Status:** exact combinatorial reduction, conditional on extending the same frozen-singleton identities and 3-block vanishing rule already consumed at \(m_5,m_6\). The numerical value of \(m_7\) remains candidate-level because \(\{5,2\}\) and \(C_7\) are not yet both exact-certified.
+The combinatorial reduction assumes the frozen-singleton identities and 3-block vanishing rule used at m5 and m6. The corrected model value {5,2}=1/8 is exact; C7 and arithmetic transport remain unresolved.
 
 ## 1. Bell(7) classes
 
@@ -125,53 +123,16 @@ m_7
 }
 \]
 
-## 6. Current active candidate
+## 6. Corrected model input
 
-The old \(\{5,2\}=1/8\) midpoint candidate is retired; see
-`results/spectator_52_coarse.md`
-and
-`notes/spectator_52_eliminate_v.md`.
+The [exact lattice calculation](spectator_52_exact_lattice.md) gives {5,2}=1/8. The ledger therefore becomes
 
-The active exact-\(v\) numerical candidate is
+    m7 = 6913/360 + C7.
 
-\[
-\{5,2\}=\frac7{72}.
-\]
+The numerical C7 candidate -17/360 would give m7=862/45. This remains a conditional scenario until C7 and the arithmetic transports are established.
 
-Using the source identification candidate
+The Stieltjes floor implied by the supplied moments through m6 is
 
-\[
-C_7=-\frac{17}{360},
-\]
+    m7* = 25866469/1352400.
 
-we obtain
-
-\[
-\boxed{
-m_7
-=
-\frac{3443}{180}
-=
-19.127777777\ldots.
-}
-\]
-
-This is only
-
-\[
-\frac{5813}{4057200}
-=
-0.0014327615\ldots
-\]
-
-above the exact Stieltjes floor
-
-\[
-m_7^*=\frac{25866469}{1352400}
-=
-19.126345016\ldots.
-\]
-
-That small gap is important: it makes the \(m_8\) target for any further Christoffel improvement quite tight.
-
-The displayed \(m_7\) remains a **candidate** until both new seventh-order constants and their arithmetic transports are certified.
+The explicit-input calculator in `scripts/m7_ledger.py` keeps scenario arithmetic separate from moment certification.

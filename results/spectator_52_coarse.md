@@ -1,14 +1,8 @@
-> **SUPERSEDED — actual-walk audit, 5 October 2026:** The historical distance-three spectator reduction added an absent s1 prefix. Its 7/72 numerical preference and dependent m7/m8 scenarios are quarantined. The reason stated below for retiring 1/8 is withdrawn. Neither fraction is certified. Read `results/spectator_actual_walk_audit.md` and the corrected `notes/spectator_52_eliminate_v.md`. The material below is preserved as historical evidence, not the current candidate policy.
+# Numerical comparison for the extra-prefix spectator formula
 
-# {5,2} numerical reconnaissance
+The table below records the earlier formula with the distance-three fixed set {0,s1,s2,s3,s4}. That set contains an extra s1 and evaluates a different integral from the defining walk.
 
-**Status: model-side falsifier only. Nothing here is consumed as proof.**
-
-The first five-dimensional midpoint ladder discretised the spectator
-frequency v and showed a strong but misleading drift towards 1/8.
-The exact elimination of v in
-`notes/spectator_52_eliminate_v.md` revealed that this was a
-quadrature artefact. The 1/8 candidate is therefore **retired**.
+The corrected model value is {5,2}=1/8 by [exact lattice evaluation](../notes/spectator_52_exact_lattice.md). The [actual-walk audit](spectator_actual_walk_audit.md) compares corrected and extra-prefix calculations.
 
 ## Calibration: pure C5
 
@@ -28,11 +22,9 @@ Observed midpoint values:
 
 This is consistent with the certified anchor.
 
-## Corrected ladder: spectator frequency integrated exactly
+## Extra-prefix ladder
 
-For each four-dimensional midpoint cell, the v-integral is evaluated
-analytically using the cubic formula in
-`notes/spectator_52_eliminate_v.md`.
+The spectator frequency was integrated analytically, while the four remaining variables used midpoint quadrature. The distance-three weight retained the extra prefix.
 
 | dc | U1 | U2 | U3 | {5,2}=7(U1+U2+U3) |
 |---:|---:|---:|---:|---:|
@@ -44,30 +36,4 @@ analytically using the cubic formula in
 | 0.0625 | 0.0099563102 | 0.0027934096 | 0.0011973564 | 0.0976295331 |
 | 0.0500 | 0.0099435807 | 0.0027878263 | 0.0011949089 | 0.0974842118 |
 
-The remaining four-dimensional midpoint rule still crosses rational
-kink hyperplanes, so non-monotonicity is expected and these rungs
-must not be treated as enclosures.
-
-Two genuinely dyadic Richardson probes are:
-
-- dc 0.125 -> 0.0625: 0.09724485998;
-- dc 0.100 -> 0.0500: 0.09723151986.
-
-Both are close to
-
-    7/72 = 0.09722222222...
-
-so **7/72 is now the active candidate to falsify**, not an accepted
-identification.
-
-The deviations of the two Richardson probes from 7/72 are about
-2.26e-5 and 9.30e-6 respectively. That is encouraging but nowhere
-near enough for a proof.
-
-## Next gate
-
-The exact-v reduction turns each partition-cyclic term into a
-four-dimensional piecewise polynomial of degree at most four on a
-rational hyperplane arrangement. The next decisive step is exact
-rational cell/polytope integration. A rational reconstruction is not
-to be consumed until that independent exact computation agrees.
+These are numerical quadratures without error enclosures. Their apparent convergence toward 7/72 concerns the extra-prefix formula rather than the corrected model.
