@@ -27,6 +27,7 @@ THEOREMS=(
     'mirror_certificate_nonnegative','mirror_certificate_le_two',
     'mirror_certificate_negative_majorant','mirror_denominator_dominates',
     'mirror_threshold_count_cap','finite_mirror_certificate_counting',
+    'resolvent_quadratic_identity','resolvent_quadratic_minorant',
 )
 
 

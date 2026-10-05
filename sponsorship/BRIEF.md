@@ -16,7 +16,7 @@ The immediate target is a signed trace estimate for the actual prime operator. E
 | [Bounded resolvent reduction](../notes/bounded_resolvent_bridge.md) | An alternative target with controlled compression error and three resolvent powers |
 | [Prime-removal expansion](../notes/prime_removal_resolvent.md) | Local remainder bounds and explicit conditional-phase/covariance terms to estimate |
 | [Positive-weight resolvent criterion](../notes/mirror_resolvent_certificate.md) | A bounded certificate with three first resolvents and a sufficient single-point estimate |
-| [Lean formalization](../formal/README.md) | 26 kernel-checked scalar and conditional finite counting theorems, with an axiom audit |
+| [Lean formalization](../formal/README.md) | 28 kernel-checked scalar and conditional finite counting theorems, with an axiom audit |
 | [Local verification record](../results/project_verification_2026-10-05.json) | 33 Python checks and the separate Lean proof audit, including source hashes |
 
 The eighth-order model certificate has origin-mass value `12241115/162540559`, corresponding to a conditional counting conversion of approximately 84.938%. It does not establish a new unconditional zeta-zero bound. Analytic proof notes require independent mathematical review.

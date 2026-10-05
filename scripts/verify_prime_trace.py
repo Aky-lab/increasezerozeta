@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from fractions import Fraction as F
 from itertools import product
 import json
-from math import comb, log, pi, sin, sqrt
+from math import comb, factorial, log, pi, sin, sqrt
 from pathlib import Path
 import random
 
@@ -315,6 +315,127 @@ def logarithmic_mean_value_calibrations():
     return mean_cases,geometric_cases,alias_cases,exponents
 
 
+def fixed_taper_geometry():
+    """Exact taper calculus, smoothing moments and nonperiodic gauge checks."""
+    ramp = [F(0),F(0),F(0),F(10),F(-15),F(6)]
+    def derivative(p):
+        return [j*p[j] for j in range(1,len(p))]
+    def value(p,x):
+        return sum(c*x**j for j,c in enumerate(p))
+    def integral(p,lo,hi):
+        return sum(c*(hi**(j+1)-lo**(j+1))/F(j+1) for j,c in enumerate(p))
+    density = derivative(ramp)
+    second = derivative(density)
+    assert density == [F(0),F(0),F(30),F(-60),F(30)]
+    assert second == [F(0),F(60),F(-180),F(120)]
+    assert value(ramp,F(0))==0 and value(ramp,F(1))==1
+    assert all(value(p,x)==0 for p in (density,second) for x in (F(0),F(1)))
+    assert integral(ramp,F(0),F(1))==F(1,2)
+    assert integral(density,F(0),F(1))==1
+    assert value(density,F(1,2))==F(15,8)
+    assert integral(second,F(0),F(1,2))-integral(second,F(1,2),F(1))==F(15,4)
+    # Two disjoint transition edges of phi for L>2.
+    first_l1,first_linf,second_l1 = F(2),F(15,8),F(15,2)
+    product_second = 2*second_l1+2*first_linf*first_l1
+    assert product_second==F(45,2)
+    # Independently integrate centered density versus its closed moment law.
+    centered_density = [F(15,8),F(0),F(-15),F(0),F(30)]
+    moments = []
+    for j in range(13):
+        moment = integral([F(0)]*(2*j)+centered_density,F(-1,2),F(1,2))
+        expected = F(15,2**(2*j)*(2*j+1)*(2*j+3)*(2*j+5))
+        assert moment==expected
+        moments.append(str(moment))
+        # Series coefficient of 120*((12-w^2)*sin(w/2)-6*w*cos(w/2))/w^5.
+        n = 2*j+5
+        sine = lambda k: F((-1)**((k-1)//2),2**k*factorial(k))
+        cosine = lambda k: F((-1)**(k//2),2**k*factorial(k))
+        numerator = 120*(12*sine(n)-sine(n-2)-6*cosine(n-1))
+        assert numerator==(-1)**j*moment/F(factorial(2*j))
+    for n in (1,3):
+        sine = lambda k: F((-1)**((k-1)//2),2**k*factorial(k))
+        cosine = lambda k: F((-1)**(k//2),2**k*factorial(k))
+        assert 12*sine(n)-(sine(n-2) if n>=3 else 0)-6*cosine(n-1)==0
+    # Rational envelope: a/k and b/k^2 bounds imply a finite harmonic
+    # contribution plus a uniformly bounded cubic-series tail.
+    envelope_cases = 0
+    for a,b,d in product((F(1,3),F(2),F(7,3)),(F(1,2),F(3),F(17)),(1,7,31)):
+        ratio = b/a
+        cutoff = max(1,(ratio.numerator+ratio.denominator-1)//ratio.denominator)
+        harmonic = sum(F(1,k) for k in range(1,cutoff+1))
+        bound = 2*a*a*harmonic+b*b/F(cutoff**2)
+        direct = 2*sum(min(d,k)*min(a*a/F(k*k),b*b/F(k**4))
+                       for k in range(1,257))
+        assert direct<=bound and b*b/F(cutoff**2)<=a*a
+        envelope_cases += 1
+    for k in range(2,130):
+        assert F(1,2)*(F(1,(k-1)**2)-F(1,k*k))-F(1,k**3)==F(3*k-2,2*k**3*(k-1)**2)
+    # A noncommensurate rational unit phase, with zero-extended gates.
+    unit = G(F(3,5),F(4,5))
+    def unit_power(k):
+        base = unit if k>=0 else unit.conjugate()
+        out = ONE
+        for _ in range(abs(k)):
+            out = out*base
+        return out
+    taper = [F(0),F(1,2),F(1),F(1,2),F(0)]
+    gauge_cases = 0
+    for s in range(-4,5):
+        operator = [[G(taper[u]*taper[v]) if v==u+s else ZERO
+                     for v in range(5)] for u in range(5)]
+        for u,v in product(range(5),repeat=2):
+            transformed = unit_power(u)*operator[u][v]*unit_power(-v)
+            assert transformed==unit_power(-s)*operator[u][v]
+        gauge_cases += 1
+    # Allowing surviving wraps would violate that identity at this phase.
+    assert unit_power(3)*G(taper[3]*taper[1])*unit_power(-1)!=unit_power(-3)*G(taper[3]*taper[1])
+    # Direct midpoint integration of the two shifted tapers is independent
+    # of the centered-density/convolution derivation of the closed kernel.
+    kernel_cases,max_kernel_error = 0,0.0
+    def ramp_value(x):
+        if x<=0:
+            return 0.0
+        if x>=1:
+            return 1.0
+        return 10*x**3-15*x**4+6*x**5
+    for length in (4.0,6.0,10.0):
+        def phi_value(x):
+            return ramp_value(length/2+x)*ramp_value(length/2-x)
+        grid = [-length/2+length*(j+0.5)/8192 for j in range(8192)]
+        for s in (1.0,length-2):
+            overlap = [phi_value(v+s/2)*phi_value(v-s/2) for v in grid]
+            for k in (0,1,3,9):
+                w = 2*pi*k/length
+                direct = sum(h*cmath.cos(w*v).real for h,v in zip(overlap,grid))/8192
+                if k==0:
+                    closed = 1-(s+1)/length
+                else:
+                    if abs(w)<1:
+                        psi = sum((-1)**j*w**(2*j)/factorial(2*j)
+                                  *float(F(15,2**(2*j)*(2*j+1)*(2*j+3)*(2*j+5)))
+                                  for j in range(11))
+                    else:
+                        psi = 120*((12-w*w)*sin(w/2)-6*w*cmath.cos(w/2).real)/w**5
+                    closed = psi*sin(pi*k*(1-(s+1)/length))/(pi*k)
+                error = abs(direct-closed)
+                assert error<1e-8
+                max_kernel_error = max(max_kernel_error,error)
+                kernel_cases += 1
+    return dict(ramp_coefficients=list(map(str,ramp)),
+                ramp_integral='1/2',phi_first_derivative_l1=str(first_l1),
+                phi_first_derivative_linf=str(first_linf),
+                phi_second_derivative_l1=str(second_l1),
+                overlap_second_derivative_l1_upper_bound=str(product_second),
+                centered_smoothing_even_moments=moments,
+                exact_smoothing_series_coefficients=13,
+                rational_two_decay_envelope_cases=envelope_cases,
+                exact_noncommensurate_gauge_cases=gauge_cases,
+                wrapped_gate_counterexample=True,
+                numerical_direct_overlap_kernel_cases=kernel_cases,
+                numerical_direct_overlap_max_error=max_kernel_error,
+                continuous_leakage_proof='notes/fixed_taper_projection.md')
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path)
@@ -359,6 +480,7 @@ def main():
     classifications = prime_word_classification()
     telescope = telescoping_checks(q)
     double_leakage = double_leakage_checks()
+    taper_geometry = fixed_taper_geometry()
     means,geometric,aliases,envelopes = logarithmic_mean_value_calibrations()
     leakage = 0
     for d in range(1,12):
@@ -388,6 +510,7 @@ def main():
         'noncommuting_telescoping_cases':telescope,
         'projection_leakage_count_cases':leakage,
         'exact_double_projection_and_open_word_cases':double_leakage,
+        'fixed_taper_geometry':taper_geometry,
         'numerical_logarithmic_sampled_mean_value_cases':means,
         'numerical_geometric_endpoint_cases':geometric,
         'numerical_same_sign_alias_cases':aliases,

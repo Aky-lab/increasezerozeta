@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-10-05T19:57:44.161488+00:00",
+  "generated_at_utc": "2026-10-05T20:21:18.536267+00:00",
   "python_version": "3.12.12",
   "runner_sha256": "12933663be2b4f475ae32d527f47c95bdbbb4af24c0b3291318a4bb772bee0de",
   "script_sources_sha256": {
@@ -30,17 +30,17 @@
     "scripts/verify_dilated_rectangles.py": "53945eeb2767bea9e2d5489b5f9fc72b10f3df49d2b83687fd362640156c4b1b",
     "scripts/verify_dilation_coverage.py": "2ea0dc7c5d7c5a7c97709818609bf2c93769d267b7d41e7ec4a3e70db7a9b0a4",
     "scripts/verify_full_window_transport.py": "a75386e7aaa8c7aab1a274f85ea974f8e21ff545ed596c64af6652c2d5c2900b",
-    "scripts/verify_lean_counting.py": "708d8d9aa39746016018fd973d4055eee5d8512294b0487efe29375e5fe88b77",
+    "scripts/verify_lean_counting.py": "3cdfadbae73700c5ac2526f99e3bbed1a5553f51985e32788b61a0ff9dba41bb",
     "scripts/verify_lemmas.py": "a5d3fb7a7b7460a182773fc743b329d8e593e94a30ecf50d7a82bc9b1619a125",
     "scripts/verify_lock_frame.py": "31c66514072a4e4f71b53b7938513e8489b9bbf943c857dbe5163fce3944ec56",
-    "scripts/verify_mirror_certificate.py": "9019521fbf03b0dca2a1b82ef2554f884f0c99dbf900358b41a8abd95f322bca",
+    "scripts/verify_mirror_certificate.py": "219dcebfef5dfc00a4e1ee8b38f7633a1430a5436e52247ab0773611a0d2fc2b",
     "scripts/verify_mixed_cycles.py": "1773ecc9ef8357e6f3406f2262350bb50cfb8d47966a81174c30efd870ab1663",
     "scripts/verify_model_certificates.py": "82eeb6c7bd3b4e4c22547fce0f4066f86927b22eb22a25b88ead8ff23cf25874",
     "scripts/verify_pairing_model.py": "46c1245a9b39b528c365fb95ffe30278285b026fb214b711452894bf8de1f38e",
     "scripts/verify_presieved_pairs.py": "93bf6795ea056efe1f8d67cc2146da87fab0bbf0b53ebe3db6d3bbf9889df995",
     "scripts/verify_prime_pair_transport.py": "c2f0d53493c0cc0727a95faa6b157dd2e030548a2510041ca60a02dc4b209735",
     "scripts/verify_prime_removal.py": "c95e2af10c155d57b96aa1e016eefc3065ee8404bcebb01d3c71e923ea795918",
-    "scripts/verify_prime_trace.py": "bd6d00670593bc431b255e9f1f65d21d3a3c9ad0026382aa8ca7d707baa0843a",
+    "scripts/verify_prime_trace.py": "9cdc54e5b1cbe757521d15f38ac669248fdec30791714d2e4a742c64ba60e792",
     "scripts/verify_progression_profile.py": "3f271788f9d1fd5340cbea4855cc5d35a844052b6d30731d94b5a181221a751a",
     "scripts/verify_project.py": "12933663be2b4f475ae32d527f47c95bdbbb4af24c0b3291318a4bb772bee0de",
     "scripts/verify_pure_cycle_lattice.py": "51e6c849e3f380699b7ab6f57079c34a8a2c1b3b944cd0599e114df0eb2b1553",
@@ -191,7 +191,7 @@
     },
     {
       "script": "scripts/verify_prime_trace.py",
-      "sha256": "bd6d00670593bc431b255e9f1f65d21d3a3c9ad0026382aa8ca7d707baa0843a",
+      "sha256": "9cdc54e5b1cbe757521d15f38ac669248fdec30791714d2e4a742c64ba60e792",
       "scope": "exact cyclic Fourier normalization, balanced/off-balance word ledgers, open/closed-loop overlaps, prime-base classification, noncommuting telescoping, two-sided projection leakage, sampled mean-value calibrations and signed trace budgets",
       "exit_code": 0,
       "stdout": "PASS: 63 exact Fourier entries, six word-ledger degrees,\n      174 periodic closed loops and 24 noncommuting telescopes.\n      147 exact double-leakage cases, 36 sampled mean-value calibrations.\nBalanced trace limit: 5102709/31726805\nUnproved off-balance cap for 80%: -3860057/63453610\n",
@@ -218,7 +218,7 @@
     },
     {
       "script": "scripts/verify_mirror_certificate.py",
-      "sha256": "9019521fbf03b0dca2a1b82ef2554f884f0c99dbf900358b41a8abd95f322bca",
+      "sha256": "219dcebfef5dfc00a4e1ee8b38f7633a1430a5436e52247ab0773611a0d2fc2b",
       "scope": "exact reflected-square certificate, imaginary pole isolation, positive residues, complete rational partial fractions and one-point sufficient target",
       "exit_code": 0,
       "stdout": "PASS: mirror square identities; three simple imaginary pole pairs; positive weights;\ncomplete rational partial fractions; quadratic lower bound; isolated one-point target.\nThe actual arithmetic resolvent inequality remains unproved.\n",
@@ -365,14 +365,14 @@
     },
     {
       "script": "scripts/verify_lean_counting.py",
-      "sha256": "708d8d9aa39746016018fd973d4055eee5d8512294b0487efe29375e5fe88b77",
+      "sha256": "3cdfadbae73700c5ac2526f99e3bbed1a5553f51985e32788b61a0ff9dba41bb",
       "scope": "Lean kernel proofs of scalar majorization and conditional finite counting, with complete axiom audit",
       "dependency_sha256": {
-        "formal/CountingBridge.lean": "e57e14d83f839fb9ead7b489c5a6df21dabd2c277b36226add451de632843c0c",
+        "formal/CountingBridge.lean": "ac5b19be43d8cd7ae1ad01c3e4d8097efc0ed6617b27fca86c1dae9841ced085",
         "lean-toolchain": "302cd63c54178885b89e669f33b38f12f4dd7ae7e5cac537b3203e3768d8fb2b"
       },
       "exit_code": 0,
-      "stdout": "PASS: 26 Lean kernel-checked theorems, complete standard-axiom audit, 7 gate rejection cases.\nThe actual arithmetic trace cap remains unproved.\n",
+      "stdout": "PASS: 28 Lean kernel-checked theorems, complete standard-axiom audit, 7 gate rejection cases.\nThe actual arithmetic trace cap remains unproved.\n",
       "stderr": "",
       "passed": true
     }

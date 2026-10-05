@@ -1,6 +1,6 @@
 # Formal scope of the counting bridge
 
-[CountingBridge.lean](CountingBridge.lean) contains 26 kernel-checked
+[CountingBridge.lean](CountingBridge.lean) contains 28 kernel-checked
 theorems using Lean 4.33.0 and its standard library. It requires neither
 Mathlib nor a package download. The file checks the scalar certificate
 and the finite count implication conditional on the spectral inputs.
@@ -13,6 +13,7 @@ and the finite count implication conditional on the spectral inputs.
 | Scalar certificates | Both denominators are positive and both certificates majorize the nonpositive half-line. The reflected-square certificate lies in [0,2] and its denominator dominates the parameterized denominator. |
 | Finite spectral list | Pointwise majorization bounds the number of bad entries by the certificate sum; a one-tenth sum cap implies a one-tenth count cap. |
 | Conditional counting conversion | The finite trace-cap input gives `4*N <= 5*S + 10*C + 9*delta`. |
+| Resolvent minorant | A cleared polynomial-square identity gives a global quadratic lower bound for `x/(x^2+r^2)`, for positive r and S. |
 | Exact rational arithmetic | The supplied cubic model moments give 247/2519, margin 49/25190 and conversion 2025/2519. A rational parameter witness is checked. |
 
 Here N is the target multiplicity, S its simple-on-line count, C the
@@ -48,6 +49,18 @@ Lean checks `2*D(x)=qN(x)^2+qN(-x)^2`, denominator positivity,
 comparison with the admissible parameter family. The threshold and
 finite counting theorems apply directly to f_m, without a parameter
 hypothesis. The actual f_m trace cap remains a supplied hypothesis.
+
+The resolvent lemmas check
+
+    2*r*S^2*x-(-(r-S)^2+2*S*x-x^2)*(x^2+r^2)
+      =(x^2-S*x+r^2-r*S)^2,
+    (-(r-S)^2+2*S*x-x^2)/(2*r*S^2)<=x/(x^2+r^2).
+
+The identity is algebraic; the inequality assumes r>0 and S>0.
+Choosing S=(r^2+4/3)/(r+1) and taking the supplied first two
+moments gives the [sharp two-moment lower bound](../notes/mirror_resolvent_certificate.md)
+in the proof note. The moment limits, sharpness construction and
+operator functional calculus are outside this Lean file.
 
 ## What is still an input
 

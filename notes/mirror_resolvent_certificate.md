@@ -101,8 +101,9 @@ these decimals, specify the certificate.
 ## 3. Actual resolvent and prime-removal targets
 
 Define m_T(z)=Tr[P*(J_T-zI)^(-1)*P]/d. At each fixed pole the
-resolvent compression error is O(ell^-2), by the block estimate in
-the bounded bridge. The smallest imaginary part exceeds 1/4, so
+resolvent compression error is O(log(ell)/ell^3), by the block estimate
+and the [fixed-taper leakage bound](fixed_taper_projection.md).
+The smallest imaginary part exceeds 1/4, so
 the constants are finite and independent of T. Formula (3) and
 the established explicit-formula transfer give
 
@@ -133,20 +134,48 @@ first moment is o(1). This is another equivalent closing statistic.
 
 ## 4. A sufficient estimate at one point
 
-For real x and r>0,
+For r>0 define S=(r^2+4/3)/(r+1), P=r^2-r*S and
+C=1/(2*r*S^2). The following identity gives a global quadratic
+minorant on the entire real line:
 
-    x/(x^2+r^2)-x/r^2+x^2/(2*r^3)
-       =x^2*(x-r)^2/[2*r^3*(x^2+r^2)] >=0.                 (8)
+    x/(x^2+r^2)-C*(-(r-S)^2+2*S*x-x^2)
+       =C*(x^2-S*x+P)^2/(x^2+r^2) >=0.                     (8)
+
+The cleared identity and scalar inequality are proved in Lean for
+every positive r,S; no assumption x>=0 is used.
 
 The established first two projected moments of J_T are 1+o(1)
-and 4/3+o(1). The second includes the O(ell^-2) projection-leakage
+and 4/3+o(1). The second includes the O(log(ell)/ell^3) projection-leakage
 correction to (I-H_T)^2. Apply spectral functional calculus to (8):
 
-    liminf Re m_T(i*r) >= r^(-2)-2/(3*r^3).
+    liminf Re m_T(i*r) >= h(r),
+    h(r)=(1-1/(6*r))/(r^2+4/3).
+
+Here r,S are fixed before taking the limit. The minorant expectation
+simplifies using S*(r+1)=r^2+4/3. Thus the moment errors contribute
+o(1), with no unknown high moments.
+
+This bound is sharp among probability measures with moments 1,4/3.
+The polynomial x^2-S*x+P has value -1/3 at x=1, so its two real
+roots x_-<1<x_+ are distinct. Give them weights
+(x_+-1)/(x_+-x_-) and (1-x_-)/(x_+-x_-). These positive weights
+give mean one and second moment S-P=4/3. The remainder in (8)
+vanishes on their support.
+
+There is an independent Cauchy--Schwarz derivation. For a probability
+measure of mean a and second moment b, put sigma^2=b-a^2 and
+m=integral (x-i*r)^(-1) dmu. Centering both factors gives
+
+    |1+(i*r-a)*m|^2 <= sigma^2*(Im(m)/r-|m|^2).
+
+Completing the square puts m in the disk with center
+a/(b+r^2)+i*(r+sigma^2/(2*r))/(b+r^2) and radius
+sigma^2/[2*r*(b+r^2)]. Its leftmost real coordinate is
+(a-sigma^2/(2*r))/(b+r^2), which recovers h(r) when a=1,b=4/3.
 
 The positive weights let this bound handle r_2 and r_3. Define
 
-    C_large=sum_(j=2,3) w_j*(r_j^(-2)-2/(3*r_j^3)),
+    C_large=sum_(j=2,3) w_j*h(r_j),
     theta=(9/10-C_large)/w_1.
 
 The single actual estimate
@@ -154,9 +183,11 @@ The single actual estimate
     liminf Re m_T(i*r_1) >=theta                            (9)
 
 would therefore imply (5). Exact interval computations give
-1.04388<theta<1.04389; C_large is approximately 0.530805482.
+0.98282<theta<0.98283; C_large is approximately 0.552399195.
 Condition (9) is stronger than the three-point condition (5).
 It is a sufficient research target, not a proved bound.
+Each individual two-moment lower bound is sharp; no joint optimality
+for their weighted sum is asserted.
 
 The first two moments alone cannot establish (5): the probability
 law (1/6)*delta_0+(2/3)*delta_1+(1/6)*delta_2 has those moments,

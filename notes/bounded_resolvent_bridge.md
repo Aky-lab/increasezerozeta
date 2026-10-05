@@ -104,20 +104,22 @@ Let P project onto Fourier modes 0,...,d-1 and Q=I-P. Set
 For each T these are bounded self-adjoint operators; their norms
 need not be bounded uniformly in T.
 
-The function phi(u)*phi(u+s) has uniformly bounded variation,
-independent of s and L. Its nonzero Fourier coefficients satisfy
-|c_m|<=C/|m|. For a shift m the number of modes crossing P's edge is
-min(d,|m|). Hence
+The function phi(u)*phi(u+s) has uniformly bounded first and second
+derivative L1 norms, independent of s and L. Its nonzero Fourier
+coefficients satisfy |c_m|<=min(C1/|m|,C2*L/m^2). For a shift m the
+number of modes crossing P's edge is min(d,|m|). Splitting at m=ceil(L)
+gives the [fixed-taper projection bound](fixed_taper_projection.md):
 
     ||Q*K_s*P||_HS^2
-       <=C sum_(m!=0) min(d,|m|)/m^2 <=C'*log(2d).
+       <=C'*log(2+L).
 
 The same bound holds for the reverse leakage. Partial summation of
 Chebyshev's estimate gives sum_(n<=X) Lambda(n)/sqrt(n)=O(sqrt(X)).
 Triangle inequality in Hilbert--Schmidt norm yields, with
 V=Q*J_T*P=-Q*K_T*P,
 
-    ||V||_HS^2/d = O(X*log(2d)/(d*ell1^2))=O(ell^(-2)).       (8)
+    ||V||_HS^2/d = O(X*log(2+L)/(d*ell1^2))
+                =O(log(ell)/ell^3).                          (8)
 
 This estimate uses no arithmetic cancellation.
 

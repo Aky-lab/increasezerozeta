@@ -12,7 +12,7 @@ The project studies a continuum moment model and the arithmetic estimates needed
 | [Counting bridge](notes/spectral_counting_bridge.md) | The actual-matrix hypothesis sufficient for an 80% simple-zero bound |
 | [Bounded resolvent criterion](notes/bounded_resolvent_bridge.md) | An alternative arithmetic target using three resolvent powers |
 | [Positive-weight criterion](notes/mirror_resolvent_certificate.md) | A certificate bounded by two, three first resolvents and a sufficient one-point inequality |
-| [Lean proofs](formal/README.md) | 26 kernel-checked scalar and finite counting theorems, with their assumptions |
+| [Lean proofs](formal/README.md) | 28 kernel-checked scalar and finite counting theorems, with their assumptions |
 | [Computational records](results/project_verification_2026-10-05.json) | Local verification results, source hashes and reproduction details |
 
 The finite model has moments

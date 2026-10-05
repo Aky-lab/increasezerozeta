@@ -98,13 +98,13 @@ def poles():
     # Three disjoint sign-changing intervals exhaust the degree-three P.
     contribution = F(0),F(0)
     for r,w in intervals[1:]:
-        r2,r3 = imul(r,r),imul(imul(r,r),r)
-        lower = iadd(idiv((F(1),F(1)),r2),
-                     idiv((F(-2,3),F(-2,3)),r3))
+        r2 = imul(r,r)
+        lower = idiv(iadd((F(1),F(1)),idiv((F(-1,6),F(-1,6)),r)),
+                     iadd((F(4,3),F(4,3)),r2))
         contribution = iadd(contribution,imul(w,lower))
     target = idiv(iadd((F(9,10),F(9,10)),(-contribution[1],-contribution[0])),
                   intervals[0][1])
-    assert F(104388,100000) < target[0] <= target[1] < F(104389,100000)
+    assert F(98282,100000) < target[0] <= target[1] < F(98283,100000)
     return records,contribution,target
 
 
@@ -206,6 +206,29 @@ def scalar_identities():
                 low_moment_block_certificate_value=str(block_cap))
 
 
+def two_moment_minorants():
+    cases = []
+    for r in (F(1,4),F(1,3),F(1),F(4,3),F(2),F(4),F(5)):
+        s = (r*r+F(4,3))/(r+1)
+        p = r*r-r*s
+        denominator = 2*r*s*s
+        minorant_numerator = [-(r-s)**2,2*s,F(-1)]
+        remainder = add([F(0),denominator],
+                        scale(mul(minorant_numerator,[r*r,F(0),F(1)]),-1))
+        assert remainder==mul([p,-s,F(1)],[p,-s,F(1)])
+        expected = (1-F(1,6)/r)/(r*r+F(4,3))
+        assert (minorant_numerator[0]+minorant_numerator[1]
+                +minorant_numerator[2]*F(4,3))/denominator==expected
+        value_at_mean = evaluate([p,-s,F(1)],F(1))
+        assert value_at_mean==F(-1,3)
+        assert p-s+F(4,3)==0
+        coarse = 1/r**2-F(2,3)/r**3
+        assert expected-coarse==(r-F(4,3))**2/(2*r**3*(r*r+F(4,3)))
+        cases.append(dict(pole=str(r),quadratic_s=str(s),quadratic_p=str(p),
+                          exact_mean_lower_bound=str(expected)))
+    return cases
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path)
@@ -214,6 +237,7 @@ def main():
     record = dict(schema_version=1,generated_at_utc=datetime.now(timezone.utc).isoformat(),
                   checker_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                   scalar=scalar_identities(),partial_fractions=partial_fractions(),
+                  two_moment_quadratic_minorants=two_moment_minorants(),
                   isolated_poles=isolated,
                   large_pole_moment_contribution_interval=list(map(str,contribution)),
                   sufficient_small_pole_target_interval=list(map(str,target)),

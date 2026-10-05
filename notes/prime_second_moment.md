@@ -20,21 +20,23 @@ balanced/off-balance sums, rather than to assume a model moment.
 ## 1. A sharper finite-frame word estimate
 
 Let K_s be the gated circle translation from the actual-prime note,
-P=P_d its d-mode projection, and eta_d=log(2*d)/d. Both leakage norms
+P=P_d its d-mode projection, and eta_d=log(2+L)/d. Both leakage norms
 
     ||(I-P)*K_s*P||_HS, ||P*K_s*(I-P)||_HS
 
-are O(sqrt(log(2*d))), uniformly in s, because the Fourier coefficients
-of phi(u)*phi(u+s) are O(1/|m|). Products of a fixed number of K_s have
-leakage bounded by the sum of the individual leakage norms.
+are O(sqrt(log(2+L))), uniformly in s, by the combined first- and
+second-derivative Fourier bounds in the
+[fixed-taper projection lemma](fixed_taper_projection.md). Products
+of a fixed number of K_s have leakage bounded by the sum of the
+individual commutator Hilbert--Schmidt norms.
 
 Inserting P between j factors and telescoping gives trace errors of the
 form Tr(P*K_1*P*...*K_i*(I-P)*K_(i+1)*...*K_j*P). The left factor
 crosses the projection boundary once; the right factor also crosses it.
-Their Hilbert--Schmidt norms are both O_j(sqrt(log(2*d))). Therefore
+Their Hilbert--Schmidt norms are both O_j(sqrt(log(2+L))). Therefore
 
     |Tr(P*K_1*...*K_j*P)
-       -Tr(P*K_1*P*...*P*K_j*P)| <= C_j*log(2*d).             (2)
+       -Tr(P*K_1*P*...*P*K_j*P)| <= C_j*log(2+L).             (2)
 
 This bound holds for open words as
 well as balanced words. No prime sum has yet been estimated.
@@ -136,7 +138,7 @@ There are four sign choices per two-factor word. From (3), their full
 absolute error is bounded by
 
     O(eta_d*ell1^(-2)*(sum_n w_n)^2)
-      =O(X*log(2*d)/(d*ell1^2)).                             (9)
+      =O(X*log(2+L)/(d*ell1^2)).                             (9)
 
 The balanced proxy differs from D_2 by a smaller error of the same
 form with sum_n w_n^2 in place of (sum_n w_n)^2. Thus (6), (8) and (9)
@@ -171,8 +173,8 @@ remains 49/25190. Likewise q4 retains only orders three through eight.
 There is a precise limit to the boundary argument. Summing (3) absolutely
 over all j-factor prime words gives only the envelope
 
-    O_j(X^(j/2)*log(2*d)/(d*ell1^j))
-      =O_(j,lambda)(T^(j*lambda/2-1)/ell^j).                 (12)
+    O_j(X^(j/2)*log(2+L)/(d*ell1^j))
+      =O_(j,lambda)(T^(j*lambda/2-1)*log(ell)/ell^(j+1)).    (12)
 
 It tends to zero when j*lambda/2<=1, including the equality case. At
 unit bandwidth it justifies j=2. For higher degrees at that bandwidth,

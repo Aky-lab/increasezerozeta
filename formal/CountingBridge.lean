@@ -249,6 +249,41 @@ theorem mirror_denominator_dominates (α x : R)
   unfold certificateDenominator mirrorDenominator
   grind
 
+omit [LE R] [LT R] [LawfulOrderLT R] [IsLinearOrder R] [OrderedRing R] in
+theorem resolvent_quadratic_identity (r S x : R) :
+    2*r*S^2*x-(-(r-S)^2+2*S*x-x^2)*(x^2+r^2)
+      =(x^2-S*x+r^2-r*S)^2 := by grind
+
+/-- A global quadratic minorant for the real part of a first resolvent. -/
+theorem resolvent_quadratic_minorant (r S x : R) (hr : 0 < r) (hS : 0 < S) :
+    (-(r-S)^2+2*S*x-x^2)/(2*r*S^2) ≤ x/(x^2+r^2) := by
+  have hsqx := OrderedRing.sq_nonneg (a := x)
+  have hsqr := OrderedRing.mul_pos hr hr
+  have hsqS := OrderedRing.mul_pos hS hS
+  have hprod := OrderedRing.mul_pos hr hsqS
+  have hd1 : 0 < 2*r*S^2 := by grind
+  have hd2 : 0 < x^2+r^2 := by grind
+  have hi1 := (Field.IsOrdered.inv_nonneg_iff (a := 2*r*S^2)).mpr
+    (Preorder.le_of_lt hd1)
+  have hi2 := (Field.IsOrdered.inv_nonneg_iff (a := x^2+r^2)).mpr
+    (Preorder.le_of_lt hd2)
+  have hs := OrderedRing.sq_nonneg (a := x^2-S*x+r^2-r*S)
+  have hid := resolvent_quadratic_identity r S x
+  have hn : (-(r-S)^2+2*S*x-x^2)*(x^2+r^2) ≤ 2*r*S^2*x := by grind
+  have hp1 := OrderedRing.mul_le_mul_of_nonneg_right hn hi1
+  have hp2 := OrderedRing.mul_le_mul_of_nonneg_right hp1 hi2
+  have hn1 : 2*r*S^2 ≠ 0 := by grind
+  have hn2 : x^2+r^2 ≠ 0 := by grind
+  have hc1 := Field.mul_inv_cancel hn1
+  have hc2 := Field.mul_inv_cancel hn2
+  have hl : (-(r-S)^2+2*S*x-x^2)*(x^2+r^2)*(2*r*S^2)⁻¹*(x^2+r^2)⁻¹
+      = ((-(r-S)^2+2*S*x-x^2)*(2*r*S^2)⁻¹)*((x^2+r^2)*(x^2+r^2)⁻¹) := by grind
+  have hh : 2*r*S^2*x*(2*r*S^2)⁻¹*(x^2+r^2)⁻¹
+      = (x*(x^2+r^2)⁻¹)*((2*r*S^2)*(2*r*S^2)⁻¹) := by grind
+  rw [hl, hh, hc1, hc2] at hp2
+  simp only [Field.div_eq_mul_inv]
+  simpa only [Semiring.mul_one] using hp2
+
 variable [DecidableLE R]
 
 /-- The bad count includes equality at the spectral threshold. -/
@@ -365,3 +400,5 @@ end ZeroZeta
 #print axioms ZeroZeta.mirror_denominator_dominates
 #print axioms ZeroZeta.mirror_threshold_count_cap
 #print axioms ZeroZeta.finite_mirror_certificate_counting
+#print axioms ZeroZeta.resolvent_quadratic_identity
+#print axioms ZeroZeta.resolvent_quadratic_minorant

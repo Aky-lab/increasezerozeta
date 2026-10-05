@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-05T18:20:56.165979+00:00",
+  "generated_at_utc": "2026-10-05T20:14:27.127109+00:00",
   "status": "finite algebra and numerical calibrations checked; analytic proof draft; higher off-balance target unproved",
   "p3_coefficients": [
     "-277/2519",
@@ -132,6 +132,43 @@
   "noncommuting_telescoping_cases": 24,
   "projection_leakage_count_cases": 385,
   "exact_double_projection_and_open_word_cases": 147,
+  "fixed_taper_geometry": {
+    "ramp_coefficients": [
+      "0",
+      "0",
+      "0",
+      "10",
+      "-15",
+      "6"
+    ],
+    "ramp_integral": "1/2",
+    "phi_first_derivative_l1": "2",
+    "phi_first_derivative_linf": "15/8",
+    "phi_second_derivative_l1": "15/2",
+    "overlap_second_derivative_l1_upper_bound": "45/2",
+    "centered_smoothing_even_moments": [
+      "1",
+      "1/28",
+      "1/336",
+      "5/14784",
+      "5/109824",
+      "1/146432",
+      "1/905216",
+      "1/5292032",
+      "5/148176896",
+      "5/801898496",
+      "1/844103680",
+      "1/4341104640",
+      "1/21894266880"
+    ],
+    "exact_smoothing_series_coefficients": 13,
+    "rational_two_decay_envelope_cases": 27,
+    "exact_noncommensurate_gauge_cases": 9,
+    "wrapped_gate_counterexample": true,
+    "numerical_direct_overlap_kernel_cases": 24,
+    "numerical_direct_overlap_max_error": 3.9968028886505635e-14,
+    "continuous_leakage_proof": "notes/fixed_taper_projection.md"
+  },
   "numerical_logarithmic_sampled_mean_value_cases": 36,
   "numerical_geometric_endpoint_cases": 4104,
   "numerical_same_sign_alias_cases": 24,
