@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-05T08:03:50.487700+00:00",
+  "python_version": "3.12.12",
+  "runner_sha256": "ad652b3bb1711f2a46e3eaf430fc3b576e37b91705819401c0d9b2de02d47e8e",
+  "all_checks_passed": true,
+  "limitations": [
+    "Passing checks do not prove the surrounding analytic transport.",
+    "Higher-moment fractions and the 80% target remain candidates.",
+    "Spectator checks are finite examples, not an exhaustive proof.",
+    "Hashes identify the executed scripts, not a full repository revision."
+  ],
+  "checks": [
+    {
+      "script": "scripts/verify_lemmas.py",
+      "sha256": "a49f5e12ee930cef0383b23d72b02f039bd745e776b3e0648ac65ae8c473236e",
+      "scope": "finite local algebra and conditional core arithmetic",
+      "exit_code": 0,
+      "stdout": "prime pairs checked: 300\nlargest (proved-bound)/(8/(p-1)+8/(q-1)) ratio: 0.802083 at (3, 5)\nintegral Q = 1/16 = 0.062500000000\nintegral (nu-1)Q = 1/96 = 0.010416666667\nC_core = -1/48 = -0.020833333333\nC_core + 0.0111 = -73/7500 = -0.009733333333\nLambda_2(0) = 457/3078 = 0.148473034438\nsimple-critical proportion (conditional consumption) = 1082/1539 = 70.305393112411%\nALL EXACT-ARITHMETIC CHECKS PASSED\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/christoffel_exact.py",
+      "sha256": "5a48ffcaf310a2c5e461d8e5fd6239949e0e3f7aca146d2f26665ed04689a87b",
+      "scope": "exact moment consumption for supplied moments",
+      "exit_code": 0,
+      "stdout": "degree 2:\n  det(H2) = 5/108\n  lambda_2(0) = 5/36\n  q2(x) = 1 + (-7/4)*x^1 + (2/3)*x^2\n  simple >= 0.7222222222222222\n\ndegree 3:\n  det(H3) = 283/108864\n  lambda_3(0) = 1415/13891 = 0.1018645165934778\n  q3(x) = 1 + (-43428/13891)*x^1 + (37704/13891)*x^2 + (-9660/13891)*x^3\n  q3(-t)>=1 sign test: True\n  simple >= 11061/13891 = 0.7962709668130444\n  distinct >= 12476/13891 = 0.8981354834065222\n\nq3 at reference rationalised roots: [3.561362038586135e-05, -2.4070183341732058e-06, -3.436585565905982e-05]\n\nALL EXACT CHRISTOFFEL CHECKS PASSED\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/k8_target.py",
+      "sha256": "a75574359a0c9f2139686e3aaea5eb2ddeb581a8361d5ecc159a5280be42ece0",
+      "scope": "exact target geometry for supplied moments",
+      "exit_code": 0,
+      "stdout": "m7 Stieltjes floor:\n  25866469/1352400 = 19.126345016267376\n\ndelta <= coefficient * (m7-m7*)^2:\n    80%: 2666160/10471 = 254.623245153280\n  80.2%: 1847648880/11260853 = 164.077168932052\n    81%: 39399920/599677 = 65.701902857705\n    90%: 2073680/453083 = 4.576821465383\n\nm7=19.130000\n  m8 floor = 37.047415822002\n  m8 max for 80% = 37.050817310021\n\nm7=19.136000\n  m8 floor = 37.095675327302\n  m8 max for 80% = 37.119410977975\n\nALL EXACT K=8 TARGET CHECKS PASSED\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "script": "scripts/verify_spectator_reduction.py",
+      "sha256": "e4740fc6289ac5b53cc5f6da37d9b51e3f684232d3fc7348ac0b24688e4c3b12",
+      "scope": "finite rational checks of exact-v reduction",
+      "exit_code": 0,
+      "stdout": "exact rational spectator cases checked: 7203\ncases with nonzero integral: 2343\nALL FINITE SPECTATOR REDUCTION CHECKS PASSED\nScope: finite checks of J_d only; no certification of {5,2}=7/72.\n",
+      "stderr": "",
+      "passed": true
+    }
+  ]
+}
